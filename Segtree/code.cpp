@@ -11,11 +11,10 @@ node merge(node a, node b){
 }
 
 class SegmentTree {
-    private:
+    public:
         node tree[4*MAX];
         long long leftLimit;
         long long rightLimit;
-    public:
         long long v[MAX];
 
         // requires minimum index and maximum index
