@@ -73,5 +73,7 @@ void bfs(){
 ```cpp
 memset(visited, 0, sizeof(visited));
 memset(distance, -1, sizeof(distance));
+
+d[1] = 0;
 fila.push(1);
 ```
