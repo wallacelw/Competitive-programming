@@ -44,3 +44,34 @@ void dijkstra(ll start){
     }
 }
 ```
+
+# BFS
+
+## Global scope
+
+```cpp
+queue<ll> fila;
+bool visited[MAX];
+ll distance[MAX];
+
+void bfs(){
+    while(!fila.empty()){
+        ll u = fila.front(); fila.pop();
+
+        for(auto v : g[u]){
+            if (visited[v]) continue;
+            visited[v] = 1;
+            distance[v] = distance[u] + 1;
+            fila.push(v);
+        }
+    }
+}
+```
+
+## Main scope
+
+```cpp
+memset(visited, 0, sizeof(visited));
+memset(distance, -1, sizeof(distance));
+fila.push(1);
+```
