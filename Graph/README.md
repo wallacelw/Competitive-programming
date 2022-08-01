@@ -52,7 +52,7 @@ void dijkstra(ll start){
 ```cpp
 queue<ll> fila;
 bool visited[MAX];
-ll distance[MAX];
+ll d[MAX]; // distance
 
 void bfs(){
     while(!fila.empty()){
@@ -61,7 +61,7 @@ void bfs(){
         for(auto v : g[u]){
             if (visited[v]) continue;
             visited[v] = 1;
-            distance[v] = distance[u] + 1;
+            d[v] = d[u] + 1;
             fila.push(v);
         }
     }
