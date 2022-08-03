@@ -14,3 +14,6 @@ for(ll i=0; i<n; i++){
 }
 ll lis = (lower_bound(d.begin(), d.end(), LLINF) - d.begin() - 1);
 ```
+# Knapsack
+
+![Demostração](knapsack.gif)
