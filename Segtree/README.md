@@ -2,6 +2,10 @@
 
 Data structure that creates parent vertices for a linear array to do faster computation with binary agregation. 
 
+
+MT LIXO O CÓDIGO, REFATORAR ..... TODO TODO TODO
+
+
 ## Código:
 ```cpp
 
