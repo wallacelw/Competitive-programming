@@ -16,7 +16,7 @@ ll lis = (lower_bound(d.begin(), d.end(), LLINF) - d.begin() - 1);
 ```
 # Knapsack
 
-![Demostração](knapsack.gif)
+![Demostração](Knapsack.gif)
 
 Use int instead of long long for 10^8 size matrix
 
