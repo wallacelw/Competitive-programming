@@ -2,28 +2,20 @@
 
 Data structure that creates parent vertices for a linear array to do faster computation with binary agregation. 
 
-
-MT LIXO O CÓDIGO, REFATORAR ..... TODO TODO TODO
-
-
 ## Código:
 ```cpp
-
+int L = 1, N; // L = 1 = left limit; N = right limit
 class SegmentTree {
     public:
         struct node{
-            long long psum;
+            int psum;
         };
 
         node tree[4*MAX];
-        long long leftLimit;
-        long long rightLimit;
-        long long v[MAX];
+        int v[MAX];
 
         // requires minimum index and maximum index
-        SegmentTree(long long left, long long right) {
-            leftLimit = left;
-            rightLimit = right;
+        SegmentTree() {
             memset(v, 0, sizeof(v));
         }
 
@@ -35,7 +27,7 @@ class SegmentTree {
             return tmp;
         }
 
-        void build (long long l, long long r, long long i) {
+        void build (int l=L, int r=N, int i=1) {
             if (l == r){
                 node tmp;
                 // leaf element
@@ -44,13 +36,13 @@ class SegmentTree {
                 tree[i] = tmp;
             }
             else{
-                long long mid = (l+r)/2;
+                int mid = (l+r)/2;
                 build(l, mid, 2*i);
                 build(mid+1, r, 2*i+1);
                 tree[i] = merge(tree[2*i], tree[2*i+1]);
             }
         }
-        void point_update(long long idx, long long l, long long r, long long i, long long val){
+        void point_update(int idx=1, int val=0, int l=L, int r=N, int i=1){
             if (l == r){
                 // update operation to leaf
                 node tmp{val};
@@ -58,7 +50,7 @@ class SegmentTree {
                 tree[i] = tmp;
             }
             else{
-                long long mid = (l+r)/2;
+                int mid = (l+r)/2;
                 if (idx <= mid)
                     point_update(idx, l, mid, 2*i, val);
                 else
@@ -66,7 +58,7 @@ class SegmentTree {
                 tree[i] = merge(tree[2*i], tree[2*i+1]);
             }
         }
-        node range_query(long long left, long long right, long long l, long long r, long long i){
+        node range_query(int left=L, int right=N, int l=L, int r=N, int i=1){
             // left/right are the range limits for the update query
             // l / r are the variables used for the vertex limits
             if (right < l or r < left){
@@ -79,7 +71,7 @@ class SegmentTree {
                 return tree[i];
             }
             else{
-                long long mid = (l+r)/2;
+                int mid = (l+r)/2;
                 node ansl = range_query(left, right, l, mid, 2*i);
                 node ansr = range_query(left, right, mid+1, r, 2*i+1);
                 return merge(ansl, ansr);
@@ -92,7 +84,7 @@ class SegmentTree {
 
 ### Details
 
-**0 or 1-indexed**, depends on the arguments passed on to the constructor 
+**0 or 1-indexed**, depends on the arguments used as default value
 
 
 Uses a **struct node** to define node/vertex properties. *Default:* psum 
