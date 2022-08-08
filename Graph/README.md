@@ -91,3 +91,11 @@ void dfs(ll u, ll p = -1){
     }
 }
 ```
+
+# Tree Transversal - Pre order (childs -> node) / "Euler Tour" / Preorder time / DFS time 
+
+Created an array that can have some properties like all child vetices are right after the node
+
+## Problems
+
+https://cses.fi/problemset/task/1138 -> change value of node and calculate sum of the path to root of a tree
