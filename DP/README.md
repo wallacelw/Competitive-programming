@@ -1,7 +1,8 @@
-# LIS ( Longest Increasing Sequence )
+# Dynamic Programming
+
+## LIS ( Longest Increasing Sequence )
 
 **Strictly Increasing**: ans_i < ans_(i+1)
-
 
 **Requires** a vector *x* with size *n*
 ```cpp
@@ -14,7 +15,7 @@ for(ll i=0; i<n; i++){
 }
 ll lis = (lower_bound(d.begin(), d.end(), LLINF) - d.begin() - 1);
 ```
-# Knapsack
+## Knapsack
 
 ![Demostração](Knapsack.gif)
 

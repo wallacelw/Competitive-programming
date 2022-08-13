@@ -1,4 +1,6 @@
-# DFS Tree
+# Grafos
+
+## DFS Tree
 
 ```cpp
 bool visited[MAX];
@@ -20,7 +22,7 @@ void dfs(ll u=1, ll parent=0, ll layer=1){
 }
 ```
 
-# Djikstra
+## Djikstra
 
 ```cpp
 priority_queue<pll, vpll, greater<pll>> pq;
@@ -45,9 +47,9 @@ void dijkstra(ll start){
 }
 ```
 
-# BFS
+## BFS
 
-## Global scope
+### Global scope
 
 ```cpp
 queue<ll> fila;
@@ -68,7 +70,7 @@ void bfs(){
 }
 ```
 
-## Main scope
+### Main scope
 
 ```cpp
 memset(visited, 0, sizeof(visited));
