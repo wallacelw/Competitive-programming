@@ -2,8 +2,8 @@
 
 ```cpp
 // * Ordered Set and Map
-// find_by_order(i) -> O(log(N))
-// order_of_key(i) -> O(log(N))
+// find_by_order(i) -> iterator to elem with index i; O(log(N))
+// order_of_key(i) -> index of key; O(log(N))
 
 #include <bits/extc++.h>
 using namespace __gnu_pbds;
