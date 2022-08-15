@@ -1,9 +1,10 @@
 # Modular Arithmetic
 
-!! NOT REALLY TESTED !!
+--> Probably works, xD
+
+## Basic operations with redundant MOD operators
 
 ```cpp
-
 class OpMOD{
     public:
         long long add(long long a, long long b){
