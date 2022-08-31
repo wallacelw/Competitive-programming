@@ -1,4 +1,6 @@
-````cpp
+# Iterative P-sum Classic Segtree with MOD
+
+```cpp
 struct Segtree{
     vector<ll> t;
     int n;
