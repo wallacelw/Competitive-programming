@@ -66,21 +66,29 @@ class OpMOD{
         long long div(long long a, long long b){
             return mul(a, inv(b));
         }
-
         vector<long long> fact;
-
         void buildFact(long long n){ // from fact[0] to fact[n]; O(n)
             fact = vector<long long>(n+1);
             fact[0] = fact[1] = 1;
             for(long long i=2; i<=n; i++) fact[i] = mul(fact[i-1], i);
         }
-
         vector<long long> ifact;
-
         void buildIfact(long long n){ // from ifact[0] to ifact[n], requires FACT; O(n)
             ifact = vector<long long>(n+1);
             ifact[n] = inv(fact[n]);
             for(long long i=n-1; i>=0; i--) ifact[i] = mul(ifact[i+1], i+1);
         }
+        long long combination(long long n, long long k){ // n! / (n! (n-k)! )
+            return mul( mul(fact[n], ifact[k]) , ifact[n-k]); 
+        }
+        long long disposition(long long n, long long k){ // n! / (n-k)!
+            return mul(fact[n], ifact[n-k]);
+        }
 };
+
+OpMOD op;
+
+int32_t main(){sws;
+    op.buildFact(n);
+    op.buildIfact(n);
 ```
