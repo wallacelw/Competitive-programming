@@ -2,6 +2,8 @@
 
 **Solves**: LCA
 
+**OBS:** log2(1e9) ~= 30 ; log2(1e18) ~= 60
+
 ```cpp
 const int LOGMAX = 32;
 const int LLOGMAX = 62;
@@ -48,7 +50,7 @@ ll lca(ll a, ll b){  // O(log(N))
 
 int32_t main(){sws;
     ll n; cin >> n;
-    
+
     N = n;
     binary_lifting();
 ```
