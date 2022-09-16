@@ -4,11 +4,13 @@
 
 ```cpp
 const int MOD = 1e9+7;
+
 struct intM{
     long long val;
 
-    intM(long long n=0){ // não sei se esse é o melhor jeito de fazer isso
+    intM(long long n=0){
         val = n%MOD;
+        if (val < 0) val += MOD;
     }
     
     bool operator ==(const intM& b) const{
@@ -39,5 +41,9 @@ struct intM{
         return (*this) * (b ^ (MOD-2));
     }
 
+    ostream& operator <<(ostream& os, const intM& a){
+        os << a.val;
+        return os;
+    }
 };
 ```
