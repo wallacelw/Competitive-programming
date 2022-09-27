@@ -12,8 +12,7 @@ void dijkstra(ll start){
     while( !pq.empty() ){
         ll u, p1; tie(p1, u) = pq.top(); pq.pop();
         if (p1 > d[u]) continue;
-        for(auto elem : g[u]){
-            ll v, p2; tie(v, p2) = elem;
+        for(auto [v, p2] : g[u]){
             if (d[u] + p2 < d[v]){
                 d[v] = d[u] + p2;
                 pq.push({d[v], v});
