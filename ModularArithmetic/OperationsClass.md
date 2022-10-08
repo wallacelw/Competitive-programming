@@ -37,8 +37,6 @@ class OpMOD{
 
 It assumes that all numbers that are given are already between [0, MOD)
 
---> Probably works, xD. Careful with factorials function
-
 ```cpp
 class OpMOD{
     public:

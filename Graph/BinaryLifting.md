@@ -1,8 +1,8 @@
 # Binary lifting
 
-**Solves**: LCA
+**Solves**: LCA, O(log) travelling in a tree
 
-**OBS:** log2(1e9) ~= 30 ; log2(1e18) ~= 60
+**OBS:** log2(1e5) ~= 17; log2(1e9) ~= 30 ; log2(1e18) ~= 60
 
 ```cpp
 const int LOGMAX = 32;

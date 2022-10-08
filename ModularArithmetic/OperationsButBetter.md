@@ -1,6 +1,4 @@
-# Modular Arithmetic
-
-## Basic operations with redundant MOD operators
+## Overloading operations struct
 
 ```cpp
 const int MOD = 1e9+7;

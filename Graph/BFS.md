@@ -1,7 +1,5 @@
 ## BFS
 
-### Global scope
-
 ```cpp
 queue<ll> fila;
 bool visited[MAX];
@@ -19,14 +17,12 @@ void bfs(){
         }
     }
 }
-```
 
-### Main scope
+int32_t main(){sws;
 
-```cpp
-memset(visited, 0, sizeof(visited));
-memset(distance, -1, sizeof(distance));
-
-d[1] = 0;
-fila.push(1);
+    memset(visited, 0, sizeof(visited));
+    memset(distance, -1, sizeof(distance));
+    d[1] = 0;
+    fila.push(1);
+}
 ```

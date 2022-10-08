@@ -78,3 +78,44 @@ struct Dinic {  // O( Vertices^2 * Edges)
     }
 };
 ```
+
+### How to use?
+
+Set an unique id for all nodes
+
+Remember to include the sink vertex and the source vertex. Usually *n+1* and *n+2*, *n* = max number of normal vertices
+
+use **dinic.addEdge** to add edges -> (from, to, normal way capacity, retro-capacity)
+
+use **dinic.flow(source_id, sink_id)** to receive maximum flow from source to sink through the network
+
+### Example
+
+```cpp
+int32_t main(){sws;
+    ll n, m; cin >> n >> m;
+    Dinic dinic;
+ 
+    for(ll i=1; i<=n; i++){
+        ll k; cin >> k;
+        for(ll j=0; j<k; j++){
+            ll empresa; cin >> empresa;
+            empresa += n;
+            dinic.addEdge(i, empresa, 1, 0);
+        }
+    }
+ 
+    ll source = n + m + 1;
+    ll sink = n + m + 2;
+ 
+    for(ll i=1; i<=n; i++){
+        dinic.addEdge(source, i, 1, 0);
+    }
+ 
+    for(ll j=1; j<=m; j++){
+        dinic.addEdge(j+n, sink, 1, 0);
+    }
+ 
+    cout << m - dinic.flow(source, sink) << endl;
+}
+```

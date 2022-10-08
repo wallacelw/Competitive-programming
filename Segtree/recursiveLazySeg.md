@@ -1,6 +1,6 @@
-# Recursive Segtree with Lazy propagation
+## Recursive Segtree with Lazy propagation
 
-## Código:
+### Código:
 
 ```cpp
 ll L=1, N; // L=1=left delimiter; N=right delimiter
@@ -100,8 +100,6 @@ class SegmentTreeLazy {
 };
 ```
 
-## Avisos
-
 ### Details
 
 **0 or 1-indexed**, depends on the arguments passed on to the default variables 
@@ -150,8 +148,8 @@ Uses a **merge function** to define how to join nodes
 
 **range_query(left, right, l, r, i)**: does a range query from *left* to *right* (inclusive) and returns a node with the result 
 
-
 ### Requires
+
 MAX variable 
 
 ## Problems
