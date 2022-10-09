@@ -2,26 +2,25 @@
 
 ## Código:
 ```cpp
-class DSU {
-    public:
-        vll group;
-        vll card;
-        DSU (long long n){
-            group = vll(n);
-            iota(group.begin(), group.end(), 0);
-            card = vll(n, 1);
-        }
-        long long find(long long i){
-            return (i == group[i]) ? i : (group[i] = find(group[i]));
-        }
-        void join(long long a ,long long b){
-            a = find(a);
-            b = find(b);
-            if (a == b) return;
-            if (card[a] < card[b]) swap(a, b);
-            card[a] += card[b];
-            group[b] = a;
-        }
+struct DSU{
+    vll group;
+    vll card;
+    DSU (long long n){
+        group = vll(n);
+        iota(group.begin(), group.end(), 0);
+        card = vll(n, 1);
+    }
+    long long find(long long i){
+        return (i == group[i]) ? i : (group[i] = find(group[i]));
+    }
+    void join(long long a ,long long b){
+        a = find(a);
+        b = find(b);
+        if (a == b) return;
+        if (card[a] < card[b]) swap(a, b);
+        card[a] += card[b];
+        group[b] = a;
+    }
 };
 ```
 
