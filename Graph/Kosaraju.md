@@ -5,6 +5,12 @@ Used for Finding strongly connected components (SCC)
 **Complexity** O(1) -> O(V + E), linear on number of edges and vertices 
 
 ```cpp
+vector<vll> g(MAX, vll());
+vector<vll> gi(MAX, vll()); // inverted edges
+bool vis[MAX]; // visited vertice?
+ll component[MAX]; // connected component of each vertice
+stack<ll> pilha; // for inverting order of transversal
+
 void dfs(ll u) {
     vis[u] = 1;
     for(auto v : g[u]) if (!vis[v]) dfs(v);
