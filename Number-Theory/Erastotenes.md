@@ -20,9 +20,11 @@ vector<int> crivo(int n){
 }
 ```
 
+### Optimized
+
 ```cpp
 // O (N log^2(N) ) -> Teorema de Merten
-vll crivoOtimizado(ll n){ 
+vll eratostenes(ll n){ 
     vll primes {2, 3};
     bitset<MAX> sieve;
     sieve.set();
