@@ -1,6 +1,5 @@
-# Crivo de Eratóstenes
+## Crivo de Eratóstenes
 
-## Código:
 ```cpp
 vector<int> crivo(int n){
     int max = 1e6;
@@ -13,6 +12,26 @@ vector<int> crivo(int n){
             primes.push_back(i);
 
             for(int j= i*i; j<=n; j += 2*i) // sieving all odd multiples of i >= i*i
+                sieve[j] = false;
+        }
+    }
+
+    return primes;
+}
+```
+
+```cpp
+// O (N log^2(N) ) -> Teorema de Merten
+vll crivoOtimizado(ll n){ 
+    vll primes {2, 3};
+    bitset<MAX> sieve;
+    sieve.set();
+
+    for(ll i=5, step=2; i<=n; i+=step, step = 6 - step){
+        if(sieve[i]){ // i is prime
+            primes.push_back(i);
+
+            for(ll j= i*i; j<=n; j += 2*i) // sieving all odd multiples of i >= i*i
                 sieve[j] = false;
         }
     }
