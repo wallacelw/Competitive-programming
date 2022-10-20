@@ -24,20 +24,18 @@ vector<int> crivo(int n){
 
 ```cpp
 // O (N log^2(N) ) -> Teorema de Merten
-vll eratostenes(ll n){ 
-    vll primes {2, 3};
+vll primes {2, 3};
+set<ll> isPrime = {2, 3};
+void eratostenes(ll n){ 
     bitset<MAX> sieve;
     sieve.set();
-
     for(ll i=5, step=2; i<=n; i+=step, step = 6 - step){
         if(sieve[i]){ // i is prime
             primes.push_back(i);
-
+            isPrime.insert(i);
             for(ll j= i*i; j<=n; j += 2*i) // sieving all odd multiples of i >= i*i
                 sieve[j] = false;
         }
     }
-
-    return primes;
 }
 ```
