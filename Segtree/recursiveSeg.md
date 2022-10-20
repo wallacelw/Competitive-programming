@@ -4,7 +4,86 @@ Data structure that creates parent vertices for a linear array to do faster comp
 
 ![Diagrama](segtree_diagram.png)
 
-## Código:
+## Clearer (min)
+
+```cpp
+// 1 indexed segtree for minimum
+ll L=1, R;
+struct Segtree {
+    struct Node {
+        ll mn;
+    };
+ 
+    vector<Node> tree;
+    vll v;
+    
+    Segtree(ll n) {
+        v.assign(n+1, 0);
+        tree.assign(4*(n+1), Node{});
+        R = n;
+    }
+ 
+    Node merge(Node a, Node b) {
+        Node tmp;
+        // merge operaton:
+        tmp.mn = min(a.mn, b.mn);
+        //
+        return tmp;
+    }
+ 
+    void build( ll l=L, ll r=R, ll i=1 ) {
+        if (l == r) {
+            Node tmp;
+            // leaf element:
+            tmp.mn = v[l];
+            //
+            tree[i] = tmp;
+        }
+        else {
+            ll mid = (l+r)/2;
+            build(l, mid, 2*i);
+            build(mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
+        }
+    }
+ 
+    void point_update(ll idx=1, ll val=0, ll l=L, ll r=R, ll i=1 ) {
+        if (l == r) {
+            // update operation:
+            Node tmp{val};
+            //
+            tree[i] = tmp;
+        }
+        else {
+            ll mid = (l+r)/2;
+            if (idx <= mid) point_update(idx, val, l, mid, 2*i);
+            else point_update(idx, val, mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
+        }
+    }
+ 
+    Node range_query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1) {
+        // left/right are the range limits for the update query
+            // l / r are the variables used for the vertex limits
+            if (right < l or r < left){
+                // null element
+                Node tmp{INF};
+                //
+                return tmp;
+            }
+            else if (left <= l and r <= right) return tree[i]; 
+            else{
+                int mid = (l+r)/2;
+                Node ansl = range_query(left, right, l, mid, 2*i);
+                Node ansr = range_query(left, right, mid+1, r, 2*i+1);
+                return merge(ansl, ansr);
+            }
+    }
+};
+```
+
+## Old (sum):
+
 ```cpp
 int L = 1, N; // L = 1 = left limit; N = right limit
 class SegmentTree {
