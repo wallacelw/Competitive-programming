@@ -1,8 +1,10 @@
 ## Kosaraju
 
-Used for Finding strongly connected components (SCC)
+Used for Finding strongly connected components (SCC) in a directed graph (digraph).
 
-**Complexity** O(1) -> O(V + E), linear on number of edges and vertices 
+**Complexity** O(1) -> O(V + E), linear on number of edges and vertices.
+
+**Remember** to also construct the inverse graph (*gi*).
 
 ```cpp
 vector<vll> g(MAX, vll());
