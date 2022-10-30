@@ -9,7 +9,8 @@
 vector<tlll> edges(MAX, tlll() );
 vll d(MAX, INF);
 
-void BellmanFord(ll n) {
+void BellmanFord(ll x = 1, ll n) {
+    d[x] = 0;
     for(ll i=0; i<n-1; i++) { // n-1 iterations will suffice 
         for(auto [u, v, w] : edges) if (d[u] + w < d[v]) {
               d[v] = d[u] + w;
