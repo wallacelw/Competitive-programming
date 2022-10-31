@@ -89,6 +89,8 @@ use **dinic.addEdge** to add edges -> (from, to, normal way capacity, retro-capa
 
 use **dinic.flow(source_id, sink_id)** to receive maximum flow from source to sink through the network
 
+**OBS:** It's possible to access *dinic.edge*, which is a vector that contains all edges and also its respective properties, like the **flow** passing through each edge. This can be used to matching problems for example.
+
 ### Example
 
 ```cpp
