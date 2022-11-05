@@ -3,22 +3,21 @@
 ```cpp
 vector<vll> g(MAX, vll());
 queue<ll> fila;
-bool visited[MAX];
-ll d[MAX]; // distance
+bool vis[MAX];
 
 void bfs(ll i){
-    memset(visited, 0, sizeof(visited));
-    memset(distance, -1, sizeof(distance));
+    memset(vis, 0, sizeof(vis));
     fila.push(i);
-
-    d[1] = 0; // 
+    vis[i] = 1;
+    
     while(!fila.empty()){
         ll u = fila.front(); fila.pop();
 
-        for(auto v : g[u]){
-            if (visited[v]) continue;
-            visited[v] = 1;
+        for(auto v : g[u]) if (!vis[v]) {
+            vis[v] = 1;
+
             d[v] = d[u] + 1;
+            
             fila.push(v);
         }
     }
