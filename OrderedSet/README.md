@@ -27,6 +27,9 @@ Ordered Set pode ser tornar um multiset se utilizar um pair do valor com um inde
 
 O set não precisa conter a chave sendo buscada pelo *order_of_key()*.
 
+*order_of_key()* returns index starting from 0;
+[0, n)
+
 ## Problemas
 
 Consegue computar em O(log(N)), quantos elementos são menores que K, utilizando o index.
