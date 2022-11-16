@@ -1,8 +1,10 @@
-## Tree Transversal - Pre order (childs -> node)
+## Euler Tour Technique (ETT)
 
-**AKA**: Euler Tour , Preorder time , DFS time 
+**AKA**: Preorder time , DFS time.
 
-Created an array that can have some properties like all child vetices are right after the node
+Flattening a tree into an array to easily query and update subtrees. This is achieved by doing a *Pre Order Tree Transversal:* (childs -> node), a simple *dfs* marking *entry times* and *leaving times*.
+
+Creates an array that can have some properties, like all child vetices are ordered after their respective roots.
 
 ```cpp
 vector<vector<int>> g(MAX, vector<int>());
