@@ -1,6 +1,7 @@
-# Fluxo
+## Fluxo
 
 ```cpp
+const ll N = 505; // number of nodes, including sink and source
 struct Dinic {  // O( Vertices^2 * Edges)
     struct Edge { 
         ll from, to, flow, cap;
@@ -87,7 +88,7 @@ use **dinic.addEdge** to add edges -> (from, to, normal way capacity, retro-capa
 
 use **dinic.flow(source_id, sink_id)** to receive maximum flow from source to sink through the network
 
-**OBS:** It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective properties, like the **flow** passing through each edge. This can be used to matching problems for example.
+**OBS:** It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective properties, like the **flow** passing through each edge. This can be used to **matching problems** with a bipartite graph and *1 capacity* for example.
 
 ### Example
 
