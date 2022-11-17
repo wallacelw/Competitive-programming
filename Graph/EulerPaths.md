@@ -8,21 +8,25 @@ A special case is the closed path, which is an **Eulerian Circuit** or **Euleria
 
 Similarly, a **Hamiltonian Path** consists of a path that transverses all **Vertices**.
 
-### Eulerian Path
+### Conditions for Eulerian Path existence
 
-To check if it is possible, there are only two conditions: 
+To check if it is possible, there is a need for connectivity: 
 
-**connectivity**, all vertices are connected, but there is no need for it to be strongly connected. To check connectivity, you can even consider a directed graph as undirected.
+**connectivity**, all vertices (that contains at least 1 edge) are connected. But there is no need for it to be strongly connected. To check connectivity, you can consider a directed graph as undirected and do a dfs.
 
-**same entry degree and leave degree for all vertices**, all vertices require *in-degree = out-degree*, which an exception to the initial vertice (1 more out-degree) and the final vertice (1 more in-degree).
+and also:
+
+![image](..\Aux-Images\EulerianPathExistence.png)
 
 ## Hierholzer Algorithm
 
 Find a Eulerian Path with a linear complexity of *O(Edges)*.
 
-### Example:
+### Example 1:
 
 Generating an Eulerian Path with Hierholzer, starting on node *1* and ending on node *n*.
+
+https://cses.fi/problemset/task/1693
 
 ```cpp
 vector<vll> g(MAX, vll());

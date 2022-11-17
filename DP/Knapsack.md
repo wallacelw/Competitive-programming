@@ -1,6 +1,6 @@
 # Knapsack
 
-![Demostração](Knapsack.gif)
+![Demostração](../Aux-Images/Knapsack.gif)
 
 Use int instead of long long for 10^8 size matrix
 
