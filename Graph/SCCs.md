@@ -1,6 +1,6 @@
 ## Kosaraju
 
-Used for Finding strongly connected components (SCC) in a directed graph (digraph).
+Used for **Finding Strongly Connected Somponents** (SCCs) in a *directed graph* (digraph).
 
 **Complexity** O(1) -> O(V + E), linear on number of edges and vertices.
 

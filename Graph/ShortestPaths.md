@@ -1,4 +1,8 @@
-## Bellman-Ford for shortest paths
+## Single-Source Shortest Paths (SSSP)
+
+### Bellman-Ford for shortest paths
+
+**Supports** Negative edges!
 
 **Solves:** Finds all shortest paths from a initial node *x* to every other node
 
@@ -19,7 +23,7 @@ void BellmanFord(ll x = 1, ll n) {
 }
 ```
 
-## Variation to find a negative cycle
+#### Variation of Bellman-Ford to find a negative cycle
 
 Iterate *n* times and if in the last iteration a distance if reduced, it means that there is a negative cycle.
 Save this last node, whose distance was reduced, and, which a parent array, reconstruct the negative cycle.
@@ -58,5 +62,31 @@ void find_negative_cycle(ll n){ // O (Vertices * Edges)
         return;
     } 
     // No Negative cycles
+}
+```
+
+### Djikstra
+
+**Only Works for Non-Negative Weighted Graph**
+
+```cpp
+priority_queue<pll, vpll, greater<pll>> pq;
+vector<vpll> g(MAX, vpll());
+vll d(MAX, INF);
+
+void dijkstra(ll start){
+    pq.push({0, start});
+    d[start] = 0;
+
+    while( !pq.empty() ){
+        auto [p1, u] = pq.top(); pq.pop();
+        if (p1 > d[u]) continue;
+        for(auto [v, p2] : g[u]){
+            if (d[u] + p2 < d[v]){
+                d[v] = d[u] + p2;
+                pq.push({d[v], v});
+            }
+        }
+    }
 }
 ```
