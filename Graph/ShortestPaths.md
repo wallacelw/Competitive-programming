@@ -68,7 +68,7 @@ void BellmanFord_Cycle(ll start, ll n){ // O (Vertices * Edges)
 }
 ```
 
-### Djikstra
+### Dijkstra
 
 **Only Works for Non-Negative Weighted Graph**
 
@@ -91,5 +91,37 @@ void dijkstra(ll start){
             }
         }
     }
+}
+```
+
+### Modified Dijkstra for K-Shortest Paths
+
+```cpp
+priority_queue<pll, vpll, greater<pll>> pq;
+vector<vpll> g(MAX, vpll());
+vll cnt(MAX, 0);
+
+// modified Dijkstra for K-Shortest Paths (not necessarily the same distance)
+vll dijkstraKSP(ll start, ll end, ll k){ // O(K * M) = O(K * Edges) 
+
+    vll ans;
+    pq.push({0, start});
+
+    while( cnt[end] < k ){
+        auto [dis, u] = pq.top(); pq.pop();
+
+        if (cnt[u] == k) continue;
+        cnt[u] += 1;
+
+        if (u == end) { // found a shortest path 
+            ans.pb(dis); // adding the distance of this path
+        }
+
+        for(auto [v, w] : g[u]){
+            pq.push({dis+w, v});
+        }
+    }
+
+    return ans; // not ordered!
 }
 ```
