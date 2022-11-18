@@ -125,3 +125,57 @@ vll dijkstraKSP(ll start, ll end, ll k){ // O(K * M) = O(K * Edges)
     return ans; // not ordered!
 }
 ```
+
+### Extended Dijkstra
+
+Besides the **Shortest Path Distance**, 
+
+Also *Computes*: 
+
+- **how many shortest paths**;
+- **what is the minimum number of edges transversed in any shortest path**;
+- **what is the maximum number of edges transversed in any shortest path**;
+
+https://cses.fi/problemset/task/1202
+
+```cpp
+priority_queue<pll, vector<pll>, greater<pll>> pq;
+vector<vpll> g(MAX, vpll());
+vll d(MAX, LLINF);
+vll ways(MAX, 0);
+vll mn(MAX, LLINF);
+vll mx(MAX, -LLINF);
+
+void dijkstra(ll start){
+    pq.push({0, start});
+
+    ways[start] = 1;
+    d[start] = 0, mn[start] = 0, mx[start] = 0;
+
+    while( !pq.empty() ){
+        auto [p1, u] = pq.top(); pq.pop();
+
+        if (p1 > d[u]) continue;
+
+        for(auto [v, p2] : g[u]){
+            // reset info, shorter path found, previous ones are discarted
+            if (d[u] + p2 < d[v]){ 
+
+                ways[v] = ways[u];
+                mn[v] = mn[u]+1;
+                mx[v] = mx[u]+1;
+                d[v] = d[u] + p2;
+
+                pq.push({d[v], v});
+
+            }
+            // same distance, another path, update info
+            else if (d[u] + p2 == d[v]) { 
+                ways[v] = (ways[v] + ways[u]) % MOD;
+                mn[v] = min(mn[v], mn[u]+1);
+                mx[v] = max(mx[v], mx[u]+1);
+            }
+        }
+    }
+}
+```
