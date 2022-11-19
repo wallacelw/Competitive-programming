@@ -1,6 +1,8 @@
-# Ternary Search
+## Ternary Search
 
 **Complexity:** O( log(n) )
+
+**Requires EPS!**, precision usually defined in the question text
 
 ```cpp
 ld f(ld d){

@@ -1,4 +1,4 @@
-# Segtree with sum, max, min
+## Segtree with sum, max, min
 
 ```cpp
 #define int long long // need long long ? 

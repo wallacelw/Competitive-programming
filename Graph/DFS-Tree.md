@@ -1,5 +1,7 @@
 ## DFS Tree
 
+A *Back Edge* existence means that there is a cycle.
+
 ```cpp
 bool visited[MAX];
 vector<vll> g(MAX, vll());

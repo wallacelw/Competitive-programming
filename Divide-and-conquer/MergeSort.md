@@ -1,4 +1,4 @@
-# Merge sort
+## Merge sort
 
 ```cpp
 int merge(vector<int> &v, int l, int mid, int r){

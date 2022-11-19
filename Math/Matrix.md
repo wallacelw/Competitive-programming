@@ -1,6 +1,6 @@
-# Matrix
+## Matrix
 
-## Matrix operations
+### Matrix operations
 
 ```cpp
 struct Matrix{

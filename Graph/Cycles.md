@@ -1,5 +1,12 @@
 ## Find a Cycle
 
+*vis[] array* stores the current state of a node:
+**-1** -> not visited
+**0** -> explored, not ended (still need to end edge transversals)
+**1** -> visited, totally explored (no more edges to transverse)
+
+*p[] array* stores the descedent of each node, to reconstruct cycle components
+
 ```cpp
 vector<vll> g(MAX, vll());
 vll vis(MAX, -1);

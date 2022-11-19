@@ -1,6 +1,4 @@
-# Point struct
-
-## Código:
+## Point struct
 
 ```cpp
 struct Point{
@@ -52,7 +50,7 @@ struct Point{
 };
 ```
 
-## Teoria:
+### Teoria:
 
 Por definição, o produto escalar define o cosseno entre dois vetores:
 
@@ -80,4 +78,4 @@ For i in [1, N) :
 Area = abs(Area)
 ```
 
-Lembre-se de pegar o módulo da área para ignorar o sentido escolhido.
+*Lembre-se* de pegar o módulo da área para ignorar o sentido escolhido.

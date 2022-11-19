@@ -43,7 +43,7 @@ vector<ll> factorization(ll n){
 
 ## Pollard Rho
 
-**Complexity**:  better than O(sqrt(N)) :D
+**Complexity**:  better than O(sqrt(N)) *:D*
 
 **Returns**: a vector containing all the primes that divides *N* (There can be multiples instances of a prime and it is *not* ordered)
 

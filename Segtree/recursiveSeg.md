@@ -1,10 +1,10 @@
-# Recursive Classic Segtree
+## Recursive Classic Segtree
 
 Data structure that creates parent vertices for a linear array to do faster computation with binary agregation. 
 
 ![Diagrama](../Aux-Images/segtree_diagram.png)
 
-## Clearer (min)
+## Clearer version (min-seg)
 
 ```cpp
 // 1 indexed segtree for minimum
@@ -82,7 +82,7 @@ struct Segtree {
 };
 ```
 
-## Old (sum):
+## Old (sum-seg):
 
 ```cpp
 int L = 1, N; // L = 1 = left limit; N = right limit
@@ -213,7 +213,7 @@ Uses a **merge function** to define how to join nodes
 ### Requires
 MAX variable 
 
-## Problems
+### Problems
 
 - Range Sum Query, point update
 - Range Max/Min Query, point update

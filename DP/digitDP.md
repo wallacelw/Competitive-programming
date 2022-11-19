@@ -5,6 +5,7 @@ The rest of the states are defined by the problem
 
 ### Example1:
 
+Calculate the quantity of numbers with no consective equal digits
 
 ```cpp
 string s; // number 

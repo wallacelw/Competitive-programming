@@ -1,4 +1,4 @@
-# Z function
+## Z function
 
 ```cpp
 vector<int> z_function(string s) {

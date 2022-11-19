@@ -1,6 +1,7 @@
-# Binary search
+## Binary search
 
-## Código:
+Finds the first element that changes value in any monotonic function
+
 ```cpp
 bool attribute(int a){
     // add code here!!!!!
@@ -23,6 +24,4 @@ int search(int l=0, int r=1e9, int ans=0){
 }
 ```
 
-## Problems
-
-- Find an element in any monotonic function
+- 

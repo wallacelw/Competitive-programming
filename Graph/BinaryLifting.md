@@ -1,4 +1,4 @@
-# Binary lifting
+## Binary lifting
 
 **Solves**: LCA, O(log) travelling in a tree
 
@@ -53,4 +53,5 @@ int32_t main(){sws;
 
     N = n;
     binary_lifting();
+}
 ```

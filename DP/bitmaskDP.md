@@ -2,7 +2,7 @@
 
 use a bitmask of chosen itens to be a state of the DP
 
-## Example:
+### Example:
 
 https://cses.fi/problemset/task/1653/
 

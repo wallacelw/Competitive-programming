@@ -1,4 +1,4 @@
-# SUFFIX ARRAY
+## SUFFIX ARRAY
 
 **Complexity:** O(n * log (n))
 
@@ -43,7 +43,7 @@ vector<int> suffix_array(string s) {
 }
 ```
 
-# KASAI's ALGORITHM FOR LCP (longest common prefix)
+## KASAI's ALGORITHM FOR LCP (longest common prefix)
 
 **Complexity:** O(log (n))
 

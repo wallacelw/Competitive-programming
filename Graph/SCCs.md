@@ -41,7 +41,7 @@ void kosaraju(ll n){
 
 ### Can be extended to generate a Condensation Graph
 
-AKA: condensate/convert all SCC's into single vertices and create a new graph
+*AKA:* condensate/convert all SCC's into single vertices and create a new graph
 
 ```cpp
 vector<vll> gc(MAX, vll()); // Condensation Graph
