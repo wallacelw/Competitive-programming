@@ -23,5 +23,3 @@ int search(int l=0, int r=1e9, int ans=0){
     return ans;
 }
 ```
-
-- 
