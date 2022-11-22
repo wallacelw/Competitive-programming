@@ -1,7 +1,5 @@
 ## Recursive Segtree with Lazy propagation
 
-### Código:
-
 ```cpp
 ll L=1, N; // L=1=left delimiter; N=right delimiter
 class SegmentTreeLazy {
@@ -152,7 +150,7 @@ Uses a **merge function** to define how to join nodes
 
 MAX variable 
 
-## Problems
+### Problems
 
 - Range Sum Query, range update
 - Range Max/Min Query, range update

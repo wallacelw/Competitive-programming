@@ -1,4 +1,4 @@
-## Overloading operations struct
+## Overloading Operations Struct
 
 ```cpp
 const int MOD = 1e9+7;

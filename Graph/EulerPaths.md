@@ -20,11 +20,13 @@ and also:
 
 ## Hierholzer Algorithm
 
-Find a Eulerian Path with a linear complexity of *O(Edges)*.
+Find a **Eulerian Path/Circuit** with a linear complexity of *O(Edges)*.
+
+Using an *ordered set* on **Undirected Graphs** increases complexity by *log2(Edges)*. This can be optimized using a *list* with references to each bidirectional edge so that any reversed edge can be erased in *O(1)*.
 
 ### Example 1:
 
-Generating an Eulerian Path with Hierholzer, starting on node *1* and ending on node *n*.
+Generating an **Eulerian Path** with Hierholzer in a *Directed Graph*, starting on node *1* and ending on node *n*.
 
 https://cses.fi/problemset/task/1693
 
@@ -124,3 +126,104 @@ int32_t main(){ sws;
 }   
 ```
 
+### Example 2:
+
+Generating an **Eulerian Circuit** with Hierholzer in an *Undirected Graph*, starting on node *1* and also ending on node *1*.
+
+https://cses.fi/problemset/task/1691
+
+```cpp
+// adding log2(m) complexity due to ordered_set structure required for not using a same bidirectional edge twice
+#include <bits/extc++.h>
+using namespace __gnu_pbds;
+template <class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+vector<ordered_set<ll>> g(MAX, ordered_set<ll>()); // undirected graph
+
+vll degree(MAX, 0);
+
+vector<bool> vis(MAX, 0);
+
+ll dfsConnected(ll u) {
+    ll total = 1; vis[u] = 1;
+    for(auto v : g[u]) if (!vis[v]) {
+        total += dfsConnected(v);
+    }
+    return total;
+}
+
+// O(n log2(m)) -> O(Vertices * log2(Edges))
+bool checkPossiblePath(ll n, ll nodes) {
+
+    // check connectivity
+    vis.assign(n+1, 0);
+    ll connectedNodes = dfsConnected(1);
+    if (connectedNodes != nodes) return 0;
+
+    // check degrees
+    for(ll i=1; i<=n; i++) {
+        // all degrees need to be even
+        if (degree[i] % 2 == 1) return 0;
+    }
+
+    return 1;
+}
+
+// O(m * log2(m)) -> O(Edges * log2(m)) 
+vll hierholzer(ll start, ll n) { // generate an eulerian path, assuming there is only 1 end node
+    vll ans, pilha, idx(n+1, 0);
+
+    pilha.pb(start);
+    while(!pilha.empty()) {
+        ll u = pilha.back();
+        if (idx[u] < (ll) g[u].size()) {
+            ll v = *(g[u].find_by_order(idx[u]));
+            
+            pilha.pb( v );
+            g[v].erase(u);
+
+            idx[u] += 1;
+        }
+        else { // no more outEdge from node u, backtracking
+            ans.pb(u);
+            pilha.pop_back();
+        }
+    }
+    reverse(ans.begin(), ans.end());
+    return ans;
+}
+
+int32_t main(){ sws;
+    ll n, m; cin >> n >> m;
+
+    // OBS: some nodes are isolated and don't contribute to the eulerian circuit
+    ll participantNodes = 0;
+
+    for(ll i=0; i<m; i++) {
+        ll a, b; cin >> a >> b;
+
+        g[a].insert(b);
+        g[b].insert(a);
+
+        degree[a] += 1;
+        degree[b] += 1;
+
+        if (!vis[a]) {
+            vis[a] = 1;
+            participantNodes += 1; 
+        }
+        if (!vis[b]) {
+            vis[b] = 1;
+            participantNodes += 1; 
+        }
+    }
+
+    if ( !checkPossiblePath(n, participantNodes) ) {
+        cout << "IMPOSSIBLE" << endl;
+        return 0;
+    }
+
+    for(auto elem : hierholzer(1, n)) cout << elem << ' ';
+    cout << endl;
+}   
+```

@@ -1,6 +1,5 @@
-# Disjoint Set Union
+## Disjoint Set Union
 
-## Código:
 ```cpp
 struct DSU{
     vll group;
@@ -24,17 +23,12 @@ struct DSU{
 };
 ```
 
-## Avisos
+### Avisos
 
 Possui a optimização de **Compressão** e **Balanceamento**
 
-### Methods
-
-#### O(a(N)) ~ O(1):
+Both are: *O(a(N)) ~ O(1)*:
 
 **find(i)**: finds the representative of an element and returns it
 
-
 **join(a, b)**: finds both representatives and unites them, remaining only one for all. No return value
-
-## Problems

@@ -8,20 +8,20 @@ It can be done with a DFS, appending in the reverse order of transversal.
 
 ```cpp
 vector<vll> g(MAX, vll());
-vector<bool> visited;
+vector<bool> vis;
 vll topological;
 
 void dfs(ll u) {
-    visited[u] = 1;
-    for(auto v : g[u]) if (!visited[v]) dfs(v);
+    vis[u] = 1;
+    for(auto v : g[u]) if (!vis[v]) dfs(v);
     topological.pb(u);
 }
 
 // 1 - indexed
 void topological_sort(ll n) {
-    visited.assign(n+1, 0);
+    vis.assign(n+1, 0);
     topological.clear();
-    for(ll i=1; i<=n; i++) if (!visited[i]) dfs(i);
+    for(ll i=1; i<=n; i++) if (!vis[i]) dfs(i);
     reverse(topological.begin(), topological.end());
 }
 ```

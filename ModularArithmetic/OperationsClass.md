@@ -2,12 +2,15 @@
 
 ### Basic operations with redundant MOD operators
 
+Also contains combinatorics operations
+
 ```cpp
 struct OpMOD{
     vector<long long> fact, ifact;
 
     OpMOD () {}
 
+    // overloaded constructor that computes factorials
     OpMOD(long long n){ // from fact[0] to fact[n]; O(n)
         fact.assign(n+1 , 1);
         for(long long i=2; i<=n; i++) fact[i] = mul(fact[i-1], i);

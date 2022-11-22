@@ -1,8 +1,7 @@
-# Convex Hull
+## Convex Hull
 
 **Complexity:** O(n * log (n))
 
-## Código:
 ```cpp
 struct point{
     int x, y;

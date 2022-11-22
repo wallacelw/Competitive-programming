@@ -1,4 +1,4 @@
-# Iterative P-sum Classic Segtree with MOD
+## Iterative P-sum Classic Segtree with MOD
 
 ```cpp
 struct Segtree{

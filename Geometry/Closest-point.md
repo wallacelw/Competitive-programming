@@ -1,4 +1,4 @@
-# Closest-point (Divide and conquer)
+## Closest-point (Divide and conquer)
 
 ```cpp
 int solve(vector<point> x_s, vector<point> y_s){

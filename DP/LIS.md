@@ -1,4 +1,4 @@
-# LIS ( Longest Increasing Sequence )
+## LIS ( Longest Increasing Sequence )
 
 **Strictly Increasing**: ans_i < ans_(i+1)
 
