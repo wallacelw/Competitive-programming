@@ -72,6 +72,7 @@ bool checkPossiblePath(ll start, ll end, ll n, ll nodes) {
 }
 
 // O(m) -> O(Edges)
+// Hierholzer function can be used directly if there is already a garanted existance of an eulerian path/circuit.
 vll hierholzer(ll start, ll n) { // generate an eulerian path, assuming there is only 1 end node
     vll ans, pilha, idx(n+1, 0);
 
@@ -170,6 +171,7 @@ bool checkPossiblePath(ll n, ll nodes) {
 }
 
 // O(m * log2(m)) -> O(Edges * log2(m)) 
+// Hierholzer function can be used directly if there is already a garanted existance of an eulerian path/circuit.
 vll hierholzer(ll start, ll n) { // generate an eulerian path, assuming there is only 1 end node
     vll ans, pilha, idx(n+1, 0);
 

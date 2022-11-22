@@ -7,6 +7,41 @@ Algoritmos e ideias de programação competitiva
 g++ -Wall -Wextra -Wshadow -ggdb3 -D_GLIBCXX_ASSERTIONS -fmax-errors=2 -std=c++17 -O3 test.cpp -o test
 ```
 
+## Template:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define sws cin.tie(0)->sync_with_stdio(0)
+
+#define endl '\n'
+#define ll long long
+#define vll vector<ll>
+#define pb push_back
+#define ld long double
+#define vld vector<ld>
+#define pll pair<ll, ll>
+#define vpll vector<pll>
+#define ff first
+#define ss second
+#define tlll tuple<ll, ll, ll>
+
+#define teto(a, b) ((a+b-1)/(b))
+#define LSB(i) ((i) & -(i))
+#define dbg(a) " [ " << #a << " = " << a << " ] "
+
+const int MAX = 2e5+10;
+const long long MOD = 1e9+7;
+const int INF = 0x3f3f3f3f;
+const long long LLINF = 0x3f3f3f3f3f3f3f3f;
+const long double EPS = 1e-7;
+const long double PI = acos(-1);
+
+int32_t main(){ sws;
+
+}
+```
+
 ---
 
 # BIT-FenwickTree
@@ -397,9 +432,7 @@ struct Dinic {  // O( Vertices^2 * Edges)
 
     ll run(ll s, ll sink, ll minE) {
         if (s == sink) return minE;
-
         ll ans = 0;
-
         for(; px[s] < (int)g[s].size(); px[s]++){
             ll e = g[s][ px[s] ];
             auto &v = edges[e], &rev = edges[e^1];
@@ -444,7 +477,6 @@ struct Dinic {  // O( Vertices^2 * Edges)
         Edge e = {u, v, 0, c};
         edges.pb(e);
         g[u].pb(ne++);
-
         e = {v, u, 0, rc};
         edges.pb(e);
         g[v].pb(ne++);
@@ -457,6 +489,14 @@ struct Dinic {  // O( Vertices^2 * Edges)
         memset(qu, 0, sizeof(qu));
         memset(px, 0, sizeof(px));
         qt = 0; pass = 0;
+    }
+
+    vpll cut() { // OBS: cut set cost is equal to max flow
+        vpll cuts;
+        for (auto [from, to, flow, cap]: edges)
+            if (flow == cap and vis[from] == pass and vis[to] < pass and cap > 0)
+                cuts.pb({from, to});
+        return cuts;
     }
 };
 ```
@@ -502,6 +542,33 @@ int32_t main(){sws;
  
     cout << m - dinic.flow(source, sink) << endl;
 }
+```
+
+## Minimum Cut
+
+Another problem solved by network flow is the **minimum cut**.
+
+Let’s define an **s-t cut C** = *(S-component, T-component)* as a partition of *V ∈ G* such that source *s ∈ S-component* and sink *t ∈ T-component*. Let’s also define a cut-set of C to be the set {(u, v) ∈ E | u ∈ S-component, v ∈ T-component} such that if all edges in the cut-set of C are removed, the Max Flow from s to t is 0 (i.e., s and t are disconnected). The cost of an s-t cut C is defined by the sum of the capacities of the edges in the cut-set of C.
+
+The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS) from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value mf. This is the minimum over all possible s-t cuts values.
+
+### Example:
+
+https://cses.fi/problemset/task/1695/
+
+```cpp
+int32_t main(){ sws;
+    ll n, m; cin >> n >> m;
+    Dinic dinic;
+    for(ll i=0; i<m; i++) {
+        ll u, v; cin >> u >> v;
+        dinic.addEdge(u, v, 1, 1);
+    }
+    dinic.flow(1, n);
+    vpll ans = dinic.cut();
+    cout << ans.size() << endl;
+    for(auto [u, v] : ans) cout << u << ' ' << v << endl;
+}   
 ```
 
 
@@ -700,6 +767,173 @@ Area = abs(Area)
 
 # Graph
 
+## SAT (Boolean satisfiability problem)
+
+SAT is NP-Complete
+
+### 2-SAT (2-satisfiability)
+
+2-SAT is a restriction of the SAT problem, in 2-SAT every clause has exactly two literals.
+
+Can be solved with graphs in *O(Vertices + Edges)*.
+
+```cpp
+// 0-idx graph !!!!
+struct TwoSat {
+    ll N; // needs to be the twice of the number of variables
+    // node with idx 2x => variable x
+    // node with idx 2x+1 => negation of variable x
+
+    vector<vll> g, gt; 
+    // g = graph; gt = transposed graph (all edges are inverted)
+
+    TwoSat(ll n) { // number of variables
+        N = 2*n;
+        g.assign(N, vll());
+        gt.assign(N, vll());
+    }
+
+    vector<bool> used;
+    vll order, comp;
+    vector<bool> assignment;
+    //  assignment[x] == 1 -> x was assigned 
+    //  assignment[x] == 0 -> !x was assigned 
+
+    // dfs1 and dfs2 are part of kosaraju algorithm
+    void dfs1(ll u) {
+        used[u] = true;
+        for (ll v : g[u]) if (!used[v]) dfs1(v); 
+        order.pb(u); // topological order
+    }
+
+    void dfs2(ll u, ll timer) {
+        comp[u] = timer;
+        for (ll v : gt[u]) if (comp[v] == -1) dfs2(v, timer); 
+    }
+
+    bool solve_2SAT() {
+        order.clear();
+        used.assign(N, false);
+        for (ll i = 0; i < N; i++) if (!used[i]) dfs1(i);
+
+        comp.assign(N, -1);
+        for (ll i = 0, j = 0; i < N; i++) {
+            ll u = order[N - i - 1]; // reverse order
+            if (comp[u] == -1) dfs2(u, j++);
+        }
+
+        assignment.assign(N/2, false);
+        for (ll i = 0; i < N; i += 2) {
+            if (comp[i] == comp[i + 1]) return false; // x and !x contradiction
+            assignment[i / 2] = comp[i] > comp[i + 1];
+        }
+        return true;
+    }
+
+    void add_disjunction(ll a, bool na, ll b, bool nb) {
+        // disjunction of (a, b) => if one of the two variables is false, then the other one must be true
+        // na and nb signify whether a and b are to be negated 
+        // na == 1 => !a ; na == 0 => a
+        // nb == 1 => !b ; nb == 0 => b
+        a = 2*a ^ na;
+        b = 2*b ^ nb;
+        ll neg_a = a ^ 1;
+        ll neg_b = b ^ 1;
+        g[neg_a].pb(b);
+        g[neg_b].pb(a);
+        gt[b].pb(neg_a);
+        gt[a].pb(neg_b);
+    }
+};
+```
+
+#### Example of Application:
+
+https://cses.fi/problemset/task/1684/ (Giant Pizza)
+
+```cpp
+int32_t main(){ sws;
+    ll m, n; cin >> m >> n;
+ 
+    TwoSat twoSat(n);
+ 
+    for(ll i=0; i<m; i++) {
+        char charA, charB;
+        ll a, b;
+        cin >> charA >> a >> charB >> b;
+        // at least one => (!a 'disjoint' !b)
+        bool na = (charA == '-');
+        bool nb = (charB == '-');
+        twoSat.add_disjunction(a-1, na, b-1, nb);
+    }
+ 
+    if (!twoSat.solve_2SAT()) cout << "IMPOSSIBLE" << endl;
+    else {
+        for(ll i=0; i<n; i++) {
+            if (twoSat.assignment[i]) cout << "+ ";
+            else cout << "- ";
+        }
+        cout << endl;
+    }
+}   
+```
+
+### Extended Version
+
+Possibly faster implementation, with redundant functions to facilitate logic.
+
+```cpp
+struct TwoSat { // copied from kth-competitive-programming/kactl
+	ll N;
+	vector<vll> gr;
+	vll values; // 0 = false, 1 = true
+	TwoSat(ll n = 0) : N(n), gr(2*n) {} // crazy constructor, n = number of variables
+	ll addVar() { // (optional)
+		gr.emplace_back();
+		gr.emplace_back();
+		return N++;
+	}
+	void either(ll f, ll j) {
+		f = max(2*f, -1-2*f);
+		j = max(2*j, -1-2*j);
+		gr[f].push_back(j^1);
+		gr[j].push_back(f^1);
+	}
+	void atMostOne(const vll& li) { // (optional)
+		if ((ll)li.size() <= 1) return;
+		ll cur = ~li[0];
+		for(ll i=2; i<(ll)li.size(); i++) {
+			ll next = addVar();
+			either(cur, ~li[i]);
+			either(cur, next);
+			either(~li[i], next);
+			cur = ~next;
+		}
+		either(cur, ~li[1]);
+	}
+	vll _val, comp, z; ll time = 0;
+	ll dfs(ll i) {
+		ll low = _val[i] = ++time, x; z.push_back(i);
+		for(ll e : gr[i]) if (!comp[e])
+			low = min(low, _val[e] ?: dfs(e));
+		if (low == _val[i]) do {
+			x = z.back(); z.pop_back();
+			comp[x] = low;
+			if (values[x>>1] == -1)
+				values[x>>1] = x&1;
+		} while (x != i);
+		return _val[i] = low;
+	}
+	bool solve() {
+		values.assign(N, -1);
+		_val.assign(2*N, 0); comp = _val;
+		for(ll i=0; i<2*N; i++) if (!comp[i]) dfs(i);
+		for(ll i=0; i<N; i++) if (comp[2*i] == comp[2*i+1]) return 0;
+		return 1;
+	}
+};
+```
+
 ## BFS
 
 ```cpp
@@ -817,6 +1051,54 @@ void find_bridges(ll n) {
     memset(tin, 0, sizeof(tin));
     memset(low, 0, sizeof(low));
     for(ll i=1; i<=n; i++) if (!vis[i]) dfs(i);
+}
+```
+
+## Articulation Points and Bridges
+
+Finds all Cut-Vertices and Cut-Edges in a single dfs tranversal O(V+E)
+
+**Maybe is working, maybe it's not, needs testing for exquisite graphs, like cliques**
+
+```cpp
+vector<vll> g(MAX, vll());
+vll tin(MAX, -1), low(MAX, 0);
+// tin[] = the first time a node is visited ("time in")
+// if tin[u] != -1, u was visited
+// low[] = lowest first_time of any node reachable by the current node
+
+ll root = -1, rootChildren = 0, timer = 0;
+// root = the root of a dfs transversal, rootChildren = number of direct descedentes of the root
+
+vector<bool> isArticulation(MAX, 0); // this vector exists, because we can define several time if a node is a cut vertice
+vll articulations; // cut vertices
+vpll bridges; // cut edges
+
+void dfs(ll u, ll p) {
+    low[u] = tin[u] = timer++;
+
+    for(auto v : g[u]) if (v != p) {
+        if (tin[v] == -1) { // not visited
+            if (u == root) rootChildren += 1;
+
+            dfs(v, u);
+
+            if (low[v] >= tin[u]) isArticulation[u] = 1;
+            if (low[v] > tin[u]) bridges.pb({u, v});
+        }
+
+        low[u] = min(low[u], low[v]);
+    }
+}
+
+void findBridgesAndPoints(ll n) {
+    timer = 0;
+    for(ll i=1; i<=n; i++) if (tin[i] == -1) {
+        root = i; rootChildren = 0;
+        dfs(i, -1);
+        if (rootChildren > 1) isArticulation[i] = 1;
+    }
+    for(ll i=1; i<=n; i++) if (isArticulation[i]) articulations.pb(i);
 }
 ```
 
@@ -1309,6 +1591,8 @@ void dijkstra(ll start){
 }
 ```
 
+**OBS** Dijkstra can be modified for the opposite operation: *longest paths*.
+
 ### Modified Dijkstra for K-Shortest Paths
 
 ```cpp
@@ -1394,6 +1678,16 @@ void dijkstra(ll start){
     }
 }
 ```
+
+## Terminology:
+
+**Clique**: a subset of vertices of an *undirected graph* such that every two distinct vertices in the clique are adjacent.
+
+**Articulation Points ( Cut Vertices )**: *A vertex* whose remotion would split a connected component and create more *connected components*.
+
+**Bridges ( Cut Edges )**: *An Edge* whose remotion would split a connected component and increase the number of *connected components* present. Also called *isthmus* or *cut arc*.
+
+
 
 ## Topological Sort
 
@@ -1842,8 +2136,6 @@ int search(int l=0, int r=1e9, int ans=0){
     return ans;
 }
 ```
-
-- 
 
 ## Ternary Search
 
