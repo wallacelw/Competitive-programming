@@ -25,7 +25,7 @@ struct OpMOD{
     }
 
     ll sub(ll a, ll b){
-        return ( (a%MOD) - (b%MOD) + MOD ) % MOD;
+        return ( ((a%MOD) - (b%MOD)) + MOD ) % MOD;
     }
 
     ll mul(ll a, ll b){
@@ -49,25 +49,32 @@ struct OpMOD{
     }
 
     // n! / (n! (n-k)! )
-    ll combination(ll n, ll k){ // Combinação/Binomio de Newton
+    ll combination(ll n, ll k){ // "Combinação/Binomio de Newton"
         return mul( mul(fact[n], ifact[k]) , ifact[n-k]); 
     }
 
     // n! / (n-k)!
-    ll disposition(ll n, ll k){ // Arranjo
+    ll disposition(ll n, ll k){ // "Arranjo Simples"
         return mul(fact[n], ifact[n-k]);
     }
 
     // n! 
-    ll permutation(ll n){ // Permutação
+    ll permutation(ll n){ // "Permutação Simples"
         return fact[n];
     }
 
     // n! / (k1! k2! k3!)
-    ll permutationRepetition(ll n, vll x) { // Permutação com Repetição 
+    ll permutationRepetition(ll n, vll x) { // "Permutação com Repetição" 
         ll tmp = fact[n];
         for(auto k : x) tmp = mul(tmp, ifact[k]);
         return tmp;
+    }
+
+    // (n+m-1)! / ((n-1)! (m!)) 
+    ll starBars(ll n, ll m) { // "pontos e virgulas"
+        // n Groups -> n-1 Bars
+        // m Stars
+        return combination(n+m-1, m);
     }
 };
 
