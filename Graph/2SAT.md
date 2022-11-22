@@ -111,6 +111,8 @@ int32_t main(){ sws;
 
 ### Extended Version
 
+Possibly faster implementation, with redundant functions to facilitate logic.
+
 ```cpp
 struct TwoSat { // copied from kth-competitive-programming/kactl
 	ll N;
