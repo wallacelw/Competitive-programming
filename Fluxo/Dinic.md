@@ -14,9 +14,7 @@ struct Dinic {  // O( Vertices^2 * Edges)
 
     ll run(ll s, ll sink, ll minE) {
         if (s == sink) return minE;
-
         ll ans = 0;
-
         for(; px[s] < (int)g[s].size(); px[s]++){
             ll e = g[s][ px[s] ];
             auto &v = edges[e], &rev = edges[e^1];
@@ -61,7 +59,6 @@ struct Dinic {  // O( Vertices^2 * Edges)
         Edge e = {u, v, 0, c};
         edges.pb(e);
         g[u].pb(ne++);
-
         e = {v, u, 0, rc};
         edges.pb(e);
         g[v].pb(ne++);
@@ -74,6 +71,14 @@ struct Dinic {  // O( Vertices^2 * Edges)
         memset(qu, 0, sizeof(qu));
         memset(px, 0, sizeof(px));
         qt = 0; pass = 0;
+    }
+
+    vpll cut() { // OBS: cut set cost is equal to max flow
+        vpll cuts;
+        for (auto [from, to, flow, cap]: edges)
+            if (flow == cap and vis[from] == pass and vis[to] < pass and cap > 0)
+                cuts.pb({from, to});
+        return cuts;
     }
 };
 ```
@@ -129,3 +134,21 @@ Let’s define an **s-t cut C** = *(S-component, T-component)* as a partition of
 
 The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS) from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value mf. This is the minimum over all possible s-t cuts values.
 
+### Example:
+
+https://cses.fi/problemset/task/1695/
+
+```cpp
+int32_t main(){ sws;
+    ll n, m; cin >> n >> m;
+    Dinic dinic;
+    for(ll i=0; i<m; i++) {
+        ll u, v; cin >> u >> v;
+        dinic.addEdge(u, v, 1, 1);
+    }
+    dinic.flow(1, n);
+    vpll ans = dinic.cut();
+    cout << ans.size() << endl;
+    for(auto [u, v] : ans) cout << u << ' ' << v << endl;
+}   
+```
