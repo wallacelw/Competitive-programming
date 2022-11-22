@@ -76,6 +76,18 @@ struct OpMOD{
         // m Stars
         return combination(n+m-1, m);
     }
+
+    // !n = (n-1) * ( !(n-1) + !(n-2) )
+    vll subfactorial; // derangements
+    void computeSubfactorials(ll n) {
+        subfactorial.assign(n+1, 0);
+        subfactorial[0] = 1;
+        // !0 = 1
+        // !1 = 0
+        for(ll i=2; i<=n; i++) {
+            subfactorial[i] = mul( (i-1) , add(subfactorial[i-1], subfactorial[i-2]) );
+        }
+    }
 };
 
 // remember to pass a number delimeter (n) to precompute factorials 
