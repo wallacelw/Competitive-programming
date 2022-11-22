@@ -94,6 +94,8 @@ void dijkstra(ll start){
 }
 ```
 
+**OBS** Dijkstra can be modified for the opposite operation: *longest paths*.
+
 ### Modified Dijkstra for K-Shortest Paths
 
 ```cpp
