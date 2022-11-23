@@ -4,7 +4,7 @@
 
 ```cpp
 struct Matrix{
-    vector<vector<int>> M, IND;
+    vector<vll> M, IND;
     
     Matrix(vector<vector<int>> mat){
         M = mat;
@@ -58,6 +58,71 @@ struct Matrix{
         else{
             return (*this) * aux;
         }
+    }
+};
+```
+
+### Another Version with separated Identity
+
+```cpp
+Matrix IdentityM(5, 5, 1);
+struct Matrix{
+    vector<vll> M;
+    
+    Matrix(vector<vll> mat) {
+        M = mat;
+    }
+    
+    // identity == 0 => Empty matrix constructor
+    // identity == 1 => generates a Identity Matrix
+    Matrix(ll row, ll col, bool identity = 0){
+        M.assign(row, vll(col, 0));
+
+        if (identity) // row == col
+            for(ll i=0; i<row; i++)
+                M[i][i] = 1;
+    }
+
+    // A+B ; needs (sizeof(A) == sizeof(B))
+    Matrix operator +(const Matrix &B) const{
+        ll row = M.size(); ll col = M[0].size();
+
+        Matrix ans(row, col);
+
+        for(ll i=0; i<row; i++){
+            for(ll j=0; j<col; j++){
+                ans.M[i][j] = (M[i][j] + B.M[i][j]) % MOD;
+            }
+        }
+        return ans;
+    }
+    // A*B (A.column == B.row)
+    Matrix operator *(const Matrix &B) const{ 
+        ll rowA = M.size(); ll colB = B.M[0].size();
+        ll colA; ll rowB = colA = M[0].size();
+
+        Matrix ans(rowB, colA);
+
+        for(ll i=0; i<rowA; i++){
+            for(ll j=0; j<colA; j++){
+                ll sum=0;
+                for(ll k=0; k<rowB; k++){
+                    sum += (M[i][k] * B.M[k][j]) % MOD;
+                    sum %= MOD;
+                }
+                ans.M[i][j] = sum;
+            }
+        }
+        return ans;
+    }
+
+    Matrix operator ^(const ll n) const{ // Need identity Matrix
+        if (n == 0) return IdentityM;
+        if (n == 1) return (*this);
+        Matrix aux = (*this) ^ (n/2);
+        aux = aux * aux;
+        if(n % 2 == 0) return aux;
+        else return (*this) * aux;
     }
 };
 ```
