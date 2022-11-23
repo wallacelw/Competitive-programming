@@ -62,25 +62,26 @@ struct Matrix{
 };
 ```
 
-### Another Version with separated Identity
+### Another Version with long long and MOD
 
 ```cpp
-Matrix IdentityM(5, 5, 1);
 struct Matrix{
-    vector<vll> M;
+    vector<vll> M, Identity;
     
     Matrix(vector<vll> mat) {
         M = mat;
     }
     
     // identity == 0 => Empty matrix constructor
-    // identity == 1 => generates a Identity Matrix
+    // identity == 1 => also generates a Identity Matrix
     Matrix(ll row, ll col, bool identity = 0){
         M.assign(row, vll(col, 0));
 
-        if (identity) // row == col
+        if (identity) { // row == col
+            Identity.assign(row, vll(col, 0));
             for(ll i=0; i<row; i++)
-                M[i][i] = 1;
+                Identity[i][i] = 1;
+        }
     }
 
     // A+B ; needs (sizeof(A) == sizeof(B))
@@ -98,7 +99,7 @@ struct Matrix{
     }
     // A*B (A.column == B.row)
     Matrix operator *(const Matrix &B) const{ 
-        ll rowA = M.size(); ll colB = B.M[0].size();
+        ll rowA = M.size();
         ll colA; ll rowB = colA = M[0].size();
 
         Matrix ans(rowB, colA);
@@ -117,7 +118,7 @@ struct Matrix{
     }
 
     Matrix operator ^(const ll n) const{ // Need identity Matrix
-        if (n == 0) return IdentityM;
+        if (n == 0) return Identity;
         if (n == 1) return (*this);
         Matrix aux = (*this) ^ (n/2);
         aux = aux * aux;
@@ -125,4 +126,50 @@ struct Matrix{
         else return (*this) * aux;
     }
 };
+```
+
+#### Usage
+
+For faster linear recurrence computation with matrix exponentiation. 
+
+Base * Operator^(n) = Result[n]
+
+**Example:**
+
+*Recorrence:*
+dp[i] = dp[i-1] + dp[i-2] + dp[i-3] + dp[i-4] + dp[i-5] + dp[i-6]
+
+Base Matrix
+[dp[5], dp[4], dp[3], dp[2], dp[1], dp[0]]
+
+* Operator Matrix ^ 1
+[1, 1, 0, 0, 0, 0]
+[1, 0, 1, 0, 0, 0]
+[1, 0, 0, 1, 0, 0]
+[1, 0, 0, 0, 1, 0]
+[1, 0, 0, 0, 0, 1]
+[1, 0, 0, 0, 0, 0]
+
+= Result Matrix
+[dp[n+5], dp[n+4], dp[n+3], dp[n+2], dp[n+1], dp[n]]
+
+```cpp
+int32_t main(){ sws;
+    ll n; cin >> n;
+    Matrix op(6, 6, 1);
+    op.M[0] = {1, 1, 0, 0, 0, 0};
+    op.M[1] = {1, 0, 1, 0, 0, 0};
+    op.M[2] = {1, 0, 0, 1, 0, 0};
+    op.M[3] = {1, 0, 0, 0, 1, 0};
+    op.M[4] = {1, 0, 0, 0, 0, 1};
+    op.M[5] = {1, 0, 0, 0, 0, 0};
+
+    Matrix base(vector(1, vll({16, 8, 4, 2, 1, 1})));
+    if (n <= 5) cout << base.M[0][5-n] << endl; 
+    else {
+        op = op^(n-5);
+        Matrix ans = base * op;
+        cout << ans.M[0][0] << endl;
+    }
+}   
 ```
