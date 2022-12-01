@@ -10,10 +10,11 @@ g++ -Wall -Wextra -Wshadow -ggdb3 -D_GLIBCXX_ASSERTIONS -fmax-errors=2 -std=c++1
 ## Template:
 
 ```cpp
+// Needed
 #include <bits/stdc++.h>
 using namespace std;
 #define sws cin.tie(0)->sync_with_stdio(0)
-
+// Life Quality
 #define endl '\n'
 #define ll long long
 #define vll vector<ll>
@@ -25,11 +26,13 @@ using namespace std;
 #define ff first
 #define ss second
 #define tlll tuple<ll, ll, ll>
-
+// Remainders
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
-#define dbg(a) " [ " << #a << " = " << a << " ] "
-
+// Debugging
+#define db(a) " [ " << #a << " = " << a << " ] "
+template <typename... A> void dbg(A const&... a) { ((cerr << db(a)), ...); cerr << endl; }
+// Constants
 const int MAX = 2e5+10;
 const long long MOD = 1e9+7;
 const int INF = 0x3f3f3f3f;
