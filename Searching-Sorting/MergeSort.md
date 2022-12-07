@@ -1,5 +1,7 @@
 ## Merge sort
 
+Merge Sort with number of inversions counter.
+
 ```cpp
 int merge(vector<int> &v, int l, int mid, int r){
     int i=l, j=mid+1, swaps=0;
