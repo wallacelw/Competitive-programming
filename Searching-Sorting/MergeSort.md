@@ -13,7 +13,7 @@ int merge(vector<int> &v, int l, int mid, int r){
             ans.push_back(v[i]);
             i++;
         }
-        if(i > mid or (v[j] < v[i] and j <= r)){
+        else if(i > mid or (v[j] < v[i] and j <= r)){
             ans.push_back(v[j]);
             j++;
             swaps = swaps + abs(mid+1-i);
@@ -44,58 +44,37 @@ int merge_sort(vector<int> &v, vector<int> &ans, int l, int r){
 
 ### Updated
 
+Directly updates the *v* vector. Also return the number of swaps (inversions).
+
+**O(N log(N))**
+
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-#define sws cin.tie(0)->sync_with_stdio(0)
- 
-#define endl '\n'
-#define ll long long
-#define ld long double
-#define vll vector<ll>
-#define vld vector<ld>
-#define ff first
-#define ss second
-#define pll pair<ll, ll>
-#define tlll tuple<ll, ll, ll>
-#define vpll vector<pll>
-#define pb push_back
- 
-#define teto(a, b) ((a+b-1)/(b))
-#define LSB(i) ((i) & -(i))
-#define db(a) " [ " << #a << " = " << a << " ] "
-template <typename... A> void dbg(A const&... a) { ((cerr << db(a)), ...); cerr << endl; }
 
-const int MAX = 2e5+10;
-const long long MOD = 1e9+7;
-const int INF = 0x3f3f3f3f;
-const long long LLINF = 0x3f3f3f3f3f3f3f3f;
-const long double EPS = 1e-7;
-const long double PI = acos(-1);
-
+// O(N)
 ll merge(vll &v, ll l, ll r) {
     ll i = l, mid = (l+r)/2, j = mid+1, swaps = 0;
     vll ans;
 
-    while(i <= mid or j <= r){
+    while(i <= mid or j <= r) {
 
         if(j > r or (v[i] <= v[j] and i <= mid)) {
             ans.pb(v[i]);
-            i++;
+            i += 1;
         }
-        if(i > mid or (v[j] < v[i] and j <= r)){
+
+        else if(i > mid or (v[j] < v[i] and j <= r)){
             ans.pb(v[j]);
-            j++;
-            swaps += mid+1 - i;
+            j += 1;
+            swaps += mid + 1 - i;
         }
     }
     
-    for(ll k=l; k<=r; k++)
-        v[k] = ans[k-l];
+    for(ll k=l; k<=r; k++) v[k] = ans[k-l];
 
     return swaps;
 }
 
+// O(log2(N))
 ll merge_sort(vll &v, ll l, ll r){
     if(l == r) return 0;
 
@@ -106,16 +85,4 @@ ll merge_sort(vll &v, ll l, ll r){
 
     return swaps;
 }
-
-int32_t main() { sws;
-    ll t; cin >> t;
-    while(t--) {
-        ll n; cin >> n;
-        vll x(n);
-        for(ll i=0; i<n; i++) cin >> x[i];
-        cout << merge_sort(x, 0, n-1) << endl;
-        for(ll i=0; i<n; i++) cout << x[i] << " ";
-        cout << endl;
-    }
-}   
 ```
