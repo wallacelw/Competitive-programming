@@ -65,7 +65,7 @@ ll merge(vll &v, ll l, ll r) {
         else if(i > mid or (v[j] < v[i] and j <= r)){
             ans.pb(v[j]);
             j += 1;
-            swaps += mid + 1 - i;
+            swaps += (mid-1)+1; // mid-i+1 = elements remaining in the left subarray (same number of elements that will be swaped to the right)
         }
     }
     
