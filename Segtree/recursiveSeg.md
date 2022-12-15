@@ -85,7 +85,7 @@ struct Segtree {
 ## Even more polished (sum-seg):
 
 ```cpp
-// 1 indexed segtree for minimum
+// 1 indexed segtree for sum 
 ll L=1, R;
 struct Segtree {
     struct Node {
