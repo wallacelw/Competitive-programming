@@ -37,3 +37,41 @@ int32_t main(){sws;
 ## Find the distance of the longest path from all nodes
 
 It can be proven that to any node X, the maximum distance is either dist(X, A) or dist(X, B), which are the extremities of a diameter.
+
+```cpp
+vector<vll> g(MAX, vll());
+vll distA(MAX, 0);
+vll distB(MAX, 0);
+
+pll dfs(ll u, ll p, ll op) {
+    pll ans = {u, 0};
+    for(auto v : g[u]) if (v != p) {
+        if (op == 1) distA[v] = distA[u]+1;
+        else if (op == 2) distB[v] = distB[u]+1;
+
+        auto [node, length] = dfs(v, u, op);
+        
+        if (length + 1 > ans.ss)
+            ans = {node, length+1};
+    }
+    return ans;
+}
+
+int32_t main() { sws;
+    ll n; cin >> n;
+    for(ll i=0; i<n-1; i++) {
+        ll u, v; cin >> u >> v;
+        g[u].pb(v);
+        g[v].pb(u);
+    }
+
+    auto [nodeA, _t1] = dfs(1, -1, 0);
+    auto [nodeB, _t2] = dfs(nodeA, -1, 1);
+    dfs(nodeB, -1, 2);
+
+    for(ll i=1; i<=n; i++) {
+        cout << max(distA[i], distB[i]) << ' '; 
+    }
+    cout << endl;
+}   
+```
