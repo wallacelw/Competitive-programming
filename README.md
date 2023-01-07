@@ -30,8 +30,9 @@ using namespace std;
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
 // Debugging
-#define db(a) " [ " << #a << " = " << a << " ] "
-template <typename... A> void dbg(A const&... a) { ((cerr << db(a)), ...); cerr << endl; }
+#define db(a) cerr << " [ " << #a << " = " << a << " ] " << endl;
+#define debug(a...) cerr<<#a<<": ";for(auto &b:a)cerr<<b<<" ";cerr<<endl;
+template <typename... A> void dbg(A const&... a) { ((cerr << "{" << a << "} "), ...); cerr << endl; }
 // Constants
 const int MAX = 2e5+10;
 const long long MOD = 1e9+7;
