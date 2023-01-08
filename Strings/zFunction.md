@@ -42,6 +42,14 @@ int32_t main() { sws;
 
 **OBS:** A border of a string is a prefix that is also a suffix of the string but not the whole string. For example, the borders of *abcababcab* are *ab* and *abcab*.
 
+Works because *z[i] == j* is the condition when the common characters of z[i] reaches the end of the string. For example:
+
+*<ins>ab</ins>cababc<ins>ab</ins>*
+
+z[8] = 2
+
+**ab** is the border;
+
 ```cpp
 int32_t main(){ sws;
     string s; cin >> s;
@@ -55,3 +63,28 @@ int32_t main(){ sws;
 }
 ```
 
+- Find all period lengths of a string.
+
+**OBS:** A period of a string is a prefix that can be used to generate the whole string by repeating the prefix. The last repetition may be partial. For example, the periods of *abcabca* are *abc*, *abcabc* and *abcabca*.
+
+Works because *z[i] + i >= n* is the condition when the common characters of z[i] in addition to the elements already passed, exceeds or is equal to the end of the string. For example:
+
+*abaababa<ins>ab</ins>*
+
+z[8] = 2
+
+**abaababa** is the period; the remaining (z[i] characters) are a prefix of the period; and when all these characters are combined, it can form the string (which has *n* characters).
+
+```cpp
+int32_t main(){ sws;
+    string s; cin >> s;
+    vll z = z_function(s);
+    ll n = s.length();
+    for(ll i=1; i<n; i++) {
+        if (z[i] + i >= n) {
+            cout << i << ' ';
+        }
+    }
+    cout << n << endl;
+}
+```
