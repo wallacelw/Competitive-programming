@@ -4,13 +4,14 @@
 
 **OBS:** log2(1e5) ~= 17; log2(1e9) ~= 30 ; log2(1e18) ~= 60
 
+**Use for deep trees:** LLOGMAX = 62;
+
 ```cpp
-const int LOGMAX = 32;
-const int LLOGMAX = 62;
+const ll LOGMAX = 32;
 
 vector<vll> g(MAX, vll());
-ll depth[MAX] = {}; // depth[1] = 0 
-ll jump[MAX][LOGMAX] = {}; // jump[v][k] -> 2^k antecessor of v
+ll depth[MAX]; // depth[1] = 0 
+ll jump[MAX][LOGMAX]; // jump[v][k] -> 2^k antecessor of v
 // 1 points to 0 and 0 is the end point loop
 ll N; // quantity of vertices of the tree
 
@@ -48,10 +49,10 @@ ll lca(ll a, ll b){  // O(log(N))
 }
 
 
-int32_t main(){sws;
+int32_t main(){ sws;
     ll n; cin >> n;
-
     N = n;
+
     binary_lifting();
 }
 ```
