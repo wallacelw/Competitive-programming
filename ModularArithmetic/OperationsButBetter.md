@@ -4,7 +4,7 @@
 const int MOD = 1e9+7;
 
 struct intM{
-    long long val;
+    long long val = 0;
 
     intM(long long n=0){
         val = n%MOD;
@@ -37,11 +37,6 @@ struct intM{
 
     intM operator /(const intM& b) const{ 
         return (*this) * (b ^ (MOD-2));
-    }
-
-    ostream& operator <<(ostream& os, const intM& a){
-        os << a.val;
-        return os;
     }
 };
 ```

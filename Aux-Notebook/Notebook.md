@@ -1,87 +1,6 @@
 # Competitive-programming
 Algoritmos e ideias de programação competitiva
 
-1. [Competitive-programming](#competitive-programming)
-   1. [Flags for compilation:](#flags-for-compilation)
-   2. [Template:](#template)
-2. [DP](#dp)
-   1. [Bitmask DP](#bitmask-dp)
-      1. [Broken Profile](#broken-profile)
-   2. [Digit DP](#digit-dp)
-   3. [Knapsack](#knapsack)
-   4. [LIS ( Longest Increasing Sequence )](#lis--longest-increasing-sequence-)
-3. [DSU](#dsu)
-   1. [Disjoint Set Union](#disjoint-set-union)
-4. [Flow](#flow)
-   1. [Fluxo](#fluxo)
-      1. [Minimum Cut](#minimum-cut)
-5. [Geometry](#geometry)
-   1. [Closest-point (Divide and conquer)](#closest-point-divide-and-conquer)
-   2. [Convex Hull](#convex-hull)
-   3. [Point Struct](#point-struct)
-6. [Graph](#graph)
-   1. [2-SAT (2-satisfiability)](#2-sat-2-satisfiability)
-   2. [BFS](#bfs)
-   3. [Bridges ( Cut Edges )](#bridges--cut-edges-)
-   4. [Articulation Points and Bridges](#articulation-points-and-bridges)
-   5. [Cycles](#cycles)
-   6. [DFS Tree](#dfs-tree)
-   7. [Euler Path](#euler-path)
-      1. [Hierholzer Algorithm](#hierholzer-algorithm)
-   8. [Euler Tour Technique (ETT)](#euler-tour-technique-ett)
-   9. [Strongly Connected Components](#strongly-connected-components)
-      1. [Kosaraju](#kosaraju)
-   10. [Single-Source Shortest Paths (SSSP)](#single-source-shortest-paths-sssp)
-       1. [Bellman-Ford for shortest paths](#bellman-ford-for-shortest-paths)
-       2. [Dijkstra](#dijkstra)
-       3. [Modified Dijkstra for K-Shortest Paths](#modified-dijkstra-for-k-shortest-paths)
-   11. [Graph Terminology:](#graph-terminology)
-   12. [Topological Sort](#topological-sort)
-7. [Math](#math)
-   1. [Matrix](#matrix)
-   2. [Series Theory](#series-theory)
-8. [Misc](#misc)
-   1. [Minimum Excluded (MEX)](#minimum-excluded-mex)
-9. [ModularArithmetic](#modulararithmetic)
-   1. [Overloading Operations Struct](#overloading-operations-struct)
-      1. [Basic operations with combinatorics](#basic-operations-with-combinatorics)
-10. [Number-Theory](#number-theory)
-    1. [Combinatorics Theory](#combinatorics-theory)
-    2. [Crivo de Eratóstenes](#crivo-de-eratóstenes)
-    3. [Factorization](#factorization)
-       1. [Trial Division with precomputed primes](#trial-division-with-precomputed-primes)
-       2. [Pollard Rho](#pollard-rho)
-11. [OrderedSet](#orderedset)
-    1. [Policy Based Data Structures (PBDS)](#policy-based-data-structures-pbds)
-12. [Searching-Sorting](#searching-sorting)
-    1. [Binary search](#binary-search)
-    2. [Merge sort](#merge-sort)
-    3. [Ternary Search](#ternary-search)
-13. [Segtree](#segtree)
-    1. [Segtree with sum, max, min](#segtree-with-sum-max-min)
-    2. [Implicit Segtree or Sparse Segtree](#implicit-segtree-or-sparse-segtree)
-    3. [Iterative P-sum Classic Segtree with MOD](#iterative-p-sum-classic-segtree-with-mod)
-    4. [Inverted Segtree](#inverted-segtree)
-    5. [Recursive Segtree with Lazy propagation](#recursive-segtree-with-lazy-propagation)
-       1. [Sum range query, increase range query](#sum-range-query-increase-range-query)
-       2. [Range Minimum Query, Update (Assignment) Query](#range-minimum-query-update-assignment-query)
-    6. [Recursive Classic Segtree](#recursive-classic-segtree)
-14. [Strings](#strings)
-    1. [Booth's Algorithm](#booths-algorithm)
-    2. [Knuth–Morris–Pratt algorithm (KMP)](#knuthmorrispratt-algorithm-kmp)
-    3. [SUFFIX ARRAY](#suffix-array)
-    4. [KASAI's ALGORITHM FOR LCP (longest common prefix)](#kasais-algorithm-for-lcp-longest-common-prefix)
-    5. [TRIE](#trie)
-    6. [Z-function](#z-function)
-15. [Structures](#structures)
-    1. [BIT ( Fenwick Tree or Binary indexed tree)](#bit--fenwick-tree-or-binary-indexed-tree)
-16. [Tree](#tree)
-    1. [Binary lifting](#binary-lifting)
-    2. [Find the Centroid of a Tree](#find-the-centroid-of-a-tree)
-    3. [Find the Diameter](#find-the-diameter)
-    4. [Find the lenght of the longest path from all nodes](#find-the-lenght-of-the-longest-path-from-all-nodes)
-    5. [Heavy Light Decomposition](#heavy-light-decomposition)
-
 ## Flags for compilation:
 
 ```bash
@@ -779,17 +698,17 @@ struct Point{
 
 Por definição, o produto escalar define o cosseno entre dois vetores:
 
-$$ cos(a, b) = ( a \cdot b ) / ( ||a|| \cdot||b|| ) $$
+cos(a, b) = ( a * b ) / ( ||a|| * ||b|| )
 
-$$ a \cdot b =  cos(a, b) \cdot  ( ||a|| \cdot||b|| ) $$
+a * b =  cos(a, b) * ( ||a|| * ||b|| )
 
 O sinal do produto vetorial de A com B indica a relação espacial entre os vetores A e B.
 
-$cross(a, b) > 0$ -> ***B*** está a esquerda de ***A***.
+cross(a, b) > 0 -> ***B*** está a esquerda de ***A***.
 
-$cross(a, b) = 0$ -> ***B*** é colinear ao ***A***.
+cross(a, b) = 0 -> ***B*** é colinear ao ***A***.
 
-$cross(a, b) > 0$ -> ***B*** está a direita de ***A***.
+cross(a, b) > 0 -> ***B*** está a direita de ***A***.
 
 A magnitude do produto vetorial de A com B é a área do paralelogramo formado por A e B. Logo, a metade é a área do triângulo formado por A e B.
 
@@ -1939,7 +1858,7 @@ $ MEX( x ) <= len( x ) $
 const int MOD = 1e9+7;
 
 struct intM{
-    long long val;
+    long long val = 0;
 
     intM(long long n=0){
         val = n%MOD;
@@ -1972,11 +1891,6 @@ struct intM{
 
     intM operator /(const intM& b) const{ 
         return (*this) * (b ^ (MOD-2));
-    }
-
-    ostream& operator <<(ostream& os, const intM& a){
-        os << a.val;
-        return os;
     }
 };
 ```
@@ -2914,6 +2828,140 @@ Use the same code as min segtree, change:
 **min()** -> **max()**
 **LLINF** -> **-LLINF**
 
+### Complex Lazy Problems
+
+**Requirements:** to be able to *propagate/push* the lazy stored updates. In other words, the property of **Aggregation:** to transfer the data saved in *lazy[i]* to *tree[i]* and also the property of **Composition:** to push the updates to the children (*lazy[i]* to *lazy[2*i]* and *lazy[i]* to *lazy[2*i+1]*).
+
+#### Example1:
+
+*range increase query by x*
+*range sum of the squares* = a[l]^2 + ... + a[r]^2
+
+```cpp
+// import this struct
+struct intM{};
+
+ll L = 1, R; // Declare R = n and also use build() afterwards -_- macake
+struct SegtreeLazy{
+
+    struct Node {
+        intM val;
+        intM sqr;
+    };
+
+    Node merge(Node a, Node b) {
+        return Node{
+            a.val + b.val,
+            a.sqr + b.sqr
+        };
+    }
+
+    vector<intM> v, lazy;
+    vector<Node> tree;
+
+    SegtreeLazy() {
+        tree.assign(4*(R-L+2), Node{});
+        lazy.assign(4*(R-L+2), intM{});
+        v.assign((R-L+2), intM{});
+    }
+
+    void build(ll l=L, ll r=R, ll i=1) {
+        if (l == r) {
+            tree[i] = Node{
+                v[l],
+                v[l] * v[l]
+            };
+        }
+        else{
+            ll mid = (l+r)/2;
+            build(l, mid, 2*i);
+            build(mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
+        }
+        lazy[i] = intM{};
+    }
+
+    void propagate(ll l, ll r, ll i){
+        if(lazy[i].val) {
+            tree[i].sqr = tree[i].sqr + (intM(2) * lazy[i] * tree[i].val);
+            tree[i].sqr = tree[i].sqr + (lazy[i] * lazy[i] * intM(r-l+1));
+
+            tree[i].val = tree[i].val + (lazy[i] * intM(r-l+1));
+
+            if(l != r){
+                lazy[2*i] = lazy[2*i] + lazy[i];
+                lazy[2*i+1] = lazy[2*i+1] + lazy[i];
+            }
+            
+            lazy[i] = intM{};
+        }
+    }
+
+    // [left, right] = (selected interval for the query)
+    // l, r = the variables used for the vertex limits
+
+    // increase function adds 'val' to [left, right]
+    void increase(ll left=L, ll right=R, ll val=0, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
+
+        if (right < l or r < left) return;
+
+        else if (left <= l and r <= right){
+            lazy[i] = lazy[i] + intM(val);
+            propagate(l, r, i);
+        }
+
+        else{
+            ll mid = (l+r)/2;
+            increase(left, right, val, l, mid, 2*i);
+            increase(left, right, val, mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
+        }
+    }
+
+    Node query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
+
+        if (right < l or r < left) return Node{};
+
+        else if (left <= l and r <= right) return tree[i];
+
+        else{
+            ll mid = (l+r)/2;
+            return merge(
+                query(left, right, l, mid, 2*i),
+                query(left, right, mid+1, r, 2*i+1)
+            );
+        }
+    }
+};
+
+int32_t main(){ sws;
+    ll n, q; cin >> n >> q;
+    R = n;
+
+    SegtreeLazy st;
+
+    for(ll i=1; i<=n; i++) {
+        ll x; cin >> x;
+        st.v[i] = intM(x);
+    }
+
+    st.build();
+
+    while(q--) {
+        char c; cin >> c;
+        if (c == 'u') {
+            ll l, r, x; cin >> l >> r >> x;
+            st.increase(l, r, x);
+        }
+        else {
+            ll l, r; cin >> l >> r;
+            cout << st.query(l, r).sqr.val << endl;
+        }
+    }
+}   
+```
 
 ## Recursive Classic Segtree
 
@@ -3530,9 +3578,9 @@ int32_t main(){ sws;
 ## Find the Centroid of a Tree
 
 A centroid of a tree is defined as a node such that when the tree is rooted
-at it, no other nodes have a subtree of size greater than $\frac{N}{2}$.
+at it, no other nodes have a subtree of size greater than *N/2*.
 
-We can find a centroid in a tree by starting at the root. Each step, loop through all of its children. If all of its children have subtree size less than or equal to $\frac{N}{2}$, then it is a centroid. Otherwise, move to the child with a subtree size that is more than $\frac{N}{2}$ and repeat until you find a centroid.
+We can find a centroid in a tree by starting at the root. Each step, loop through all of its children. If all of its children have subtree size less than or equal to *N/2*, then it is a centroid. Otherwise, move to the child with a subtree size that is more than *N/2* and repeat until you find a centroid.
 
 ```cpp
 vector<vll> g(MAX, vll());
