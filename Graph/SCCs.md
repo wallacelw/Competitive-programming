@@ -1,4 +1,6 @@
-## Kosaraju
+## Strongly Connected Components
+
+### Kosaraju
 
 Used for **Finding Strongly Connected Somponents** (SCCs) in a *directed graph* (digraph).
 
@@ -39,7 +41,7 @@ void kosaraju(ll n){
 }
 ```
 
-### Can be extended to generate a Condensation Graph
+#### Can be extended to generate a Condensation Graph
 
 *AKA:* condensate/convert all SCC's into single vertices and create a new graph
 

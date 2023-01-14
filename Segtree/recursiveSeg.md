@@ -4,7 +4,7 @@ Data structure that creates parent vertices for a linear array to do faster comp
 
 ![Diagrama](../Aux-Images/segtree_diagram.png)
 
-## Clearer version (min-seg)
+#### Clearer version (min-seg)
 
 ```cpp
 // 1 indexed segtree for minimum
@@ -82,7 +82,7 @@ struct Segtree {
 };
 ```
 
-## Even more polished (sum-seg):
+#### Even more polished (sum-seg):
 
 ```cpp
 // 1 indexed segtree for sum 
@@ -158,9 +158,9 @@ struct Segtree {
 };
 ```
 
-## Avisos
+#### Avisos
 
-### Details
+#### Details
 
 **0 or 1-indexed**, depends on the arguments used as default value
 
@@ -171,7 +171,7 @@ Uses a **struct node** to define node/vertex properties. *Default:* psum
 Uses a **merge function** to define how to join nodes 
 
 
-### Parameters
+#### Parameters
 
 **left** and **right**: parameters that are the range limits for the range query 
 
@@ -185,7 +185,7 @@ Uses a **merge function** to define how to join nodes
 **val**: value that will be inserted to the idx node 
 
 
-### Atributes
+#### Atributes
 
 **Tree**: node array 
 
@@ -193,13 +193,13 @@ Uses a **merge function** to define how to join nodes
 **v**: vector that are used for leaf nodes 
 
 
-### Methods
+#### Methods
 
-#### O(n):
+##### O(n):
 
 **build(l, r, i)**: From **v** vector, constructs Segtree 
 
-#### O(log(N))
+##### O(log(N))
 
 **point_update(idx, l, r, i, val)**: updates leaf node with *idx* index to *val* value. No return value 
 
@@ -207,10 +207,10 @@ Uses a **merge function** to define how to join nodes
 **range_query(left, right, l, r, i)**: does a range query from *left* to *right* (inclusive) and returns a node with the result 
 
 
-### Requires
+#### Requires
 MAX variable 
 
-### Problems
+#### Problems
 
 - Range Sum Query, point update
 - Range Max/Min Query, point update

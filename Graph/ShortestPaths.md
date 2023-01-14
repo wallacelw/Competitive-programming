@@ -128,7 +128,7 @@ vll dijkstraKSP(ll start, ll end, ll k){ // O(K * M) = O(K * Edges)
 }
 ```
 
-### Extended Dijkstra
+#### Extended Dijkstra
 
 Besides the **Shortest Path Distance**, 
 

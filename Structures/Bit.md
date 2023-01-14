@@ -2,7 +2,7 @@
 
 **Complexity** O(log(n)): point update, range query
 
-### 0-indexed:
+#### 0-indexed:
 
 ```cpp
 struct FenwickTree {
@@ -37,7 +37,7 @@ struct FenwickTree {
 };
 ```
 
-### 1-indexed
+#### 1-indexed
 
 ```cpp
 struct FenwickTree {

@@ -1,7 +1,5 @@
 ## Matrix
 
-### Matrix operations
-
 ```cpp
 struct Matrix{
     vector<vll> M, IND;
@@ -62,7 +60,7 @@ struct Matrix{
 };
 ```
 
-### Another Version with long long and MOD
+#### Another Version with long long and MOD
 
 ```cpp
 struct Matrix{

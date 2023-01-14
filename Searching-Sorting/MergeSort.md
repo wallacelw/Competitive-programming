@@ -42,7 +42,7 @@ int merge_sort(vector<int> &v, vector<int> &ans, int l, int r){
 }
 ```
 
-### Updated
+#### Updated
 
 Directly updates the *v* vector. Also return the number of swaps (inversions).
 

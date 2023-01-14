@@ -3,7 +3,7 @@
 Use each digit position as state and also is the considered number is already smaller than the reference.
 The rest of the states are defined by the problem
 
-### Example1:
+#### Example1:
 
 Calculate the quantity of numbers with no consective equal digits
 
@@ -60,7 +60,7 @@ int32_t main(void){ sws;
 }
 ```
 
-### Example2:
+#### Example2:
 
 Classy numbers are the numbers than contains no more than 3 non-zero digit
 

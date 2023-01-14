@@ -151,7 +151,7 @@ struct SegtreeLazy{
 };
 ```
 
-# MAX Query
+#### For MAX Query
 
 Use the same code as min segtree, change:
 

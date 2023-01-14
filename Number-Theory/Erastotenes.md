@@ -20,7 +20,7 @@ vector<int> crivo(int n){
 }
 ```
 
-### Optimized
+#### Optimized
 
 ```cpp
 // O (N log^2(N) ) -> Teorema de Merten

@@ -83,7 +83,7 @@ struct Dinic {  // O( Vertices^2 * Edges)
 };
 ```
 
-### How to use?
+#### How to use?
 
 Set an unique id for all nodes
 
@@ -95,7 +95,7 @@ use **dinic.flow(source_id, sink_id)** to receive maximum flow from source to si
 
 **OBS:** It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective properties, like the **flow** passing through each edge. This can be used to **matching problems** with a bipartite graph and *1 capacity* for example.
 
-### Example
+#### Example
 
 ```cpp
 int32_t main(){sws;
@@ -126,7 +126,7 @@ int32_t main(){sws;
 }
 ```
 
-## Minimum Cut
+### Minimum Cut
 
 Another problem solved by network flow is the **minimum cut**.
 
@@ -134,7 +134,7 @@ Let’s define an **s-t cut C** = *(S-component, T-component)* as a partition of
 
 The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS) from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value mf. This is the minimum over all possible s-t cuts values.
 
-### Example:
+#### Example:
 
 https://cses.fi/problemset/task/1695/
 

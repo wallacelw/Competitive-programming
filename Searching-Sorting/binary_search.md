@@ -2,7 +2,7 @@
 
 Finds the first element that changes value in any monotonic function
 
-### Maximum
+#### Maximum
 
 **Monotonically Decreasing** [1, 1, 1, 1, 0, 0, 0, 0]
 
@@ -27,7 +27,7 @@ ll search(ll l=0, ll r=1e9, ll ans=0){
 }
 ```
 
-### Minimum 
+#### Minimum 
 
 **Monotonically Increasing** [0, 0, 0, 0, 1, 1, 1, 1]
 

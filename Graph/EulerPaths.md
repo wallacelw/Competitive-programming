@@ -1,6 +1,6 @@
 ## Euler Path
 
-### Definitions:
+#### Definitions:
 
 An **Eulerian Path** or **Eulerian Trail** (*Caminho Euleriano*) consists of a path that transverses all **Edges**. 
 
@@ -8,7 +8,7 @@ A special case is the closed path, which is an **Eulerian Circuit** or **Euleria
 
 Similarly, a **Hamiltonian Path** consists of a path that transverses all **Vertices**.
 
-### Conditions for Eulerian Path existence
+#### Conditions for Eulerian Path existence
 
 To check if it is possible, there is a need for connectivity: 
 
@@ -18,13 +18,13 @@ and also:
 
 ![image](..\Aux-Images\EulerianPathExistence.png)
 
-## Hierholzer Algorithm
+### Hierholzer Algorithm
 
 Find a **Eulerian Path/Circuit** with a linear complexity of *O(Edges)*.
 
 Using an *ordered set* on **Undirected Graphs** increases complexity by *log2(Edges)*. This can be optimized using a *list* with references to each bidirectional edge so that any reversed edge can be erased in *O(1)*.
 
-### Example 1:
+#### Example 1:
 
 Generating an **Eulerian Path** with Hierholzer in a *Directed Graph*, starting on node *1* and ending on node *n*.
 
@@ -127,7 +127,7 @@ int32_t main(){ sws;
 }   
 ```
 
-### Example 2:
+#### Example 2:
 
 Generating an **Eulerian Circuit** with Hierholzer in an *Undirected Graph*, starting on node *1* and also ending on node *1*.
 

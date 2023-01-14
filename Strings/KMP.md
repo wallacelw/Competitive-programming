@@ -1,4 +1,4 @@
-## Knuth–Morris–Pratt algorithm
+## Knuth–Morris–Pratt algorithm (KMP)
 
 **AKA** Prefix function
 

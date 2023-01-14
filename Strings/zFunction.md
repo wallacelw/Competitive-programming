@@ -1,4 +1,4 @@
-## Z function
+## Z-function
 
 Suppose we are given a string  *s*  of length  *n* . The Z-function for this string is an array of length  *n*  where the  *i* -th element is equal to the greatest number of characters starting from the position  *i*  that coincide with the first characters of  *s* .
 
@@ -19,7 +19,7 @@ vll z_function(string s) { // O(n)
 }
 ```
 
-### Solves
+#### Solves
 
 - Find occurrences of pattern string (*pattern*) in the main string (*str*):
 

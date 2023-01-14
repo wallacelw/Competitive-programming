@@ -1,6 +1,4 @@
-## Modular Arithmetic
-
-### Basic operations with redundant MOD operators
+### Basic operations with combinatorics
 
 Also contains combinatorics operations
 

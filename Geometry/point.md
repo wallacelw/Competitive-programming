@@ -1,4 +1,4 @@
-## Point struct
+## Point Struct
 
 ```cpp
 struct Point{
@@ -50,7 +50,7 @@ struct Point{
 };
 ```
 
-### Teoria:
+#### Teoria:
 
 Por definição, o produto escalar define o cosseno entre dois vetores:
 
@@ -68,7 +68,7 @@ $cross(a, b) > 0$ -> ***B*** está a direita de ***A***.
 
 A magnitude do produto vetorial de A com B é a área do paralelogramo formado por A e B. Logo, a metade é a área do triângulo formado por A e B.
 
-### Área de qualquer polígono, convexo ou não.
+#### Área de qualquer polígono, convexo ou não.
 
 Definindo um vértice como 0, e enumerando os demais de [1 a N), calcula-se a área do polígono como o somatório da metade de todos os produtos vetorias entre o 0 e os demais.
 

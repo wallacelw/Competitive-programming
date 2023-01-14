@@ -23,7 +23,7 @@ struct DSU{
 };
 ```
 
-### Avisos
+#### Avisos
 
 Possui a optimização de **Compressão** e **Balanceamento**
 

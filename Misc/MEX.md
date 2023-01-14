@@ -1,4 +1,6 @@
-## Minimum Excluded
+## Minimum Excluded (MEX)
+
+! TODO :(
 
 let x be an array:
 

@@ -1,6 +1,6 @@
 ## Policy Based Data Structures (PBDS)
 
-### Ordered Set
+#### Ordered Set
 
 ```cpp
 // * Ordered Set and Map
@@ -12,7 +12,7 @@ using namespace __gnu_pbds;
 template <class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 ```
 
-### Ordered Map
+#### Ordered Map
 
 ```cpp
 // * Ordered Set and Map
@@ -24,17 +24,17 @@ using namespace __gnu_pbds;
 template <class K, class V> using ordered_map = tree<K, V, less<K>, rb_tree_tag, tree_order_statistics_node_update>;
 ```
 
-### Ordered Multiset
+#### Ordered Multiset
 
 Ordered Set pode ser tornar um multiset se utilizar um pair do valor com um index distinto. pll{val, t}, 1 <= t <= n
 
-### Observação
+**Observação:**
 
 O set não precisa conter a chave sendo buscada pelo *order_of_key()*.
 
 *order_of_key()* returns index starting from 0;
 [0, n)
 
-## Problemas
+**Problemas**
 
 Consegue computar em O(log(N)), quantos elementos são menores que K, utilizando o index.

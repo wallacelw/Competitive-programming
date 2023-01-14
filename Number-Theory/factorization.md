@@ -1,4 +1,6 @@
-## Trial Division with precomputed primes
+## Factorization
+
+### Trial Division with precomputed primes
 
 **Complexity**:  O(sqrt(N))
 
@@ -41,7 +43,7 @@ vector<ll> factorization(ll n){
 }
 ```
 
-## Pollard Rho
+### Pollard Rho
 
 **Complexity**:  better than O(sqrt(N)) *:D*
 

@@ -1,6 +1,87 @@
 # Competitive-programming
 Algoritmos e ideias de programação competitiva
 
+1. [Competitive-programming](#competitive-programming)
+   1. [Flags for compilation:](#flags-for-compilation)
+   2. [Template:](#template)
+2. [DP](#dp)
+   1. [Bitmask DP](#bitmask-dp)
+      1. [Broken Profile](#broken-profile)
+   2. [Digit DP](#digit-dp)
+   3. [Knapsack](#knapsack)
+   4. [LIS ( Longest Increasing Sequence )](#lis--longest-increasing-sequence-)
+3. [DSU](#dsu)
+   1. [Disjoint Set Union](#disjoint-set-union)
+4. [Flow](#flow)
+   1. [Fluxo](#fluxo)
+      1. [Minimum Cut](#minimum-cut)
+5. [Geometry](#geometry)
+   1. [Closest-point (Divide and conquer)](#closest-point-divide-and-conquer)
+   2. [Convex Hull](#convex-hull)
+   3. [Point Struct](#point-struct)
+6. [Graph](#graph)
+   1. [2-SAT (2-satisfiability)](#2-sat-2-satisfiability)
+   2. [BFS](#bfs)
+   3. [Bridges ( Cut Edges )](#bridges--cut-edges-)
+   4. [Articulation Points and Bridges](#articulation-points-and-bridges)
+   5. [Cycles](#cycles)
+   6. [DFS Tree](#dfs-tree)
+   7. [Euler Path](#euler-path)
+      1. [Hierholzer Algorithm](#hierholzer-algorithm)
+   8. [Euler Tour Technique (ETT)](#euler-tour-technique-ett)
+   9. [Strongly Connected Components](#strongly-connected-components)
+      1. [Kosaraju](#kosaraju)
+   10. [Single-Source Shortest Paths (SSSP)](#single-source-shortest-paths-sssp)
+       1. [Bellman-Ford for shortest paths](#bellman-ford-for-shortest-paths)
+       2. [Dijkstra](#dijkstra)
+       3. [Modified Dijkstra for K-Shortest Paths](#modified-dijkstra-for-k-shortest-paths)
+   11. [Graph Terminology:](#graph-terminology)
+   12. [Topological Sort](#topological-sort)
+7. [Math](#math)
+   1. [Matrix](#matrix)
+   2. [Series Theory](#series-theory)
+8. [Misc](#misc)
+   1. [Minimum Excluded (MEX)](#minimum-excluded-mex)
+9. [ModularArithmetic](#modulararithmetic)
+   1. [Overloading Operations Struct](#overloading-operations-struct)
+      1. [Basic operations with combinatorics](#basic-operations-with-combinatorics)
+10. [Number-Theory](#number-theory)
+    1. [Combinatorics Theory](#combinatorics-theory)
+    2. [Crivo de Eratóstenes](#crivo-de-eratóstenes)
+    3. [Factorization](#factorization)
+       1. [Trial Division with precomputed primes](#trial-division-with-precomputed-primes)
+       2. [Pollard Rho](#pollard-rho)
+11. [OrderedSet](#orderedset)
+    1. [Policy Based Data Structures (PBDS)](#policy-based-data-structures-pbds)
+12. [Searching-Sorting](#searching-sorting)
+    1. [Binary search](#binary-search)
+    2. [Merge sort](#merge-sort)
+    3. [Ternary Search](#ternary-search)
+13. [Segtree](#segtree)
+    1. [Segtree with sum, max, min](#segtree-with-sum-max-min)
+    2. [Implicit Segtree or Sparse Segtree](#implicit-segtree-or-sparse-segtree)
+    3. [Iterative P-sum Classic Segtree with MOD](#iterative-p-sum-classic-segtree-with-mod)
+    4. [Inverted Segtree](#inverted-segtree)
+    5. [Recursive Segtree with Lazy propagation](#recursive-segtree-with-lazy-propagation)
+       1. [Sum range query, increase range query](#sum-range-query-increase-range-query)
+       2. [Range Minimum Query, Update (Assignment) Query](#range-minimum-query-update-assignment-query)
+    6. [Recursive Classic Segtree](#recursive-classic-segtree)
+14. [Strings](#strings)
+    1. [Booth's Algorithm](#booths-algorithm)
+    2. [Knuth–Morris–Pratt algorithm (KMP)](#knuthmorrispratt-algorithm-kmp)
+    3. [SUFFIX ARRAY](#suffix-array)
+    4. [KASAI's ALGORITHM FOR LCP (longest common prefix)](#kasais-algorithm-for-lcp-longest-common-prefix)
+    5. [TRIE](#trie)
+    6. [Z-function](#z-function)
+15. [Structures](#structures)
+    1. [BIT ( Fenwick Tree or Binary indexed tree)](#bit--fenwick-tree-or-binary-indexed-tree)
+16. [Tree](#tree)
+    1. [Binary lifting](#binary-lifting)
+    2. [Find the Centroid of a Tree](#find-the-centroid-of-a-tree)
+    3. [Find the Diameter](#find-the-diameter)
+    4. [Find the lenght of the longest path from all nodes](#find-the-lenght-of-the-longest-path-from-all-nodes)
+    5. [Heavy Light Decomposition](#heavy-light-decomposition)
+
 ## Flags for compilation:
 
 ```bash
@@ -10,10 +91,11 @@ g++ -Wall -Wextra -Wshadow -ggdb3 -D_GLIBCXX_ASSERTIONS -fmax-errors=2 -std=c++1
 ## Template:
 
 ```cpp
+// Needed
 #include <bits/stdc++.h>
 using namespace std;
 #define sws cin.tie(0)->sync_with_stdio(0)
-
+// Life Quality
 #define endl '\n'
 #define ll long long
 #define vll vector<ll>
@@ -25,11 +107,14 @@ using namespace std;
 #define ff first
 #define ss second
 #define tlll tuple<ll, ll, ll>
-
+// Remainders
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
-#define dbg(a) " [ " << #a << " = " << a << " ] "
-
+// Debugging
+#define db(a) cerr << " [ " << #a << " = " << a << " ] " << endl;
+#define debug(a...) cerr<<#a<<": ";for(auto &b:a)cerr<<b<<" ";cerr<<endl;
+template <typename... A> void dbg(A const&... a) { ((cerr << "{" << a << "} "), ...); cerr << endl; }
+// Constants
 const int MAX = 2e5+10;
 const long long MOD = 1e9+7;
 const int INF = 0x3f3f3f3f;
@@ -44,139 +129,13 @@ int32_t main(){ sws;
 
 ---
 
-# BIT-FenwickTree
-
-## BIT ( Fenwick Tree or Binary indexed tree)
-
-**Complexity** O(log(n)): point update, range query
-
-### 0-indexed:
-
-```cpp
-struct FenwickTree {
-    vector<ll> bit;  // binary indexed tree
-    ll n;
-
-    FenwickTree(ll n) { // all zero constructor
-        this->n = n;
-        bit.assign(n, 0);
-    }
-
-    FenwickTree(vector<ll> a) : FenwickTree(a.size()) { // vector constructor
-        for (size_t i = 0; i < a.size(); i++)
-            add(i, a[i]);
-    }
-
-    ll sum(ll r) { // prefix sum [1, r]
-        ll ret = 0;
-        for (; r >= 0; r = (r & (r + 1)) - 1)
-            ret += bit[r];
-        return ret;
-    }
-
-    ll query(ll l, ll r) { // range sum [l, r]
-        return sum(r) - sum(l - 1);
-    }
-
-    void add(ll idx, ll delta) { // add delta to current value
-        for (; idx < n; idx = idx | (idx + 1))
-            bit[idx] += delta;
-    }
-};
-```
-
-### 1-indexed
-
-```cpp
-struct FenwickTree {
-    vector<ll> bit;  // binary indexed tree
-    ll n;
-
-    FenwickTree(ll n) { // all zero constructor
-        this->n = n + 2;
-        bit.assign(n + 2, 0);
-    }
-
-    FenwickTree(vector<ll> a) : FenwickTree(a.size()) { // vector constructor
-        for (size_t i = 0; i < a.size(); i++)
-            add(i, a[i]);
-    }
-
-    ll sum(ll idx) { // sum from 1 to idx [inclusive] (prefix sum)
-        ll ret = 0;
-        for (++idx; idx > 0; idx -= idx & -idx)
-            ret += bit[idx];
-        return ret;
-    }
-
-    ll query(ll l, ll r) { // sum from l to r [inclusive]
-        return sum(r) - sum(l - 1);
-    }
-
-    void add(ll idx, ll delta) { // add delta to current value
-        for (++idx; idx < n; idx += idx & -idx)
-            bit[idx] += delta;
-    }
-};
-```
-
-
----
-
-# Divide-and-conquer
-
-## Merge sort
-
-```cpp
-int merge(vector<int> &v, int l, int mid, int r){
-    int i=l, j=mid+1, swaps=0;
-    vector<int> ans;
-
-    while(i <= mid or j <= r){
-
-        if(j > r or (v[i] <= v[j] and i<=mid)){
-            ans.push_back(v[i]);
-            i++;
-        }
-        if(i > mid or (v[j] < v[i] and j <= r)){
-            ans.push_back(v[j]);
-            j++;
-            swaps = swaps + abs(mid+1-i);
-        }
-    }
-    
-    for(int i=l; i<=r; i++)
-        v[i] = ans[i-l];
-
-    return swaps;
-}
-
-int merge_sort(vector<int> &v, vector<int> &ans, int l, int r){
-    if(l==r){
-        ans[l] = v[l];
-        return 0;
-    }
-
-
-    int mid = (l+r)/2, swaps = 0;
-    swaps += merge_sort(v, ans, l, mid);
-    swaps += merge_sort(v, ans, mid+1, r);
-    swaps += merge(ans, l, mid, r);
-
-    return swaps;
-}
-```
-
-
----
-
 # DP
 
 ## Bitmask DP
 
 use a bitmask of chosen itens to be a state of the DP
 
-### Example:
+**Example**:
 
 https://cses.fi/problemset/task/1653/
 
@@ -210,12 +169,96 @@ int32_t main(){
 }
 ```
 
+### Broken Profile
+
+Solves problem where is needed to count the ways of filling a *n* x *m* grid with dominos/tilings of specific size.
+
+*Example:* Fill *n* x *m* with 2x1 dominos or 1x2 dominos -> https://cses.fi/problemset/task/2181
+
+1 ≤ n ≤ 10 (rows)
+1 ≤ m ≤ 1000 (collums)
+
+#### States
+
+**dp[j][p]** -> numbers of ways of filling first *j* columns completely with dominoes (without leaving any block as empty) and leaving the profile *p* for the *j+1* collum.
+
+*j* = collums completely filled.
+*p* = bitmask representation of the "profile" for the j+1 collum.
+
+Note that, the (j+1) th column should not contain a complete domino (in the vertical), those types will be included in the dp transition from j+1 to j+2.
+
+![Valido](../Aux-Images/BrokenProfile1.png) ![Invalido](../Aux-Images/BrokenProfile2.png)
+
+#### Transitions
+
+**Initial States:**
+```cpp
+dp[i = 0][p = 0] = 1
+dp[i = 0][p != 0] = 0
+```
+
+From a specific **dp[j][q]**, with profile *q* for the *j-th* collum and all the collums before filled, it's possible to generate several **dp[j+1][p]** just by adding vertical and horizontal tiles.
+
+**Final Answer:** dp[m][0]
+
+```cpp
+// grid size
+ll dp[1010][1 << 11];
+ll n, m;
+// n is the num of rows, m is the num of collums
+
+// check if i'th bit of q is occupied
+bool occupied(ll i, ll q) {
+    return q & (1 << (i-1));
+}
+
+void solveBlock(ll i, ll j, ll p, ll q) {
+    // from profile q -> generate profile p
+    // OBS: q represents the profile of the j col, and p represents the profile of the j+1 col when j is filled;
+    // i <= 10 (row); j <= 1000 (col)
+
+    // found a new way to fill j, add this possibility
+    if (i == n+1) {
+        dp[j+1][p] = (dp[j+1][p] + dp[j][q]) % MOD;
+        return;
+    }
+
+    // skip occupied block
+    if ( occupied(i, q) ) {
+        solveBlock(i+1, j, p, q);
+        return;
+    }
+    
+    // insert vertical tile
+    if(i+1 <= n and !occupied(i+1, q)){
+        solveBlock(i+2, j, p, q);
+    }
+
+    // insert horizontal tile
+    if (j+1 <= m) {
+        solveBlock(i+1, j, p^(1<<(i-1)), q);
+    }
+}
+
+int32_t main(){ sws;
+    cin >> n >> m;
+    memset(dp, 0, sizeof(dp));
+    dp[0][0] = 1; // Initial Condition
+    for(ll j=0; j<m; j++) { // each collum
+        for(ll q=0; q < (1 << n); q++){ // each collum profile
+            solveBlock(1, j, 0, q);
+        }
+    }
+    cout << dp[m][0] << endl;
+}   
+```
+
 ## Digit DP
 
 Use each digit position as state and also is the considered number is already smaller than the reference.
 The rest of the states are defined by the problem
 
-### Example1:
+#### Example1:
 
 Calculate the quantity of numbers with no consective equal digits
 
@@ -272,7 +315,7 @@ int32_t main(void){ sws;
 }
 ```
 
-### Example2:
+#### Example2:
 
 Classy numbers are the numbers than contains no more than 3 non-zero digit
 
@@ -401,7 +444,7 @@ struct DSU{
 };
 ```
 
-### Avisos
+#### Avisos
 
 Possui a optimização de **Compressão** e **Balanceamento**
 
@@ -414,7 +457,7 @@ Both are: *O(a(N)) ~ O(1)*:
 
 ---
 
-# Fluxo
+# Flow
 
 ## Fluxo
 
@@ -501,7 +544,7 @@ struct Dinic {  // O( Vertices^2 * Edges)
 };
 ```
 
-### How to use?
+#### How to use?
 
 Set an unique id for all nodes
 
@@ -513,7 +556,7 @@ use **dinic.flow(source_id, sink_id)** to receive maximum flow from source to si
 
 **OBS:** It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective properties, like the **flow** passing through each edge. This can be used to **matching problems** with a bipartite graph and *1 capacity* for example.
 
-### Example
+#### Example
 
 ```cpp
 int32_t main(){sws;
@@ -544,7 +587,7 @@ int32_t main(){sws;
 }
 ```
 
-## Minimum Cut
+### Minimum Cut
 
 Another problem solved by network flow is the **minimum cut**.
 
@@ -552,7 +595,7 @@ Let’s define an **s-t cut C** = *(S-component, T-component)* as a partition of
 
 The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS) from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value mf. This is the minimum over all possible s-t cuts values.
 
-### Example:
+#### Example:
 
 https://cses.fi/problemset/task/1695/
 
@@ -680,7 +723,7 @@ vector<point> convex_hull(vector<point>& v){
 ```
 
 
-## Point struct
+## Point Struct
 
 ```cpp
 struct Point{
@@ -732,7 +775,7 @@ struct Point{
 };
 ```
 
-### Teoria:
+#### Teoria:
 
 Por definição, o produto escalar define o cosseno entre dois vetores:
 
@@ -750,7 +793,7 @@ $cross(a, b) > 0$ -> ***B*** está a direita de ***A***.
 
 A magnitude do produto vetorial de A com B é a área do paralelogramo formado por A e B. Logo, a metade é a área do triângulo formado por A e B.
 
-### Área de qualquer polígono, convexo ou não.
+#### Área de qualquer polígono, convexo ou não.
 
 Definindo um vértice como 0, e enumerando os demais de [1 a N), calcula-se a área do polígono como o somatório da metade de todos os produtos vetorias entre o 0 e os demais.
 
@@ -767,11 +810,9 @@ Area = abs(Area)
 
 # Graph
 
-## SAT (Boolean satisfiability problem)
+## 2-SAT (2-satisfiability)
 
-SAT is NP-Complete
-
-### 2-SAT (2-satisfiability)
+SAT (Boolean satisfiability problem) is NP-Complete.
 
 2-SAT is a restriction of the SAT problem, in 2-SAT every clause has exactly two literals.
 
@@ -878,7 +919,7 @@ int32_t main(){ sws;
 }   
 ```
 
-### Extended Version
+#### Extended Version
 
 Possibly faster implementation, with redundant functions to facilitate logic.
 
@@ -957,64 +998,6 @@ void bfs(ll i){
             fila.push(v);
         }
     }
-}
-```
-
-## Binary lifting
-
-**Solves**: LCA, O(log) travelling in a tree
-
-**OBS:** log2(1e5) ~= 17; log2(1e9) ~= 30 ; log2(1e18) ~= 60
-
-```cpp
-const int LOGMAX = 32;
-const int LLOGMAX = 62;
-
-vector<vll> g(MAX, vll());
-ll depth[MAX] = {}; // depth[1] = 0 
-ll jump[MAX][LOGMAX] = {}; // jump[v][k] -> 2^k antecessor of v
-// 1 points to 0 and 0 is the end point loop
-ll N; // quantity of vertices of the tree
-
-void binary_lifting(ll u = 1, ll p = -1){ // DFS, O(N)
-    for(auto v : g[u]) if (v != p){
-        depth[v] = depth[u] + 1;
-        
-        jump[v][0] = u;
-        for(ll k=1; k < LOGMAX; k++)
-            jump[v][k] = jump[ jump[v][k-1] ][k-1];
-        binary_lifting(v, u);
-    }
-}
-
-ll go(ll v, ll dist){ // O(log(N))
-    for(ll k = LOGMAX-1; k >= 0; k--)
-        if (dist & (1 << k))
-            v = jump[v][k];
-    return v;
-}
-
-ll lca(ll a, ll b){  // O(log(N))
-    if (depth[a] < depth[b]) swap(a, b);
-    
-    a = go(a, depth[a] - depth[b]);
-    if (a == b) return a;
-
-    for(ll k = LOGMAX-1; k >= 0; k--){
-        if (jump[a][k] != jump[b][k]){
-            a = jump[a][k];
-            b = jump[b][k];
-        }
-    }
-    return jump[a][0];
-}
-
-
-int32_t main(){sws;
-    ll n; cin >> n;
-
-    N = n;
-    binary_lifting();
 }
 ```
 
@@ -1102,7 +1085,9 @@ void findBridgesAndPoints(ll n) {
 }
 ```
 
-## Find a Cycle
+## Cycles
+
+#### Find a Cycle
 
 *vis[] array* stores the current state of a node:
 **-1** -> not visited
@@ -1184,7 +1169,7 @@ void dfs(ll u=1, ll parent=0, ll layer=1){
 
 ## Euler Path
 
-### Definitions:
+#### Definitions:
 
 An **Eulerian Path** or **Eulerian Trail** (*Caminho Euleriano*) consists of a path that transverses all **Edges**. 
 
@@ -1192,7 +1177,7 @@ A special case is the closed path, which is an **Eulerian Circuit** or **Euleria
 
 Similarly, a **Hamiltonian Path** consists of a path that transverses all **Vertices**.
 
-### Conditions for Eulerian Path existence
+#### Conditions for Eulerian Path existence
 
 To check if it is possible, there is a need for connectivity: 
 
@@ -1202,13 +1187,13 @@ and also:
 
 ![image](..\Aux-Images\EulerianPathExistence.png)
 
-## Hierholzer Algorithm
+### Hierholzer Algorithm
 
 Find a **Eulerian Path/Circuit** with a linear complexity of *O(Edges)*.
 
 Using an *ordered set* on **Undirected Graphs** increases complexity by *log2(Edges)*. This can be optimized using a *list* with references to each bidirectional edge so that any reversed edge can be erased in *O(1)*.
 
-### Example 1:
+#### Example 1:
 
 Generating an **Eulerian Path** with Hierholzer in a *Directed Graph*, starting on node *1* and ending on node *n*.
 
@@ -1256,6 +1241,7 @@ bool checkPossiblePath(ll start, ll end, ll n, ll nodes) {
 }
 
 // O(m) -> O(Edges)
+// Hierholzer function can be used directly if there is already a garanted existance of an eulerian path/circuit.
 vll hierholzer(ll start, ll n) { // generate an eulerian path, assuming there is only 1 end node
     vll ans, pilha, idx(n+1, 0);
 
@@ -1310,7 +1296,7 @@ int32_t main(){ sws;
 }   
 ```
 
-### Example 2:
+#### Example 2:
 
 Generating an **Eulerian Circuit** with Hierholzer in an *Undirected Graph*, starting on node *1* and also ending on node *1*.
 
@@ -1354,6 +1340,7 @@ bool checkPossiblePath(ll n, ll nodes) {
 }
 
 // O(m * log2(m)) -> O(Edges * log2(m)) 
+// Hierholzer function can be used directly if there is already a garanted existance of an eulerian path/circuit.
 vll hierholzer(ll start, ll n) { // generate an eulerian path, assuming there is only 1 end node
     vll ans, pilha, idx(n+1, 0);
 
@@ -1435,11 +1422,13 @@ void dfs_time(int u, int p) {
 }
 ```
 
-## Problems
+#### Problems
 
 https://cses.fi/problemset/task/1138 -> change value of node and calculate sum of the path to root of a tree
 
-## Kosaraju
+## Strongly Connected Components
+
+### Kosaraju
 
 Used for **Finding Strongly Connected Somponents** (SCCs) in a *directed graph* (digraph).
 
@@ -1480,7 +1469,7 @@ void kosaraju(ll n){
 }
 ```
 
-### Can be extended to generate a Condensation Graph
+#### Can be extended to generate a Condensation Graph
 
 *AKA:* condensate/convert all SCC's into single vertices and create a new graph
 
@@ -1625,7 +1614,7 @@ vll dijkstraKSP(ll start, ll end, ll k){ // O(K * M) = O(K * Edges)
 }
 ```
 
-### Extended Dijkstra
+#### Extended Dijkstra
 
 Besides the **Shortest Path Distance**, 
 
@@ -1679,7 +1668,7 @@ void dijkstra(ll start){
 }
 ```
 
-## Terminology:
+## Graph Terminology:
 
 **Clique**: a subset of vertices of an *undirected graph* such that every two distinct vertices in the clique are adjacent.
 
@@ -1726,11 +1715,9 @@ void topological_sort(ll n) {
 
 ## Matrix
 
-### Matrix operations
-
 ```cpp
 struct Matrix{
-    vector<vector<int>> M, IND;
+    vector<vll> M, IND;
     
     Matrix(vector<vector<int>> mat){
         M = mat;
@@ -1788,6 +1775,159 @@ struct Matrix{
 };
 ```
 
+#### Another Version with long long and MOD
+
+```cpp
+struct Matrix{
+    vector<vll> M, Identity;
+    
+    Matrix(vector<vll> mat) {
+        M = mat;
+    }
+    
+    // identity == 0 => Empty matrix constructor
+    // identity == 1 => also generates a Identity Matrix
+    Matrix(ll row, ll col, bool identity = 0){
+        M.assign(row, vll(col, 0));
+
+        if (identity) { // row == col
+            Identity.assign(row, vll(col, 0));
+            for(ll i=0; i<row; i++)
+                Identity[i][i] = 1;
+        }
+    }
+
+    // A+B ; needs (sizeof(A) == sizeof(B))
+    Matrix operator +(const Matrix &B) const{
+        ll row = M.size(); ll col = M[0].size();
+
+        Matrix ans(row, col);
+
+        for(ll i=0; i<row; i++){
+            for(ll j=0; j<col; j++){
+                ans.M[i][j] = (M[i][j] + B.M[i][j]) % MOD;
+            }
+        }
+        return ans;
+    }
+    // A*B (A.column == B.row)
+    Matrix operator *(const Matrix &B) const{ 
+        ll rowA = M.size();
+        ll colA; ll rowB = colA = M[0].size();
+
+        Matrix ans(rowB, colA);
+
+        for(ll i=0; i<rowA; i++){
+            for(ll j=0; j<colA; j++){
+                ll sum=0;
+                for(ll k=0; k<rowB; k++){
+                    sum += (M[i][k] * B.M[k][j]) % MOD;
+                    sum %= MOD;
+                }
+                ans.M[i][j] = sum;
+            }
+        }
+        return ans;
+    }
+
+    Matrix operator ^(const ll n) const{ // Need identity Matrix
+        if (n == 0) return Identity;
+        if (n == 1) return (*this);
+        Matrix aux = (*this) ^ (n/2);
+        aux = aux * aux;
+        if(n % 2 == 0) return aux;
+        else return (*this) * aux;
+    }
+};
+```
+
+#### Usage
+
+For faster linear recurrence computation with matrix exponentiation. 
+
+Base * Operator^(n) = Result[n]
+
+**Example:**
+
+*Recorrence:*
+dp[i] = dp[i-1] + dp[i-2] + dp[i-3] + dp[i-4] + dp[i-5] + dp[i-6]
+
+Base Matrix
+[dp[5], dp[4], dp[3], dp[2], dp[1], dp[0]]
+
+* Operator Matrix ^ 1
+[1, 1, 0, 0, 0, 0]
+[1, 0, 1, 0, 0, 0]
+[1, 0, 0, 1, 0, 0]
+[1, 0, 0, 0, 1, 0]
+[1, 0, 0, 0, 0, 1]
+[1, 0, 0, 0, 0, 0]
+
+= Result Matrix
+[dp[n+5], dp[n+4], dp[n+3], dp[n+2], dp[n+1], dp[n]]
+
+```cpp
+int32_t main(){ sws;
+    ll n; cin >> n;
+    Matrix op(6, 6, 1);
+    op.M[0] = {1, 1, 0, 0, 0, 0};
+    op.M[1] = {1, 0, 1, 0, 0, 0};
+    op.M[2] = {1, 0, 0, 1, 0, 0};
+    op.M[3] = {1, 0, 0, 0, 1, 0};
+    op.M[4] = {1, 0, 0, 0, 0, 1};
+    op.M[5] = {1, 0, 0, 0, 0, 0};
+
+    Matrix base(vector(1, vll({16, 8, 4, 2, 1, 1})));
+    if (n <= 5) cout << base.M[0][5-n] << endl; 
+    else {
+        op = op^(n-5);
+        Matrix ans = base * op;
+        cout << ans.M[0][0] << endl;
+    }
+}   
+```
+
+## Series Theory
+
+#### Closed formulas for some sequences
+
+**Natural Number Summation (PA):**
+
+$ 1 + 2 + 3 + 4 + 5 + ... + n-1 + n $
+
+$ = \sum_{i=1}^n i $
+
+= $ \frac{ n(n+1) }{ 2 } $
+
+**Natural Number Quadratic Summation:**
+
+$ 1 + 4 + 9 + 16 + 25 + ... + (n-1)^2 + n^2 $
+
+$ = \sum_{i=1}^n i^2 $
+
+= $ \frac{ n(n+1)(2n+1) }{ 6 } $
+
+**Triangular Numbers Summation:**
+
+$ 1 + 3 + 6 + 10 + 15 + ... + \frac{(n-1)(n)}{2} + \frac{(n)(n+1)}{2} $
+
+$ = \sum_{i=1}^n \frac{i(i+1)}{2} = \frac{1}{2}(\sum_{i=1}^n i^2 + \sum_{i=1}^n i) $
+
+$ = \frac{1}{2} ( \frac{ n(n+1) }{ 2 } + \frac{ n(n+1)(2n+1) }{ 6 }) $
+
+
+---
+
+# Misc
+
+## Minimum Excluded (MEX)
+
+! TODO :(
+
+let x be an array:
+
+$ MEX( x ) <= len( x ) $
+
 
 ---
 
@@ -1841,67 +1981,97 @@ struct intM{
 };
 ```
 
-## Modular Arithmetic
-
-### Basic operations with redundant MOD operators
+### Basic operations with combinatorics
 
 Also contains combinatorics operations
 
 ```cpp
 struct OpMOD{
-    vector<long long> fact, ifact;
+    vll fact, ifact;
 
     OpMOD () {}
 
     // overloaded constructor that computes factorials
-    OpMOD(long long n){ // from fact[0] to fact[n]; O(n)
+    OpMOD(ll n){ // from fact[0] to fact[n]; O(n)
         fact.assign(n+1 , 1);
-        for(long long i=2; i<=n; i++) fact[i] = mul(fact[i-1], i);
+        for(ll i=2; i<=n; i++) fact[i] = mul(fact[i-1], i);
 
         ifact.assign(n+1, 1);
         ifact[n] = inv(fact[n]);
-        for(long long i=n-1; i>=0; i--) ifact[i] = mul(ifact[i+1], i+1);
+        for(ll i=n-1; i>=0; i--) ifact[i] = mul(ifact[i+1], i+1);
     }
 
-    long long add(long long a, long long b){
+    ll add(ll a, ll b){
         return ( (a%MOD) + (b%MOD) ) % MOD;
     }
 
-    long long sub(long long a, long long b){
-        long long tmp = (a%MOD) - (b%MOD) % MOD;
-        if (tmp < 0) tmp += MOD;
-        return tmp;
+    ll sub(ll a, ll b){
+        return ( ((a%MOD) - (b%MOD)) + MOD ) % MOD;
     }
 
-    long long mul(long long a, long long b){
+    ll mul(ll a, ll b){
         return ( (a%MOD) * (b%MOD) ) % MOD;
     }
 
-    long long fast_exp(long long n, long long i){ // n ** i
+    ll fast_exp(ll n, ll i){ // n ** i
         if (i == 0) return 1;
         if (i == 1) return n;
-        long long tmp = fast_exp(n, i/2);
+        ll tmp = fast_exp(n, i/2);
         if (i % 2 == 0) return mul(tmp, tmp);
         else return mul( mul(tmp, tmp), n );
     }
 
-    long long inv(long long n){
+    ll inv(ll n){
         return fast_exp(n, MOD-2);
     }
 
-    long long div(long long a, long long b){
+    ll div(ll a, ll b){
         return mul(a, inv(b));
     }
 
-    long long combination(long long n, long long k){ // n! / (n! (n-k)! )
+    // n! / (n! (n-k)! )
+    ll combination(ll n, ll k){ // "Combinação/Binomio de Newton"
         return mul( mul(fact[n], ifact[k]) , ifact[n-k]); 
     }
 
-    long long disposition(long long n, long long k){ // n! / (n-k)!
+    // n! / (n-k)!
+    ll disposition(ll n, ll k){ // "Arranjo Simples"
         return mul(fact[n], ifact[n-k]);
+    }
+
+    // n! 
+    ll permutation(ll n){ // "Permutação Simples"
+        return fact[n];
+    }
+
+    // n! / (k1! k2! k3!)
+    ll permutationRepetition(ll n, vll x) { // "Permutação com Repetição" 
+        ll tmp = fact[n];
+        for(auto k : x) tmp = mul(tmp, ifact[k]);
+        return tmp;
+    }
+
+    // (n+m-1)! / ((n-1)! (m!)) 
+    ll starBars(ll n, ll m) { // "pontos e virgulas"
+        // n Groups -> n-1 Bars
+        // m Stars
+        return combination(n+m-1, m);
+    }
+
+    // !n = (n-1) * ( !(n-1) + !(n-2) )
+    vll subfactorial; // derangements
+    void computeSubfactorials(ll n) {
+        subfactorial.assign(n+1, 0);
+        subfactorial[0] = 1;
+        // !0 = 1
+        // !1 = 0
+        for(ll i=2; i<=n; i++) {
+            subfactorial[i] = mul( (i-1) , add(subfactorial[i-1], subfactorial[i-2]) );
+        }
     }
 };
 
+// remember to pass a number delimeter (n) to precompute factorials 
 OpMOD op;
 ```
 
@@ -1910,6 +2080,51 @@ OpMOD op;
 ---
 
 # Number-Theory
+
+## Combinatorics Theory
+
+#### Stars and Bars 
+
+Also called "sticks and stones", "balls and bars", and "dots and dividers"
+
+$ x_1 + x_2 + ... + x_n = m $
+
+**Example: (n = 3, m = 7)**
+
+★ ★ ★ ★ | ★ | ★ ★
+
+*n* Groups;
+*n-1* Bars;
+*m* Stars;
+
+**Solution**
+
+*C(n+m-1, n-1) = (n+m-1)! / ( (n-1)! (m)! )*
+
+**Proof**
+
+Elements = Bars + Stars = (n-1) + m = n+m-1;
+Repetition of Bars = n-1
+Repetition of Stars = m
+
+Therefore, it's a simple *permutation with repetition*.
+
+$ P^{(n+m-1)}_{(n-1,m)} = C (n+m-1, m)$
+
+#### Derangement
+
+In combinatorial mathematics, a derangement is a permutation of the elements of a set, such that no element appears in its original position. In other words, a derangement is a permutation that has no fixed points.
+
+##### Counting derangements 
+
+The number of derangements of a set of size n is known as the subfactorial of n or the n-th derangement number or n-th de Montmort number.
+
+A subfactorial is noted as: 
+
+**!n** = (n-1) * ( !(n-1) + !(n-2) ), for n >= 2.
+
+*!1* = 0
+*!0* = 1 
 
 ## Crivo de Eratóstenes
 
@@ -1933,7 +2148,7 @@ vector<int> crivo(int n){
 }
 ```
 
-### Optimized
+#### Optimized
 
 ```cpp
 // O (N log^2(N) ) -> Teorema de Merten
@@ -1953,7 +2168,9 @@ void eratostenes(ll n){
 }
 ```
 
-## Trial Division with precomputed primes
+## Factorization
+
+### Trial Division with precomputed primes
 
 **Complexity**:  O(sqrt(N))
 
@@ -1996,7 +2213,7 @@ vector<ll> factorization(ll n){
 }
 ```
 
-## Pollard Rho
+### Pollard Rho
 
 **Complexity**:  better than O(sqrt(N)) *:D*
 
@@ -2067,7 +2284,7 @@ vector<ll> fact(ll n) {
 
 ## Policy Based Data Structures (PBDS)
 
-### Ordered Set
+#### Ordered Set
 
 ```cpp
 // * Ordered Set and Map
@@ -2079,7 +2296,7 @@ using namespace __gnu_pbds;
 template <class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 ```
 
-### Ordered Map
+#### Ordered Map
 
 ```cpp
 // * Ordered Set and Map
@@ -2091,18 +2308,18 @@ using namespace __gnu_pbds;
 template <class K, class V> using ordered_map = tree<K, V, less<K>, rb_tree_tag, tree_order_statistics_node_update>;
 ```
 
-### Ordered Multiset
+#### Ordered Multiset
 
 Ordered Set pode ser tornar um multiset se utilizar um pair do valor com um index distinto. pll{val, t}, 1 <= t <= n
 
-### Observação
+**Observação:**
 
 O set não precisa conter a chave sendo buscada pelo *order_of_key()*.
 
 *order_of_key()* returns index starting from 0;
 [0, n)
 
-## Problemas
+**Problemas**
 
 Consegue computar em O(log(N)), quantos elementos são menores que K, utilizando o index.
 
@@ -2115,25 +2332,142 @@ Consegue computar em O(log(N)), quantos elementos são menores que K, utilizando
 
 Finds the first element that changes value in any monotonic function
 
+#### Maximum
+
+**Monotonically Decreasing** [1, 1, 1, 1, 0, 0, 0, 0]
+
 ```cpp
-bool attribute(int a){
-    // add code here!!!!!
+bool f(ll a){
+    // Add desired function here
     return true;
 }
 
-int search(int l=0, int r=1e9, int ans=0){
-    while(l <= r) { // [l; r]
-        int mid = (l+r)/2;
- 
-        if(attribute(mid)) { // [mid; r]
+ll search(ll l=0, ll r=1e9, ll ans=0){
+    while(l <= r) { // [l, r] 
+        ll mid = (l+r)/2;
+        if(f(mid)) { // (mid, r]
             ans = mid;
             l = mid+1;
         }
-        else { // [l; mid]
+        else { // [l; mid)
             r = mid-1;
         }
     }
     return ans;
+}
+```
+
+#### Minimum 
+
+**Monotonically Increasing** [0, 0, 0, 0, 1, 1, 1, 1]
+
+```cpp
+bool f(ll mid){
+    // Add desired function here
+    return true;
+}
+
+ll bSearch(ll l=0, ll r=1e9, ll ans=0){
+    while(l <= r) { // [l, r] 
+        ll mid = (l+r)/2;
+        if (f(mid) ) { // [l, mid)
+            ans = mid;
+            r = mid-1;
+        }
+        else { // (mid, r]
+            l = mid+1;
+        }
+    }
+    return ans;
+}
+```
+
+## Merge sort
+
+Merge Sort with number of inversions counter.
+
+```cpp
+int merge(vector<int> &v, int l, int mid, int r){
+    int i=l, j=mid+1, swaps=0;
+    vector<int> ans;
+
+    while(i <= mid or j <= r){
+
+        if(j > r or (v[i] <= v[j] and i<=mid)){
+            ans.push_back(v[i]);
+            i++;
+        }
+        else if(i > mid or (v[j] < v[i] and j <= r)){
+            ans.push_back(v[j]);
+            j++;
+            swaps = swaps + abs(mid+1-i);
+        }
+    }
+    
+    for(int i=l; i<=r; i++)
+        v[i] = ans[i-l];
+
+    return swaps;
+}
+
+int merge_sort(vector<int> &v, vector<int> &ans, int l, int r){
+    if(l==r){
+        ans[l] = v[l];
+        return 0;
+    }
+
+
+    int mid = (l+r)/2, swaps = 0;
+    swaps += merge_sort(v, ans, l, mid);
+    swaps += merge_sort(v, ans, mid+1, r);
+    swaps += merge(ans, l, mid, r);
+
+    return swaps;
+}
+```
+
+#### Updated
+
+Directly updates the *v* vector. Also return the number of swaps (inversions).
+
+**O(N log(N))**
+
+```cpp
+
+// O(N)
+ll merge(vll &v, ll l, ll r) {
+    ll i = l, mid = (l+r)/2, j = mid+1, swaps = 0;
+    vll ans;
+
+    while(i <= mid or j <= r) {
+
+        if(j > r or (v[i] <= v[j] and i <= mid)) {
+            ans.pb(v[i]);
+            i += 1;
+        }
+
+        else if(i > mid or (v[j] < v[i] and j <= r)){
+            ans.pb(v[j]);
+            j += 1;
+            swaps += (mid-1)+1; // mid-i+1 = elements remaining in the left subarray (same number of elements that will be swaped to the right)
+        }
+    }
+    
+    for(ll k=l; k<=r; k++) v[k] = ans[k-l];
+
+    return swaps;
+}
+
+// O(log2(N))
+ll merge_sort(vll &v, ll l, ll r){
+    if(l == r) return 0;
+
+    ll mid = (l+r)/2, swaps = 0;
+    swaps += merge_sort(v, l, mid);
+    swaps += merge_sort(v, mid+1, r);
+    swaps += merge(v, l, r);
+
+    return swaps;
 }
 ```
 
@@ -2245,6 +2579,64 @@ class SegmentTree {
                 return merge(ansl, ansr);
             }
         }
+};
+```
+
+## Implicit Segtree or Sparse Segtree
+
+Creates vertices only when needed.
+Uncreated vertices are considered to have default values.
+
+**TODO** Needs testing!
+
+```cpp
+// Remember to set R value !!
+ll L=1, R;
+struct SegImplicit {
+    struct Node{
+        ll ps = 0, Lnode = 0, Rnode = 0;
+    };
+    ll idx = 2; // 1-> root / 0-> zero element
+    Node tree[4*MAX];
+
+    ll merge(Node a, Node b){
+        return a.ps + b.ps;
+    }
+
+    void increase(ll pos, ll x, ll l=L, ll r=R, ll i=1) {
+        if (l == r) {
+            tree[i].ps += x;
+            return;
+        }
+
+        ll mid = (l+r)/2;
+
+        if (pos <= mid) {
+            if (tree[i].Lnode == 0) tree[i].Lnode = idx++; // new vertex
+            increase(pos, x, l, mid, tree[i].Lnode);
+        }
+        else {
+            if (tree[i].Rnode == 0) tree[i].Rnode = idx++;
+            increase(pos, x, mid+1, r, tree[i].Rnode);
+        }
+
+        tree[i].ps = merge(tree[ tree[i].Lnode ], tree[ tree[i].Rnode ]);
+    }
+
+    Node query(ll left, ll right, ll l=L, ll r=R, ll i=1) {
+        if (right < l or r < left)
+            return Node{};
+
+        if (left <= l and r <= right)
+            return tree[i];
+            
+        ll mid = (l+r)/2;
+        Node ansl, ansr;
+        if (tree[i].Lnode != 0) ansl = query(left, right, l, mid, tree[i].Lnode);
+        if (tree[i].Rnode != 0) ansr = query(left, right, mid+1, r, tree[i].Rnode);
+
+        return Node{merge(ansl, ansr), 0, 0};
+    }
 };
 ```
 
@@ -2364,161 +2756,164 @@ class SegmentTree {
 
 ## Recursive Segtree with Lazy propagation
 
+### Sum range query, increase range query
+
 ```cpp
-ll L=1, N; // L=1=left delimiter; N=right delimiter
-class SegmentTreeLazy {
-    public:
-        struct node{
-            int psum = 0;
-        };
+ll L = 1, R;
+struct SegtreeLazy{
+    vector<ll> tree, lazy, v;
 
-        node tree[4*MAX];
-        int lazy[4*MAX];
-        int v[MAX];
+    SegtreeLazy() {
+        tree.assign(4*(R-L+2), 0);
+        lazy.assign(4*(R-L+2), 0);
+        v.assign((R-L+2), 0);
+    }
 
-        node merge(node a, node b){
-            node tmp;
-            // merge operaton:
-            tmp.psum = a.psum + b.psum;
-            //
-            return tmp;
+    void build(ll l=L, ll r=R, ll i=1) {
+        if (l == r) tree[i] = v[l];
+        else{
+            ll mid = (l+r)/2;
+            build(l, mid, 2*i);
+            build(mid+1, r, 2*i+1);
+            tree[i] = tree[2*i] + tree[2*i+1];
         }
-        
-        SegmentTreeLazy() {
-            memset(lazy, 0, sizeof(lazy));
-            memset(v, 0, sizeof(v));
+        lazy[i] = 0;
+    }
+
+    void propagate(ll l, ll r, ll i){
+        if(lazy[i]) {
+            tree[i] += lazy[i] * (r-l+1);
+            if(l != r){
+                lazy[2*i] += lazy[i];
+                lazy[2*i+1] += lazy[i];
+            }
+            else v[l] += lazy[i]; // update array
+            lazy[i] = 0;
+        }
+    }
+
+    // [left, right] = (selected interval for the query)
+    // l, r = the variables used for the vertex limits
+
+    // increase function adds 'val' to [left, right]
+    void increase(ll left=L, ll right=R, ll val=0, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
+
+        if (right < l or r < left) return;
+
+        else if (left <= l and r <= right){
+            lazy[i] += val;
+            propagate(l, r, i);
         }
 
-        void build (int l=L, int r=N, int i=1) {
-            if (l == r){
-                node tmp;
-                // leaf element
-                tmp.psum = v[l];
-                //
-                tree[i] = tmp;
-                lazy[i] = 0;
-            }
-            else{
-                int mid = (l+r)/2;
-                build(l, mid, 2*i);
-                build(mid+1, r, 2*i+1);
-                tree[i] = merge(tree[2*i], tree[2*i+1]);
-                lazy[i] = 0;
-            }
+        else{
+            ll mid = (l+r)/2;
+            increase(left, right, val, l, mid, 2*i);
+            increase(left, right, val, mid+1, r, 2*i+1);
+            tree[i] = tree[2*i] + tree[2*i+1];
         }
-        void range_update(int left=L, int right=N, int val=0, int l=L, int r=N, int i=1){
-            // left/right are the range limits for the update query (can be chosen)
-            // l / r are the variables used for the vertex limits
-            if (lazy[i]){
-                tree[i].psum += lazy[i] * (r-l+1);
-                if (l != r){
-                    lazy[2*i] += lazy[i];
-                    lazy[2*i+1] += lazy[i];
-                }
-                lazy[i] = 0;
-            }
+    }
 
-            if (right < l or r < left) return;
-            else if (left <= l and r <= right){
-                tree[i].psum += val * (r-l+1);
-                if (l != r){
-                    lazy[2*i] += val;
-                    lazy[2*i+1] += val;
-                }
-            }
-            else{
-                int mid = (l+r)/2;
-                range_update(left, right, val, l, mid, 2*i);
-                range_update(left, right, val, mid+1, r, 2*i+1);
-                tree[i] = merge(tree[2*i], tree[2*i+1]);
-            }
-        }
-        node range_query(int left=L, int right=N, int l=L, int r=N, int i=1){
-            // left/right are the range limits for the update query
-            // l / r are the variables used for the vertex limits
-            if (lazy[i]){
-                tree[i].psum += lazy[i] * (r-l+1);
-                if (l != r){
-                    lazy[2*i] += lazy[i];
-                    lazy[2*i+1] += lazy[i];
-                }
-                lazy[i] = 0;
-            }
+    ll query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
 
-            if (right < l or r < left){
-                node tmp{0};
-                return tmp;
-            }
-            else if (left <= l and r <= right){
-                return tree[i];
-            }
-            else{
-                int mid = (l+r)/2;
-                node ansl = range_query(left, right, l, mid, 2*i);
-                node ansr = range_query(left, right, mid+1, r, 2*i+1);
-                return merge(ansl, ansr);
-            }
+        if (right < l or r < left) return 0;
+
+        else if (left <= l and r <= right) return tree[i];
+
+        else{
+            ll mid = (l+r)/2;
+            return (
+                query(left, right, l, mid, 2*i) + 
+                query(left, right, mid+1, r, 2*i+1)
+            );
         }
+    }
 };
 ```
 
-### Details
+### Range Minimum Query, Update (Assignment) Query
 
-**0 or 1-indexed**, depends on the arguments passed on to the default variables 
+```cpp
+ll L = 1, R;
+struct SegtreeLazy{
+    vll tree, lazy, v;
 
+    SegtreeLazy() {
+        tree.assign(4*(R-L+2), 0);
+        lazy.assign(4*(R-L+2), 0);
+        v.assign((R-L+2), 0);
+    }
 
-Uses a **struct node** to define node/vertex properties. *Default:* psum 
+    void build(ll l=L, ll r=R, ll i=1) {
+        if (l == r) tree[i] = v[l];
+        else{
+            ll mid = (l+r)/2;
+            build(l, mid, 2*i);
+            build(mid+1, r, 2*i+1);
+            tree[i] = min(tree[2*i], tree[2*i+1]);
+        }
+        lazy[i] = LLINF; // min query default value
+    }
 
+    void propagate(ll l, ll r, ll i){
+        if(lazy[i] != LLINF) { // need to propagate lazy
+            tree[i] = lazy[i];
+            if(l != r)
+                lazy[2*i] = lazy[2*i+1] = lazy[i];
+            else 
+                v[l] = lazy[i]; // update 'v' vector
+            lazy[i] = LLINF;
+        }
+    }
 
-Uses a **merge function** to define how to join nodes 
+    // [left, right] = (selected interval for the query)
+    // l, r = the variables used for the vertex limits
 
+    // update function changes all elements in [left, right] to val
+    void update(ll left=L, ll right=R, ll val=0, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
 
-### Parameters
+        if (right < l or r < left) return;
 
-**left** and **right**: parameters that are the range limits for the range query 
+        else if (left <= l and r <= right){
+            lazy[i] = val;
+            propagate(l, r, i);
+        }
 
+        else{
+            ll mid = (l+r)/2;
+            update(left, right, val, l, mid, 2*i);
+            update(left, right, val, mid+1, r, 2*i+1);
+            tree[i] = min(tree[2*i], tree[2*i+1]);
+        }
+    }
 
-**l** and **r**: are auxilary variables used for delimiting a vertex boundaries 
+    ll query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
 
+        if (right < l or r < left) return LLINF;
 
-**idx**: index of the leaf node that will be updated 
+        else if (left <= l and r <= right) return tree[i];
 
+        else{
+            ll mid = (l+r)/2;
+            return min(
+                query(left, right, l, mid, 2*i), 
+                query(left, right, mid+1, r, 2*i+1)
+            );
+        }
+    }
+};
+```
 
-**val**: value that will be inserted to the idx node 
+#### For MAX Query
 
+Use the same code as min segtree, change:
 
-### Atributes
+**min()** -> **max()**
+**LLINF** -> **-LLINF**
 
-**Tree**: node array 
-
-
-**v**: vector that are used for leaf nodes 
-
-
-**Lazy**: array containing lazy updates
-
-### Methods
-
-#### O(n):
-
-**build(l, r, i)**: From **v** vector, constructs Segtree 
-
-#### O(log(N))
-
-**range_update(left, right, l, r, i, val)**: updates all element from *left* to *right* (inclusive) with *val* value. No return value 
-
-
-**range_query(left, right, l, r, i)**: does a range query from *left* to *right* (inclusive) and returns a node with the result 
-
-### Requires
-
-MAX variable 
-
-### Problems
-
-- Range Sum Query, range update
-- Range Max/Min Query, range update
-- Range Xor Query, range update
 
 ## Recursive Classic Segtree
 
@@ -2526,7 +2921,7 @@ Data structure that creates parent vertices for a linear array to do faster comp
 
 ![Diagrama](../Aux-Images/segtree_diagram.png)
 
-## Clearer version (min-seg)
+#### Clearer version (min-seg)
 
 ```cpp
 // 1 indexed segtree for minimum
@@ -2604,88 +2999,85 @@ struct Segtree {
 };
 ```
 
-## Old (sum-seg):
+#### Even more polished (sum-seg):
 
 ```cpp
-int L = 1, N; // L = 1 = left limit; N = right limit
-class SegmentTree {
-    public:
-        struct node{
-            int psum;
-        };
-
-        node tree[4*MAX];
-        int v[MAX];
-
-        // requires minimum index and maximum index
-        SegmentTree() {
-            memset(v, 0, sizeof(v));
-        }
-
-        node merge(node a, node b){
-            node tmp;
+// 1 indexed segtree for sum 
+ll L=1, R;
+struct Segtree {
+    struct Node {
+        // null element:
+        ll ps = 0;
+    };
+ 
+    vector<Node> tree;
+    vll v;
+    
+    Segtree(ll n) {
+        v.assign(n+1, 0);
+        tree.assign(4*(n+1), Node{});
+        R = n;
+    }
+ 
+    Node merge(Node a, Node b) {
+        return Node{
             // merge operaton:
-            tmp.psum = a.psum + b.psum;
-            //
-            return tmp;
+            a.ps + b.ps
+        };
+    }
+ 
+    void build( ll l=L, ll r=R, ll i=1 ) {
+        if (l == r) {
+            tree[i] = Node {
+                // leaf element:
+                v[l]
+            };
         }
-
-        void build (int l=L, int r=N, int i=1) {
-            if (l == r){
-                node tmp;
-                // leaf element
-                tmp.psum = v[l];
-                //
-                tree[i] = tmp;
-            }
-            else{
-                int mid = (l+r)/2;
-                build(l, mid, 2*i);
-                build(mid+1, r, 2*i+1);
-                tree[i] = merge(tree[2*i], tree[2*i+1]);
-            }
+        else {
+            ll mid = (l+r)/2;
+            build(l, mid, 2*i);
+            build(mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
         }
-        void point_update(int idx=1, int val=0, int l=L, int r=N, int i=1){
-            if (l == r){
-                // update operation to leaf
-                node tmp{val};
-                //
-                tree[i] = tmp;
-            }
-            else{
-                int mid = (l+r)/2;
-                if (idx <= mid)
-                    point_update(idx, val, l, mid, 2*i);
-                else
-                    point_update(idx, val, mid+1, r, 2*i+1);
-                tree[i] = merge(tree[2*i], tree[2*i+1]);
-            }
+    }
+ 
+    void update(ll idx=1, ll val=0, ll l=L, ll r=R, ll i=1 ) {
+        if (l == r) {
+            tree[i] = Node{
+                // update operation:
+                val
+            };
         }
-        node range_query(int left=L, int right=N, int l=L, int r=N, int i=1){
-            // left/right are the range limits for the update query
+        else {
+            ll mid = (l+r)/2;
+            if (idx <= mid) update(idx, val, l, mid, 2*i);
+            else update(idx, val, mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
+        }
+    }
+ 
+    Node query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1) {
+        // left/right are the range limits for the update query
             // l / r are the variables used for the vertex limits
             if (right < l or r < left){
-                // null element
-                node tmp{0};
-                //
-                return tmp;
+                // null element:
+                return Node{};
             }
-            else if (left <= l and r <= right){
-                return tree[i];
-            }
+            else if (left <= l and r <= right) return tree[i]; 
             else{
                 int mid = (l+r)/2;
-                node ansl = range_query(left, right, l, mid, 2*i);
-                node ansr = range_query(left, right, mid+1, r, 2*i+1);
-                return merge(ansl, ansr);
+                return merge(
+                    query(left, right, l, mid, 2*i), 
+                    query(left, right, mid+1, r, 2*i+1)
+                );
             }
-        }
+    }
 };
 ```
 
-## Avisos
+#### Avisos
 
-### Details
+#### Details
 
 **0 or 1-indexed**, depends on the arguments used as default value
 
@@ -2696,7 +3088,7 @@ Uses a **struct node** to define node/vertex properties. *Default:* psum
 Uses a **merge function** to define how to join nodes 
 
 
-### Parameters
+#### Parameters
 
 **left** and **right**: parameters that are the range limits for the range query 
 
@@ -2710,7 +3102,7 @@ Uses a **merge function** to define how to join nodes
 **val**: value that will be inserted to the idx node 
 
 
-### Atributes
+#### Atributes
 
 **Tree**: node array 
 
@@ -2718,13 +3110,13 @@ Uses a **merge function** to define how to join nodes
 **v**: vector that are used for leaf nodes 
 
 
-### Methods
+#### Methods
 
-#### O(n):
+##### O(n):
 
 **build(l, r, i)**: From **v** vector, constructs Segtree 
 
-#### O(log(N))
+##### O(log(N))
 
 **point_update(idx, l, r, i, val)**: updates leaf node with *idx* index to *val* value. No return value 
 
@@ -2732,10 +3124,10 @@ Uses a **merge function** to define how to join nodes
 **range_query(left, right, l, r, i)**: does a range query from *left* to *right* (inclusive) and returns a node with the result 
 
 
-### Requires
+#### Requires
 MAX variable 
 
-### Problems
+#### Problems
 
 - Range Sum Query, point update
 - Range Max/Min Query, point update
@@ -2745,6 +3137,51 @@ MAX variable
 ---
 
 # Strings
+
+## Booth's Algorithm
+
+An efficient algorithm which uses a modified version of KMP to compute the **least amount of rotation needed** to reach the **lexicographically minimal string rotation**.
+
+A *rotation* of a string can be generated by moving characters one after another from beginning to end. For example, the rotations of *acab* are *acab*, *caba*, *abac*, and *baca*.
+
+```cpp
+// Booth Algorithm
+ll least_rotation(string s) { // O(n)
+    ll n = s.length();
+    vll f(2*n, -1);
+    ll k = 0;
+    for(ll j=1; j<2*n; j++) {
+        ll i = f[j-k-1];
+        while(i != -1 and s[j % n] != s[(k+i+1) % n] ) {
+            if (s[j % n] < s[(k+i+1) % n])
+                k = j - i - 1;
+            i = f[i];
+        }
+        if (i == -1 and s[j % n] != s[(k+i+1) % n] ) {
+            if (s[j % n] < s[(k+i+1) % n])
+                k = j;
+            f[j - k] = -1;
+        }
+        else
+            f[j - k] = i + 1;
+    }
+    return k;
+}
+
+int32_t main(){ sws;
+    string s; cin >> s;
+    ll n = s.length();
+    ll ans_idx = least_rotation(s);
+    string tmp = s + s;
+    cout << tmp.substr(ans_idx, n) << endl;
+}
+```
+
+## Knuth–Morris–Pratt algorithm (KMP)
+
+**AKA** Prefix function
+
+todo :D
 
 ## SUFFIX ARRAY
 
@@ -2815,38 +3252,500 @@ vector<int> kasai(string s, vector<int> sa) {
 
 ## TRIE
 
-Todo :-(
+*AKA:*  prefix tree, digital tree
 
-## Z function
+**MAX** Should be the number of maximum nodes to be created.
 
 ```cpp
-vector<int> z_function(string s) {
-    int n = (int) s.length();
-    vector<int> z(n);
-    for (int i = 1, l = 0, r = 0; i < n; ++i) {
-        if (i <= r)
-            z[i] = min (r - i + 1, z[i - l]);
-        while (i + z[i] < n && s[z[i]] == s[i + z[i]])
-            ++z[i];
-        if (r < i + z[i] - 1)
-            l = i, r = i + z[i] - 1;
+struct Trie{
+    ll trie[MAX][26];
+    bool isWordEnd[MAX];
+    ll nxt = 1, wordsCnt = 0;
+
+    void add(string s){ // O(n)
+        ll node = 0;
+        for(auto c: s) {
+            if(trie[node][c-'a'] == 0)
+                node = trie[node][c-'a'] = nxt++;
+            else
+                node = trie[node][c-'a'];
+        }
+        if(!isWordEnd[node]){
+            isWordEnd[node] = true;
+            wordsCnt++;
+        }
+    }
+
+    bool find(string s, bool remove=false){ // O(n)
+        ll node = 0;
+        for(auto c: s) {
+            if(trie[node][c-'a'] == 0)
+                return false;
+            else
+                node = trie[node][c-'a'];
+        }
+        if(remove and isWordEnd[node]){
+            isWordEnd[node] = false;
+            wordsCnt--;
+        }
+        return isWordEnd[node];
+    }
+};
+```
+
+## Z-function
+
+Suppose we are given a string  *s*  of length  *n* . The Z-function for this string is an array of length  *n*  where the  *i* -th element is equal to the greatest number of characters starting from the position  *i*  that coincide with the first characters of  *s* .
+
+The first element of the Z-function,  *z[0]* , is generally not well defined. This implementation assumes it as *z[0] = 0*. But it can also be interpreted as *z[0] = n* (all characters coincide).
+
+```cpp
+vll z_function(string s) { // O(n)
+    ll n = (ll) s.length();
+    vll z(n);
+    for (ll i=1, l=0, r=0; i<n; i++) {
+        if (i <= r) z[i] = min(r - i + 1, z[i - l]);
+
+        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) z[i]++;
+
+        if (r < i + z[i] - 1) l = i, r = i + z[i] - 1;
     }
     return z;
 }
 ```
 
-**Solves:** Find occurrences of pattern string (*pattern*) in the main string (*str*):
+#### Solves
+
+- Find occurrences of pattern string (*pattern*) in the main string (*str*):
 
 ```cpp
-string str, pattern; cin >> str >> pattern;
-string s = pattern + '$' + str;
-vector<int> z = z_function(s);
-ll ans = 0;
-ll n = pattern.size();
-for(ll i=0; i< (int) str.size(); i++){
-    if( z[i + n + 1] == n)
-        ans += 1;
+int32_t main() { sws;
+    string str, pattern; cin >> str >> pattern;
+    string s = pattern + '$' + str;
+    vll z = z_function(s);
+    ll ans = 0;
+    ll n = pattern.size();
+    for(ll i=0; i< (ll) str.size(); i++){
+        if( z[i + n + 1] == n)
+            ans += 1;
+    }
+    cout << ans << endl;
 }
-cout << ans << endl;
+```
+
+- Find all border lengths of a given string.
+
+**OBS:** A border of a string is a prefix that is also a suffix of the string but not the whole string. For example, the borders of *abcababcab* are *ab* and *abcab*.
+
+Works because *z[i] == j* is the condition when the common characters of z[i] reaches the end of the string. For example:
+
+*<ins>ab</ins>cababc<ins>ab</ins>*
+
+z[8] = 2
+
+**ab** is the border;
+
+```cpp
+int32_t main(){ sws;
+    string s; cin >> s;
+    vll z = z_function(s);
+    ll n = s.length();
+    for(ll i=n-1, j=1; i>=0; i--) {
+        if (z[i] == j) cout << j << ' ';
+        j += 1;
+    }
+    cout << endl;
+}
+```
+
+- Find all period lengths of a string.
+
+**OBS:** A period of a string is a prefix that can be used to generate the whole string by repeating the prefix. The last repetition may be partial. For example, the periods of *abcabca* are *abc*, *abcabc* and *abcabca*.
+
+Works because *z[i] + i >= n* is the condition when the common characters of z[i] in addition to the elements already passed, exceeds or is equal to the end of the string. For example:
+
+*abaababa<ins>ab</ins>*
+
+z[8] = 2
+
+**abaababa** is the period; the remaining (z[i] characters) are a prefix of the period; and when all these characters are combined, it can form the string (which has *n* characters).
+
+```cpp
+int32_t main(){ sws;
+    string s; cin >> s;
+    vll z = z_function(s);
+    ll n = s.length();
+    for(ll i=1; i<n; i++) {
+        if (z[i] + i >= n) {
+            cout << i << ' ';
+        }
+    }
+    cout << n << endl;
+}
+```
+
+
+---
+
+# Structures
+
+## BIT ( Fenwick Tree or Binary indexed tree)
+
+**Complexity** O(log(n)): point update, range query
+
+#### 0-indexed:
+
+```cpp
+struct FenwickTree {
+    vector<ll> bit;  // binary indexed tree
+    ll n;
+
+    FenwickTree(ll n) { // all zero constructor
+        this->n = n;
+        bit.assign(n, 0);
+    }
+
+    FenwickTree(vector<ll> a) : FenwickTree(a.size()) { // vector constructor
+        for (size_t i = 0; i < a.size(); i++)
+            add(i, a[i]);
+    }
+
+    ll sum(ll r) { // prefix sum [1, r]
+        ll ret = 0;
+        for (; r >= 0; r = (r & (r + 1)) - 1)
+            ret += bit[r];
+        return ret;
+    }
+
+    ll query(ll l, ll r) { // range sum [l, r]
+        return sum(r) - sum(l - 1);
+    }
+
+    void add(ll idx, ll delta) { // add delta to current value
+        for (; idx < n; idx = idx | (idx + 1))
+            bit[idx] += delta;
+    }
+};
+```
+
+#### 1-indexed
+
+```cpp
+struct FenwickTree {
+    vector<ll> bit;  // binary indexed tree
+    ll n;
+
+    FenwickTree(ll n) { // all zero constructor
+        this->n = n + 2;
+        bit.assign(n + 2, 0);
+    }
+
+    FenwickTree(vector<ll> a) : FenwickTree(a.size()) { // vector constructor
+        for (size_t i = 0; i < a.size(); i++)
+            add(i, a[i]);
+    }
+
+    ll sum(ll idx) { // sum from 1 to idx [inclusive] (prefix sum)
+        ll ret = 0;
+        for (++idx; idx > 0; idx -= idx & -idx)
+            ret += bit[idx];
+        return ret;
+    }
+
+    ll query(ll l, ll r) { // sum from l to r [inclusive]
+        return sum(r) - sum(l - 1);
+    }
+
+    void add(ll idx, ll delta) { // add delta to current value
+        for (++idx; idx < n; idx += idx & -idx)
+            bit[idx] += delta;
+    }
+};
+```
+
+
+---
+
+# Tree
+
+## Binary lifting
+
+**Solves**: LCA, O(log) travelling in a tree
+
+**OBS:** log2(1e5) ~= 17; log2(1e9) ~= 30 ; log2(1e18) ~= 60
+
+**Use for deep trees:** LLOGMAX = 62;
+
+```cpp
+const ll LOGMAX = 32;
+
+vector<vll> g(MAX, vll());
+ll depth[MAX]; // depth[1] = 0 
+ll jump[MAX][LOGMAX]; // jump[v][k] -> 2^k antecessor of v
+// 1 points to 0 and 0 is the end point loop
+ll N; // quantity of vertices of the tree
+
+void binary_lifting(ll u = 1, ll p = -1){ // DFS, O(N)
+    for(auto v : g[u]) if (v != p){
+        depth[v] = depth[u] + 1;
+        
+        jump[v][0] = u;
+        for(ll k=1; k < LOGMAX; k++)
+            jump[v][k] = jump[ jump[v][k-1] ][k-1];
+        binary_lifting(v, u);
+    }
+}
+
+ll go(ll v, ll dist){ // O(log(N))
+    for(ll k = LOGMAX-1; k >= 0; k--)
+        if (dist & (1 << k))
+            v = jump[v][k];
+    return v;
+}
+
+ll lca(ll a, ll b){  // O(log(N))
+    if (depth[a] < depth[b]) swap(a, b);
+    
+    a = go(a, depth[a] - depth[b]);
+    if (a == b) return a;
+
+    for(ll k = LOGMAX-1; k >= 0; k--){
+        if (jump[a][k] != jump[b][k]){
+            a = jump[a][k];
+            b = jump[b][k];
+        }
+    }
+    return jump[a][0];
+}
+
+
+int32_t main(){ sws;
+    ll n; cin >> n;
+    N = n;
+
+    binary_lifting();
+}
+```
+
+## Find the Centroid of a Tree
+
+A centroid of a tree is defined as a node such that when the tree is rooted
+at it, no other nodes have a subtree of size greater than $\frac{N}{2}$.
+
+We can find a centroid in a tree by starting at the root. Each step, loop through all of its children. If all of its children have subtree size less than or equal to $\frac{N}{2}$, then it is a centroid. Otherwise, move to the child with a subtree size that is more than $\frac{N}{2}$ and repeat until you find a centroid.
+
+```cpp
+vector<vll> g(MAX, vll());
+vll subtreeSize(MAX, 1);
+ll N; // <- initialize N = n !!
+
+void getSizes(ll u = 1, ll p = -1) {
+	for(auto v : g[u]) if (v != p) {
+		getSizes(v, u);
+		subtreeSize[u] += subtreeSize[v];
+	}
+}
+
+ll centroid(ll u = 1, ll p = -1) {
+	for(auto v : g[u]) if (v != p) {
+		if (subtreeSize[v] * 2 > N) return centroid(v, u);
+	}
+	return u;
+}
+```
+
+## Find the Diameter
+
+From any node X find a node A which is the farthest away from X.
+Then, from node A, find a node B which is the farthest away from A. 
+
+Path from (A - B) is a diameter.
+
+It can be proven by drawing a diameter line. If any node is further than any of the diameter extremities, then it should be switched (so the first line wasn't a diameter at all).
+
+From any node, the fasthest node is a diameter extremity. Then from this extremity, the fasthest node is the other diameter extremity.
+
+```cpp
+vector<vll> g(MAX, vll());
+ 
+pll dfs(ll u, ll p){
+    pll ans = {u, 0};
+    for(auto v : g[u]) if (v != p) {
+        auto [node, comp] = dfs(v, u);
+        if (comp+1 > ans.ss){
+            ans = {node, comp+1};
+        }
+    }
+    return ans;
+}
+ 
+int32_t main(){sws;
+    ll n; cin >> n;
+    for(ll i=1; i<n; i++){
+        ll a, b; cin >> a >> b;
+        g[a].pb(b);
+        g[b].pb(a);
+    }
+    ll ans1 = dfs(1, 1).ff;
+    cout << dfs(ans1 , ans1).ss << endl;
+}
+```
+## Find the lenght of the longest path from all nodes
+
+It can be proven that to any node X, the maximum distance is either dist(X, A) or dist(X, B), which are the extremities of a diameter.
+
+```cpp
+vector<vll> g(MAX, vll());
+vll distA(MAX, 0);
+vll distB(MAX, 0);
+
+pll dfs(ll u, ll p, ll op) {
+    pll ans = {u, 0};
+    for(auto v : g[u]) if (v != p) {
+        if (op == 1) distA[v] = distA[u]+1;
+        else if (op == 2) distB[v] = distB[u]+1;
+
+        auto [node, length] = dfs(v, u, op);
+        
+        if (length + 1 > ans.ss)
+            ans = {node, length+1};
+    }
+    return ans;
+}
+
+int32_t main() { sws;
+    ll n; cin >> n;
+    for(ll i=0; i<n-1; i++) {
+        ll u, v; cin >> u >> v;
+        g[u].pb(v);
+        g[v].pb(u);
+    }
+
+    auto [nodeA, _t1] = dfs(1, -1, 0);
+    auto [nodeB, _t2] = dfs(nodeA, -1, 1);
+    dfs(nodeB, -1, 2);
+
+    for(ll i=1; i<=n; i++) {
+        cout << max(distA[i], distB[i]) << ' '; 
+    }
+    cout << endl;
+}   
+```
+
+## Heavy Light Decomposition
+
+**Features:**
+
+- Update all nodes along the path from node *x* to node *y*.
+
+- Find the sum, maximum, minimum (or any other operation that satisfies the
+associative property) along the path from node *x* to node *y*.
+
+Each query takes *O(log(N))* time. So the total complexity should be *O(Q log(N))*
+
+**Definitions:**
+
+- A heavy child of a node is the child with the largest subtree size rooted at the child.
+- A light child of a node is any child that is not a heavy child.
+- A heavy edge connects a node to its heavy child.
+- A light edge connects a node to any of its light children.
+- A heavy path is the path formed by a collection heavy edges.
+- A light path is the path formed by a collection light edges.
+
+```cpp
+ll N, v[MAX]; // Set N = n !
+vector<vll> g(MAX, vll());
+
+ll sz[MAX], p[MAX], dep[MAX], id[MAX], tp[MAX];
+ll st[1 << 19];
+
+void update_node(ll idx, ll val) { // O(log^2(N))
+	st[idx += N] = val;
+	for (idx /= 2; idx; idx /= 2)
+		st[idx] = max(st[2 * idx], st[2 * idx + 1]);
+}
+
+ll query(ll lo, ll hi) {
+	ll ra = 0, rb = 0;
+	for (lo += N, hi += N + 1; lo < hi; lo /= 2, hi /= 2) {
+		if (lo & 1)
+			ra = max(ra, st[lo++]);
+		if (hi & 1)
+			rb = max(rb, st[--hi]);
+	}
+	return max(ra, rb);
+}
+
+ll dfs_sz(ll cur, ll par) {
+	sz[cur] = 1;
+	p[cur] = par;
+	for(ll chi : g[cur]) {
+		if(chi == par) continue;
+		dep[chi] = dep[cur] + 1;
+		p[chi] = cur;
+		sz[cur] += dfs_sz(chi, cur);
+	}
+	return sz[cur];
+}
+
+ll ct = 1; // counter
+void dfs_hld(ll cur, ll par, ll top) {
+	id[cur] = ct++;
+	tp[cur] = top;
+	update_node(id[cur], v[cur]);
+	ll h_chi = -1, h_sz = -1;
+	for(ll chi : g[cur]) {
+		if(chi == par) continue;
+		if(sz[chi] > h_sz) {
+			h_sz = sz[chi];
+			h_chi = chi;
+		}
+	}
+	if(h_chi == -1) return;
+	dfs_hld(h_chi, cur, top);
+	for(ll chi : g[cur]) {
+		if(chi == par || chi == h_chi) continue;
+		dfs_hld(chi, cur, chi);
+	}
+}
+
+// returns the max_value of a node in the path from X to Y
+ll path(ll x, ll y){ // O(log^2(N))
+	ll ret = 0;
+	while(tp[x] != tp[y]){
+		if(dep[tp[x]] < dep[tp[y]])swap(x,y);
+		ret = max(ret, query(id[tp[x]],id[x]));
+		x = p[tp[x]];
+	}
+	if(dep[x] > dep[y])swap(x,y);
+	ret = max(ret, query(id[x],id[y]));
+	return ret;
+}
+
+
+int32_t main(){ sws;
+    ll n, q; cin >> n >> q;
+    N = n;
+    for(ll i=1; i<=n; i++) cin >> v[i];
+    for(ll i=2; i<=n; i++) {
+        ll a, b; cin >> a >> b;
+        g[a].pb(b);
+        g[b].pb(a);
+    }
+    dfs_sz(1, 1);
+    dfs_hld(1, 1, 1);
+    while(q--) {
+        ll t; cin >> t;
+        if (t == 1) {
+            ll s, x; cin >> s >> x;
+            v[s] = x;
+            update_node(id[s], v[s]);
+        }
+        else {
+            ll a, b; cin >> a >> b;
+            cout << path(a, b) << endl;
+        }
+    }
+}
 ```
 

@@ -1,8 +1,6 @@
-## SAT (Boolean satisfiability problem)
+## 2-SAT (2-satisfiability)
 
-SAT is NP-Complete
-
-### 2-SAT (2-satisfiability)
+SAT (Boolean satisfiability problem) is NP-Complete.
 
 2-SAT is a restriction of the SAT problem, in 2-SAT every clause has exactly two literals.
 
@@ -109,7 +107,7 @@ int32_t main(){ sws;
 }   
 ```
 
-### Extended Version
+#### Extended Version
 
 Possibly faster implementation, with redundant functions to facilitate logic.
 
