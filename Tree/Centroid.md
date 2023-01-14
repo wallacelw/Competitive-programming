@@ -1,9 +1,9 @@
 ## Find the Centroid of a Tree
 
 A centroid of a tree is defined as a node such that when the tree is rooted
-at it, no other nodes have a subtree of size greater than $\frac{N}{2}$.
+at it, no other nodes have a subtree of size greater than *N/2*.
 
-We can find a centroid in a tree by starting at the root. Each step, loop through all of its children. If all of its children have subtree size less than or equal to $\frac{N}{2}$, then it is a centroid. Otherwise, move to the child with a subtree size that is more than $\frac{N}{2}$ and repeat until you find a centroid.
+We can find a centroid in a tree by starting at the root. Each step, loop through all of its children. If all of its children have subtree size less than or equal to *N/2*, then it is a centroid. Otherwise, move to the child with a subtree size that is more than *N/2* and repeat until you find a centroid.
 
 ```cpp
 vector<vll> g(MAX, vll());
