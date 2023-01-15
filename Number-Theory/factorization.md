@@ -7,29 +7,14 @@
 **Returns**: a vector containing all the primes that divides *N* (There can be multiples instances of a prime and it is ordered)
 
 ```cpp
-vll eratostenes(ll n){ 
-    vll primes {2, 3};
-    bitset<MAX> sieve;
-    sieve.set();
 
-    for(ll i=5, step=2; i<=n; i+=step, step = 6 - step){
-        if(sieve[i]){ // i is prime
-            primes.push_back(i);
+// import this and create vector<int> prime
+void sieve(ll n){}
 
-            for(ll j= i*i; j<=n; j += 2*i) // sieving all odd multiples of i >= i*i
-                sieve[j] = false;
-        }
-    }
+vector<int> factorization(int n){ // O(sqrt(n))
+    vector<int> factors;
 
-    return primes;
-}
-
-vll primes = eratostenes(MAX);
-
-vector<ll> factorization(ll n){
-    vll factors;
-
-    for(ll p : primes){
+    for(int p : prime){
         if (p*p > n) break;
         while(n % p == 0){
             factors.pb(p);
