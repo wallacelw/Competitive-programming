@@ -23,12 +23,12 @@ struct DSU{
 };
 ```
 
-#### Avisos
+**Avisos:**
 
-Possui a optimização de **Compressão** e **Balanceamento**
+Possui a optimização de *Compressão* e *Balanceamento*
 
 Both are: *O(a(N)) ~ O(1)*:
 
-**find(i)**: finds the representative of an element and returns it
+*find(i)*: finds the representative of an element and returns it
 
-**join(a, b)**: finds both representatives and unites them, remaining only one for all. No return value
+*join(a, b)*: finds both representatives and unites them, remaining only one for all. No return value
