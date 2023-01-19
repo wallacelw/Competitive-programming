@@ -53,7 +53,12 @@ struct Segtree{
 
 ```cpp
 int h = sizeof(int) * 8 - __builtin_clz(n);
-int d[N]; 
+int d[N];
+
+const int N = 1e5;  // limit for array size
+int n;  // array size
+int t[2 * N];
+
 
 void apply(int p, int value) {
   t[p] += value;
