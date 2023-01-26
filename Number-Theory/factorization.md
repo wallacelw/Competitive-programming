@@ -28,6 +28,43 @@ vector<int> factorization(int n){ // O(sqrt(n))
 }
 ```
 
+### Using Smallest Prime technique
+
+**Requires** Values less than 1e8
+
+**Complexity**:  O(log2(N))
+
+```cpp
+vector<int> prime;
+bool is_composite[MAX]; // can be 1e7
+ll sp[MAX]; // smallest prime
+
+void sieve (int n) { // O(n)
+	fill(is_composite, is_composite + n, false);
+
+	for (int i = 2; i <= n; i++) {
+		if (!is_composite[i]) {
+            prime.pb(i);
+            sp[i] = i;
+        }
+		for (int j = 0; j < (int) prime.size () && i * prime[j] <= n; j++) {
+			is_composite[i * prime[j]] = true;
+            sp[i * prime[j]] = prime[j];
+			if (i % prime[j] == 0) break;
+		}
+	}
+}
+
+vll factorization(ll a) { // log2(a)
+    vll factors;
+    while(a > 1) {
+        factors.pb(sp[a]);
+        a /= sp[a];
+    }
+    return factors;
+}
+```
+
 ### Pollard Rho
 
 **Complexity**:  better than O(sqrt(N)) *:D*
