@@ -2,17 +2,17 @@
 
 ```cpp
 struct DSU{
-    vll group;
-    vll card;
-    DSU (long long n){
+    vll group, card;
+    DSU (ll n){
+        n += 1; // 0-idx -> 1-idx
         group = vll(n);
         iota(group.begin(), group.end(), 0);
         card = vll(n, 1);
     }
-    long long find(long long i){
+    ll find(ll i){
         return (i == group[i]) ? i : (group[i] = find(group[i]));
     }
-    void join(long long a ,long long b){
+    void join(ll a ,ll b){
         a = find(a);
         b = find(b);
         if (a == b) return;
