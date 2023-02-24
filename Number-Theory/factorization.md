@@ -40,8 +40,8 @@ bool is_composite[MAX]; // can be 1e7
 ll sp[MAX]; // smallest prime
 
 void sieve (int n) { // O(n)
-	fill(is_composite, is_composite + n, false);
-
+	memset(is_composite, 0, sizeof(is_composite));
+	
 	for (int i = 2; i <= n; i++) {
 		if (!is_composite[i]) {
             prime.pb(i);
