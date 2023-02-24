@@ -1,28 +1,6 @@
 ## Crivo de Eratóstenes
 
 ```cpp
-vector<int> crivo(int n){
-    int max = 1e6;
-    vector<int> primes {2};
-    bitset<max> sieve;
-    sieve.set();
-
-    for(int i=3; i<=n; i+=2){
-        if(sieve[i]){ // i is prime
-            primes.push_back(i);
-
-            for(int j= i*i; j<=n; j += 2*i) // sieving all odd multiples of i >= i*i
-                sieve[j] = false;
-        }
-    }
-
-    return primes;
-}
-```
-
-#### Optimized
-
-```cpp
 // O (N log^2(N) ) -> Teorema de Merten
 
 vll primes {2, 3};
@@ -58,7 +36,7 @@ vector<int> prime;
 bool is_composite[MAX]; // can be 1e7
 
 void sieve (int n) { // O(n)
-	fill(is_composite, is_composite + n, false);
+	memset(is_composite, 0, sizeof(is_composite));
 
 	for (int i = 2; i <= n; i++) {
 		if (!is_composite[i]) prime.pb(i);
