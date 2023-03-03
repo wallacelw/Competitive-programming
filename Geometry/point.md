@@ -24,7 +24,7 @@ struct Point{
     }
 
     int operator *(const Point& b) const{ // dot product
-        return x*b.y + y*b.x;
+        return x*b.x + y*b.y;
     }
  
     int operator ^(const Point& b) const{ // cross product
