@@ -45,3 +45,8 @@ int32_t main(){ sws;
 
 }
 ```
+
+## Linux Alias
+
+```bash
+alias comp='g++ -std=c++17 -g -O2 -Wall -Wconversion -Wshadow -fsanitize=address,undefined -fno-sanitize-recover -ggdb -o out'
