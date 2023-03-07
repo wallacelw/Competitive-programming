@@ -1,49 +1,58 @@
-## Closest-point (Divide and conquer)
+## Minimum pair distance
+
+Using **Divide and conquer**, it's possible to split the vector of points into two parts and solve each one separately. When merging, it's sufficient to compare only the *6* closest points for each point which is inside a delimited section. This section is defined by all points between *median.x-d* and *median.x+d*. *d* is the minimum distance of the two parts.  
 
 ```cpp
-int solve(vector<point> x_s, vector<point> y_s){
-    int n = x_s.size();
- 
-    if(n < 4){
-        int d = x_s[0].dist(x_s[1]);
-        for(int i=0; i<n; i++){
-            for(int j=i+1; j<n; j++)
-                d = min(d, x_s[i].dist(x_s[j]));
-        }
+// xs = points sorted by X; ys = points sorted by Y
+ll solve(vector<P> xs, vector<P> ys){ // -> O(n log2(n) )
+    ll n = xs.size();
+    
+    // Base case, brute force
+    if(n <= 3){
+        ll d = xs[0].dist(xs[1]);
+        for(ll i=0; i<n; i++)
+            for(ll j=i+1; j<n; j++)
+                d = min(d, xs[i].dist(xs[j]));
         return d;
     }
- 
-    int mid = n/2;
-    vector<point> x_sl(x_s.begin(), x_s.begin()+mid);
-    vector<point> x_sr(x_s.begin()+mid, x_s.end());
-    vector<point> y_sl, y_sr;
-    for(auto p: y_s){
-        if(p.x <= x_s[mid].x)
-            y_sl.push_back(p);
-        else
-            y_sr.push_back(p);
+    
+    // Divide
+    ll mid = n/2;
+    P median = xs[mid];
+    vector<P> xsl(xs.begin(), xs.begin() + mid);
+    vector<P> xsr(xs.begin() + mid, xs.end());
+
+    vector<P> ysl, ysr;
+    for(auto p : ys){
+        if(p.x <= median.x) 
+            ysl.push_back(p);
+        else 
+            ysr.push_back(p);
     }
  
-    int dl = solve(x_sl, y_sl);
-    int dr = solve(x_sr, y_sr);
-
+    ll dl = solve(xsl, ysl);
+    ll dr = solve(xsr, ysr);
 
     // Merge !!!
-    int d = min(dl, dr);
+    ll d = min(dl, dr);
  
-    vector<point> possible;
-    for(auto p: y_s){
-        if(x_s[mid].x-d < p.x and p.x < x_s[mid].x+d)
+    vector<P> possible;
+    for(auto p : ys){
+        if(median.x-d < p.x and p.x < median.x+d)
             possible.push_back(p);
     }
  
-    n = possible.size();
-    for(int i=0; i<n; i++){
-        for(int j=1; (j<7 and j+i<n); j++){
+    ll m = possible.size();
+    for(ll i=0; i<m; i++){
+        for(ll j=1; (j<=6 and j+i<m); j++){
             d = min(d, possible[i].dist(possible[i+j]));
         }
     }
  
     return d;
+}
+
+bool cmp_by_Y(P a, P b) { 
+    return (eq(a.y, b.y) ? a.x < b.x : a.y < b.y); 
 }
 ```
