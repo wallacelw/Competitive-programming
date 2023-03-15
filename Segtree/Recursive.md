@@ -4,7 +4,7 @@ Data structure that creates parent vertices for a linear array to do faster comp
 
 ![Diagrama](../Aux-Images/segtree_diagram.png)
 
-#### Clearer version (min-seg)
+### Clearer version (min-seg)
 
 ```cpp
 // 1 indexed segtree for minimum
@@ -64,25 +64,25 @@ struct Segtree {
  
     Node range_query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1) {
         // left/right are the range limits for the update query
-            // l / r are the variables used for the vertex limits
-            if (right < l or r < left){
-                // null element
-                Node tmp{INF};
-                //
-                return tmp;
-            }
-            else if (left <= l and r <= right) return tree[i]; 
-            else{
-                int mid = (l+r)/2;
-                Node ansl = range_query(left, right, l, mid, 2*i);
-                Node ansr = range_query(left, right, mid+1, r, 2*i+1);
-                return merge(ansl, ansr);
+        // l / r are the variables used for the vertex limits
+        if (right < l or r < left){
+            // null element
+            Node tmp{INF};
+            //
+            return tmp;
+        }
+        else if (left <= l and r <= right) return tree[i]; 
+        else{
+            ll mid = (l+r)/2;
+            Node ansl = range_query(left, right, l, mid, 2*i);
+            Node ansr = range_query(left, right, mid+1, r, 2*i+1);
+            return merge(ansl, ansr);
             }
     }
 };
 ```
 
-#### Even more polished (sum-seg):
+### Even more polished (sum-seg):
 
 ```cpp
 // 1 indexed segtree for sum 
@@ -141,74 +141,52 @@ struct Segtree {
  
     Node query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1) {
         // left/right are the range limits for the update query
-            // l / r are the variables used for the vertex limits
-            if (right < l or r < left){
-                // null element:
-                return Node{};
-            }
-            else if (left <= l and r <= right) return tree[i]; 
-            else{
-                int mid = (l+r)/2;
-                return merge(
-                    query(left, right, l, mid, 2*i), 
-                    query(left, right, mid+1, r, 2*i+1)
-                );
-            }
+        // l / r are the variables used for the vertex limits
+        if (right < l or r < left){
+            // null element:
+            return Node{};
+        }
+        else if (left <= l and r <= right) return tree[i]; 
+        else{
+            int mid = (l+r)/2;
+            return merge(
+                query(left, right, l, mid, 2*i), 
+                query(left, right, mid+1, r, 2*i+1)
+            );
+        }
     }
 };
 ```
 
-#### Avisos
-
 #### Details
 
-**0 or 1-indexed**, depends on the arguments used as default value
-
-
-Uses a **struct node** to define node/vertex properties. *Default:* psum 
-
-
-Uses a **merge function** to define how to join nodes 
+- **0 or 1-indexed**, depends on the arguments used as default value
+- Uses a **struct node** to define node/vertex properties. *Default:* psum 
+- Uses a **merge function** to define how to join nodes 
 
 
 #### Parameters
 
-**left** and **right**: parameters that are the range limits for the range query 
-
-
-**l** and **r**: are auxilary variables used for delimiting a vertex boundaries 
-
-
-**idx**: index of the leaf node that will be updated 
-
-
-**val**: value that will be inserted to the idx node 
-
+- **left** and **right**: parameters that are the range limits for the range query 
+- **l** and **r**: are auxilary variables used for delimiting a vertex boundaries 
+- **idx**: index of the leaf node that will be updated 
+- **val**: value that will be inserted to the idx node 
 
 #### Atributes
 
-**Tree**: node array 
-
-
-**v**: vector that are used for leaf nodes 
-
+- **v**: vector that are used for leaf nodes 
+- **Tree**: node array 
 
 #### Methods
 
 ##### O(n):
 
-**build(l, r, i)**: From **v** vector, constructs Segtree 
+- **build(l, r, i)**: From **v** vector, constructs Segtree.
 
 ##### O(log(N))
 
-**point_update(idx, l, r, i, val)**: updates leaf node with *idx* index to *val* value. No return value 
-
-
-**range_query(left, right, l, r, i)**: does a range query from *left* to *right* (inclusive) and returns a node with the result 
-
-
-#### Requires
-MAX variable 
+- **point_update(idx, l, r, i, val)**: updates leaf node with *idx* index to *val* value. No return value 
+- **range_query(left, right, l, r, i)**: does a range query from *left* to *right* (inclusive) and returns a node with the result 
 
 #### Problems
 
