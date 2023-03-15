@@ -1,4 +1,4 @@
-## Graham Scan
+## Convex Hull
 
 **Complexity:** O(n * log (n))
 
