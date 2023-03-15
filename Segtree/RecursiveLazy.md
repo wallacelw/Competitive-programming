@@ -1,6 +1,102 @@
 ## Recursive Segtree with Lazy propagation
 
-### Sum range query, increase range query
+Needs refactoring :-( to leave only 1 version
+
+### Most recent version (Max range query, increase range update)
+
+```cpp
+ll L = 1, R; // construct Seg with R value and build() afterwards
+struct SegtreeLazy{
+
+    struct Node {
+        ll mx = -LLINF;
+    };
+
+    Node merge(Node a, Node b) {
+        return Node{
+            max(a.mx, b.mx)
+        };
+    }
+
+    vector<ll> v, lazy;
+    vector<Node> tree;
+
+    SegtreeLazy(ll n) {
+        R = n;
+        tree.assign(4*(R-L+2), Node{});
+        lazy.assign(4*(R-L+2), 0);
+        v.assign((R-L+2), 0);
+    }
+
+    void build(ll l=L, ll r=R, ll i=1) {
+        if (l == r) {
+            tree[i] = Node{
+                v[l]
+            };
+        }
+        else{
+            ll mid = (l+r)/2;
+            build(l, mid, 2*i);
+            build(mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
+        }
+        lazy[i] = 0;
+    }
+
+    void propagate(ll l, ll r, ll i){
+        if(lazy[i]) {
+            tree[i].mx += lazy[i];
+
+            if(l != r){
+                lazy[2*i] = lazy[2*i] + lazy[i];
+                lazy[2*i+1] = lazy[2*i+1] + lazy[i];
+            }
+            
+            lazy[i] = 0;
+        }
+    }
+
+    // [left, right] = (selected interval for the query)
+    // l, r = the variables used for the nodes boundaries
+
+    // increase function adds 'val' to [left, right]
+    void increase(ll left, ll right, ll val, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
+
+        if (right < l or r < left) return;
+
+        else if (left <= l and r <= right){
+            lazy[i] = lazy[i] + val;
+            propagate(l, r, i);
+        }
+
+        else{
+            ll mid = (l+r)/2;
+            increase(left, right, val, l, mid, 2*i);
+            increase(left, right, val, mid+1, r, 2*i+1);
+            tree[i] = merge(tree[2*i], tree[2*i+1]);
+        }
+    }
+
+    Node query(ll left, ll right, ll l=L, ll r=R, ll i=1){
+        propagate(l, r, i);
+
+        if (right < l or r < left) return Node{};
+
+        else if (left <= l and r <= right) return tree[i];
+
+        else{
+            ll mid = (l+r)/2;
+            return merge(
+                query(left, right, l, mid, 2*i),
+                query(left, right, mid+1, r, 2*i+1)
+            );
+        }
+    }
+};
+```
+
+### Sum range query, increase range update
 
 ```cpp
 ll L = 1, R;
