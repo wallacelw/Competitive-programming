@@ -1,4 +1,4 @@
-## Convex Hull
+## Andrew's monotone chain convex hull algorithm
 
 **Complexity:** O(n * log (n))
 
