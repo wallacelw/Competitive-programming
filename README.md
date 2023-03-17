@@ -1,10 +1,18 @@
 # Competitive-programming
 Algoritmos e ideias de programação competitiva
 
+Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
+
 ## Flags for compilation:
 
 ```bash
 g++ -Wall -Wextra -Wshadow -ggdb3 -D_GLIBCXX_ASSERTIONS -fmax-errors=2 -std=c++17 -O3 test.cpp -o test
+```
+
+## Linux Alias
+
+```bash
+alias comp='g++ -std=c++17 -g -O2 -Wall -Wextra -Wconversion -Wshadow -D_GLIBCXX_ASSERTIONS -fsanitize=address,undefined -fno-sanitize-recover -ggdb -o out'
 ```
 
 ## Template:
@@ -49,10 +57,4 @@ const long double PI = acos(-1);
 int32_t main(){ sws;
 
 }
-```
-
-## Linux Alias
-
-```bash
-alias comp='g++ -std=c++17 -g -O2 -Wall -Wextra -Wconversion -Wshadow -D_GLIBCXX_ASSERTIONS -fsanitize=address,undefined -fno-sanitize-recover -ggdb -o out'
 ```
