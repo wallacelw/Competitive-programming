@@ -1,5 +1,7 @@
 ## BIT ( Fenwick Tree or Binary indexed tree)
 
+*OBS:* BIT cannot support min/max queries, because it's mandatory to have an inverse operation.
+
 Let's define **g(i)** as the number acquired after removing the **LSB(i)** of **i**:
 
     g(i) = i - LSB(i) = i - (i & (-i))
@@ -14,9 +16,9 @@ Therefore, to retrieve the range value of an arbitrary value **x**, it's only ne
 
 In the 1-Indexed implementation, Bit[0] is undefined and not used.
 
-**Complexity** O(log(n)): point update, range query
+**Complexity** O(log(n)): add, sum, query
 
-### 1-indexed
+### 1-indexed Implementation
 
 ```cpp
 struct FT {
@@ -24,8 +26,7 @@ struct FT {
     ll n;
 
     // constructor (all zeros)
-    FT(ll sz) { 
-        n = sz;
+    FT(ll sz) : n(sz) { 
         bit.assign(sz + 1, 0);
     }
 
