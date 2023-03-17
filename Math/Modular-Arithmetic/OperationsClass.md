@@ -1,4 +1,4 @@
-### Basic operations with combinatorics
+### Operations with Combinatorics
 
 Also contains combinatorics operations
 
