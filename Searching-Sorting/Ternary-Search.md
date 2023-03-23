@@ -2,24 +2,47 @@
 
 **Complexity:** O( log(n) )
 
-**Requires EPS!**, precision usually defined in the question text
-
+**Float and Min Version:**
+*Requires EPS!*, precision usually defined in the question text
 ```cpp
 ld f(ld d){
     // function here
 }
 
-ld ternary_search(ld l, ld r){ // for min value
+// for min value
+ld ternary_search(ld l, ld r){ 
     while(r - l > EPS){
         // divide into 3 equal parts and eliminate one side
         ld m1 = l + (r - l) / 3; 
         ld m2 = r - (r - l) / 3;
-
         if (f(m1) < f(m2)){
             r = m2;
         }
-        else{
+        else {
             l = m1;
+        }
+    }
+    return f(l);
+}
+```
+
+**Integer and Max Version:**
+```cpp
+ll f(ll idx) {
+    // function here
+}
+
+// for max value, using integer idx
+ll ternary_search(ll l, ll r) {
+    while(l <= r) {
+        // divide into 3 equal parts and eliminate one side
+        ll m1 = l + (r-l)/3;
+        ll m2 = r - (r-l)/3;
+        if(f(m1) < f(m2)) {
+            l = m1+1;
+        } 
+        else {
+            r = m2-1;
         }
     }
     return f(l);
