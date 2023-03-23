@@ -26,7 +26,7 @@ ld ternary_search(ld l, ld r){
 }
 ```
 
-**Integer and Max Version:**
+**Integer and Max Version:** (probably working xD)
 ```cpp
 ll f(ll idx) {
     // function here
