@@ -48,11 +48,13 @@ struct OpMOD{
 
     // n! / (n! (n-k)! )
     ll combination(ll n, ll k){ // "Combinação/Binomio de Newton"
+        if(k > n) return 0;
         return mul( mul(fact[n], ifact[k]) , ifact[n-k]); 
     }
 
     // n! / (n-k)!
     ll disposition(ll n, ll k){ // "Arranjo Simples"
+        if(k > n) return 0;
         return mul(fact[n], ifact[n-k]);
     }
 
