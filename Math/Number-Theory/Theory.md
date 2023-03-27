@@ -18,8 +18,6 @@
     => b % c == 0
     => a % c == 0 (transitivity)
 
-
-
 ### Greatest Common Divisor (GCD) 
 
     gcd(a) = a
@@ -35,6 +33,10 @@
 ### Observation
 
 std-c++17 implements gcd() function, which works correcly for negative numbers as well.
+
+**For negatives numbers, the following is true:**
+
+    gcd(a,b) = gcd(−a,−b) = gcd(−a,b) = gcd(a,−b)
 
 ## Closed Formulas related to divisors of a number
 
