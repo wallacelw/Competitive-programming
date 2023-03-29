@@ -1,5 +1,5 @@
 # Competitive-programming
-Algoritmos e ideias de programação competitiva
+Algoritmos e ideias de Programação Competitiva
 
 Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
 
