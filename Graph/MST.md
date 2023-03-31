@@ -1,5 +1,7 @@
 ## Minimum Spanning Tree
 
+MST minimizes the maximum edge of a tree (considering all possible trees).
+
 ### Kruskal's Algorithm
 
 Sort all edges in crescent order by weight, include all edges which joins two disconnected trees. In case of tie, choose whichever. Don't include edges that will join a already connected part of the tree.
