@@ -16,7 +16,7 @@ To check if it is possible, there is a need for connectivity:
 
 and also:
 
-![image](..\..\Aux-Images\EulerianPathExistence.png)
+![image](..\Aux-Images\EulerianPathExistence.png)
 
 ### Hierholzer Algorithm
 
