@@ -59,13 +59,15 @@ struct TwoSat {
         return true;
     }
 
-    void add_disjunction(ll a, bool na, ll b, bool nb) {
+    void add_disjunction(ll a, bool flagA, ll b, bool flagB) {
         // disjunction of (a, b) => if one of the two variables is false, then the other one must be true
-        // na and nb signify whether a and b are to be negated 
-        // na == 1 => !a ; na == 0 => a
-        // nb == 1 => !b ; nb == 0 => b
-        a = 2*a ^ na;
-        b = 2*b ^ nb;
+        // a and b can't be false at the same time
+
+        // flagA and flagB represents whether a and b are negated 
+        // flagA == 1 => a ; flagA == 0 => !a
+        // flagB == 1 => b ; flagB == 0 => !b
+        a = 2*a ^ (!flagA);
+        b = 2*b ^ (!flagB);
         ll neg_a = a ^ 1;
         ll neg_b = b ^ 1;
         g[neg_a].pb(b);
