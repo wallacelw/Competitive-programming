@@ -55,7 +55,7 @@ struct Dinic {  // O( Vertices^2 * Edges)
         return ans;
     }
 
-    void addEdge(ll u, ll v, ll c, ll rc) { // c = capacity, rc = retro-capacity;
+    void addEdge(ll u, ll v, ll c, ll rc = 0) { // c = capacity, rc = retro-capacity;
         Edge e = {u, v, 0, c};
         edges.pb(e);
         g[u].pb(ne++);
