@@ -6,7 +6,7 @@
 
 **Solves:** Finds all shortest paths from a initial node *x* to every other node
 
-**Complexity:** O(n * m) = O(vertices * edges) -> quadratic
+**Complexity:** O(n * m) = O(vertices * edges) -> O(n^2) "quadratic"
 
 **Conjecture:** After **at most** *n-1 (Vertices-1) iterations*, all shortest paths will be found.
 
@@ -72,6 +72,7 @@ void BellmanFord_Cycle(ll start, ll n){ // O (Vertices * Edges)
 
 **Only Works for Non-Negative Weighted Graph**
 
+**Complexity:** O((V+E)log(V)) -> O(n log n) 
 ```cpp
 priority_queue<pll, vpll, greater<pll>> pq;
 vector<vpll> g(MAX, vpll());
@@ -181,3 +182,11 @@ void dijkstra(ll start){
     }
 }
 ```
+
+## All-Pairs Shortest Paths (APSP)
+
+### Floyd Warshall
+
+**Complexity:** O(V^3)
+
+TODO
