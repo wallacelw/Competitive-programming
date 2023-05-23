@@ -1,16 +1,17 @@
-## Xor Base
+## Xor Basis
 
 ```cpp
-struct XorBase {
-    vector<ll> base;
-
-    ll reduce(ll vec) {
-        for(auto b : base) vec = min(vec, vec^b);
-        return vec; 
+struct XorBasis {
+    vll basis;
+    
+    ll reduce(ll a) {
+        for(auto b : basis) a = min(a, a^b);
+        return a;
     }
 
-    void add(ll vec) {
-        base.pb(vec);
+    void add(ll a) {
+        ll val = reduce(a);
+        if (val) basis.pb(val);
     }
 };
 ```
