@@ -40,7 +40,7 @@ using namespace std;
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
 #define MSB(i) (32 - __builtin_clz(i)) // or 64 - clzll
-#define BITS(i) __builtin_popcount() // count bits
+#define BITS(i) __builtin_popcount(i) // count bits
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
