@@ -2,15 +2,15 @@
 
 ```cpp
 struct XorBasis {
-    vector<ll> B;
+    vector<ll> basis;
     
-    ll reduce(ll a) {
-        for(auto b : B) a = min(a, a^b);
-        return a;
+    ll reduce(ll vec) {
+        for(auto b : basis) vec = min(vec, vec^b);
+        return vec;
     }
 
-    void add(ll a) {
-        ll val = reduce(a);
+    void add(ll vec) {
+        ll val = reduce(vec);
         if (val) B.pb(val);
     }
 };
@@ -21,7 +21,7 @@ struct XorBasis {
 ```cpp
 struct XorBasis {
     vector<ll> basis;
-    ll dim = 0, mx = 0;
+    ll mx = 0;
 
     ll reduce(ll vec) {
         for(auto b : basis) vec = min(vec, vec^b);
@@ -33,10 +33,13 @@ struct XorBasis {
         if (val) {
             basis.pb(val);
             mx = max(mx, mx^val);
-            dim += 1;
         }
     }
 
+    ll dim() {
+        return basis.size();
+    }
+    
     void jordan() {
         sort(basis.begin(), basis.end(), greater<ll>());
         for(ll i=1; i<(ll)basis.size(); i++) {
@@ -47,3 +50,9 @@ struct XorBasis {
     }
 };
 ```
+
+**Common problems:**
+
+- Find if a vector can be formed by the basis ( if(reduce(val)) )
+- Find how many linear combinations form a vector (ans = 2^(dim(kernel)))
+- Find the maximum vector that can be formed (mx = max(mx, mx^b))
