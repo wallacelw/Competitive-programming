@@ -2,13 +2,14 @@
 
 ```cpp
 const ll N = 505; // number of nodes, including sink and source
+
 struct Dinic {  // O( Vertices^2 * Edges)
     struct Edge { 
         ll from, to, flow, cap;
     };
     vector<Edge> edges;
 
-    vll g[N];
+    vector<ll> g[N];
     ll ne = 0, lvl[N], vis[N], pass;
     ll qu[N], px[N], qt;
 
@@ -73,8 +74,9 @@ struct Dinic {  // O( Vertices^2 * Edges)
         qt = 0; pass = 0;
     }
 
-    vpll cut() { // OBS: cut set cost is equal to max flow
-        vpll cuts;
+    vector<pll> cut() { // OBS: cut set cost is equal to max flow (number of edges)
+        // the cut set is the set of edges that, if removed, will disrupt flow and make it 0.
+        vector<pll> cuts;
         for (auto [from, to, flow, cap]: edges)
             if (flow == cap and vis[from] == pass and vis[to] < pass and cap > 0)
                 cuts.pb({from, to});
@@ -92,39 +94,6 @@ Remember to include the sink vertex and the source vertex. Usually *n+1* and *n+
 use **dinic.addEdge** to add edges -> (from, to, normal way capacity, retro-capacity)
 
 use **dinic.flow(source_id, sink_id)** to receive maximum flow from source to sink through the network
-
-**OBS:** It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective properties, like the **flow** passing through each edge. This can be used to **matching problems** with a bipartite graph and *1 capacity* for example.
-
-#### Example
-
-```cpp
-int32_t main(){sws;
-    ll n, m; cin >> n >> m;
-    Dinic dinic;
- 
-    for(ll i=1; i<=n; i++){
-        ll k; cin >> k;
-        for(ll j=0; j<k; j++){
-            ll empresa; cin >> empresa;
-            empresa += n;
-            dinic.addEdge(i, empresa, 1, 0);
-        }
-    }
- 
-    ll source = n + m + 1;
-    ll sink = n + m + 2;
- 
-    for(ll i=1; i<=n; i++){
-        dinic.addEdge(source, i, 1, 0);
-    }
- 
-    for(ll j=1; j<=m; j++){
-        dinic.addEdge(j+n, sink, 1, 0);
-    }
- 
-    cout << m - dinic.flow(source, sink) << endl;
-}
-```
 
 ### Minimum Cut
 
@@ -152,3 +121,13 @@ int32_t main(){ sws;
     for(auto [u, v] : ans) cout << u << ' ' << v << endl;
 }   
 ```
+
+### Matching
+
+A perfect matching includes all vertices from the bipartite graph L and R. 
+
+A maximum matching has the maximum cadinality. A perfect matching is a maximum matching. But the opposite is not necessarity true.
+
+It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective attributes, like the .flow passing through each edge. Remember to consider that negative flow exist for reverse edges. 
+
+This can be used to **matching problems** with a bipartite graph and *1 capacity* for example.
