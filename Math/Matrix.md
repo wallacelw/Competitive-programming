@@ -60,42 +60,39 @@ struct Matrix{
 };
 ```
 
-#### Another Version with long long and MOD
+### Another Version with LL and MOD
 
 ```cpp
-struct Matrix{
-    vector<vll> M, Identity;
+struct Matrix {
+    vector<vector<ll>> M;
     
-    Matrix(vector<vll> mat) {
+    Matrix(vector<vector<ll>> mat) {
         M = mat;
     }
     
     // identity == 0 => Empty matrix constructor
-    // identity == 1 => also generates a Identity Matrix
+    // identity == 1 => Generates a Identity Matrix (row == col)
     Matrix(ll row, ll col, bool identity = 0){
-        M.assign(row, vll(col, 0));
-
-        if (identity) { // row == col
-            Identity.assign(row, vll(col, 0));
-            for(ll i=0; i<row; i++)
-                Identity[i][i] = 1;
-        }
+        M.assign(row, vector<ll>(col, 0));
+        if (identity) 
+            for(ll i=0; i<row; i++) M[i][i] = 1;
     }
 
-    // A+B ; needs (sizeof(A) == sizeof(B))
+    // A+B  (sizeof(A) == sizeof(B))
     Matrix operator +(const Matrix &B) const{
         ll row = M.size(); ll col = M[0].size();
-
         Matrix ans(row, col);
 
         for(ll i=0; i<row; i++){
             for(ll j=0; j<col; j++){
-                ans.M[i][j] = (M[i][j] + B.M[i][j]) % MOD;
+                ans.M[i][j] = ( M[i][j] + B.M[i][j] ) % MOD;
             }
         }
+
         return ans;
     }
-    // A*B (A.column == B.row)
+
+    // A*B  (A.column == B.row)
     Matrix operator *(const Matrix &B) const{ 
         ll rowA = M.size();
         ll colA; ll rowB = colA = M[0].size();
@@ -104,24 +101,29 @@ struct Matrix{
 
         for(ll i=0; i<rowA; i++){
             for(ll j=0; j<colA; j++){
-                ll sum=0;
                 for(ll k=0; k<rowB; k++){
-                    sum += (M[i][k] * B.M[k][j]) % MOD;
-                    sum %= MOD;
+                    ans.M[i][j] += (M[i][k] * B.M[k][j]) % MOD;
+                    ans.M[i][j] %= MOD;
                 }
-                ans.M[i][j] = sum;
             }
         }
+
         return ans;
     }
 
-    Matrix operator ^(const ll n) const{ // Need identity Matrix
-        if (n == 0) return Identity;
-        if (n == 1) return (*this);
-        Matrix aux = (*this) ^ (n/2);
-        aux = aux * aux;
-        if(n % 2 == 0) return aux;
-        else return (*this) * aux;
+    Matrix operator ^(ll n) const{ // row == col
+        ll sz = M.size(); 
+        
+        Matrix ans(sz, sz, 1); // initialized as identity
+        Matrix tmp(M);
+
+        while(n) {
+            if (n & 1) ans = (ans * tmp);
+            tmp = (tmp * tmp);
+            n >>= 1;
+        }
+
+        return ans;
     }
 };
 ```
