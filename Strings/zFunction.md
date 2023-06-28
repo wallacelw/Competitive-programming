@@ -5,13 +5,13 @@ Suppose we are given a string  *s*  of length  *n* . The Z-function for 
 The first element of the Z-function,  *z[0]* , is generally not well defined. This implementation assumes it as *z[0] = 0*. But it can also be interpreted as *z[0] = n* (all characters coincide).
 
 ```cpp
-vll z_function(string s) { // O(n)
+vector<ll> z_function(string s) { // O(n)
     ll n = (ll) s.length();
     vll z(n);
     for (ll i=1, l=0, r=0; i<n; i++) {
         if (i <= r) z[i] = min(r - i + 1, z[i - l]);
 
-        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) z[i]++;
+        while (i + z[i] < n and s[z[i]] == s[i + z[i]]) z[i]++;
 
         if (r < i + z[i] - 1) l = i, r = i + z[i] - 1;
     }
