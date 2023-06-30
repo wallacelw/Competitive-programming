@@ -1,4 +1,3 @@
-
 ## Random Numbers Generator
 
 **HOW TO USE :**

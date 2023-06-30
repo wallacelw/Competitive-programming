@@ -42,3 +42,9 @@ A subfactorial is noted as:
 
 *!1* = 0
 *!0* = 1 
+
+#### Burside Lemma
+
+necklaces with *n* pearls and *k* colors:
+
+$\frac{1}{n} \sum_{i=1}^n k^{\gcd(i, n)}$
