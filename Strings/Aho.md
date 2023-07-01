@@ -6,8 +6,10 @@ namespace aho {
     int link[MAX], idx = 0, term[MAX], exit[MAX], sobe[MAX];
     vector<int> word[MAX];
     bool vis[MAX]; // avoids recalculation
-    int first[MAX]; // idx+1 of the last char of the pattern match
-
+    int match[MAX];
+    // idx+1 of the last char of the pattern match
+    // idx = 0 -> no match
+    
     void add(string& s, int id) {
         int at = 0;
         for (char c : s) {
@@ -49,7 +51,7 @@ namespace aho {
                 vis[tmp] = 1;
 
                 for(auto id : word[tmp])
-                    first[id] = i+1;
+                    match[id] = i+1;
 
                 tmp = exit[tmp];
             }
@@ -71,7 +73,7 @@ void solve() {
     aho::build();
     aho::query(s);
     for(int i=0; i<n; i++) {
-        int pos = aho::first[i];
+        int pos = aho::match[i];
         if (pos == 0) 
             cout << -1 << endl;
         else 
