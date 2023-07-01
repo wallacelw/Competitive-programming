@@ -1,5 +1,8 @@
 ## Aho Cosarick
 
+
+### find first occurences of match for each pattern
+
 ```cpp
 namespace aho {
     map<char, int> to[MAX];
@@ -78,6 +81,98 @@ void solve() {
             cout << -1 << endl;
         else 
             cout << pos - p[i].size() + 1 << endl;
+    }
+}
+```
+
+### Count how many matches per pattern
+
+```cpp
+namespace aho {
+    map<char, int> to[MAX];
+    int link[MAX], idx = 0, term[MAX], exit[MAX], psum[MAX];
+    vector<int> word[MAX];
+    int lazy[MAX], match[MAX];
+
+    void add(string& s, int id) {
+        int at = 0;
+        for (char c : s) {
+            if (to[at].count(c)) at = to[at][c];
+            else at = to[at][c] = ++idx;
+        }
+        term[at]++, psum[at]++;
+        word[at].pb(id);
+    }
+
+    void build() {
+        queue<int> q;
+        q.push(0);
+        link[0] = exit[0] = -1;
+        while (q.size()) {
+            int u = q.front(); q.pop();
+            for (auto [c, v] : to[u]) {
+                int l = link[u];
+                while (l != -1 and !to[l].count(c)) l = link[l];
+                link[v] = l == -1 ? 0 : to[l][c];
+                exit[v] = term[link[v]] ? link[v] : exit[link[v]];
+                if (exit[v] != -1) psum[v] += psum[exit[v]];
+                q.push(v);
+            }
+        }
+    }
+
+    int query(string& s) {
+        memset(lazy, 0, sizeof(lazy));
+        memset(match, 0, sizeof(match));
+
+        int at = 0, ans = 0;
+        int n = (int) s.size();
+        for (int i=0; i<n; i++){
+            char c = s[i];
+            while (at != -1 and !to[at].count(c)) at = link[at];
+            at = at == -1 ? 0 : to[at][c];
+
+            if (term[at]) lazy[at] += 1;
+            else if (exit[at] != -1) lazy[exit[at]] += 1;
+
+            ans += psum[at];
+        }
+
+        queue<int> q; q.push(0);
+        stack<int> st;
+        while(!q.empty()) {
+            int u = q.front(); q.pop();
+            st.push(u); 
+            for(auto [c, v] : to[u])
+                q.push(v);
+        }
+
+        while(!st.empty()) {
+            int i = st.top(); st.pop();
+            if (lazy[i]) {
+                for(auto id : word[i]) {
+                    match[id] += lazy[i];
+                }
+                if (exit[i] != -1) lazy[exit[i]] += lazy[i];
+            }
+        }
+
+        return ans;
+    }
+}
+
+void solve() {
+    string s; cin >> s;
+    int n; cin >> n;
+    vector<string> p(n);
+    for(int i=0; i<n; i++) {
+        cin >> p[i];
+        aho::add(p[i], i);
+    }
+    aho::build();
+    aho::query(s);
+    for(int i=0; i<n; i++) {
+        cout << aho::match[i] << endl;
     }
 }
 ```
