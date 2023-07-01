@@ -30,13 +30,14 @@
     lcm(a, b, c) = lcm( lcm(a, b), c ) 
     lcm(a, b) = (a*b) / gcd(a, b)
 
-### Observation
+#### Observation
 
 std-c++17 implements gcd() function, which works correcly for negative numbers as well.
 
 **For negatives numbers, the following is true:**
 
     gcd(a,b) = gcd(−a,−b) = gcd(−a,b) = gcd(a,−b)
+
 
 ## Closed Formulas related to divisors of a number
 
@@ -48,14 +49,13 @@ Let **n** be a number represented by it's prime factors $p_i$ and respective exp
 ![Soma](../../Aux-Images/SumDivisors.png)
 ![Produto](../../Aux-Images/ProductDivisors.png)
 
-## Binomial Coeficients
+## Lucas' Theorem
 
 By definition, *n choose k* **($C ^n_k$)** is equal to:
 
     n! / (k! * (n-k)!), 0 <= k <= n
     0, otherwise
 
-### Lucas' Theorem
 
     C(n, k) mod p = C(n_i, k_i) * C(n_i-1, k_i-1) * ... * C(n_0, k_0) mod p
 
@@ -69,3 +69,31 @@ By definition, *n choose k* **($C ^n_k$)** is equal to:
     n_2 = 1
     n_1 = 0
     n_0 = 1
+
+## Series' Theory
+
+#### Closed formulas for some sequences
+
+**Natural Number Summation (PA):**
+
+$ 1 + 2 + 3 + 4 + 5 + ... + n-1 + n $
+
+$ = \sum_{i=1}^n i $
+
+= $ \frac{ n(n+1) }{ 2 } $
+
+**Natural Number Quadratic Summation:**
+
+$ 1 + 4 + 9 + 16 + 25 + ... + (n-1)^2 + n^2 $
+
+$ = \sum_{i=1}^n i^2 $
+
+= $ \frac{ n(n+1)(2n+1) }{ 6 } $
+
+**Triangular Numbers Summation:**
+
+$ 1 + 3 + 6 + 10 + 15 + ... + \frac{(n-1)(n)}{2} + \frac{(n)(n+1)}{2} $
+
+$ = \sum_{i=1}^n \frac{i(i+1)}{2} = \frac{1}{2}(\sum_{i=1}^n i^2 + \sum_{i=1}^n i) $
+
+$ = \frac{1}{2} ( \frac{ n(n+1) }{ 2 } + \frac{ n(n+1)(2n+1) }{ 6 }) $

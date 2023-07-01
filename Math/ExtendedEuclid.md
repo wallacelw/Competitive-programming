@@ -1,6 +1,10 @@
 ## Extended Euclidian Algorithm
 
-Can be used to find the inverse multiplicative of a number if gcd(a, mod) == 1
+**Computes the coeficients of this diofantine equation:**
+
+a*x + b*y = gcd(a, b)
+
+**Can be used to find the inverse multiplicative of a number if gcd(a, mod) == 1**
 
 a * x + m * y = gcd(a, m)
 a * x = 1 (mod m)

@@ -25,4 +25,3 @@ void topological_sort(ll n) {
     reverse(topological.begin(), topological.end());
 }
 ```
-

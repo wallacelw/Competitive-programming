@@ -42,6 +42,7 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
 - [Flow](#flow)
   - [Fluxo](#fluxo)
     - [Minimum Cut](#minimum-cut)
+    - [Matching](#matching)
 - [Searching-Sorting](#searching-sorting)
   - [Policy Based Data Structures (PBDS)](#policy-based-data-structures-pbds)
   - [Merge sort](#merge-sort)
@@ -52,22 +53,25 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
   - [Knuth–Morris–Pratt algorithm (KMP)](#knuthmorrispratt-algorithm-kmp)
   - [SUFFIX ARRAY](#suffix-array)
   - [KASAI's ALGORITHM FOR LCP (longest common prefix)](#kasais-algorithm-for-lcp-longest-common-prefix)
+  - [Hashing](#hashing)
   - [Booth's Algorithm](#booths-algorithm)
+  - [Aho Cosarick](#aho-cosarick)
+    - [find first occurences of match for each pattern](#find-first-occurences-of-match-for-each-pattern)
+    - [Count how many matches per pattern](#count-how-many-matches-per-pattern)
 - [Tree](#tree)
   - [Binary lifting](#binary-lifting)
   - [Find the Diameter](#find-the-diameter)
   - [Find the lenght of the longest path from all nodes](#find-the-lenght-of-the-longest-path-from-all-nodes)
   - [Heavy Light Decomposition (WIP)](#heavy-light-decomposition-wip)
   - [Find the Centroid of a Tree](#find-the-centroid-of-a-tree)
-- [Modular-Arithmetic](#modular-arithmetic)
-  - [Overloading Operations Struct](#overloading-operations-struct)
-    - [Lucas' Theorem](#lucas-theorem)
-    - [Operations with Combinatorics](#operations-with-combinatorics)
-- [Number-Theory](#number-theory)
+- [Math](#math)
+  - [Matrix](#matrix)
+    - [Another Version with LL and MOD](#another-version-with-ll-and-mod)
   - [Factorization](#factorization)
     - [Trial Division with precomputed primes](#trial-division-with-precomputed-primes)
     - [Using Smallest Prime technique](#using-smallest-prime-technique)
     - [Pollard Rho](#pollard-rho)
+  - [Xor Basis](#xor-basis)
   - [Crivo de Eratóstenes](#crivo-de-eratóstenes)
     - [Linear Sieve](#linear-sieve)
   - [Basic Knowledge](#basic-knowledge)
@@ -75,11 +79,15 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
     - [Least Commom Multiple (LCM)](#least-commom-multiple-lcm)
     - [Observation](#observation)
   - [Closed Formulas related to divisors of a number](#closed-formulas-related-to-divisors-of-a-number)
-  - [Combinatorics Theory](#combinatorics-theory)
-- [Math](#math)
-  - [Matrix](#matrix)
+  - [Binomial Coeficients](#binomial-coeficients)
+    - [Lucas' Theorem](#lucas-theorem)
+  - [Extended Euclidian Algorithm](#extended-euclidian-algorithm)
+    - [Operations with Combinatorics](#operations-with-combinatorics)
+    - [Overloading Operations Struct](#overloading-operations-struct)
   - [Series Theory](#series-theory)
+  - [Combinatorics Theory](#combinatorics-theory)
 - [Misc](#misc)
+  - [Random Numbers Generator](#random-numbers-generator)
     - [Getline](#getline)
   - [Minimum Excluded (MEX)](#minimum-excluded-mex)
 - [Game-Theory](#game-theory)
@@ -138,9 +146,12 @@ using namespace std;
 #define ss second
 #define tlll tuple<ll, ll, ll>
 
-// Extra
+// Utility
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
+#define MSB(i) (32 - __builtin_clz(i)) // or 64 - clzll
+#define BITS(i) __builtin_popcount(i) // count bits
+
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 // Debugging
@@ -160,7 +171,6 @@ int32_t main(){ sws;
 
 }
 ```
-
 
 ---
 
@@ -1143,8 +1153,25 @@ void dijkstra(ll start){
 ### Floyd Warshall
 
 **Complexity:** O(V^3)
+*Suports negative edges*
 
-TODO
+```cpp
+// N < sqr3(1e8) = 460
+ll N = 200;
+
+// d[u][v] = INF (no edge)
+vector<vll> d(N+1, vll(N+1, INF));
+
+void floyd_warshall() { // O(N^3)
+    for(ll i=1; i<=N; i++) d[i][i] = 0;
+
+    for(ll aux=1; aux<=N; aux++)
+        for(ll u=1; u<=N; u++)
+            for(ll v=1; v<=N; v++)
+                if (d[u][aux] < INF and d[v][aux] < INF)
+                    d[u][v] = min(d[u][v], d[u][aux] + d[v][aux]);
+}
+```
 
 ## BFS
 
@@ -1413,17 +1440,39 @@ bool eq(unit a, unit b){ return abs(a - b) <= EPS; }
 struct P {
     unit x, y;
     P(unit xx=0, unit yy=0): x(xx), y(yy){}
-    P operator +(const P& b) const{ return P{x + b.x, y + b.y}; }
-    P operator -(const P& b) const{ return P{x - b.x, y - b.y}; }
-    P operator *(unit t) const{ return {x*t, y*t}; }
-    P operator /(unit t) const{ return {x/t, y/t}; }
-    unit operator *(const P& b) const{ return x*b.x + y*b.y; }
-    unit operator ^(const P& b) const{ return x*b.y - y*b.x; }
-    bool operator <(const P& b) const{ return (eq(x, b.x) ? y < b.y : x < b.x); }
-    bool operator ==(const P& b) const{ return eq(x, b.x) and eq(y, b.y); }
-    unit dist(P b) { return ((x-b.x)*(x-b.x) + (y-b.y)*(y-b.y)); }
-    unit dot(const P& b, const P& c) const{ return (b-*this) * (c-*this); }
-    unit cross(const P& b, const P& c) const{ return (b-*this) ^ (c-*this); }
+    P operator +(const P& b) const { 
+        return P{x + b.x, y + b.y}; 
+    }
+    P operator -(const P& b) const { 
+        return P{x - b.x, y - b.y};
+    }
+    P operator *(unit t) const {
+        return {x*t, y*t};
+    }
+    P operator /(unit t) const { 
+        return {x/t, y/t}; 
+    }
+    unit operator *(const P& b) const { 
+        return x*b.x + y*b.y; 
+    }
+    unit operator ^(const P& b) const {
+        return x*b.y - y*b.x;
+    }
+    bool operator <(const P& b) const {
+        return (eq(x, b.x) ? y < b.y : x < b.x);
+    }
+    bool operator ==(const P& b) const {
+        return eq(x, b.x) and eq(y, b.y);
+    }
+    unit dist(P b) {
+        return ((x-b.x)*(x-b.x) + (y-b.y)*(y-b.y));
+    }
+    unit dot(const P& b, const P& c) const{
+        return (b-*this) * (c-*this);
+    }
+    unit cross(const P& b, const P& c) const{
+        return (b-*this) ^ (c-*this);
+    }
 };
 ```
 
@@ -1562,13 +1611,14 @@ vector<P> convex_hull(vector<P>& v){
 
 ```cpp
 const ll N = 505; // number of nodes, including sink and source
+
 struct Dinic {  // O( Vertices^2 * Edges)
     struct Edge { 
         ll from, to, flow, cap;
     };
     vector<Edge> edges;
 
-    vll g[N];
+    vector<ll> g[N];
     ll ne = 0, lvl[N], vis[N], pass;
     ll qu[N], px[N], qt;
 
@@ -1633,8 +1683,9 @@ struct Dinic {  // O( Vertices^2 * Edges)
         qt = 0; pass = 0;
     }
 
-    vpll cut() { // OBS: cut set cost is equal to max flow
-        vpll cuts;
+    vector<pll> cut() { // OBS: cut set cost is equal to max flow (number of edges)
+        // the cut set is the set of edges that, if removed, will disrupt flow and make it 0.
+        vector<pll> cuts;
         for (auto [from, to, flow, cap]: edges)
             if (flow == cap and vis[from] == pass and vis[to] < pass and cap > 0)
                 cuts.pb({from, to});
@@ -1652,39 +1703,6 @@ Remember to include the sink vertex and the source vertex. Usually *n+1* and *n+
 use **dinic.addEdge** to add edges -> (from, to, normal way capacity, retro-capacity)
 
 use **dinic.flow(source_id, sink_id)** to receive maximum flow from source to sink through the network
-
-**OBS:** It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective properties, like the **flow** passing through each edge. This can be used to **matching problems** with a bipartite graph and *1 capacity* for example.
-
-#### Example
-
-```cpp
-int32_t main(){sws;
-    ll n, m; cin >> n >> m;
-    Dinic dinic;
- 
-    for(ll i=1; i<=n; i++){
-        ll k; cin >> k;
-        for(ll j=0; j<k; j++){
-            ll empresa; cin >> empresa;
-            empresa += n;
-            dinic.addEdge(i, empresa, 1, 0);
-        }
-    }
- 
-    ll source = n + m + 1;
-    ll sink = n + m + 2;
- 
-    for(ll i=1; i<=n; i++){
-        dinic.addEdge(source, i, 1, 0);
-    }
- 
-    for(ll j=1; j<=m; j++){
-        dinic.addEdge(j+n, sink, 1, 0);
-    }
- 
-    cout << m - dinic.flow(source, sink) << endl;
-}
-```
 
 ### Minimum Cut
 
@@ -1712,6 +1730,16 @@ int32_t main(){ sws;
     for(auto [u, v] : ans) cout << u << ' ' << v << endl;
 }   
 ```
+
+### Matching
+
+A perfect matching includes all vertices from the bipartite graph L and R. 
+
+A maximum matching has the maximum cadinality. A perfect matching is a maximum matching. But the opposite is not necessarity true.
+
+It's possible to access *dinic.edges*, which is a vector that contains all edges and also its respective attributes, like the .flow passing through each edge. Remember to consider that negative flow exist for reverse edges. 
+
+This can be used to **matching problems** with a bipartite graph and *1 capacity* for example.
 
 
 ---
@@ -1965,13 +1993,13 @@ Suppose we are given a string  *s*  of length  *n* . The Z-function for 
 The first element of the Z-function,  *z[0]* , is generally not well defined. This implementation assumes it as *z[0] = 0*. But it can also be interpreted as *z[0] = n* (all characters coincide).
 
 ```cpp
-vll z_function(string s) { // O(n)
+vector<ll> z_function(string s) { // O(n)
     ll n = (ll) s.length();
     vll z(n);
     for (ll i=1, l=0, r=0; i<n; i++) {
         if (i <= r) z[i] = min(r - i + 1, z[i - l]);
 
-        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) z[i]++;
+        while (i + z[i] < n and s[z[i]] == s[i + z[i]]) z[i]++;
 
         if (r < i + z[i] - 1) l = i, r = i + z[i] - 1;
     }
@@ -2122,6 +2150,83 @@ vector<int> kasai(string s, vector<int> sa) {
 }
 ```
 
+## Hashing
+
+```cpp
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+// hash(s) -> s[0]*P^n + s[1]*P^(n-1) + ... + s[n-1]*P + s[n]
+struct Hashing {
+    vector<ll> mods = { // multiple mods to surpass colision
+        1000000009,1000000021,1000000033,
+        1000000087,1000000093,1000000097,
+        1000000103,1000000123,1000000181,
+        1000000207,1000000223,1000000241,
+        1000000271,1000000289,1000000297
+    };
+
+    ll num; // number of mods used (3 is a good number)
+    ll P = 131; // more than ascii
+    vector<unordered_set<ll>> cnt;
+    vector<vector<ll>> h, p;
+
+    Hashing(string &s, ll n = 3) : num(n) { // O(len(s) * num)
+        shuffle(mods.begin(), mods.end(), rng);
+        ll len = (ll) s.size();
+        cnt.assign(n, unordered_set<ll>());
+        h.assign(n, vector<ll>(len));
+        p.assign(n, vector<ll>(len));
+
+        for(ll i=0; i<num; i++) {
+            p[i][0] = 1, h[i][0] = s[0];
+            for(ll j=1; j<len; j++) {
+                p[i][j] = (p[i][j-1] * P) % mods[i];
+                h[i][j] = (h[i][j-1] * P + s[j]) % mods[i]; 
+            }
+        }
+    }   
+
+    // hash of s[l...r]
+    vector<ll> get(ll l, ll r) {  // O(num)
+        vector<ll> vec(num);
+        for(ll i=0; i<num; i++) {
+            vec[i] = h[i][r];
+            if (l > 0)
+                vec[i] = vec[i] - (h[i][l-1] * p[i][r-l+1]) % mods[i];
+            if (vec[i] < 0)
+                vec[i] += mods[i];
+        }
+        return vec;
+    }
+    
+    // hash of t
+    vector<ll> get(string &t) { // O(len(t) * num)
+        ll len = (ll) t.size();
+        vector<ll> vec(num);
+        for(ll i=0; i<num; i++) {
+            ll pow = 1, hash = t[0];
+            for(ll j=1; j<len; j++) {
+                pow = (pow * P) % mods[i];
+                hash = (hash * P  + t[j]) % mods[i]; 
+            }
+            vec[i] = hash;
+        }
+        return vec;
+    }
+
+    void add(vector<ll> &vec) { // O(num)
+        for(ll i=0; i<num; i++)
+            cnt[i].insert(vec[i]);
+    }
+
+    bool check(vector<ll> &vec) { // O(num)
+        for(ll i=0; i<num; i++)
+            if (!cnt[i].count(vec[i])) return 0;
+        return 1;
+    }
+};
+```
+
 ## Booth's Algorithm
 
 An efficient algorithm which uses a modified version of KMP to compute the **least amount of rotation needed** to reach the **lexicographically minimal string rotation**.
@@ -2158,6 +2263,185 @@ int32_t main(){ sws;
     ll ans_idx = least_rotation(s);
     string tmp = s + s;
     cout << tmp.substr(ans_idx, n) << endl;
+}
+```
+
+## Aho Cosarick
+
+
+### find first occurences of match for each pattern
+
+```cpp
+namespace aho {
+    map<char, int> to[MAX];
+    int link[MAX], idx = 0, term[MAX], exit[MAX], sobe[MAX];
+    vector<int> word[MAX];
+    bool vis[MAX]; // avoids recalculation
+    int match[MAX];
+    // idx+1 of the last char of the pattern match
+    // idx = 0 -> no match
+    
+    void add(string& s, int id) {
+        int at = 0;
+        for (char c : s) {
+            if (to[at].count(c)) at = to[at][c];
+            else at = to[at][c] = ++idx;
+        }
+        term[at]++, sobe[at]++;
+        word[at].pb(id);
+    }
+
+    void build() { 
+        queue<int> q;
+        q.push(0);
+        link[0] = exit[0] = -1;
+        while (q.size()) {
+            int i = q.front(); q.pop();
+            for (auto [c, j] : to[i]) {
+                int l = link[i];
+                while (l != -1 and !to[l].count(c)) l = link[l];
+                link[j] = l == -1 ? 0 : to[l][c];
+                exit[j] = term[link[j]] ? link[j] : exit[link[j]];
+                if (exit[j] != -1) sobe[j] += sobe[exit[j]];
+                q.push(j);
+            }
+        }
+    }
+
+    ll query(string& s) { // returns number of matches
+        memset(vis, 0, sizeof(vis));
+        int at = 0, ans = 0;
+        int n = (int) s.size();
+        for (int i=0; i<n; i++){
+            char c = s[i];
+            while (at != -1 and !to[at].count(c)) at = link[at];
+            at = at == -1 ? 0 : to[at][c];
+
+            int tmp = at;
+            while ((tmp > 0 and !vis[tmp])) {
+                vis[tmp] = 1;
+
+                for(auto id : word[tmp])
+                    match[id] = i+1;
+
+                tmp = exit[tmp];
+            }
+
+            ans += sobe[at];
+        }
+        return ans;
+    }
+}
+
+void solve() {
+    string s; cin >> s;
+    int n; cin >> n;
+    vector<string> p(n);
+    for(int i=0; i<n; i++) {
+        cin >> p[i];
+        aho::add(p[i], i);
+    }
+    aho::build();
+    aho::query(s);
+    for(int i=0; i<n; i++) {
+        int pos = aho::match[i];
+        if (pos == 0) 
+            cout << -1 << endl;
+        else 
+            cout << pos - p[i].size() + 1 << endl;
+    }
+}
+```
+
+### Count how many matches per pattern
+
+```cpp
+namespace aho {
+    map<char, int> to[MAX];
+    int link[MAX], idx = 0, term[MAX], exit[MAX], psum[MAX];
+    vector<int> word[MAX];
+    int lazy[MAX], match[MAX];
+
+    void add(string& s, int id) {
+        int at = 0;
+        for (char c : s) {
+            if (to[at].count(c)) at = to[at][c];
+            else at = to[at][c] = ++idx;
+        }
+        term[at]++, psum[at]++;
+        word[at].pb(id);
+    }
+
+    void build() {
+        queue<int> q;
+        q.push(0);
+        link[0] = exit[0] = -1;
+        while (q.size()) {
+            int u = q.front(); q.pop();
+            for (auto [c, v] : to[u]) {
+                int l = link[u];
+                while (l != -1 and !to[l].count(c)) l = link[l];
+                link[v] = l == -1 ? 0 : to[l][c];
+                exit[v] = term[link[v]] ? link[v] : exit[link[v]];
+                if (exit[v] != -1) psum[v] += psum[exit[v]];
+                q.push(v);
+            }
+        }
+    }
+
+    int query(string& s) {
+        memset(lazy, 0, sizeof(lazy));
+        memset(match, 0, sizeof(match));
+
+        int at = 0, ans = 0;
+        int n = (int) s.size();
+        for (int i=0; i<n; i++){
+            char c = s[i];
+            while (at != -1 and !to[at].count(c)) at = link[at];
+            at = at == -1 ? 0 : to[at][c];
+
+            if (term[at]) lazy[at] += 1;
+            else if (exit[at] != -1) lazy[exit[at]] += 1;
+
+            ans += psum[at];
+        }
+
+        queue<int> q; q.push(0);
+        stack<int> st;
+        while(!q.empty()) {
+            int u = q.front(); q.pop();
+            st.push(u); 
+            for(auto [c, v] : to[u])
+                q.push(v);
+        }
+
+        while(!st.empty()) {
+            int i = st.top(); st.pop();
+            if (lazy[i]) {
+                for(auto id : word[i]) {
+                    match[id] += lazy[i];
+                }
+                if (exit[i] != -1) lazy[exit[i]] += lazy[i];
+            }
+        }
+
+        return ans;
+    }
+}
+
+void solve() {
+    string s; cin >> s;
+    int n; cin >> n;
+    vector<string> p(n);
+    for(int i=0; i<n; i++) {
+        cin >> p[i];
+        aho::add(p[i], i);
+    }
+    aho::build();
+    aho::query(s);
+    for(int i=0; i<n; i++) {
+        cout << aho::match[i] << endl;
+    }
 }
 ```
 
@@ -2451,172 +2735,183 @@ ll centroid(ll u = 1, ll p = -1) {
 
 ---
 
-# Modular-Arithmetic
+# Math
 
-## Overloading Operations Struct
+## Matrix
 
 ```cpp
-const int MOD = 1e9+7;
-
-struct intM{
-    long long val = 0;
-
-    intM(long long n=0){
-        val = n%MOD;
-        if (val < 0) val += MOD;
-    }
+struct Matrix{
+    vector<vll> M, IND;
     
-    bool operator ==(const intM& b) const{
-        return (val == b.val);
+    Matrix(vector<vector<int>> mat){
+        M = mat;
+    }
+ 
+    Matrix(int row, int col, bool ind=0){
+        M = vector<vector<int>>(row, vector<int>(col, 0));
+        if(ind){
+            vector<int> aux(row, 0);
+            for(int i=0; i<row; i++){
+                aux[i] = 1;
+                IND.push_back(aux);
+                aux[i] = 0;
+            }
+        }
     }
 
-    intM operator +(const intM& b) const{
-        return (val + b.val) % MOD;
+    Matrix operator +(const Matrix &B) const{ // A+B (sizeof(A) == sizeof(B))
+        vector<vector<int>> ans(M.size(), vector<int>(M[0].size(), 0));
+        for(int i=0; i<(int)M.size(); i++){
+            for(int j=0; j<(int)M[i].size(); j++){
+                ans[i][j] = M[i][j] + B.M[i][j];
+            }
+        }
+        return ans;
+    }
+ 
+    Matrix operator *(const Matrix &B) const{ // A*B (A.column == B.row)
+        vector<vector<int>> ans;
+        for(int i=0; i<(int)M.size(); i++){
+            vector<int> aux;
+            for(int j=0; j<(int)M[i].size(); j++){
+                int sum=0;
+                for(int k=0; k<(int)B.M.size(); k++){
+                    sum = sum + (M[i][k]*B.M[k][j]);
+                }
+                aux.push_back(sum);
+            }
+            ans.push_back(aux);
+        }
+        return ans;
     }
 
-    intM operator -(const intM& b) const{
-        return (val - b.val + MOD) % MOD;
-    }
-
-    intM operator *(const intM& b) const{
-        return (val*b.val) % MOD;
-    }
-
-    intM operator ^(const intM& b) const{ // fast exp [(val^b) mod M];
-        if (b == 0) return 1;
-        if (b == 1) return (*this);
-        intM tmp = (*this)^(b.val/2); // diria que não vale a pena definir "/", "/" já é a multiplicação pelo inv
-        if (b.val % 2 == 0) return tmp*tmp; // diria que não vale a pena definir "%", para não confidir com o %MOD
-        else return tmp * tmp * (*this);
-    }
-
-    intM operator /(const intM& b) const{ 
-        return (*this) * (b ^ (MOD-2));
-    }
-};
-```
-
-By definition, *n choose k* **($C ^n_k$)** is equal to:
-
-    n! / (k! * (n-k)!), 0 <= k <= n
-    0, otherwise
-
-### Lucas' Theorem
-
-    C(n, k) mod p = C(n_i, k_i) * C(n_i-1, k_i-1) * ... * C(n_0, k_0) mod p
-
-**Whereas:**
-
-*n_i* and *k_i* are the i-th digit of their respective numbers written in base *p*. All terms need to smaller than *p* by definition.
-
-**Example:**
-
-    10 in base 3 = 1*3^2 + 0*3^1 + 1*3^0
-    n_2 = 1
-    n_1 = 0
-    n_0 = 1
-
-### Operations with Combinatorics
-
-Also contains combinatorics operations
-
-```cpp
-struct OpMOD{
-    vll fact, ifact;
-
-    OpMOD () {}
-
-    // overloaded constructor that computes factorials
-    OpMOD(ll n){ // from fact[0] to fact[n]; O(n)
-        fact.assign(n+1 , 1);
-        for(ll i=2; i<=n; i++) fact[i] = mul(fact[i-1], i);
-
-        ifact.assign(n+1, 1);
-        ifact[n] = inv(fact[n]);
-        for(ll i=n-1; i>=0; i--) ifact[i] = mul(ifact[i+1], i+1);
-    }
-
-    ll add(ll a, ll b){
-        return ( (a%MOD) + (b%MOD) ) % MOD;
-    }
-
-    ll sub(ll a, ll b){
-        return ( ((a%MOD) - (b%MOD)) + MOD ) % MOD;
-    }
-
-    ll mul(ll a, ll b){
-        return ( (a%MOD) * (b%MOD) ) % MOD;
-    }
-
-    ll fast_exp(ll n, ll i){ // n ** i
-        if (i == 0) return 1;
-        if (i == 1) return n;
-        ll tmp = fast_exp(n, i/2);
-        if (i % 2 == 0) return mul(tmp, tmp);
-        else return mul( mul(tmp, tmp), n );
-    }
-
-    ll inv(ll n){
-        return fast_exp(n, MOD-2);
-    }
-
-    ll div(ll a, ll b){
-        return mul(a, inv(b));
-    }
-
-    // n! / (n! (n-k)! )
-    ll combination(ll n, ll k){ // "Combinação/Binomio de Newton"
-        if(k > n) return 0;
-        return mul( mul(fact[n], ifact[k]) , ifact[n-k]); 
-    }
-
-    // n! / (n-k)!
-    ll disposition(ll n, ll k){ // "Arranjo Simples"
-        if(k > n) return 0;
-        return mul(fact[n], ifact[n-k]);
-    }
-
-    // n! 
-    ll permutation(ll n){ // "Permutação Simples"
-        return fact[n];
-    }
-
-    // n! / (k1! k2! k3!)
-    ll permutationRepetition(ll n, vll x) { // "Permutação com Repetição" 
-        ll tmp = fact[n];
-        for(auto k : x) tmp = mul(tmp, ifact[k]);
-        return tmp;
-    }
-
-    // (n+m-1)! / ((n-1)! (m!)) 
-    ll starBars(ll n, ll m) { // "pontos e virgulas"
-        // n Groups -> n-1 Bars
-        // m Stars
-        return combination(n+m-1, m);
-    }
-
-    // !n = (n-1) * ( !(n-1) + !(n-2) )
-    vll subfactorial; // derangements
-    void computeSubfactorials(ll n) {
-        subfactorial.assign(n+1, 0);
-        subfactorial[0] = 1;
-        // !0 = 1
-        // !1 = 0
-        for(ll i=2; i<=n; i++) {
-            subfactorial[i] = mul( (i-1) , add(subfactorial[i-1], subfactorial[i-2]) );
+    Matrix operator ^(const int n) const{ // Need identity Matrix
+        if (n == 0) return IND;
+        if (n == 1) return (*this);
+        Matrix aux = (*this) ^ (n/2);
+        aux = aux * aux;
+        if(n % 2 == 0)
+            return aux;
+        else{
+            return (*this) * aux;
         }
     }
 };
-
-// remember to pass a number delimeter (n) to precompute factorials 
-OpMOD op;
 ```
 
+### Another Version with LL and MOD
 
+```cpp
+struct Matrix {
+    vector<vector<ll>> M;
+    
+    Matrix(vector<vector<ll>> mat) {
+        M = mat;
+    }
+    
+    // identity == 0 => Empty matrix constructor
+    // identity == 1 => Generates a Identity Matrix (row == col)
+    Matrix(ll row, ll col, bool identity = 0){
+        M.assign(row, vector<ll>(col, 0));
+        if (identity) 
+            for(ll i=0; i<row; i++) M[i][i] = 1;
+    }
 
----
+    // A+B  (sizeof(A) == sizeof(B))
+    Matrix operator +(const Matrix &B) const{
+        ll row = M.size(); ll col = M[0].size();
+        Matrix ans(row, col);
 
-# Number-Theory
+        for(ll i=0; i<row; i++){
+            for(ll j=0; j<col; j++){
+                ans.M[i][j] = ( M[i][j] + B.M[i][j] ) % MOD;
+            }
+        }
+
+        return ans;
+    }
+
+    // A*B  (A.column == B.row)
+    Matrix operator *(const Matrix &B) const{ 
+        ll rowA = M.size();
+        ll colA; ll rowB = colA = M[0].size();
+
+        Matrix ans(rowB, colA);
+
+        for(ll i=0; i<rowA; i++){
+            for(ll j=0; j<colA; j++){
+                for(ll k=0; k<rowB; k++){
+                    ans.M[i][j] += (M[i][k] * B.M[k][j]) % MOD;
+                    ans.M[i][j] %= MOD;
+                }
+            }
+        }
+
+        return ans;
+    }
+
+    Matrix operator ^(ll n) const{ // row == col
+        ll sz = M.size(); 
+        
+        Matrix ans(sz, sz, 1); // initialized as identity
+        Matrix tmp(M);
+
+        while(n) {
+            if (n & 1) ans = (ans * tmp);
+            tmp = (tmp * tmp);
+            n >>= 1;
+        }
+
+        return ans;
+    }
+};
+```
+
+#### Usage
+
+For faster linear recurrence computation with matrix exponentiation. 
+
+Base * Operator^(n) = Result[n]
+
+**Example:**
+
+*Recorrence:*
+dp[i] = dp[i-1] + dp[i-2] + dp[i-3] + dp[i-4] + dp[i-5] + dp[i-6]
+
+Base Matrix
+[dp[5], dp[4], dp[3], dp[2], dp[1], dp[0]]
+
+* Operator Matrix ^ 1
+[1, 1, 0, 0, 0, 0]
+[1, 0, 1, 0, 0, 0]
+[1, 0, 0, 1, 0, 0]
+[1, 0, 0, 0, 1, 0]
+[1, 0, 0, 0, 0, 1]
+[1, 0, 0, 0, 0, 0]
+
+= Result Matrix
+[dp[n+5], dp[n+4], dp[n+3], dp[n+2], dp[n+1], dp[n]]
+
+```cpp
+int32_t main(){ sws;
+    ll n; cin >> n;
+    Matrix op(6, 6, 1);
+    op.M[0] = {1, 1, 0, 0, 0, 0};
+    op.M[1] = {1, 0, 1, 0, 0, 0};
+    op.M[2] = {1, 0, 0, 1, 0, 0};
+    op.M[3] = {1, 0, 0, 0, 1, 0};
+    op.M[4] = {1, 0, 0, 0, 0, 1};
+    op.M[5] = {1, 0, 0, 0, 0, 0};
+
+    Matrix base(vector(1, vll({16, 8, 4, 2, 1, 1})));
+    if (n <= 5) cout << base.M[0][5-n] << endl; 
+    else {
+        op = op^(n-5);
+        Matrix ans = base * op;
+        cout << ans.M[0][0] << endl;
+    }
+}   
+```
 
 ## Factorization
 
@@ -2750,6 +3045,65 @@ vector<ll> fact(ll n) {
 ```
 
 
+## Xor Basis
+
+```cpp
+struct XorBasis {
+    vector<ll> basis;
+    
+    ll reduce(ll vec) {
+        for(auto b : basis) vec = min(vec, vec^b);
+        return vec;
+    }
+
+    void add(ll vec) {
+        ll val = reduce(vec);
+        if (val) B.pb(val);
+    }
+};
+```
+
+**Extended:**
+
+```cpp
+struct XorBasis {
+    vector<ll> basis;
+    ll mx = 0;
+
+    ll reduce(ll vec) {
+        for(auto b : basis) vec = min(vec, vec^b);
+        return vec;
+    }
+
+    void add(ll vec) {
+        ll val = reduce(vec);
+        if (val) {
+            basis.pb(val);
+            mx = max(mx, mx^val);
+        }
+    }
+
+    ll dim() {
+        return basis.size();
+    }
+    
+    void jordan() {
+        sort(basis.begin(), basis.end(), greater<ll>());
+        for(ll i=1; i<(ll)basis.size(); i++) {
+            for(ll j=0; j<i; j++) {
+                basis[j] = min(basis[j], basis[j]^basis[i]);
+            }
+        }
+    }
+};
+```
+
+**Common problems:**
+
+- Find if a vector can be formed by the basis ( if(reduce(val)) )
+- Find how many linear combinations form a vector (ans = 2^(dim(kernel)))
+- Find the maximum vector that can be formed (mx = max(mx, mx^b))
+
 ## Crivo de Eratóstenes
 
 ```cpp
@@ -2851,6 +3205,218 @@ Let **n** be a number represented by it's prime factors $p_i$ and respective exp
 ![Soma](../../Aux-Images/SumDivisors.png)
 ![Produto](../../Aux-Images/ProductDivisors.png)
 
+## Binomial Coeficients
+
+By definition, *n choose k* **($C ^n_k$)** is equal to:
+
+    n! / (k! * (n-k)!), 0 <= k <= n
+    0, otherwise
+
+### Lucas' Theorem
+
+    C(n, k) mod p = C(n_i, k_i) * C(n_i-1, k_i-1) * ... * C(n_0, k_0) mod p
+
+**Whereas:**
+
+*n_i* and *k_i* are the i-th digit of their respective numbers written in base *p*. All terms need to smaller than *p* by definition.
+
+**Example:**
+
+    10 in base 3 = 1*3^2 + 0*3^1 + 1*3^0
+    n_2 = 1
+    n_1 = 0
+    n_0 = 1
+
+## Extended Euclidian Algorithm
+
+Can be used to find the inverse multiplicative of a number if gcd(a, mod) == 1
+
+a * x + m * y = gcd(a, m)
+a * x = 1 (mod m)
+
+```cpp
+// a*x + b*y = gcd(a, b)
+ll extended_euclid(ll a, ll b, ll &x, ll &y) { 
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    ll x1, y1;
+    ll g = extended_euclid(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a/b);
+    return g;
+}
+```
+
+### Operations with Combinatorics
+
+Also contains combinatorics operations
+
+```cpp
+struct OpMOD{
+    vll fact, ifact;
+
+    OpMOD () {}
+
+    // overloaded constructor that computes factorials
+    OpMOD(ll n){ // from fact[0] to fact[n]; O(n)
+        fact.assign(n+1 , 1);
+        for(ll i=2; i<=n; i++) fact[i] = mul(fact[i-1], i);
+
+        ifact.assign(n+1, 1);
+        ifact[n] = inv(fact[n]);
+        for(ll i=n-1; i>=0; i--) ifact[i] = mul(ifact[i+1], i+1);
+    }
+
+    ll add(ll a, ll b){
+        return ( (a%MOD) + (b%MOD) ) % MOD;
+    }
+
+    ll sub(ll a, ll b){
+        return ( ((a%MOD) - (b%MOD)) + MOD ) % MOD;
+    }
+
+    ll mul(ll a, ll b){
+        return ( (a%MOD) * (b%MOD) ) % MOD;
+    }
+
+    ll fast_exp(ll n, ll i){ // n ** i
+        if (i == 0) return 1;
+        if (i == 1) return n;
+        ll tmp = fast_exp(n, i/2);
+        if (i % 2 == 0) return mul(tmp, tmp);
+        else return mul( mul(tmp, tmp), n );
+    }
+
+    ll inv(ll n){
+        return fast_exp(n, MOD-2);
+    }
+
+    ll div(ll a, ll b){
+        return mul(a, inv(b));
+    }
+
+    // n! / (n! (n-k)! )
+    ll combination(ll n, ll k){ // "Combinação/Binomio de Newton"
+        if(k > n) return 0;
+        return mul( mul(fact[n], ifact[k]) , ifact[n-k]); 
+    }
+
+    // n! / (n-k)!
+    ll disposition(ll n, ll k){ // "Arranjo Simples"
+        if(k > n) return 0;
+        return mul(fact[n], ifact[n-k]);
+    }
+
+    // n! 
+    ll permutation(ll n){ // "Permutação Simples"
+        return fact[n];
+    }
+
+    // n! / (k1! k2! k3!)
+    ll permutationRepetition(ll n, vll x) { // "Permutação com Repetição" 
+        ll tmp = fact[n];
+        for(auto k : x) tmp = mul(tmp, ifact[k]);
+        return tmp;
+    }
+
+    // (n+m-1)! / ((n-1)! (m!)) 
+    ll starBars(ll n, ll m) { // "pontos e virgulas"
+        // n Groups -> n-1 Bars
+        // m Stars
+        return combination(n+m-1, m);
+    }
+
+    // !n = (n-1) * ( !(n-1) + !(n-2) )
+    vll subfactorial; // derangements
+    void computeSubfactorials(ll n) {
+        subfactorial.assign(n+1, 0);
+        subfactorial[0] = 1;
+        // !0 = 1
+        // !1 = 0
+        for(ll i=2; i<=n; i++) {
+            subfactorial[i] = mul( (i-1) , add(subfactorial[i-1], subfactorial[i-2]) );
+        }
+    }
+};
+
+// remember to pass a number delimeter (n) to precompute factorials 
+OpMOD op;
+```
+
+### Overloading Operations Struct
+
+```cpp
+const int MOD = 1e9+7;
+
+struct intM{
+    long long val = 0;
+
+    intM(long long n=0){
+        val = n%MOD;
+        if (val < 0) val += MOD;
+    }
+    
+    bool operator ==(const intM& b) const{
+        return (val == b.val);
+    }
+
+    intM operator +(const intM& b) const{
+        return (val + b.val) % MOD;
+    }
+
+    intM operator -(const intM& b) const{
+        return (val - b.val + MOD) % MOD;
+    }
+
+    intM operator *(const intM& b) const{
+        return (val*b.val) % MOD;
+    }
+
+    intM operator ^(const intM& b) const{ // fast exp [(val^b) mod M];
+        if (b == 0) return 1;
+        if (b == 1) return (*this);
+        intM tmp = (*this)^(b.val/2); // diria que não vale a pena definir "/", "/" já é a multiplicação pelo inv
+        if (b.val % 2 == 0) return tmp*tmp; // diria que não vale a pena definir "%", para não confidir com o %MOD
+        else return tmp * tmp * (*this);
+    }
+
+    intM operator /(const intM& b) const{ 
+        return (*this) * (b ^ (MOD-2));
+    }
+};
+```
+
+## Series Theory
+
+#### Closed formulas for some sequences
+
+**Natural Number Summation (PA):**
+
+$ 1 + 2 + 3 + 4 + 5 + ... + n-1 + n $
+
+$ = \sum_{i=1}^n i $
+
+= $ \frac{ n(n+1) }{ 2 } $
+
+**Natural Number Quadratic Summation:**
+
+$ 1 + 4 + 9 + 16 + 25 + ... + (n-1)^2 + n^2 $
+
+$ = \sum_{i=1}^n i^2 $
+
+= $ \frac{ n(n+1)(2n+1) }{ 6 } $
+
+**Triangular Numbers Summation:**
+
+$ 1 + 3 + 6 + 10 + 15 + ... + \frac{(n-1)(n)}{2} + \frac{(n)(n+1)}{2} $
+
+$ = \sum_{i=1}^n \frac{i(i+1)}{2} = \frac{1}{2}(\sum_{i=1}^n i^2 + \sum_{i=1}^n i) $
+
+$ = \frac{1}{2} ( \frac{ n(n+1) }{ 2 } + \frac{ n(n+1)(2n+1) }{ 6 }) $
+
 ## Combinatorics Theory
 
 #### Stars and Bars 
@@ -2896,217 +3462,39 @@ A subfactorial is noted as:
 *!1* = 0
 *!0* = 1 
 
+#### Burside Lemma
 
----
+necklaces with *n* pearls and *k* colors:
 
-# Math
-
-## Matrix
-
-```cpp
-struct Matrix{
-    vector<vll> M, IND;
-    
-    Matrix(vector<vector<int>> mat){
-        M = mat;
-    }
- 
-    Matrix(int row, int col, bool ind=0){
-        M = vector<vector<int>>(row, vector<int>(col, 0));
-        if(ind){
-            vector<int> aux(row, 0);
-            for(int i=0; i<row; i++){
-                aux[i] = 1;
-                IND.push_back(aux);
-                aux[i] = 0;
-            }
-        }
-    }
-
-    Matrix operator +(const Matrix &B) const{ // A+B (sizeof(A) == sizeof(B))
-        vector<vector<int>> ans(M.size(), vector<int>(M[0].size(), 0));
-        for(int i=0; i<(int)M.size(); i++){
-            for(int j=0; j<(int)M[i].size(); j++){
-                ans[i][j] = M[i][j] + B.M[i][j];
-            }
-        }
-        return ans;
-    }
- 
-    Matrix operator *(const Matrix &B) const{ // A*B (A.column == B.row)
-        vector<vector<int>> ans;
-        for(int i=0; i<(int)M.size(); i++){
-            vector<int> aux;
-            for(int j=0; j<(int)M[i].size(); j++){
-                int sum=0;
-                for(int k=0; k<(int)B.M.size(); k++){
-                    sum = sum + (M[i][k]*B.M[k][j]);
-                }
-                aux.push_back(sum);
-            }
-            ans.push_back(aux);
-        }
-        return ans;
-    }
-
-    Matrix operator ^(const int n) const{ // Need identity Matrix
-        if (n == 0) return IND;
-        if (n == 1) return (*this);
-        Matrix aux = (*this) ^ (n/2);
-        aux = aux * aux;
-        if(n % 2 == 0)
-            return aux;
-        else{
-            return (*this) * aux;
-        }
-    }
-};
-```
-
-#### Another Version with long long and MOD
-
-```cpp
-struct Matrix{
-    vector<vll> M, Identity;
-    
-    Matrix(vector<vll> mat) {
-        M = mat;
-    }
-    
-    // identity == 0 => Empty matrix constructor
-    // identity == 1 => also generates a Identity Matrix
-    Matrix(ll row, ll col, bool identity = 0){
-        M.assign(row, vll(col, 0));
-
-        if (identity) { // row == col
-            Identity.assign(row, vll(col, 0));
-            for(ll i=0; i<row; i++)
-                Identity[i][i] = 1;
-        }
-    }
-
-    // A+B ; needs (sizeof(A) == sizeof(B))
-    Matrix operator +(const Matrix &B) const{
-        ll row = M.size(); ll col = M[0].size();
-
-        Matrix ans(row, col);
-
-        for(ll i=0; i<row; i++){
-            for(ll j=0; j<col; j++){
-                ans.M[i][j] = (M[i][j] + B.M[i][j]) % MOD;
-            }
-        }
-        return ans;
-    }
-    // A*B (A.column == B.row)
-    Matrix operator *(const Matrix &B) const{ 
-        ll rowA = M.size();
-        ll colA; ll rowB = colA = M[0].size();
-
-        Matrix ans(rowB, colA);
-
-        for(ll i=0; i<rowA; i++){
-            for(ll j=0; j<colA; j++){
-                ll sum=0;
-                for(ll k=0; k<rowB; k++){
-                    sum += (M[i][k] * B.M[k][j]) % MOD;
-                    sum %= MOD;
-                }
-                ans.M[i][j] = sum;
-            }
-        }
-        return ans;
-    }
-
-    Matrix operator ^(const ll n) const{ // Need identity Matrix
-        if (n == 0) return Identity;
-        if (n == 1) return (*this);
-        Matrix aux = (*this) ^ (n/2);
-        aux = aux * aux;
-        if(n % 2 == 0) return aux;
-        else return (*this) * aux;
-    }
-};
-```
-
-#### Usage
-
-For faster linear recurrence computation with matrix exponentiation. 
-
-Base * Operator^(n) = Result[n]
-
-**Example:**
-
-*Recorrence:*
-dp[i] = dp[i-1] + dp[i-2] + dp[i-3] + dp[i-4] + dp[i-5] + dp[i-6]
-
-Base Matrix
-[dp[5], dp[4], dp[3], dp[2], dp[1], dp[0]]
-
-* Operator Matrix ^ 1
-[1, 1, 0, 0, 0, 0]
-[1, 0, 1, 0, 0, 0]
-[1, 0, 0, 1, 0, 0]
-[1, 0, 0, 0, 1, 0]
-[1, 0, 0, 0, 0, 1]
-[1, 0, 0, 0, 0, 0]
-
-= Result Matrix
-[dp[n+5], dp[n+4], dp[n+3], dp[n+2], dp[n+1], dp[n]]
-
-```cpp
-int32_t main(){ sws;
-    ll n; cin >> n;
-    Matrix op(6, 6, 1);
-    op.M[0] = {1, 1, 0, 0, 0, 0};
-    op.M[1] = {1, 0, 1, 0, 0, 0};
-    op.M[2] = {1, 0, 0, 1, 0, 0};
-    op.M[3] = {1, 0, 0, 0, 1, 0};
-    op.M[4] = {1, 0, 0, 0, 0, 1};
-    op.M[5] = {1, 0, 0, 0, 0, 0};
-
-    Matrix base(vector(1, vll({16, 8, 4, 2, 1, 1})));
-    if (n <= 5) cout << base.M[0][5-n] << endl; 
-    else {
-        op = op^(n-5);
-        Matrix ans = base * op;
-        cout << ans.M[0][0] << endl;
-    }
-}   
-```
-
-## Series Theory
-
-#### Closed formulas for some sequences
-
-**Natural Number Summation (PA):**
-
-$ 1 + 2 + 3 + 4 + 5 + ... + n-1 + n $
-
-$ = \sum_{i=1}^n i $
-
-= $ \frac{ n(n+1) }{ 2 } $
-
-**Natural Number Quadratic Summation:**
-
-$ 1 + 4 + 9 + 16 + 25 + ... + (n-1)^2 + n^2 $
-
-$ = \sum_{i=1}^n i^2 $
-
-= $ \frac{ n(n+1)(2n+1) }{ 6 } $
-
-**Triangular Numbers Summation:**
-
-$ 1 + 3 + 6 + 10 + 15 + ... + \frac{(n-1)(n)}{2} + \frac{(n)(n+1)}{2} $
-
-$ = \sum_{i=1}^n \frac{i(i+1)}{2} = \frac{1}{2}(\sum_{i=1}^n i^2 + \sum_{i=1}^n i) $
-
-$ = \frac{1}{2} ( \frac{ n(n+1) }{ 2 } + \frac{ n(n+1)(2n+1) }{ 6 }) $
+$\frac{1}{n} \sum_{i=1}^n k^{\gcd(i, n)}$
 
 
 ---
 
 # Misc
+
+## Random Numbers Generator
+
+**HOW TO USE :**
+
+```cpp
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+// to shuffle a vector
+vector<int> vec;
+shuffle(vec.begin(), vec.end(), rng);
+
+// to simply generate a unsigned 32 bit number
+unsigned int num = rng();
+
+// to limit the number to the range [0, n[
+unsigned int num = rng() % n;
+
+// to limit the number to the range [1, n]
+unsigned int num = rng() % n + 1;
+```
+
+*For 64-bit numbers:* mt19937_64
 
 ### Getline
 

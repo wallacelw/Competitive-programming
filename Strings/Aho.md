@@ -1,6 +1,5 @@
 ## Aho Cosarick
 
-
 ### find first occurences of match for each pattern
 
 ```cpp

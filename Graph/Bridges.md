@@ -1,5 +1,7 @@
 ## Bridges ( Cut Edges )
 
+Also called *isthmus* or *cut arc*.
+
 **Theory:** After constructing a DFS Tree, an edge (u, v) is a bridge if and only if there is no back-edge from *v, or a descendent of v,* to *u, or an ancestor of u*.
 
 To do this efficiently, it's used *tin[i] (entry time of node **i**)* and *low[i] (minimum entry time of all nodes that can be reached from node **i**)*.

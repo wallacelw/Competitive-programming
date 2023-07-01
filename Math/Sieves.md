@@ -1,4 +1,4 @@
-## Crivo de Eratóstenes
+## Sieve of Eratóstenes
 
 ```cpp
 // O (N log^2(N) ) -> Teorema de Merten
