@@ -16,8 +16,6 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
 - [Graph](#graph)
   - [Topological Sort](#topological-sort)
   - [DFS Tree](#dfs-tree)
-  - [Graph Terminology:](#graph-terminology)
-  - [Euler Tour Technique (ETT)](#euler-tour-technique-ett)
   - [Bridges ( Cut Edges )](#bridges--cut-edges-)
   - [Articulation Points and Bridges](#articulation-points-and-bridges)
   - [Euler Path](#euler-path)
@@ -30,7 +28,7 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
     - [Modified Dijkstra for K-Shortest Paths](#modified-dijkstra-for-k-shortest-paths)
   - [All-Pairs Shortest Paths (APSP)](#all-pairs-shortest-paths-apsp)
     - [Floyd Warshall](#floyd-warshall)
-  - [BFS](#bfs)
+  - [Euler Tour Technique (ETT)](#euler-tour-technique-ett)
   - [Cycles](#cycles)
   - [2-SAT (2-satisfiability)](#2-sat-2-satisfiability)
 - [Geometry](#geometry)
@@ -50,9 +48,8 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
   - [Binary search](#binary-search)
 - [Strings](#strings)
   - [Z-function](#z-function)
-  - [Knuth–Morris–Pratt algorithm (KMP)](#knuthmorrispratt-algorithm-kmp)
   - [SUFFIX ARRAY](#suffix-array)
-  - [KASAI's ALGORITHM FOR LCP (longest common prefix)](#kasais-algorithm-for-lcp-longest-common-prefix)
+    - [KASAI's ALGORITHM FOR LCP (longest common prefix)](#kasais-algorithm-for-lcp-longest-common-prefix)
   - [Hashing](#hashing)
   - [Booth's Algorithm](#booths-algorithm)
   - [Aho Cosarick](#aho-cosarick)
@@ -61,7 +58,7 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
 - [Tree](#tree)
   - [Binary lifting](#binary-lifting)
   - [Find the Diameter](#find-the-diameter)
-  - [Find the lenght of the longest path from all nodes](#find-the-lenght-of-the-longest-path-from-all-nodes)
+    - [Find the lenght of the longest path from all nodes](#find-the-lenght-of-the-longest-path-from-all-nodes)
   - [Heavy Light Decomposition (WIP)](#heavy-light-decomposition-wip)
   - [Find the Centroid of a Tree](#find-the-centroid-of-a-tree)
 - [Math](#math)
@@ -72,24 +69,24 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
     - [Using Smallest Prime technique](#using-smallest-prime-technique)
     - [Pollard Rho](#pollard-rho)
   - [Xor Basis](#xor-basis)
-  - [Crivo de Eratóstenes](#crivo-de-eratóstenes)
+    - [Operations with Combinatorics](#operations-with-combinatorics)
+    - [Overloading Operations Struct](#overloading-operations-struct)
+  - [Sieve of Eratóstenes](#sieve-of-eratóstenes)
     - [Linear Sieve](#linear-sieve)
   - [Basic Knowledge](#basic-knowledge)
     - [Greatest Common Divisor (GCD)](#greatest-common-divisor-gcd)
     - [Least Commom Multiple (LCM)](#least-commom-multiple-lcm)
-    - [Observation](#observation)
   - [Closed Formulas related to divisors of a number](#closed-formulas-related-to-divisors-of-a-number)
-  - [Binomial Coeficients](#binomial-coeficients)
-    - [Lucas' Theorem](#lucas-theorem)
+  - [Lucas' Theorem](#lucas-theorem)
+  - [Series' Theory](#series-theory)
   - [Extended Euclidian Algorithm](#extended-euclidian-algorithm)
-    - [Operations with Combinatorics](#operations-with-combinatorics)
-    - [Overloading Operations Struct](#overloading-operations-struct)
-  - [Series Theory](#series-theory)
   - [Combinatorics Theory](#combinatorics-theory)
+    - [Stars and Bars](#stars-and-bars)
+    - [Derangement](#derangement)
+    - [Burside Lemma](#burside-lemma)
 - [Misc](#misc)
   - [Random Numbers Generator](#random-numbers-generator)
-    - [Getline](#getline)
-  - [Minimum Excluded (MEX)](#minimum-excluded-mex)
+  - [Getline](#getline)
 - [Game-Theory](#game-theory)
     - [Proof of impartiality](#proof-of-impartiality)
 - [Structures](#structures)
@@ -111,7 +108,6 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
     - [Sum range query, increase range update](#sum-range-query-increase-range-update)
     - [Range Minimum Query, Update (Assignment) Query](#range-minimum-query-update-assignment-query)
     - [Complex Lazy Problems](#complex-lazy-problems)
-
 
 ## Flags for compilation:
 
@@ -171,6 +167,7 @@ int32_t main(){ sws;
 
 }
 ```
+
 
 ---
 
@@ -393,7 +390,8 @@ Solves problem where is needed to count the ways of filling a *n* x *m* grid wit
 
 Note that, the (j+1) th column should not contain a complete domino (in the vertical), those types will be included in the dp transition from j+1 to j+2.
 
-![Valido](../Aux-Images/BrokenProfile1.png) ![Invalido](../Aux-Images/BrokenProfile2.png)
+<img src="../Aux-Images/BrokenProfile1.png" alt="valido" width="300"/>
+<img src="../Aux-Images/BrokenProfile2.png" alt="invalido" width="300"/>
 
 #### Transitions
 
@@ -492,8 +490,6 @@ void topological_sort(ll n) {
 }
 ```
 
-
-
 ## DFS Tree
 
 A *Back Edge* existence means that there is a cycle.
@@ -518,44 +514,9 @@ void dfs(ll u=1, ll parent=0, ll layer=1){
 }
 ```
 
-## Graph Terminology:
-
-**Clique**: a subset of vertices of an *undirected graph* such that every two distinct vertices in the clique are adjacent.
-
-**Articulation Points ( Cut Vertices )**: *A vertex* whose remotion would split a connected component and create more *connected components*.
-
-**Bridges ( Cut Edges )**: *An Edge* whose remotion would split a connected component and increase the number of *connected components* present. Also called *isthmus* or *cut arc*.
-
-
-
-## Euler Tour Technique (ETT)
-
-**AKA**: Preorder time , DFS time.
-
-Flattening a tree into an array to easily query and update subtrees. This is achieved by doing a *Pre Order Tree Transversal:* (childs -> node), a simple *dfs* marking *entry times* and *leaving times*.
-
-Creates an array that can have some properties, like all child vetices are ordered after their respective roots.
-
-```cpp
-vector<vector<int>> g(MAX, vector<int>());
-int timer = 1; // to make a 1-indexed array
-int st[MAX]; // L index
-int en[MAX]; // R index
-
-void dfs_time(int u, int p) {
-	st[u] = timer++;
-	for (int v : g[u]) if (v != p) {
-        dfs_time(v, u);
-	}
-	en[u] = timer-1;
-}
-```
-
-#### Problems
-
-https://cses.fi/problemset/task/1138 -> change value of node and calculate sum of the path to root of a tree
-
 ## Bridges ( Cut Edges )
+
+Also called *isthmus* or *cut arc*.
 
 **Theory:** After constructing a DFS Tree, an edge (u, v) is a bridge if and only if there is no back-edge from *v, or a descendent of v,* to *u, or an ancestor of u*.
 
@@ -1173,31 +1134,32 @@ void floyd_warshall() { // O(N^3)
 }
 ```
 
-## BFS
+## Euler Tour Technique (ETT)
+
+**AKA**: Preorder time , DFS time.
+
+Flattening a tree into an array to easily query and update subtrees. This is achieved by doing a *Pre Order Tree Transversal:* (childs -> node), a simple *dfs* marking *entry times* and *leaving times*.
+
+Creates an array that can have some properties, like all child vetices are ordered after their respective roots.
 
 ```cpp
-vector<vll> g(MAX, vll());
-queue<ll> fila;
-bool vis[MAX];
+vector<vector<int>> g(MAX, vector<int>());
+int timer = 1; // to make a 1-indexed array
+int st[MAX]; // L index
+int en[MAX]; // R index
 
-void bfs(ll i){
-    memset(vis, 0, sizeof(vis));
-    fila.push(i);
-    vis[i] = 1;
-    
-    while(!fila.empty()){
-        ll u = fila.front(); fila.pop();
-
-        for(auto v : g[u]) if (!vis[v]) {
-            vis[v] = 1;
-
-            d[v] = d[u] + 1;
-            
-            fila.push(v);
-        }
-    }
+void dfs_time(int u, int p) {
+	st[u] = timer++;
+	for (int v : g[u]) if (v != p) {
+        dfs_time(v, u);
+	}
+	en[u] = timer-1;
 }
 ```
+
+#### Problems
+
+https://cses.fi/problemset/task/1138 -> change value of node and calculate sum of the path to root of a tree
 
 ## Cycles
 
@@ -1366,62 +1328,6 @@ int32_t main(){ sws;
         cout << endl;
     }
 }   
-```
-
-#### Extended Version
-
-Possibly faster implementation, with redundant functions to facilitate logic.
-
-```cpp
-struct TwoSat { // copied from kth-competitive-programming/kactl
-	ll N;
-	vector<vll> gr;
-	vll values; // 0 = false, 1 = true
-	TwoSat(ll n = 0) : N(n), gr(2*n) {} // crazy constructor, n = number of variables
-	ll addVar() { // (optional)
-		gr.emplace_back();
-		gr.emplace_back();
-		return N++;
-	}
-	void either(ll f, ll j) {
-		f = max(2*f, -1-2*f);
-		j = max(2*j, -1-2*j);
-		gr[f].push_back(j^1);
-		gr[j].push_back(f^1);
-	}
-	void atMostOne(const vll& li) { // (optional)
-		if ((ll)li.size() <= 1) return;
-		ll cur = ~li[0];
-		for(ll i=2; i<(ll)li.size(); i++) {
-			ll next = addVar();
-			either(cur, ~li[i]);
-			either(cur, next);
-			either(~li[i], next);
-			cur = ~next;
-		}
-		either(cur, ~li[1]);
-	}
-	vll _val, comp, z; ll time = 0;
-	ll dfs(ll i) {
-		ll low = _val[i] = ++time, x; z.push_back(i);
-		for(ll e : gr[i]) if (!comp[e])
-			low = min(low, _val[e] ?: dfs(e));
-		if (low == _val[i]) do {
-			x = z.back(); z.pop_back();
-			comp[x] = low;
-			if (values[x>>1] == -1)
-				values[x>>1] = x&1;
-		} while (x != i);
-		return _val[i] = low;
-	}
-	bool solve() {
-		values.assign(N, -1);
-		_val.assign(2*N, 0); comp = _val;
-		for(ll i=0; i<2*N; i++) if (!comp[i]) dfs(i);
-		for(ll i=0; i<N; i++) if (comp[2*i] == comp[2*i+1]) return 0;
-		return 1;
-	}
-};
 ```
 
 
@@ -1791,48 +1697,6 @@ Consegue computar em O(log(N)), quantos elementos são menores que K, utilizando
 
 Merge Sort with number of inversions counter.
 
-```cpp
-int merge(vector<int> &v, int l, int mid, int r){
-    int i=l, j=mid+1, swaps=0;
-    vector<int> ans;
-
-    while(i <= mid or j <= r){
-
-        if(j > r or (v[i] <= v[j] and i<=mid)){
-            ans.push_back(v[i]);
-            i++;
-        }
-        else if(i > mid or (v[j] < v[i] and j <= r)){
-            ans.push_back(v[j]);
-            j++;
-            swaps = swaps + abs(mid+1-i);
-        }
-    }
-    
-    for(int i=l; i<=r; i++)
-        v[i] = ans[i-l];
-
-    return swaps;
-}
-
-int merge_sort(vector<int> &v, vector<int> &ans, int l, int r){
-    if(l==r){
-        ans[l] = v[l];
-        return 0;
-    }
-
-
-    int mid = (l+r)/2, swaps = 0;
-    swaps += merge_sort(v, ans, l, mid);
-    swaps += merge_sort(v, ans, mid+1, r);
-    swaps += merge(ans, l, mid, r);
-
-    return swaps;
-}
-```
-
-#### Updated
-
 Directly updates the *v* vector. Also return the number of swaps (inversions).
 
 **O(N log(N))**
@@ -1863,7 +1727,7 @@ ll merge(vll &v, ll l, ll r) {
     return swaps;
 }
 
-// O(log2(N))
+// O(N log2(N))
 ll merge_sort(vll &v, ll l, ll r){
     if(l == r) return 0;
 
@@ -2077,12 +1941,6 @@ int32_t main(){ sws;
 }
 ```
 
-## Knuth–Morris–Pratt algorithm (KMP)
-
-**AKA** Prefix function
-
-todo :D
-
 ## SUFFIX ARRAY
 
 **Complexity:** O(n * log (n))
@@ -2128,7 +1986,7 @@ vector<int> suffix_array(string s) {
 }
 ```
 
-## KASAI's ALGORITHM FOR LCP (longest common prefix)
+### KASAI's ALGORITHM FOR LCP (longest common prefix)
 
 **Complexity:** O(log (n))
 
@@ -2151,6 +2009,8 @@ vector<int> kasai(string s, vector<int> sa) {
 ```
 
 ## Hashing
+
+May have complications with time limit, should avoid hashing
 
 ```cpp
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
@@ -2267,7 +2127,6 @@ int32_t main(){ sws;
 ```
 
 ## Aho Cosarick
-
 
 ### find first occurences of match for each pattern
 
@@ -2545,7 +2404,7 @@ int32_t main(){sws;
     cout << dfs(ans1 , ans1).ss << endl;
 }
 ```
-## Find the lenght of the longest path from all nodes
+### Find the lenght of the longest path from all nodes
 
 It can be proven that to any node X, the maximum distance is either dist(X, A) or dist(X, B), which are the extremities of a diameter.
 
@@ -3104,152 +2963,6 @@ struct XorBasis {
 - Find how many linear combinations form a vector (ans = 2^(dim(kernel)))
 - Find the maximum vector that can be formed (mx = max(mx, mx^b))
 
-## Crivo de Eratóstenes
-
-```cpp
-// O (N log^2(N) ) -> Teorema de Merten
-
-vll primes {2, 3};
-set<ll> isPrime = {2, 3};
-void eratostenes(ll n){ 
-    bitset<MAX> sieve;
-    sieve.set();
-    for(ll i=5, step=2; i<=n; i+=step, step = 6 - step){
-        if(sieve[i]){ // i is prime
-            primes.push_back(i);
-            isPrime.insert(i);
-            for(ll j= i*i; j<=n; j += 2*i) // sieving all odd multiples of i >= i*i
-                sieve[j] = false;
-        }
-    }
-}
-```
-
-### Linear Sieve
-
-Computes all primes and composites between [2, n] in O(n) time.
-
-Note that every composite *q* must have at least one prime factor, so we can pick the smallest prime factor *p*, and let the rest of the part be i, i.e. *q = ip*.
-
-Since *p* is the smallest prime factor, we have *i ≥ p* (this garantees that *p* will already exist in the vector when reached by *i*)
-
-Also, no prime less than *p* can divide *i* (break point).
-
-Now let us take a look at the code we have a moment ago. This way, it's possible to pick out each composite exactly once.
-
-```cpp
-vector<int> prime;
-bool is_composite[MAX]; // can be 1e7
-
-void sieve (int n) { // O(n)
-	memset(is_composite, 0, sizeof(is_composite));
-
-	for (int i = 2; i <= n; i++) {
-		if (!is_composite[i]) prime.pb(i);
-		for (int j = 0; j < (int) prime.size () && i * prime[j] <= n; j++) {
-			is_composite[i * prime[j]] = true;
-			if (i % prime[j] == 0) break;
-		}
-	}
-}
-```
-
-
-## Basic Knowledge
-
-    "a is divisible by b" or
-    "a is a multiple of b" or
-    "b is a divisor of a" or
-    "b is a factor of a" or
-    "b divides a" ( b|a )
-    => a % b == 0
-
-    "a1, a2 are divisible by b"
-    => gcd(a1, a2) % b == 0
-
-    "a is divisible by b1 and b2"
-    => a % lcm(b1, b2) == 0
-
-    "a is divisible by b and b is divisible by c"
-    => a % b == 0
-    => b % c == 0
-    => a % c == 0 (transitivity)
-
-### Greatest Common Divisor (GCD) 
-
-    gcd(a) = a
-    gcd(a, b, c) = gcd( gcd(a, b), c ) 
-    gcd(a, b) = (a*b) / lcm(a, b)
-
-### Least Commom Multiple (LCM)
-
-    lcm(a) = a
-    lcm(a, b, c) = lcm( lcm(a, b), c ) 
-    lcm(a, b) = (a*b) / gcd(a, b)
-
-### Observation
-
-std-c++17 implements gcd() function, which works correcly for negative numbers as well.
-
-**For negatives numbers, the following is true:**
-
-    gcd(a,b) = gcd(−a,−b) = gcd(−a,b) = gcd(a,−b)
-
-## Closed Formulas related to divisors of a number
-
-Let **n** be a number represented by it's prime factors $p_i$ and respective exponents $e_i$:
-
-**d(n) = k = t = number of divisors**
-
-![Quantidade](../../Aux-Images/CntDivisors.png)
-![Soma](../../Aux-Images/SumDivisors.png)
-![Produto](../../Aux-Images/ProductDivisors.png)
-
-## Binomial Coeficients
-
-By definition, *n choose k* **($C ^n_k$)** is equal to:
-
-    n! / (k! * (n-k)!), 0 <= k <= n
-    0, otherwise
-
-### Lucas' Theorem
-
-    C(n, k) mod p = C(n_i, k_i) * C(n_i-1, k_i-1) * ... * C(n_0, k_0) mod p
-
-**Whereas:**
-
-*n_i* and *k_i* are the i-th digit of their respective numbers written in base *p*. All terms need to smaller than *p* by definition.
-
-**Example:**
-
-    10 in base 3 = 1*3^2 + 0*3^1 + 1*3^0
-    n_2 = 1
-    n_1 = 0
-    n_0 = 1
-
-## Extended Euclidian Algorithm
-
-Can be used to find the inverse multiplicative of a number if gcd(a, mod) == 1
-
-a * x + m * y = gcd(a, m)
-a * x = 1 (mod m)
-
-```cpp
-// a*x + b*y = gcd(a, b)
-ll extended_euclid(ll a, ll b, ll &x, ll &y) { 
-    if (b == 0) {
-        x = 1;
-        y = 0;
-        return a;
-    }
-    ll x1, y1;
-    ll g = extended_euclid(b, a % b, x1, y1);
-    x = y1;
-    y = x1 - y1 * (a/b);
-    return g;
-}
-```
-
 ### Operations with Combinatorics
 
 Also contains combinatorics operations
@@ -3389,7 +3102,130 @@ struct intM{
 };
 ```
 
-## Series Theory
+## Sieve of Eratóstenes
+
+```cpp
+// O (N log^2(N) ) -> Teorema de Merten
+
+vll primes {2, 3};
+set<ll> isPrime = {2, 3};
+void eratostenes(ll n){ 
+    bitset<MAX> sieve;
+    sieve.set();
+    for(ll i=5, step=2; i<=n; i+=step, step = 6 - step){
+        if(sieve[i]){ // i is prime
+            primes.push_back(i);
+            isPrime.insert(i);
+            for(ll j= i*i; j<=n; j += 2*i) // sieving all odd multiples of i >= i*i
+                sieve[j] = false;
+        }
+    }
+}
+```
+
+### Linear Sieve
+
+Computes all primes and composites between [2, n] in O(n) time.
+
+Note that every composite *q* must have at least one prime factor, so we can pick the smallest prime factor *p*, and let the rest of the part be i, i.e. *q = ip*.
+
+Since *p* is the smallest prime factor, we have *i ≥ p* (this garantees that *p* will already exist in the vector when reached by *i*)
+
+Also, no prime less than *p* can divide *i* (break point).
+
+Now let us take a look at the code we have a moment ago. This way, it's possible to pick out each composite exactly once.
+
+```cpp
+vector<int> prime;
+bool is_composite[MAX]; // can be 1e7
+
+void sieve (int n) { // O(n)
+	memset(is_composite, 0, sizeof(is_composite));
+
+	for (int i = 2; i <= n; i++) {
+		if (!is_composite[i]) prime.pb(i);
+		for (int j = 0; j < (int) prime.size () && i * prime[j] <= n; j++) {
+			is_composite[i * prime[j]] = true;
+			if (i % prime[j] == 0) break;
+		}
+	}
+}
+```
+
+
+## Basic Knowledge
+
+    "a is divisible by b" or
+    "a is a multiple of b" or
+    "b is a divisor of a" or
+    "b is a factor of a" or
+    "b divides a" ( b|a )
+    => a % b == 0
+
+    "a1, a2 are divisible by b"
+    => gcd(a1, a2) % b == 0
+
+    "a is divisible by b1 and b2"
+    => a % lcm(b1, b2) == 0
+
+    "a is divisible by b and b is divisible by c"
+    => a % b == 0
+    => b % c == 0
+    => a % c == 0 (transitivity)
+
+### Greatest Common Divisor (GCD) 
+
+    gcd(a) = a
+    gcd(a, b, c) = gcd( gcd(a, b), c ) 
+    gcd(a, b) = (a*b) / lcm(a, b)
+
+### Least Commom Multiple (LCM)
+
+    lcm(a) = a
+    lcm(a, b, c) = lcm( lcm(a, b), c ) 
+    lcm(a, b) = (a*b) / gcd(a, b)
+
+#### Observation
+
+std-c++17 implements gcd() function, which works correcly for negative numbers as well.
+
+**For negatives numbers, the following is true:**
+
+    gcd(a,b) = gcd(−a,−b) = gcd(−a,b) = gcd(a,−b)
+
+
+## Closed Formulas related to divisors of a number
+
+Let **n** be a number represented by it's prime factors $p_i$ and respective exponents $e_i$:
+
+**d(n) = k = t = number of divisors**
+
+![Quantidade](../../Aux-Images/CntDivisors.png)
+![Soma](../../Aux-Images/SumDivisors.png)
+![Produto](../../Aux-Images/ProductDivisors.png)
+
+## Lucas' Theorem
+
+By definition, *n choose k* **($C ^n_k$)** is equal to:
+
+    n! / (k! * (n-k)!), 0 <= k <= n
+    0, otherwise
+
+
+    C(n, k) mod p = C(n_i, k_i) * C(n_i-1, k_i-1) * ... * C(n_0, k_0) mod p
+
+**Whereas:**
+
+*n_i* and *k_i* are the i-th digit of their respective numbers written in base *p*. All terms need to smaller than *p* by definition.
+
+**Example:**
+
+    10 in base 3 = 1*3^2 + 0*3^1 + 1*3^0
+    n_2 = 1
+    n_1 = 0
+    n_0 = 1
+
+## Series' Theory
 
 #### Closed formulas for some sequences
 
@@ -3417,9 +3253,38 @@ $ = \sum_{i=1}^n \frac{i(i+1)}{2} = \frac{1}{2}(\sum_{i=1}^n i^2 + \sum_{i=1}^n 
 
 $ = \frac{1}{2} ( \frac{ n(n+1) }{ 2 } + \frac{ n(n+1)(2n+1) }{ 6 }) $
 
+## Extended Euclidian Algorithm
+
+**Computes the coeficients of this diofantine equation:**
+
+a*x + b*y = gcd(a, b)
+
+**Can be used to find the inverse multiplicative of a number if gcd(a, mod) == 1**
+
+a * x + m * y = gcd(a, m)
+a * x = 1 (mod m)
+
+```cpp
+// a*x + b*y = gcd(a, b)
+ll extended_euclid(ll a, ll b, ll &x, ll &y) { 
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    ll x1, y1;
+    ll g = extended_euclid(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a/b);
+    return g;
+}
+```
+
+
+
 ## Combinatorics Theory
 
-#### Stars and Bars 
+### Stars and Bars 
 
 Also called "sticks and stones", "balls and bars", and "dots and dividers"
 
@@ -3447,11 +3312,11 @@ Therefore, it's a simple *permutation with repetition*.
 
 $ P^{(n+m-1)}_{(n-1,m)} = C (n+m-1, m)$
 
-#### Derangement
+### Derangement
 
 In combinatorial mathematics, a derangement is a permutation of the elements of a set, such that no element appears in its original position. In other words, a derangement is a permutation that has no fixed points.
 
-##### Counting derangements 
+#### Counting derangements 
 
 The number of derangements of a set of size n is known as the subfactorial of n or the n-th derangement number or n-th de Montmort number.
 
@@ -3462,7 +3327,7 @@ A subfactorial is noted as:
 *!1* = 0
 *!0* = 1 
 
-#### Burside Lemma
+### Burside Lemma
 
 necklaces with *n* pearls and *k* colors:
 
@@ -3496,7 +3361,7 @@ unsigned int num = rng() % n + 1;
 
 *For 64-bit numbers:* mt19937_64
 
-### Getline
+## Getline
 
 ```cpp
 int32_t main() {
@@ -3507,14 +3372,6 @@ int32_t main() {
 ```
 
 **NOTE:** When consuming whitespace-delimited input (e.g. int n; std::cin >> n;) any whitespace that follows, including a newline character, will be left on the input stream. Then when switching to line-oriented input, the first line retrieved with getline will be just that whitespace. In the likely case that this is unwanted behaviour.
-
-## Minimum Excluded (MEX)
-
-! TODO :(
-
-let x be an array:
-
-$ MEX( x ) <= len( x ) $
 
 
 ---
