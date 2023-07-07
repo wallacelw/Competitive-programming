@@ -1,9 +1,13 @@
 ## Fluxo
 
+**Complexity:** O( Vertices^2 * Edges)
+- For unit capacity graph: O( (V+E) sqrt(E) )
+- For unit capacity and also Bipartite Graphs: O( (V+E) sqrt(V) )
+
 ```cpp
 const ll N = 505; // number of nodes, including sink and source
 
-struct Dinic {  // O( Vertices^2 * Edges)
+struct Dinic {
     struct Edge { 
         ll from, to, flow, cap;
     };
