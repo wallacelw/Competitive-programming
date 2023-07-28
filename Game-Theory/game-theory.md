@@ -57,7 +57,11 @@ Let's consider a state *v* of a two-player impartial game and let *v_i* be the s
 
 To this state, we can assign a fully equivalent game of Nim with one pile of size *x*. The number *x* is called the Grundy value or nim-value of state *v*.
 
-Moreover, this number can be found in the following recursive way:
+If *all transitions* lead to a **winning state**, the current state must be a **losing state**.
+
+If *at least one transition* lead to a **losing state**, the current state must be a **winning state**.
+
+The MEX operator satisfies both condition above and can be used to calculate the nim-value of a state:
 
 $$ x = \text{mex}\ \{ x_1, \ldots, x_k \}, $$ 
 
