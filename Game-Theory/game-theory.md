@@ -59,14 +59,15 @@ Two players play in turns. In his/her move, a player can choose a step i > 0
 
 We can divide the steps into two types, odd steps, and even steps. 
 
-Now let's think what will happen if a player A move *x* coins from an even step(non-zero) to an odd step. Player B can move these same *x* coins to another even position and the state of the game won't change: 
+Now let's think what will happen if a player A move *x* coins from an even step(non-zero) to an odd step. Player B can always move these same *x* coins to another even position and the state of odd positions won't change: 
 
-Even_Xor_Sum' = Even_Xor_Sum
-Odd_Xor_Sum' = Odd_Xor_Sum
+=> Odd_Xor_Sum' = Odd_Xor_Sum
 
-But if player A moves a coin from an odd step to an even step, similar logic won't work. Because there is a situation when *x* coins are moved from stair 1 to 0, and player B can't move these coins from stair 0 to -1 (not a valid move).
+But if player A moves a coin from an odd step to an even step, similar logic won't work. Because there is a situation when *x* coins are moved from stair 1 to 0, and player B can't move these coins from stair 0 to -1 (not a valid move). Also, position 0 is the void, sending elements there is the same as decreasing the pile 1.
 
-From this argument, we can agree that coins in even steps are useless, they don't affect game state. If I am in a winning position and you move a coin from an even step, I will move those coins again to another even step and will remain in a winning position. The same applies for the losing positions.
+From this argument, we can agree that coins in even steps are useless, they don't affect the game state and we can consider them as void positions. Furthermore, when only considering odd positions, there is a normal classic nim game (each pile can be decreasced = move to even position = move to void).
+
+If I am in a winning position and you move a coin from an even step, I will move those coins again to another even step and I will remain in a winning position. The same applies for the losing positions.
 
 Therefore, to determine if a state is a winning position or losing position, it's only needed to compute the xor-sum of the odd positions.
 
