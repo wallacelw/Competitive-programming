@@ -7,52 +7,46 @@
 **Use for deep trees:** LLOGMAX = 62;
 
 ```cpp
-const ll LOGMAX = 32;
+const int LOGMAX = 31; // 1e9
+vector<vll> g(MAX);
+ll depth[MAX], jump[MAX][LOGMAX];
 
-vector<vll> g(MAX, vll());
-ll depth[MAX]; // depth[1] = 0 
-ll jump[MAX][LOGMAX]; // jump[v][k] -> 2^k antecessor of v
-// 1 points to 0 and 0 is the end point loop
-ll N; // quantity of vertices of the tree
-
-void binary_lifting(ll u = 1, ll p = -1){ // DFS, O(N)
-    for(auto v : g[u]) if (v != p){
+void precompute(ll u=1, ll p=-1) { // DFS, O(n)
+    for(auto v : g[u]) if (v != p) {
         depth[v] = depth[u] + 1;
-        
+
         jump[v][0] = u;
-        for(ll k=1; k < LOGMAX; k++)
-            jump[v][k] = jump[ jump[v][k-1] ][k-1];
-        binary_lifting(v, u);
+        for(ll i=1; i<LOGMAX; i++)
+            jump[v][i] = jump[ jump[v][i-1] ][i-1];
+
+        precompute(v, u);
     }
 }
 
-ll go(ll v, ll dist){ // O(log(N))
-    for(ll k = LOGMAX-1; k >= 0; k--)
-        if (dist & (1 << k))
-            v = jump[v][k];
-    return v;
+ll go(ll u, ll dist) { // O(log(n))
+    for(ll i=LOGMAX-1; i>=0; i--) // bigger jumps first
+        if (dist & (1 << i))
+            u = jump[u][i];
+
+    return u;
 }
 
-ll lca(ll a, ll b){  // O(log(N))
+ll lca(ll a, ll b) { // O(log(n))
     if (depth[a] < depth[b]) swap(a, b);
-    
     a = go(a, depth[a] - depth[b]);
     if (a == b) return a;
 
-    for(ll k = LOGMAX-1; k >= 0; k--){
-        if (jump[a][k] != jump[b][k]){
-            a = jump[a][k];
-            b = jump[b][k];
+    for (ll i=LOGMAX-1; i>=0; i--) {
+        if (jump[a][i] != jump[b][i]) {
+            a = jump[a][i];
+            b = jump[b][i];
         }
     }
+
     return jump[a][0];
 }
 
-
 int32_t main(){ sws;
-    ll n; cin >> n;
-    N = n;
-
-    binary_lifting();
+    precompute();
 }
 ```
