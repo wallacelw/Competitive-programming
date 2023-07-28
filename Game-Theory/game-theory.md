@@ -51,6 +51,25 @@ Consider a modification of the classical nim game: a player can now add stones t
 
 **Proof:** If a player adds *t* stones in a pile, the next player just needs to remove *t* stones from this pile. Considering that the game is finite and ends sooner or later.
 
+### Staircase Nim Example
+
+In Staircase Nim, there is a staircase with n steps, indexed from 0 to n - 1. In each step, there are zero or more coins.
+
+Two players play in turns. In his/her move, a player can choose a step i > 0 and move one or more coins to step i - 1. The player who is unable to make a move lose the game. That means the game ends when all the coins are in step 0.
+
+We can divide the steps into two types, odd steps, and even steps. 
+
+Now let's think what will happen if a player A move *x* coins from an even step(non-zero) to an odd step. Player B can move these same *x* coins to another even position and the state of the game won't change: 
+
+Even_Xor_Sum' = Even_Xor_Sum
+Odd_Xor_Sum' = Odd_Xor_Sum
+
+But if player A moves a coin from an odd step to an even step, similar logic won't work. Because there is a situation when *x* coins are moved from stair 1 to 0, and player B can't move these coins from stair 0 to -1 (not a valid move).
+
+From this argument, we can agree that coins in even steps are useless, they don't affect game state. If I am in a winning position and you move a coin from an even step, I will move those coins again to another even step and will remain in a winning position. The same applies for the losing positions.
+
+Therefore, to determine if a state is a winning position or losing position, it's only needed to compute the xor-sum of the odd positions.
+
 ## Sprague-Grundy Theorem
 
 Let's consider a state *v* of a two-player impartial game and let *v_i* be the states reachable from it (where $i \in \{ 1, 2, \dots, k \} , k \ge 0$ ). 
