@@ -9,12 +9,6 @@ It can be proven by drawing a diameter line. If any node is further than any of 
 
 From any node, the fasthest node is a diameter extremity. Then from this extremity, the fasthest node is the other diameter extremity.
 
-## Center of Tree
-
-**Eccentricity:** The eccentricity of a vertice is the maximum distance between this distance and any other one.
-
-**Centers of the Tree:** A tree can be central or bicentral, containing, respectively, a center or a bicenter. A tree can have multiple diameters. But if the the diameter has an odd length, the center of all diameters is the same node. Likewise, if the diameter has even length, there are two adjacent nodes that are the bicenter of the tree.
-
 ```cpp
 vector<vll> g(MAX, vll());
  
