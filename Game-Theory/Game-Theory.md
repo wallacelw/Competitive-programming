@@ -160,3 +160,22 @@ nim-val = MEX (all transitions)
     {4, 2} -> (0) xor (0) -> 0
 
     nim-val = MEX({0, 2}) = 1
+
+## Insta-Winning States
+
+Classic nim game: if all piles become 0, you lose. (no more moves)
+Modified nim game: if any pile becomes 0, you lose.
+
+To adapt to this version of nim game, we create *insta-winning states*, which represents states that have a transition to a empty pile. *Insta-winning states* must have a very high nimber (INF) so they don't conflict with other nimbers.
+
+Because of this adaptation, we can ignore states with empty piles (null value). And the nimber = 0 now represents the states that only have transitions to *insta-winning states*.
+
+After this, we added two new categories of states (insta-winning and empty-pile). Notice that:
+
+    empty-pile <- insta-winning <- nimber(0)
+
+Therefore, we have returned to the classical nim game and can proceed normally.
+
+*OBS:* Empty piles (wasn't empty before) (nimber = -1) != Non-existent piles (never existed) (nimber = 0)
+
+*Usage Example:* https://codeforces.com/gym/101908/problem/B
