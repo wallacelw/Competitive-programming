@@ -1,6 +1,10 @@
 ## Nim Game
 
-**Reference:** https://cp-algorithms.com/game_theory/sprague-grundy-nim.html
+**References:** 
+
+https://cp-algorithms.com/game_theory/sprague-grundy-nim.html
+
+https://codeforces.com/blog/entry/66040
 
 - There are *n* piles (heaps), each one with *x_i* stones. 
 
@@ -75,7 +79,7 @@ Therefore, to determine if a state is a winning position or losing position, it'
 
 Let's consider a state *v* of a two-player impartial game and let *v_i* be the states reachable from it (where $i \in \{ 1, 2, \dots, k \} , k \ge 0$ ). 
 
-To this state, we can assign a fully equivalent game of Nim with one pile of size *x*. The number *x* is called the Grundy value or nim-value of state *v*.
+To this state, we can assign a fully equivalent game of Nim with one pile of size *x*. The number *x* is called the *Grundy value or nim-value or nimber* of the state *v*.
 
 If *all transitions* lead to a **winning state**, the current state must be a **losing state**.
 
@@ -89,6 +93,8 @@ where *x_i* is the Grundy value for state *v_i* and the function MEX is the smal
 
 Viewing the game as a graph, we can gradually calculate the Grundy values starting from vertices without outgoing edges. Grundy value being equal to zero means a state is losing.
 
+Note that the MEX operation **garantees** that all nim-values smaller than the considered nimber can be reached, which is essentialy the nim game. 
+
 ### Application
 
 To calculate the Grundy value of a given state you need to:
@@ -101,11 +107,23 @@ To calculate the Grundy value of a given state you need to:
 
     If the value is zero, then the current state is losing, otherwise it is winning.
 
+**Composition:** Use XOR to compose sub-games into a game.
+
+When a game is played with multiple sub-games (as nim is played with multiple piles), you are actually choosing one sub-game and making a valid move there (choosing a pile and subtracting a value from it).
+
+**Decomposition:** Use MEX on all posible state outcomes.
+
+A single pile with size *x* can be transitioned into all nim-values smaller than *x*. Therefore, the inverse interpretation is simply the MEX. 
+
+If the set of possible outcomes is {0, 1, 2, 7, 8, 9}. The MEX is 3, because is the smallest nim-value which you can't transition into and also you can transition to all smaller nim-values. Also, {7, 8, 9} transitions can be ignored, because you can simply revert the play by subtracting the same amount.
+
 ### Example
 
 **Grundy's Game:**
 
 Initially there is only one pile with *x* stones. Each turn, a player must divide a pile into two non-zero piles with different sizes. The player who can't do any more moves loses.
+
+*Important observation*: All nimbers for (n >= 2000) are non-zero. (missing proof here).
 
 **Degenerate (Base) States:**
 
