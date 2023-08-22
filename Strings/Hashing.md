@@ -1,6 +1,8 @@
 ## Hashing
 
 ```cpp
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
 vector<ll> mods = {
     1000000009,1000000021,1000000033,
     1000000087,1000000093,1000000097,
