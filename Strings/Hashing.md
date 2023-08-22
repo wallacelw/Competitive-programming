@@ -27,7 +27,7 @@ struct Hashing {
     vector<vll> p, h;
 
     Hashing(string &ss, ll mm)
-        : n(s.size()), s(ss), m(mm), p(m, vll(n)), h(m, vll(n)) {
+        : n(ss.size()), s(ss), m(mm), p(m, vll(n)), h(m, vll(n)) {
         for(ll k=0; k<m; k++) {
             for(ll i=0; i<n; i++)
                 p[k][i] = (i ? P*p[k][i-1] : 1) % mods[k];
