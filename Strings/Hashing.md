@@ -1,5 +1,13 @@
 ## Hashing
 
+**Probability of colision:**
+= n^2 / (2m)
+
+n = Comparissons
+m = mod size
+
+*when using multiple mods*, they multiply: m = m1 * m2
+
 ```cpp
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
