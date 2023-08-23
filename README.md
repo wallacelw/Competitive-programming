@@ -3,17 +3,17 @@ Algoritmos e ideias de Programação Competitiva
 
 Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
 
-## Flags for compilation:
-
-```bash
-g++ -Wall -Wextra -Wshadow -ggdb3 -D_GLIBCXX_ASSERTIONS -fmax-errors=2 -std=c++17 -O3 test.cpp -o test
-```
-
 ## Linux Alias
 
 ```bash
-alias comp='g++ -std=c++17 -g -O2 -Wall -Wextra -Wconversion -Wshadow -D_GLIBCXX_ASSERTIONS -fsanitize=address,undefined -fno-sanitize-recover -ggdb -o test'
+alias comp='g++ -std=c++17 -g3 -ggdb3 -O3 -Wall -Wextra -Wconversion -Wshadow -D_GLIBCXX_ASSERTIONS -fsanitize=address,undefined -o test'
 ```
+
+*-Wall -Wextra -Wconversion -Wshadow* shows warnings
+
+*-fsanitize=address,undefined* shows errors for memory access error and undefined behaviour (overflow)
+
+*-g3 -ggdb3* shows more details for compilation errors (line that ocurred error)
 
 ## Template:
 
