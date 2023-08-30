@@ -40,6 +40,8 @@ vector<int> suffix_array(string s) {
 }
 ```
 
+**Note** that the lenght of the string i is: s.size()-sa[i]
+
 ### KASAI's ALGORITHM FOR LCP (longest common prefix)
 
 **Complexity:** O(log (n))
@@ -67,6 +69,8 @@ vector<int> kasai(string s, vector<int> sa) {
 *Numbers of Distinct Substrings:* (n*(n+1))/2 - lcp[i] {for all i} 
 
 *Longest Repeated Substring:* biggest lcp[i]. The position can be found in sa[i]
+
+*Find how many distinct substrings there are for each len in [1:n]*: Use delta encoding and the fact that lcp[i] counts the repeated substring between s.substr(sa[i]) and s.substr(sa[i+1]), which are the substrings corresponding to the commom prefix.
 
 *Find the k-th distinct substring:*
 ```cpp
