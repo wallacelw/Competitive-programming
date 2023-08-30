@@ -17,9 +17,6 @@ Let the given string be "banana".
 So the suffix array for "banana" is {5, 3, 1, 0, 4, 2}
 ```
 
-**Solves:** Finding the number of all distint substrings of a string. Done by adding all sizes of the substrings (size[i] = *total_size* - sa[i] ) and subtracting all lcp's.
-
-
 ```cpp
 vector<int> suffix_array(string s) {
     s += "$";
@@ -64,3 +61,9 @@ vector<int> kasai(string s, vector<int> sa) {
     return lcp;
 }
 ```
+
+#### Solves:
+
+*Numbers of Distinct Substrings:* (n*(n+1))/2 - lcp[i] {for all i} 
+
+*Longest Repeated Substring:* biggest lcp[i]. The position can be found in sa[i]
