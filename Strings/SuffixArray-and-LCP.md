@@ -67,3 +67,25 @@ vector<int> kasai(string s, vector<int> sa) {
 *Numbers of Distinct Substrings:* (n*(n+1))/2 - lcp[i] {for all i} 
 
 *Longest Repeated Substring:* biggest lcp[i]. The position can be found in sa[i]
+
+*Find the k-th distinct substring:*
+```cpp
+int32_t main() { sws;
+    string s; cin >> s;
+    ll n = s.size();
+    
+    auto sa = suffix_array(s);
+    auto lcp = kasai(s, sa);
+
+    ll k; cin >> k;
+
+    for(ll i=0; i<n; i++) {
+        ll len = n-sa[i];
+        if (k <= len) {
+            cout << s.substr(sa[i], k) << endl;
+            break;
+        }
+        k += lcp[i] - len;
+    }
+}
+```
