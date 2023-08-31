@@ -19,7 +19,7 @@ So the suffix array for "banana" is {5, 3, 1, 0, 4, 2}
 
 ```cpp
 vector<int> suffix_array(string s) {
-    s += "$";
+    s += "!";
     int n = s.size(), N = max(n, 260);
     vector<int> sa(n), ra(n);
     for (int i = 0; i < n; i++) sa[i] = i, ra[i] = s[i];
