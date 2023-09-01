@@ -24,3 +24,47 @@ ll centroid(ll u = 1, ll p = -1) {
 	return u;
 }
 ```
+
+
+# Centroid Decomposition
+
+```cpp
+vi decomp[MAXN];
+int st[MAXN];
+int processed[MAXN];
+
+int getCent(int v,int p,int tSize){
+    for(auto c:adj[v]){
+        if(c==p || processed[c])continue;
+        if((st[c]<<1)>tSize)return getCent(c,v,tSize);
+    }
+    return v;
+}
+
+
+int getSubtreeSize(int v,int p =-1){
+    st[v]=1;
+    for(auto c:adj[v]){
+        if(c==p || processed[c])continue;
+        getSubtreeSize(c,v);
+        st[v]+=st[c];
+    }
+    return st[v];
+}
+
+
+int build_cent(int v){
+    int cent = getCent(v,-1,getSubtreeSize(v));
+
+    processed[cent]=true;
+
+    for(auto c:adj[cent]){
+        if(processed[c])continue;   
+        int nx = build_cent(c);
+        decomp[nx].pb(cent);
+        decomp[cent].pb(nx);
+    }
+    return cent;
+
+}
+```
