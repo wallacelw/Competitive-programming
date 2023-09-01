@@ -388,3 +388,83 @@ int32_t main(){ sws;
     }
 }   
 ```
+
+## Range increase and set queries
+
+```cpp
+int t[MAXN<<2];
+pii lazy[MAXN<<2];
+ 
+pii combineLz(pii a,pii b){
+    if(b.ff==0)return a;
+    if(a.ff==2)return a;
+    if(b.ff==1 && a.ff==1)return mp(1,a.ss+b.ss);     
+    return mp(2,a.ss+b.ss);
+}
+ 
+void push(int v,int tl,int tr){
+    if(lazy[v].ff==0LL)return;
+    lazy[v<<1]=combineLz(lazy[v],lazy[v<<1]);
+    lazy[v<<1|1]=combineLz(lazy[v],lazy[v<<1|1]);
+    int tm = (tl+tr)/2;
+ 
+    if(lazy[v].ff==1){
+        t[v<<1]+=((tm-tl+1)*lazy[v].ss);
+        t[v<<1|1]+=((tr-tm)*lazy[v].ss);
+    }else{
+        t[v<<1]=(tm-tl+1)*lazy[v].ss;
+        t[v<<1|1]=((tr-tm)*lazy[v].ss);
+    }
+ 
+    lazy[v]=mp(0,0);
+ 
+}
+void build(int a[],int v,int tl,int tr){
+    if(tl==tr){
+        t[v]=a[tl];
+        return;
+    }
+    int tm = (tl+tr)/2;
+    build(a,v<<1,tl,tm);
+    build(a,v<<1|1,tm+1,tr);
+    t[v]=t[v<<1]+t[v<<1|1];
+    
+}
+ 
+void update(int v,int tl,int tr,int l,int r,int op,int val){
+    if(tr<l || tl>r)return;
+ 
+    if(tl==l && tr==r){
+        int aux =((tr-tl+1)*val);
+       if(op==1){
+            t[v]+= aux;
+       }else{
+            t[v]=aux;
+       }
+       lazy[v]=combineLz(mp(op,val),lazy[v]);
+       return;
+    }
+ 
+    push(v,tl,tr);
+    int tm = (tl+tr)/2;
+    update(v<<1,tl,tm,l,min(tm,r),op,val);
+    update(v<<1|1,tm+1,tr,max(l,tm+1),r,op,val);
+    t[v]=t[v<<1]+t[v<<1|1];
+   
+}
+ 
+int get(int v,int tl,int tr,int l,int r){
+ 
+    if(tr<l || tl>r){
+        return 0 ;
+    }
+ 
+    if(tl==l && tr==r){
+        return t[v];
+    }
+ 
+    push(v,tl,tr);
+    int tm = (tl+tr)/2;
+    return get (v<<1,tl,tm,l,min(tm,r))+get(v<<1|1,tm+1,tr,max(l,tm+1),r);
+}
+```
