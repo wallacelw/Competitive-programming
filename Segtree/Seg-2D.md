@@ -5,7 +5,6 @@ int t[MAXN<<2][MAXN<<2];
 char forest[MAXN][MAXN];
 int n,q;
  
- 
 void buildy(int vx,int tlx,int trx,int vy=1,int tly=0,int tr=n-1){
  
     if(tly==tr){

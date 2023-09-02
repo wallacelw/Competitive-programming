@@ -1,14 +1,18 @@
 ## Center of Tree
+
 The Catalan number is the solution for
 
-*Number of correct bracket sequence consisting of n  opening and  n  closing brackets.
-*The number of ways to completely parenthesize n+1 factorization
+- Number of correct bracket sequence consisting of *n* opening and *n* closing brackets.
+
+- The number of ways to completely parenthesize *n+1* factorization
 
 
 ```cpp
-const int MOD = ....
-const int MAX = ....
+const int MOD = ....;
+const int MAX = ....;
+
 int catalan[MAX];
+
 void init() {
     catalan[0] = catalan[1] = 1;
     for (int i=2; i<=n; i++) {

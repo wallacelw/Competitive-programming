@@ -1,6 +1,7 @@
 ## Fluxo
 
 **Complexity:** O( Vertices^2 * Edges)
+
 - For unit capacity graph: O( (V+E) sqrt(E) )
 - For unit capacity and also Bipartite Graphs: O( (V+E) sqrt(V) )
 

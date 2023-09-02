@@ -3,7 +3,6 @@
 Creates vertices only when needed. Stores historical values
 **TODO** Needs testing!
 
-
 ```cpp
 struct Vertex {
     int arrIdx;

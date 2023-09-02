@@ -1,5 +1,26 @@
 ## Combinatorics Theory
 
+### Lucas' Theorem
+
+By definition, *n choose k* **($C ^n_k$)** is equal to:
+
+    n! / (k! * (n-k)!), 0 <= k <= n
+    0, otherwise
+
+
+    C(n, k) mod p = C(n_i, k_i) * C(n_i-1, k_i-1) * ... * C(n_0, k_0) mod p
+
+**Whereas:**
+
+*n_i* and *k_i* are the i-th digit of their respective numbers written in base *p*. All terms need to smaller than *p* by definition.
+
+**Example:**
+
+    10 in base 3 = 1*3^2 + 0*3^1 + 1*3^0
+    n_2 = 1
+    n_1 = 0
+    n_0 = 1
+
 ### Stars and Bars 
 
 Also called "sticks and stones", "balls and bars", and "dots and dividers"
@@ -27,21 +48,6 @@ Repetition of Stars = m
 Therefore, it's a simple *permutation with repetition*.
 
 $ P^{(n+m-1)}_{(n-1,m)} = C (n+m-1, m)$
-
-### Derangement
-
-In combinatorial mathematics, a derangement is a permutation of the elements of a set, such that no element appears in its original position. In other words, a derangement is a permutation that has no fixed points.
-
-#### Counting derangements 
-
-The number of derangements of a set of size n is known as the subfactorial of n or the n-th derangement number or n-th de Montmort number.
-
-A subfactorial is noted as: 
-
-**!n** = (n-1) * ( !(n-1) + !(n-2) ), for n >= 2.
-
-*!1* = 0
-*!0* = 1 
 
 ### Burside Lemma
 

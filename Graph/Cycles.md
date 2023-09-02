@@ -1,6 +1,6 @@
 ## Cycles
 
-#### Find a Cycle
+**How to find a cycle:**
 
 *vis[] array* stores the current state of a node:
 **-1** -> not visited

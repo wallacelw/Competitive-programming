@@ -12,7 +12,7 @@ https://codeforces.com/blog/entry/66040
 
 - The game ends when it's impossible to make any more moves and the player without moves left lose.
 
-## Bouton's Theorem
+### Bouton's Theorem
 
 "Let *s* be the *xor-sum* value of all the piles sizes, a state **s=0** is a losing position and a **state s!=0** is a winnig position".
 
@@ -39,7 +39,7 @@ https://codeforces.com/blog/entry/66040
 
         t = s xor x xor y = s xor x xor (x xor s) = 0
 
-## Interpretation as a DAG
+### Interpretation as a DAG
 
 States of the game are Vertices
 
@@ -47,7 +47,7 @@ Moves are the transition between States, therefore, the Edges
 
 If a State has no outgoing edges, it's a dead end and a losing state
 
-## Nim with Increases
+### Nim with Increases
 
 Consider a modification of the classical nim game: a player can now add stones to a chosen pile. This extra rule needs to keep the game acyclic (finite game).
 
@@ -75,7 +75,7 @@ If I am in a winning position and you move a coin from an even step, I will move
 
 Therefore, to determine if a state is a winning position or losing position, it's only needed to compute the xor-sum of the odd positions.
 
-## Sprague-Grundy Theorem
+### Sprague-Grundy Theorem
 
 Let's consider a state *v* of a two-player impartial game and let *v_i* be the states reachable from it (where $i \in \{ 1, 2, \dots, k \} , k \ge 0$ ). 
 
@@ -95,7 +95,7 @@ Viewing the game as a graph, we can gradually calculate the Grundy values starti
 
 Note that the MEX operation **garantees** that all nim-values smaller than the considered nimber can be reached, which is essentialy the nim game. 
 
-### Application
+#### Application
 
 To calculate the Grundy value of a given state you need to:
 
@@ -117,7 +117,7 @@ A single pile with size *x* can be transitioned into all nim-values smaller than
 
 If the set of possible outcomes is {0, 1, 2, 7, 8, 9}. The MEX is 3, because is the smallest nim-value which you can't transition into and also you can transition to all smaller nim-values. Also, {7, 8, 9} transitions can be ignored, because you can simply revert the play by subtracting the same amount.
 
-### Example
+#### Example
 
 **Grundy's Game:**
 
@@ -161,7 +161,7 @@ nim-val = MEX (all transitions)
 
     nim-val = MEX({0, 2}) = 1
 
-## Insta-Winning States
+### Insta-Winning States
 
 Classic nim game: if all piles become 0, you lose. (no more moves)
 Modified nim game: if any pile becomes 0, you lose.

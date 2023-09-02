@@ -22,7 +22,7 @@ ld ternary_search(ld l, ld r){
             l = m1;
         }
     }
-    return f(l);
+    return f(l); // check here for min/max
 }
 ```
 
@@ -45,6 +45,6 @@ ll ternary_search(ll l, ll r) {
             r = m2-1;
         }
     }
-    return f(l);
+    return f(l); // check here for min/max
 }
 ```

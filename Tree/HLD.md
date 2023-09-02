@@ -26,66 +26,66 @@ ll sz[MAX], p[MAX], dep[MAX], id[MAX], tp[MAX];
 ll st[1 << 19];
 
 void update_node(ll idx, ll val) { // O(log^2(N))
-	st[idx += N] = val;
-	for (idx /= 2; idx; idx /= 2)
-		st[idx] = max(st[2 * idx], st[2 * idx + 1]);
+    st[idx += N] = val;
+    for (idx /= 2; idx; idx /= 2)
+        st[idx] = max(st[2 * idx], st[2 * idx + 1]);
 }
 
 ll query(ll lo, ll hi) {
-	ll ra = 0, rb = 0;
-	for (lo += N, hi += N + 1; lo < hi; lo /= 2, hi /= 2) {
-		if (lo & 1)
-			ra = max(ra, st[lo++]);
-		if (hi & 1)
-			rb = max(rb, st[--hi]);
-	}
-	return max(ra, rb);
+    ll ra = 0, rb = 0;
+    for (lo += N, hi += N + 1; lo < hi; lo /= 2, hi /= 2) {
+        if (lo & 1)
+            ra = max(ra, st[lo++]);
+        if (hi & 1)
+            rb = max(rb, st[--hi]);
+    }
+    return max(ra, rb);
 }
 
 ll dfs_sz(ll cur, ll par) {
-	sz[cur] = 1;
-	p[cur] = par;
-	for(ll chi : g[cur]) {
-		if(chi == par) continue;
-		dep[chi] = dep[cur] + 1;
-		p[chi] = cur;
-		sz[cur] += dfs_sz(chi, cur);
-	}
-	return sz[cur];
+    sz[cur] = 1;
+    p[cur] = par;
+    for(ll chi : g[cur]) {
+        if(chi == par) continue;
+        dep[chi] = dep[cur] + 1;
+        p[chi] = cur;
+        sz[cur] += dfs_sz(chi, cur);
+    }
+    return sz[cur];
 }
 
 ll ct = 1; // counter
 void dfs_hld(ll cur, ll par, ll top) {
-	id[cur] = ct++;
-	tp[cur] = top;
-	update_node(id[cur], v[cur]);
-	ll h_chi = -1, h_sz = -1;
-	for(ll chi : g[cur]) {
-		if(chi == par) continue;
-		if(sz[chi] > h_sz) {
-			h_sz = sz[chi];
-			h_chi = chi;
-		}
-	}
-	if(h_chi == -1) return;
-	dfs_hld(h_chi, cur, top);
-	for(ll chi : g[cur]) {
-		if(chi == par || chi == h_chi) continue;
-		dfs_hld(chi, cur, chi);
-	}
+    id[cur] = ct++;
+    tp[cur] = top;
+    update_node(id[cur], v[cur]);
+    ll h_chi = -1, h_sz = -1;
+    for(ll chi : g[cur]) {
+        if(chi == par) continue;
+        if(sz[chi] > h_sz) {
+            h_sz = sz[chi];
+            h_chi = chi;
+        }
+    }
+    if(h_chi == -1) return;
+    dfs_hld(h_chi, cur, top);
+    for(ll chi : g[cur]) {
+        if(chi == par || chi == h_chi) continue;
+        dfs_hld(chi, cur, chi);
+    }
 }
 
 // returns the max_value of a node in the path from X to Y
 ll path(ll x, ll y){ // O(log^2(N))
-	ll ret = 0;
-	while(tp[x] != tp[y]){
-		if(dep[tp[x]] < dep[tp[y]])swap(x,y);
-		ret = max(ret, query(id[tp[x]],id[x]));
-		x = p[tp[x]];
-	}
-	if(dep[x] > dep[y])swap(x,y);
-	ret = max(ret, query(id[x],id[y]));
-	return ret;
+    ll ret = 0;
+    while(tp[x] != tp[y]){
+        if(dep[tp[x]] < dep[tp[y]])swap(x,y);
+        ret = max(ret, query(id[tp[x]],id[x]));
+        x = p[tp[x]];
+    }
+    if(dep[x] > dep[y])swap(x,y);
+    ret = max(ret, query(id[x],id[y]));
+    return ret;
 }
 
 

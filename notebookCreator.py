@@ -7,7 +7,7 @@ ignore = ['.git', 'Aux-Images', 'Aux-Notebook', 'README.md', 'notebookCreator.py
 with open(os.path.join(os.getcwd(),'Aux-Notebook/Notebook.md'), 'w', encoding='utf-8') as f:
     with open(os.path.join(os.getcwd(),'README.md'), 'r', encoding='utf-8') as read:
         for line in read.readlines():
-            f.write(line)
+            f.write(line )
     f.write('\n')
     for archive in directory:
         if archive in ignore:

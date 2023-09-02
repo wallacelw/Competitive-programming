@@ -11,22 +11,22 @@ vll subtreeSize(MAX, 1);
 ll N; // <- initialize N = n !!
 
 void getSizes(ll u = 1, ll p = -1) {
-	for(auto v : g[u]) if (v != p) {
-		getSizes(v, u);
-		subtreeSize[u] += subtreeSize[v];
-	}
+    for(auto v : g[u]) if (v != p) {
+        getSizes(v, u);
+        subtreeSize[u] += subtreeSize[v];
+    }
 }
 
 ll centroid(ll u = 1, ll p = -1) {
-	for(auto v : g[u]) if (v != p) {
-		if (subtreeSize[v] * 2 > N) return centroid(v, u);
-	}
-	return u;
+    for(auto v : g[u]) if (v != p) {
+        if (subtreeSize[v] * 2 > N) return centroid(v, u);
+    }
+    return u;
 }
 ```
 
 
-# Centroid Decomposition
+## Centroid Decomposition
 
 ```cpp
 vi decomp[MAXN];

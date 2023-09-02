@@ -1,5 +1,5 @@
-
 ## Totient
+
 Quantidade de números menores que n coprimos com n
 
 ```cpp

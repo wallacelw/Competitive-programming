@@ -1,5 +1,7 @@
 ## Floyd Warshall
-The Floyd–Warshall algorithm4 provides an alternative way to approach the problem of finding shortest paths. Unlike the other algorithms of this chapter, it finds all shortest paths between the nodes in a single run.
+
+The Floyd–Warshall algorithm provides an alternative way to approach the problem of finding shortest paths. Unlike the other algorithms of this chapter, it finds all shortest paths between the nodes in a single run.
+
 ```cpp
 
 for (int i = 1; i <= n; i++) {

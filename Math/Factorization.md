@@ -40,19 +40,19 @@ bool is_composite[MAX]; // can be 1e7
 ll sp[MAX]; // smallest prime
 
 void sieve (int n) { // O(n)
-	memset(is_composite, 0, sizeof(is_composite));
-	
-	for (int i = 2; i <= n; i++) {
-		if (!is_composite[i]) {
+    memset(is_composite, 0, sizeof(is_composite));
+    
+    for (int i = 2; i <= n; i++) {
+        if (!is_composite[i]) {
             prime.pb(i);
             sp[i] = i;
         }
-		for (int j = 0; j < (int) prime.size () && i * prime[j] <= n; j++) {
-			is_composite[i * prime[j]] = true;
+        for (int j = 0; j < (int) prime.size () && i * prime[j] <= n; j++) {
+            is_composite[i * prime[j]] = true;
             sp[i * prime[j]] = prime[j];
-			if (i % prime[j] == 0) break;
-		}
-	}
+            if (i % prime[j] == 0) break;
+        }
+    }
 }
 
 vll factorization(ll a) { // log2(a)

@@ -1,6 +1,6 @@
 ## Strongly Connected Components
 
-### Kosaraju
+### Kosaraju Algorithm
 
 Used for **Finding Strongly Connected Somponents** (SCCs) in a *directed graph* (digraph).
 
