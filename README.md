@@ -1,12 +1,12 @@
 # Competitive-programming
 Algoritmos e ideias de Programação Competitiva
 
-Créditos para: [Tiagosf00](https://github.com/Tiagosf00).
+Créditos para: [Tiagosf00](https://github.com/Tiagosf00), [Cebolinha](https://quirino.net/).
 
 ## Linux Alias
 
 ```bash
-alias comp='g++ -std=c++17 -g3 -ggdb3 -O3 -Wall -Wextra -Wconversion -Wshadow -D_GLIBCXX_ASSERTIONS -fsanitize=address,undefined -o test'
+alias comp='g++ -std=c++17 -g3 -ggdb3 -O3 -Wall -Wextra  -fsanitize=address,undefined -Wshadow -Wconversion -D_GLIBCXX_ASSERTIONS -o test'
 ```
 
 *-Wall -Wextra -Wconversion -Wshadow* shows warnings
@@ -61,3 +61,48 @@ int32_t main(){ sws;
 
 }
 ```
+
+## Checklist
+
+**Thinking about solution:**
+
+- Immediately play with the sample cases, you may have understood the problem wrong
+
+- Pay close attention to the constraints
+
+- Always consider doing Binary Search on the answer
+
+- Consider Offline processing
+
+**Before Submitting:**
+
+- Even if the test cases pass, make sure your code is at least doing something
+
+- If the test cases are too simple, come up with a couple extra ones
+
+- Check if constants are big enough
+
+- Check time and memory limits
+
+- Submit the right file
+
+**General:**
+
+- #define int long long
+
+- Fast IO & endl
+
+- Be very careful when copy pasting, check you've changed everything that needs changing
+
+- Be wary of special cases, and when you do define one, be very sure you've correctly identified the full extent of their implications
+STL
+
+- Don't call .back(), .front(), .top() on empty containers
+
+- Don't change a container as you iterate through it (Even accessing a map may change it)
+
+- Always make sure your iterators are valid
+
+**Graphs:**
+
+- Add edges both ways if the graph is bidirectional

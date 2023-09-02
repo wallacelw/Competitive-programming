@@ -2,8 +2,6 @@
 
 Data structure that creates parent vertices for a linear array to do faster computation with binary agregation. 
 
-![Diagrama](../Aux-Images/segtree_diagram.png)
-
 ### Clearer version (min-seg)
 
 ```cpp
