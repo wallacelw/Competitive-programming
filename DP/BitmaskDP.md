@@ -54,7 +54,8 @@ Solves problem where is needed to count the ways of filling a *n* x *m* grid wit
 
 Note that, the (j+1) th column should not contain a complete domino (in the vertical), those types will be included in the dp transition from j+1 to j+2.
 
-![Valido](../Aux-Images/BrokenProfile1.png) ![Invalido](../Aux-Images/BrokenProfile2.png)
+<img src="../Aux-Images/BrokenProfile1.png" alt="Valido" width="400"/>
+<img src="../Aux-Images/BrokenProfile2.png" alt="Invalido" width="400"/>
 
 #### Transitions
 
