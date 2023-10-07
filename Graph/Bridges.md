@@ -7,79 +7,61 @@ Also called *isthmus* or *cut arc*.
 To do this efficiently, it's used *tin[i] (entry time of node **i**)* and *low[i] (minimum entry time of all nodes that can be reached from node **i**)*.
 
 ```cpp
-vector<vll> g(MAX, vll());
-bool vis[MAX];
-ll tin[MAX], low[MAX];
-ll timer;
-vpll bridges;
+vector<vll> g(MAX);
+ll timer = 1;
+ll tin[MAX], low[MAX]; // (tin[i] == 0) => not visited
+vector<pll> bridges;
 
 void dfs(ll u, ll p = -1){
-    vis[u] = 1;
     tin[u] = low[u] = timer++;
     for(auto v : g[u]) if (v != p) {
-        if (vis[v]) low[u] = min(low[u], tin[v]);
+        if (tin[v]) low[u] = min(low[u], tin[v]);
         else {
             dfs(v, u);
             low[u] = min(low[u], low[v]);
             if (low[v] > tin[u])
-                bridges.pb( {u, v} );
+                bridges.pb({u, v});
         }   
     }
 }
 
-void find_bridges(ll n) {
+void findBridges(ll n) {
     timer = 1;
-    memset(vis, 0, sizeof(vis));
-    memset(tin, 0, sizeof(tin));
-    memset(low, 0, sizeof(low));
-    for(ll i=1; i<=n; i++) if (!vis[i]) dfs(i);
+    for(ll i=1; i<=n; i++) if (!tin[i])
+        dfs(i);
 }
 ```
 
-## Articulation Points and Bridges
+## Articulation Points
 
-Finds all Cut-Vertices and Cut-Edges in a single dfs tranversal O(V+E)
+A vertex U is an articulation points if:
 
-**Maybe is working, maybe it's not, needs testing for exquisite graphs, like cliques**
+1. a child vertex V has low[v] >= tin[u]
+2. the root vertex used has 2 or more children.
 
 ```cpp
-vector<vll> g(MAX, vll());
-vll tin(MAX, -1), low(MAX, 0);
-// tin[] = the first time a node is visited ("time in")
-// if tin[u] != -1, u was visited
-// low[] = lowest first_time of any node reachable by the current node
+vector<vll> g(MAX);
+ll timer = 1;
+ll low[MAX], tin[MAX], isAP[MAX];
+// (tin[i] == 0) => not visited
 
-ll root = -1, rootChildren = 0, timer = 0;
-// root = the root of a dfs transversal, rootChildren = number of direct descedentes of the root
-
-vector<bool> isArticulation(MAX, 0); // this vector exists, because we can define several time if a node is a cut vertice
-vll articulations; // cut vertices
-vpll bridges; // cut edges
-
-void dfs(ll u, ll p) {
+ll dfs(ll u, ll p=-1) {
+    ll children = 0;
     low[u] = tin[u] = timer++;
-
     for(auto v : g[u]) if (v != p) {
-        if (tin[v] == -1) { // not visited
-            if (u == root) rootChildren += 1;
-
+        if (tin[v]) low[u] = min(low[u], tin[v]); // visited
+        else {
+            children++;
             dfs(v, u);
-
-            if (low[v] >= tin[u]) isArticulation[u] = 1;
-            if (low[v] > tin[u]) bridges.pb({u, v});
+            if (low[v] >= tin[u]) isAP[u] = 1;
+            low[u] = min(low[u], low[v]);
         }
-
-        low[u] = min(low[u], low[v]);
     }
+    return children;
 }
 
-void findBridgesAndPoints(ll n) {
-    timer = 0;
-    for(ll i=1; i<=n; i++) if (tin[i] == -1) {
-        root = i; rootChildren = 0;
-        dfs(i, -1);
-        if (rootChildren > 1) isArticulation[i] = 1;
-    }
-    for(ll i=1; i<=n; i++) if (isArticulation[i]) articulations.pb(i);
+void findAP(ll n) {
+    for(ll i=1; i<=n; i++) if (!tin[i])
+        isAP[i] = dfs(i) > 1; // root has more than 1 children
 }
 ```
