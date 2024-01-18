@@ -26,7 +26,7 @@ struct Hashing {
     string s;
     vector<vll> p, h;
 
-    Hashing(string &ss, ll mm)
+    Hashing(string &ss, ll mm=1)
         : n(ss.size()), s(ss), m(mm), p(m, vll(n)), h(m, vll(n)) {
         for(ll k=0; k<m; k++) {
             for(ll i=0; i<n; i++)
@@ -36,7 +36,7 @@ struct Hashing {
         }
     }
 
-    ll query(ll l, ll r, ll k) { // [l, r] inclusive (0-idx), k = mod index
+    ll query(ll l, ll r, ll k=0) { // [l, r] inclusive (0-idx), k = mod index
         ll hash = h[k][r] - (l ? (p[k][r-l+1]*h[k][l-1]) % mods[k] : 0);
         return hash < 0 ? hash + mods[k] : hash;
     }
