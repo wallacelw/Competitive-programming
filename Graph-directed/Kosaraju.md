@@ -43,7 +43,7 @@ void kosaraju(ll n){
 
 #### Condensation Graph
 
-*AKA:* condensate/convert all SCC's into single vertices and create a new graph
+*AKA:* condensate/convert all SCC's into single vertices and create a new graph, which is a **DAG** (Directed Acyclic Graph)
 
 ```cpp
 vector<vll> gc(MAX, vll()); // Condensation Graph
