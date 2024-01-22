@@ -44,11 +44,11 @@ void findBridges(ll n) {
 
 ### Bridge Tree
 
-Merging connected Vertices, leaving only bridges, one can obtain a *Bridge Tree*.
+Ignoring bridges, and merging **Vertices**, one can obtain a *Bridge Tree*.
 
-Each connected component is called a *2-edge connected component*, and as the following properties:
+Each of these condensated group of **Vertices** is called a *2-edge connected component*, and as the following properties:
 
-    - For each pair of vertices {A, B} inside the same connected component, there are at least 2 distinct paths from A to B. 
+    - For each pair of vertices {A, B} inside the same connected component, there are at least 2 distinct paths from A to B (may repeat vertices).
 
 ```cpp
 // TODO: needs testing
@@ -125,7 +125,14 @@ void findAP(ll n) {
 }
 ```
 
-### Biconnected Component
+### Block-Cut Tree
 
-*AKA:* 2-Vertex connected component
+Ignoring Articulation Points, and merging **Edges**, one can obtain a *Block-Cut Tree*.
 
+Each of these condensated group of **Edges** is called a *2-vertex connected component* or *biconnected component*, and as the following properties:
+
+    - For each pair of vertices {A, B} inside the same connected component, there are at least 2 distinct paths from A to B (may not repeat vertices). 
+
+    - For each pair of edges, there is a cycle that contains both edges
+
+**Special-Case:** Every bridge is itself a biconnected component
