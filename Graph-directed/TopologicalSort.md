@@ -1,8 +1,10 @@
 ## Topological Sort
 
-Sort a directed graph with no cycles in an order which each source of an edge is visited before the sink of this edge.
+Sort a directed graph with no cycles (DAG) in an order which each source of an edge is visited before the sink of this edge.
+
 Cannot have cycles, because it would create a contradition of which vertices whould come before.
-It can be done with a DFS, appending in the reverse order of transversal.
+
+It can be done with a DFS, appending in the reverse order of transversal. Also a stack can be used to reverse order.
 
 ```cpp
 vector<vll> g(MAX, vll());

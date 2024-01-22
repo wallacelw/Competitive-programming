@@ -45,6 +45,8 @@ void kosaraju(ll n){
 
 *AKA:* condensate/convert all SCC's into single vertices and create a new graph, which is a **DAG** (Directed Acyclic Graph)
 
+Kosaraju uses the same order as topological sort, therefore the order that components are discovered is the same!
+ 
 ```cpp
 vector<vll> gc(MAX, vll()); // Condensation Graph
 
