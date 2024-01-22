@@ -20,7 +20,7 @@ By definition, *n choose k* **($C ^n_k$)** is equal to:
     n_2 = 1
     n_1 = 0
     n_0 = 1
-
+    
 ### Stars and Bars 
 
 Also called "sticks and stones", "balls and bars", and "dots and dividers"
