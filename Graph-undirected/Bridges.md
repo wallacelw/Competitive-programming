@@ -102,14 +102,14 @@ A vertex U is an articulation points if:
 vector<vll> g(MAX);
 ll timer = 1;
 ll low[MAX], tin[MAX], isAP[MAX];
-// (tin[i] == 0) => not visited
 
-ll dfs(ll u, ll p=-1) {
+ll dfs(ll u, ll p = -1) {
     ll children = 0;
     low[u] = tin[u] = timer++;
     for(auto v : g[u]) if (v != p) {
-        if (tin[v]) low[u] = min(low[u], tin[v]); // visited
-        else {
+        if (tin[v]) // visited
+            low[u] = min(low[u], tin[v]);
+        else { // not visited
             children++;
             dfs(v, u);
             if (low[v] >= tin[u]) isAP[u] = 1;
@@ -127,11 +127,11 @@ void findAP(ll n) {
 
 ### Block-Cut Tree
 
-Ignoring Articulation Points, and merging **Edges**, one can obtain a *Block-Cut Tree*.
+Ignoring Articulation Points, and merging **Edges** into a single new **Vertex**, one can obtain a *Block-Cut Tree*.
+
+Each edge in the block-cut tree connects an Articulation Point and a biconnected component.
 
 Each of these condensated group of **Edges** is called a *2-vertex connected component* or *biconnected component*, and as the following properties:
-
-    - For each pair of vertices {A, B} inside the same connected component, there are at least 2 distinct paths from A to B (may not repeat vertices). 
 
     - For each pair of edges, there is a cycle that contains both edges
 
