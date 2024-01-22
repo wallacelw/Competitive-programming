@@ -1,5 +1,9 @@
 ## Strongly Connected Components
 
+A *SCC* is a maximal subgraph in which every vertex is reachable from any vertex inside this same subgraph!
+
+**Property:** An inverted graph has the same SCCs
+
 ### Kosaraju Algorithm
 
 Used for **Finding Strongly Connected Somponents** (SCCs) in a *directed graph* (digraph).
@@ -13,35 +17,31 @@ vector<vll> g(MAX, vll());
 vector<vll> gi(MAX, vll()); // inverted edges
 bool vis[MAX]; // visited vertice?
 ll component[MAX]; // connected component of each vertice
-stack<ll> pilha; // for inverting order of transversal
+stack<ll> st; // for inverting order of transversal
 
 void dfs(ll u) {
     vis[u] = 1;
     for(auto v : g[u]) if (!vis[v]) dfs(v);
-    pilha.push(u);
+    st.push(u);
 }
 
 void dfs2(ll u, ll c) {
-    vis[u] = 1; component[u] = c;
-    for(auto v : gi[u]) if (!vis[v]) dfs2(v, c);
+    component[u] = c;
+    for(auto v : gi[u]) if (!component[v]) dfs2(v, c);
 }
 
 // 1 - idx
 void kosaraju(ll n){
-    memset(vis, 0, sizeof(vis));
     for(ll i=1; i<=n; i++) if (!vis[i]) dfs(i);
 
-    memset(vis, 0, sizeof(vis));
-    memset(component, 0, sizeof(component));
-    
-    while(!pilha.empty()) {
-        ll u = pilha.top(); pilha.pop();
-        if (!vis[u]) dfs2(u, u);
+    while(!st.empty()) {
+        ll u = st.top(); st.pop();
+        if (!component[u]) dfs2(u, u);
     }
 }
 ```
 
-#### Can be extended to generate a Condensation Graph
+#### Condensation Graph
 
 *AKA:* condensate/convert all SCC's into single vertices and create a new graph
 
