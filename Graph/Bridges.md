@@ -35,7 +35,6 @@ void dfs(ll u, ll p = -1){
 }
 
 void findBridges(ll n) {
-    timer = 1;
     for(ll i=1; i<=n; i++) if (!tin[i])
         dfs(i);
 }
