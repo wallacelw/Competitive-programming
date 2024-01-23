@@ -25,10 +25,11 @@ using namespace std;
 #define endl '\n'
 #define ll long long
 #define ld long double
-#define pll pair<ll, ll>
 #define pb push_back
 #define ff first
 #define ss second
+#define pll pair<ll, ll>
+#define vll vector<ll, ll>
 
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
