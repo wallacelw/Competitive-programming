@@ -29,7 +29,7 @@ using namespace std;
 #define ff first
 #define ss second
 #define pll pair<ll, ll>
-#define vll vector<ll, ll>
+#define vll vector<ll>
 
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
