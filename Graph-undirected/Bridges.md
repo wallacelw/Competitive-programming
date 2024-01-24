@@ -134,5 +134,6 @@ Each edge in the block-cut tree connects an Articulation Point and a biconnected
 Each of these condensated group of **Edges** is called a *2-vertex connected component* or *biconnected component*, and as the following properties:
 
     - For each pair of edges, there is a cycle that contains both edges
+    - For each pair of vertices {A, B} inside the same connected component, there are at least 2 distinct paths from A to B (may not repeat vertices).
 
 **Special-Case:** Every bridge is itself a biconnected component
