@@ -6,105 +6,71 @@ SAT (Boolean satisfiability problem) is NP-Complete.
 
 Can be solved with graphs in *O(Vertices + Edges)*.
 
+The algorithm uses kosaraju to check if any (X and !X) are in the same Strongly Connected Component (which implies that the problem is impossible). If not, there is at least one solution, which can be generated using the topological sort of the same kosaraju (opting for the variables that appers latter in the sorted order)
+
 ```cpp
 // 0-idx graph !!!!
 struct TwoSat {
     ll N; // needs to be the twice of the number of variables
     // node with idx 2x => variable x
-    // node with idx 2x+1 => negation of variable x
+    // node with idx 2x+1 => variable !x
 
-    vector<vll> g, gt; 
-    // g = graph; gt = transposed graph (all edges are inverted)
+    vector<vll> g, gi; 
+    // g = graph; gi = transposed graph (all edges are inverted)
 
-    TwoSat(ll n) { // number of variables
+    TwoSat(ll n) { // number of variables (add +1 for 1-idx)
         N = 2*n;
         g.assign(N, vll());
-        gt.assign(N, vll());
+        gi.assign(N, vll());
     }
 
-    vector<bool> used;
-    vll order, comp;
-    vector<bool> assignment;
-    //  assignment[x] == 1 -> x was assigned 
-    //  assignment[x] == 0 -> !x was assigned 
+    ll idx; // component idx
+    vector<ll> comp, order; // topological order (reversed)
+    vector<bool> vis, chosen;
+    //  chosen[x] == 0 -> x was assigned 
+    //  chosen[x] == 1 -> !x was assigned 
 
-    // dfs1 and dfs2 are part of kosaraju algorithm
-    void dfs1(ll u) {
-        used[u] = true;
-        for (ll v : g[u]) if (!used[v]) dfs1(v); 
-        order.pb(u); // topological order
+    // dfs and dfs2 are part of kosaraju algorithm
+    void dfs(ll u) {
+        vis[u] = 1;
+        for (ll v : g[u]) if (!vis[v]) dfs(v); 
+        order.pb(u);
     }
 
-    void dfs2(ll u, ll timer) {
-        comp[u] = timer;
-        for (ll v : gt[u]) if (comp[v] == -1) dfs2(v, timer); 
+    void dfs2(ll u, ll c) {
+        comp[u] = c;
+        for (ll v : gi[u]) if (comp[v] == -1) dfs2(v, c); 
     }
 
-    bool solve_2SAT() {
-        order.clear();
-        used.assign(N, false);
-        for (ll i = 0; i < N; i++) if (!used[i]) dfs1(i);
+    bool solve() {
+        vis.assign(N, 0);
+        order = vector<ll>();
+        for (ll i = 0; i < N; i++) if (!vis[i]) dfs(i);
 
-        comp.assign(N, -1);
-        for (ll i = 0, j = 0; i < N; i++) {
-            ll u = order[N - i - 1]; // reverse order
-            if (comp[u] == -1) dfs2(u, j++);
+        comp.assign(N, -1); // comp = 0 can exist
+        idx = 1;
+        for(ll i=(ll)order.size()-1; i>=0; i--) {
+            ll u = order[i];
+            if (comp[u] == -1) dfs2(u, idx++);
         }
 
-        assignment.assign(N/2, false);
+        chosen.assign(N/2, 0);
         for (ll i = 0; i < N; i += 2) {
-            if (comp[i] == comp[i + 1]) return false; // x and !x contradiction
-            assignment[i / 2] = comp[i] > comp[i + 1];
+            // x and !x in the same component => contradiction
+            if (comp[i] == comp[i+1]) return false; 
+            chosen[i/2] = comp[i] < comp[i+1]; // choose latter node
         }
         return true;
     }
 
-    void add_disjunction(ll a, bool flagA, ll b, bool flagB) {
-        // disjunction of (a, b) => if one of the two variables is false, then the other one must be true
-        // a and b can't be false at the same time
-
-        // flagA and flagB represents whether a and b are negated 
-        // flagA == 1 => a ; flagA == 0 => !a
-        // flagB == 1 => b ; flagB == 0 => !b
-        a = 2*a ^ (!flagA);
-        b = 2*b ^ (!flagB);
-        ll neg_a = a ^ 1;
-        ll neg_b = b ^ 1;
-        g[neg_a].pb(b);
-        g[neg_b].pb(a);
-        gt[b].pb(neg_a);
-        gt[a].pb(neg_b);
+    // a (with flagA) implies => b (with flagB) 
+    void add(ll a, bool fa, ll b, bool fb) {
+        // {fa == 0} => a 
+        // {fa == 1} => !a
+        a = 2*a + fa;
+        b = 2*b + fb;
+        g[a].pb(b);
+        gi[b].pb(a);
     }
 };
-```
-
-#### Example of Application:
-
-https://cses.fi/problemset/task/1684/ (Giant Pizza)
-
-```cpp
-int32_t main(){ sws;
-    ll m, n; cin >> m >> n;
- 
-    TwoSat twoSat(n);
- 
-    for(ll i=0; i<m; i++) {
-        char charA, charB;
-        ll a, b;
-        cin >> charA >> a >> charB >> b;
-        // at least one => (!a 'disjoint' !b)
-        bool na = (charA == '-');
-        bool nb = (charB == '-');
-        twoSat.add_disjunction(a-1, na, b-1, nb);
-    }
- 
-    if (!twoSat.solve_2SAT()) cout << "IMPOSSIBLE" << endl;
-    else {
-        for(ll i=0; i<n; i++) {
-            if (twoSat.assignment[i]) cout << "+ ";
-            else cout << "- ";
-        }
-        cout << endl;
-    }
-}   
 ```
