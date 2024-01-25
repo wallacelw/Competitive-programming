@@ -51,43 +51,52 @@ Each of these condensated group of **Vertices** is called a *2-edge connected co
     - For each pair of vertices {A, B} inside the same connected component, there are at least 2 distinct paths from A to B (may repeat vertices).
 
 ```cpp
-// TODO: needs testing
-vector<vll> g(MAX);
+// g: u -> {v, edge id}
+vector<vector<pll>> g(MAX);
+vector<vll> gc(MAX);
 ll timer = 1;
-ll tin[MAX], low[MAX];
-set<pll> bridges;
+ll tin[MAX], low[MAX], comp[MAX];
+bool isBridge[MAX];
 
-void dfs(ll u, ll p = -1){
+void dfs(ll u, ll p = -1) {
     tin[u] = low[u] = timer++;
-    for(auto v : g[u]) if (v != p) {
-        if (tin[v]) // v was visited ({u,v} is a back-edge)
-            // considering a single back-edge:
+    for(auto [v, id] : g[u]) if (v != p) {
+        if (tin[v])
             low[u] = min(low[u], tin[v]); 
-        else { // v wasn't visited ({u, v} is a span-edge)
+        else {
             dfs(v, u);
-            // after low[v] was computed by dfs(v, u):
             low[u] = min(low[u], low[v]);
             if (low[v] > tin[u])
-                bridges.pb({u, v});
+                isBridge[id] = 1;
         }   
     }
 }
 
-ll group[MAX];
-
-void dfs2(ll u, ll id, ll p = -1) {
-    group[u] = id;
-    for(auto v : g[u]) if (v != p) {
-        if (!group[v]) dfs2(v, id, u);
+void dfs2(ll u, ll c, ll p = -1) {
+    comp[u] = c;
+    for(auto [v, id] : g[u]) if (v != p) {
+        if (isBridge[id]) continue;
+        if (!comp[v]) dfs2(v, c, u);
     }
 }
 
-// skip bridges, condensate connected components using dfs
 void bridgeTree(ll n) {
+    // find bridges
     for(ll i=1; i<=n; i++) if (!tin[i])
         dfs(i);
-    for(ll i=1; i<=n; i++) if (!group[i]) 
+
+    // find components
+    for(ll i=1; i<=n; i++) if (!comp[i]) 
         dfs2(i, i);
+
+    // condensate into a TREE (or TREES if disconnected)
+    for(ll u=1; u<=n; u++) {
+        for(auto [v, id] : g[u]) {
+            if (comp[u] != comp[v]) {
+                gc[comp[u]].pb(comp[v]);
+            }
+        }
+    }
 }
 ```
 
