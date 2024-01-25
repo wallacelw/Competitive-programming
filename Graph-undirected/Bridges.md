@@ -111,26 +111,31 @@ A vertex U is an articulation points if:
 vector<vll> g(MAX);
 ll timer = 1;
 ll low[MAX], tin[MAX], isAP[MAX];
-
-ll dfs(ll u, ll p = -1) {
-    ll children = 0;
+// when vertex i is removed from graph
+// isAP[i] is the quantity of new disjoint components created
+// isAP[i] >= 1 {i is a Articulation Point} 
+void dfs(ll u, ll p = -1) {
     low[u] = tin[u] = timer++;
+
     for(auto v : g[u]) if (v != p) {
         if (tin[v]) // visited
             low[u] = min(low[u], tin[v]);
         else { // not visited
-            children++;
             dfs(v, u);
-            if (low[v] >= tin[u]) isAP[u] = 1;
             low[u] = min(low[u], low[v]);
+            
+            if (low[v] >= tin[u])
+                isAP[u]++;
         }
     }
-    return children;
+
+    // corner case: root
+    if (p == -1 and isAP[u]) isAP[u]--;
 }
 
 void findAP(ll n) {
     for(ll i=1; i<=n; i++) if (!tin[i])
-        isAP[i] = dfs(i) > 1; // root has more than 1 children
+        dfs(i);
 }
 ```
 
