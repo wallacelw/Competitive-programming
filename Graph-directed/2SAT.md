@@ -72,5 +72,24 @@ struct TwoSat {
         g[a].pb(b);
         gi[b].pb(a);
     }
+
+    // force a state for a certain variable (must be true)
+    void force(ll a, bool fa) {
+        add(a, fa^1, a, fa);
+    }
+
+    // xor operation: one must exist, and only one can exist
+    void exclusive(ll a, bool fa, ll b, bool fb) {
+        add(a, fa^0, b, fb^1);
+        add(a, fa^1, b, fb^0);
+        add(b, fb^0, a, fa^1);
+        add(b, fb^1, a, fa^0);
+    }
+
+    // nand operation: no more than one can exist
+    void nand(ll a, bool fa, ll b, bool fb) {
+        add(a, fa^0, b, fb^1);
+        add(b, fb^0, a, fa^1);
+    }
 };
 ```
