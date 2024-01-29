@@ -83,6 +83,8 @@ int32_t main(){ sws;
 
 - Fast IO & endl
 
+- Consider negative and null values. Check if default values used, such as (-1 or INF) can be valid values for the problem
+
 - Be very careful when copy pasting, check you've changed everything that needs changing
 
 - Be wary of special cases, and when you do define one, be very sure you've correctly identified the full extent of their implications
