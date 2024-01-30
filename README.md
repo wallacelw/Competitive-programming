@@ -6,7 +6,7 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00), [Cebolinha](https://q
 ## Linux Alias
 
 ```bash
-alias comp='g++ -std=c++17 -g3 -ggdb3 -O3 -Wall -Wextra  -fsanitize=address,undefined -Wshadow -Wconversion -D_GLIBCXX_ASSERTIONS -o test'
+alias comp='g++ -std=c++17 -g3 -ggdb3 -O3 -Wall -Wextra -fsanitize=address,undefined -Wshadow -Wconversion -D_GLIBCXX_ASSERTIONS -o test'
 ```
 
 *-Wall -Wextra -Wconversion -Wshadow* shows warnings
@@ -42,9 +42,9 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 template<typename... A> void dbg(A const&... a){((cerr<<"{"<<a<<"} "), ...);cerr<<endl;}
 
 const int MAX = 3e5+10;
-const int INF = 0x3f3f3f3f;
+const int INF = INT32_MAX;
 const long long MOD = 1e9+7;
-const long long LLINF = 0x3f3f3f3f3f3f3f3f;
+const long long LLINF = INT64_MAX;
 const long double EPS = 1e-7;
 const long double PI = acos(-1);
 
