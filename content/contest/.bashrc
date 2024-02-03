@@ -1,0 +1,1 @@
+alias comp='g++ -std=c++17 -g3 -ggdb3 -O3 -Wall -Wextra -fsanitize=address,undefined -Wshadow -Wconversion -D_GLIBCXX_ASSERTIONS -o test'
