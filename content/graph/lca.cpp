@@ -1,9 +1,8 @@
 /**
  * Author: Wallace
  * Date: 03/02/2024
- * Description: Solves LCA,
- * log2(1e5) ~= 17; log2(1e9) ~= 30 ; log2(1e18) ~= 60
- * Time: $O(N \log(N))$
+ * Description: Solves LCA for trees
+ * Time: $O(N \log(N))$ to build, $O(\log(N))$ per query
  */
 
 struct BinaryLifting {

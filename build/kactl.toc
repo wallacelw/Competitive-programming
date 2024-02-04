@@ -32,8 +32,9 @@
 \contentsline {section}{\numberline {7.3}Matching}{3}{section.7.3}%
 \contentsline {section}{\numberline {7.4}DFS algorithms}{3}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Coloring}{3}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Heuristics}{3}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Trees}{3}{section.7.7}%
+\contentsline {section}{\numberline {7.6}Directed Graph}{3}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}2-SAT}{3}{subsection.7.6.1}%
+\contentsline {section}{\numberline {7.7}Trees}{4}{section.7.7}%
 \contentsline {section}{\numberline {7.8}Math}{4}{section.7.8}%
 \contentsline {chapter}{\numberline {8}Geometry}{4}{chapter.8}%
 \contentsline {chapter}{\numberline {9}Strings}{4}{chapter.9}%

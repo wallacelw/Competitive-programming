@@ -10,9 +10,21 @@
 
 \section{Coloring}
 
-\section{Heuristics}
+\section{Directed Graph}
+	\subsection{2-SAT}
+	
+		SAT (Boolean satisfiability problem) is NP-Complete.
+		2-SAT is a restriction of the SAT problem, in 2-SAT every clause has exactly two variables.
+		Every restriction or implication are represented in the graph as directed edges.
+		The algorithm uses kosaraju to check if any (X and !X) are in the same Strongly Connected Component 
+		(which implies that the problem is impossible). 
+		If it doesn't, there is at least one solution, which can be generated using the topological sort of the same kosaraju 
+		(opting for the variables that appers latter in the sorted order)
+
+		\kactlimport{2sat.cpp}
 
 \section{Trees}
-	\kactlimport{LCA.cpp}
-	\kactlimport{QueryTree.cpp}
+	\kactlimport{lca.cpp}
+	\kactlimport{queryTree.cpp}
+
 \section{Math}

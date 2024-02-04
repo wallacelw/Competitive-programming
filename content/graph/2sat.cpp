@@ -1,14 +1,11 @@
-## 2-SAT (2-satisfiability)
+/** 
+ * Author: Wallace
+ * Date: 04/02/2024
+ * Description: Kosaraju to find if there are SCCs.
+ * If there are not cycles, use toposort to choose states
+ * Time: O(V+E)
+ */
 
-SAT (Boolean satisfiability problem) is NP-Complete.
-
-2-SAT is a restriction of the SAT problem, in 2-SAT every clause has exactly two literals.
-
-Can be solved with graphs in *O(Vertices + Edges)*.
-
-The algorithm uses kosaraju to check if any (X and !X) are in the same Strongly Connected Component (which implies that the problem is impossible). If not, there is at least one solution, which can be generated using the topological sort of the same kosaraju (opting for the variables that appers latter in the sorted order)
-
-```cpp
 // 0-idx graph !!!!
 struct TwoSat {
     ll N; // needs to be the twice of the number of variables
@@ -18,7 +15,7 @@ struct TwoSat {
     vector<vll> g, gi; 
     // g = graph; gi = transposed graph (all edges are inverted)
 
-    TwoSat(ll n) { // number of variables (add +1 for 1-idx)
+    TwoSat(ll n) { // number of variables (add +1 faor 1-idx)
         N = 2*n;
         g.assign(N, vll());
         gi.assign(N, vll());
@@ -92,4 +89,3 @@ struct TwoSat {
         add(b, fb^0, a, fa^1);
     }
 };
-```
