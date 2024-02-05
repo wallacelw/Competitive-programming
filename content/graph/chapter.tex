@@ -10,14 +10,76 @@
 
 \section{Coloring}
 
-\section{Directed Graph}
+\section{Undirected Graph}
+
+	Bridges and Articulation Points are concepts for undirected graphs!
+	
+	\subsection{Bridges (Cut Edges)}
+
+		Also called \textbf{isthmus} or \textbf{cut arc}.
+		
+		A back-edge is never a bridge!
+		
+		A \textbf{lowlink} for a vertice $U$ is the closest vertice to the root reachable using only span edges and a \textit{single} back-edge, starting in the subtree of $U$.
+		
+		After constructing a DFS Tree, an edge (u, v) is a bridge $\iff$ there is no back-edge from $v$ (or a descendent of $v$) to $u$ (or an ancestor of $u$)
+		
+		To do this efficiently, it's used $tin[i]$ (entry time of node $i$) and $low[i]$ (minimum entry time considering all nodes that can be reached from node $i$).
+		
+		In another words, a edge (u, v) is a bridge $\iff$ the low[v] > tin[u].
+
+		\kactlimport{bridges.cpp}
+
+	\subsection{Bridge Tree}
+
+	After merging \textit{vertices} of a \textbf{2-edge connected component} into single vertices, and leaving only bridges, one can generate a Bridge Tree.
+
+	Every \textbf{2-edge connected component} has following properties:
+
+    \begin{itemize}
+		\item For each pair of vertices {A, B} inside the same component, there are at least 2 distinct paths from A to B (which may repeat vertices).
+	\end{itemize}
+
+	\kactlimport{bridgeTree.cpp}
+	
+	\subsection{Articulation Points} 
+
+	One Vertice in a graph is considered a Articulation Points or Cut Vertice if its removal in the graph will generate more disconnected components
+
+	\kactlimport{articulation.cpp}
+
+	\subsection{Block Cut Tree}
+
+	After merging \textit{edges} of a \textbf{2-vertex connected component} into single vertices, one can obtain a block cut tree.
+
+	2-vertex connected components are also called as biconnected component
+	
+	Every bridge by itself is a biconnected component
+
+	Each edge in the block-cut tree connects exactly an Articulation Point and a biconnected component (bipartite graph)
+
+	Each biconnected component has the following properties:
+
+	\begin{itemize}
+		\item For each pair of edges, there is a cycle that contains both edges
+		\item For each pair of vertices {A, B} inside the same connected component, there are at least 2 distinct paths from A to B (which do not repeat vertices).
+	\end{itemize}
+
+	\kactlimport{blockCutTree.cpp}
+	
+	\section{Directed Graph}
 	\subsection{2-SAT}
 	
 		SAT (Boolean satisfiability problem) is NP-Complete.
-		2-SAT is a restriction of the SAT problem, in 2-SAT every clause has exactly two variables.
+
+		2-SAT is a restriction of the SAT problem, in 2-SAT every clause has exactly two variables:
+		$ (X_1 \vee X_2) \wedge (X_2 \vee X_3) $
+
 		Every restriction or implication are represented in the graph as directed edges.
-		The algorithm uses kosaraju to check if any (X and !X) are in the same Strongly Connected Component 
+
+		The algorithm uses kosaraju to check if any ($X$ and $\neg{X}$) are in the same Strongly Connected Component 
 		(which implies that the problem is impossible). 
+
 		If it doesn't, there is at least one solution, which can be generated using the topological sort of the same kosaraju 
 		(opting for the variables that appers latter in the sorted order)
 

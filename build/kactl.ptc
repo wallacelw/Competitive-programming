@@ -49,20 +49,29 @@
 \contentsline {section}{\numberline {7.3}Matching}{3}{section.7.3}%
 \contentsline {section}{\numberline {7.4}DFS algorithms}{3}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Coloring}{3}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Directed Graph}{3}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}2-SAT}{3}{subsection.7.6.1}%
-\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{3}{subsection.7.6.1}%
-\contentsline {section}{\numberline {7.7}Trees}{4}{section.7.7}%
-\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{4}{section.7.7}%
-\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{4}{lstnumber.7.2.54}%
-\contentsline {section}{\numberline {7.8}Math}{4}{section.7.8}%
-\contentsline {chapter}{\numberline {8}Geometry}{4}{chapter.8}%
+\contentsline {section}{\numberline {7.6}Undirected Graph}{3}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Bridges (Cut Edges)}{3}{subsection.7.6.1}%
+\contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{3}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Bridge Tree}{3}{subsection.7.6.2}%
+\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{3}{subsection.7.6.2}%
+\contentsline {subsection}{\numberline {7.6.3}Articulation Points}{4}{subsection.7.6.3}%
+\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{4}{subsection.7.6.3}%
+\contentsline {subsection}{\numberline {7.6.4}Block Cut Tree}{4}{subsection.7.6.4}%
+\contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{4}{subsection.7.6.4}%
+\contentsline {section}{\numberline {7.7}Directed Graph}{5}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}2-SAT}{5}{subsection.7.7.1}%
+\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{5}{subsection.7.7.1}%
+\contentsline {section}{\numberline {7.8}Trees}{5}{section.7.8}%
+\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{5}{section.7.8}%
+\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{5}{lstnumber.7.6.54}%
+\contentsline {section}{\numberline {7.9}Math}{6}{section.7.9}%
+\contentsline {chapter}{\numberline {8}Geometry}{6}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
-\contentsline {chapter}{\numberline {9}Strings}{4}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Strings}{6}{chapter.9}%
 \ttl@stoptoc {chapters@8}
 \ttl@starttoc {chapters@9}
-\contentsline {chapter}{\numberline {10}Miscellaneous}{4}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{6}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
 \ttl@stoptoc {chapters@10}
