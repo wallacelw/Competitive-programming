@@ -51,5 +51,6 @@
 \contentsline {section}{\numberline {9.1}Hashing}{7}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Z-Function}{8}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Manacher}{8}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Miscellaneous}{8}{chapter.10}%
+\contentsline {section}{\numberline {9.4}Booth}{8}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{9}{chapter.10}%
 \contentsfinish 

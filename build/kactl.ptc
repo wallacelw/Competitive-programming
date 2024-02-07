@@ -87,7 +87,9 @@
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{8}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Manacher}{8}{section.9.3}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{8}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Miscellaneous}{8}{chapter.10}%
+\contentsline {section}{\numberline {9.4}Booth}{8}{section.9.4}%
+\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{8}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{9}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
 \ttl@stoptoc {chapters@10}
