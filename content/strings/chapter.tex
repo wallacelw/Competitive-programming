@@ -1,5 +1,19 @@
 \chapter{Strings}
 
+\section{Hashing}
+
+    Hashing consists in generating a Polynomial for the string, 
+    therefore, assigning each distint string to a specific numeric value
+    In practice, there will always be some collisions:
+
+    Probability of colision: = $ \frac{n^2}{2 m} $
+
+    n = Comparissons, m = mod size
+
+    when using multiple mods, they multiply: m = m1 * m2
+
+    \kactlimport{hashing.cpp}
+
 \section{Z-Function}
 
     Suppose we are given a string \textit{s} of length \textit{n}. 
@@ -39,3 +53,16 @@
 	\end{itemize}
 
     \kactlimport{zfunction.cpp}
+
+\section{Manacher}
+
+    Manacher's Algorithm is used to find all palindromes in a string.
+
+    For each substring, centered at i, find the longest palindrome that can be formed.
+    
+    Works best for odd size string, so we convert all string to odd ones
+    by adding and extra characters between the original ones
+
+    Therefore, the value stored in the vector cnt is actually palindrome-len + 1.
+
+    \kactlimport{manacher.cpp}
