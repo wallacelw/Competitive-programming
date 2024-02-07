@@ -22,36 +22,38 @@
 \contentsline {section}{\numberline {2.9}Markov chains}{3}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Data structures}{3}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Disjoint Set Union}{3}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Numerical}{3}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Number theory}{3}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Combinatorial}{3}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Permutations}{3}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Factorial}{3}{subsection.6.1.1}%
-\contentsline {chapter}{\numberline {7}Graph}{3}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Fundamentals}{3}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Network flow}{3}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Minimum Cut}{4}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Matching with Flow}{4}{subsection.7.2.2}%
-\contentsline {section}{\numberline {7.3}Matching}{4}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Coloring}{4}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Undirected Graph}{4}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Bridges (Cut Edges)}{4}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Bridge Tree}{4}{subsection.7.5.2}%
-\contentsline {subsection}{\numberline {7.5.3}Articulation Points}{5}{subsection.7.5.3}%
-\contentsline {subsection}{\numberline {7.5.4}Block Cut Tree}{5}{subsection.7.5.4}%
-\contentsline {subsection}{\numberline {7.5.5}Minimum Spanning Tree}{6}{subsection.7.5.5}%
-\contentsline {section}{\numberline {7.6}Directed Graph}{6}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Topological Sort}{6}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Kosaraju}{6}{subsection.7.6.2}%
-\contentsline {subsection}{\numberline {7.6.3}2-SAT}{6}{subsection.7.6.3}%
-\contentsline {section}{\numberline {7.7}Trees}{7}{section.7.7}%
-\contentsline {section}{\numberline {7.8}Math}{7}{section.7.8}%
-\contentsline {chapter}{\numberline {8}Geometry}{7}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Strings}{7}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Hashing}{7}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Z-Function}{8}{section.9.2}%
-\contentsline {section}{\numberline {9.3}KMP}{8}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Manacher}{8}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Booth}{9}{section.9.5}%
-\contentsline {chapter}{\numberline {10}Miscellaneous}{9}{chapter.10}%
+\contentsline {chapter}{\numberline {4}Dynamic Programming}{3}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Convex Hull Trick}{3}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Numerical}{3}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Number theory}{4}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Combinatorial}{4}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Permutations}{4}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Factorial}{4}{subsection.7.1.1}%
+\contentsline {chapter}{\numberline {8}Graph}{4}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Fundamentals}{4}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Network flow}{4}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Minimum Cut}{4}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Matching with Flow}{4}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Matching}{4}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Coloring}{4}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Undirected Graph}{4}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Bridges (Cut Edges)}{5}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Bridge Tree}{5}{subsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.5.3}Articulation Points}{5}{subsection.8.5.3}%
+\contentsline {subsection}{\numberline {8.5.4}Block Cut Tree}{5}{subsection.8.5.4}%
+\contentsline {subsection}{\numberline {8.5.5}Minimum Spanning Tree}{6}{subsection.8.5.5}%
+\contentsline {section}{\numberline {8.6}Directed Graph}{6}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Topological Sort}{6}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Kosaraju}{6}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}2-SAT}{7}{subsection.8.6.3}%
+\contentsline {section}{\numberline {8.7}Trees}{7}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Math}{8}{section.8.8}%
+\contentsline {chapter}{\numberline {9}Geometry}{8}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Strings}{8}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Hashing}{8}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Z-Function}{8}{section.10.2}%
+\contentsline {section}{\numberline {10.3}KMP}{8}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Manacher}{9}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Booth}{9}{section.10.5}%
+\contentsline {chapter}{\numberline {11}Miscellaneous}{9}{chapter.11}%
 \contentsfinish 
