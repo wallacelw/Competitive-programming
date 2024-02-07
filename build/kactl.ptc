@@ -48,31 +48,33 @@
 \ttl@starttoc {chapters@7}
 \contentsline {section}{\numberline {7.1}Fundamentals}{3}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Network flow}{3}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Matching}{3}{section.7.3}%
-\contentsline {section}{\numberline {7.4}DFS algorithms}{3}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Coloring}{3}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Undirected Graph}{3}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Bridges (Cut Edges)}{3}{subsection.7.6.1}%
-\contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{3}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Bridge Tree}{4}{subsection.7.6.2}%
-\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{4}{subsection.7.6.2}%
-\contentsline {subsection}{\numberline {7.6.3}Articulation Points}{4}{subsection.7.6.3}%
-\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{4}{subsection.7.6.3}%
-\contentsline {subsection}{\numberline {7.6.4}Block Cut Tree}{4}{subsection.7.6.4}%
-\contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{4}{subsection.7.6.4}%
-\contentsline {subsection}{\numberline {7.6.5}Minimum Spanning Tree}{5}{subsection.7.6.5}%
-\contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{5}{subsection.7.6.5}%
-\contentsline {section}{\numberline {7.7}Directed Graph}{5}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Topological Sort}{5}{subsection.7.7.1}%
-\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{5}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Kosaraju}{5}{subsection.7.7.2}%
-\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{5}{subsection.7.7.2}%
-\contentsline {subsection}{\numberline {7.7.3}2-SAT}{5}{subsection.7.7.3}%
-\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{6}{subsection.7.7.3}%
-\contentsline {section}{\numberline {7.8}Trees}{6}{section.7.8}%
-\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{6}{section.7.8}%
-\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{6}{lstnumber.7.9.54}%
-\contentsline {section}{\numberline {7.9}Math}{7}{section.7.9}%
+\contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{3}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Minimum Cut}{4}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Matching with Flow}{4}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}Matching}{4}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Coloring}{4}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Undirected Graph}{4}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Bridges (Cut Edges)}{4}{subsection.7.5.1}%
+\contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{4}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Bridge Tree}{4}{subsection.7.5.2}%
+\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{5}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Articulation Points}{5}{subsection.7.5.3}%
+\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{5}{subsection.7.5.3}%
+\contentsline {subsection}{\numberline {7.5.4}Block Cut Tree}{5}{subsection.7.5.4}%
+\contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{5}{subsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.5.5}Minimum Spanning Tree}{6}{subsection.7.5.5}%
+\contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{6}{subsection.7.5.5}%
+\contentsline {section}{\numberline {7.6}Directed Graph}{6}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Topological Sort}{6}{subsection.7.6.1}%
+\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{6}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Kosaraju}{6}{subsection.7.6.2}%
+\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{6}{subsection.7.6.2}%
+\contentsline {subsection}{\numberline {7.6.3}2-SAT}{6}{subsection.7.6.3}%
+\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{6}{subsection.7.6.3}%
+\contentsline {section}{\numberline {7.7}Trees}{7}{section.7.7}%
+\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{7}{section.7.7}%
+\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{7}{lstnumber.7.10.54}%
+\contentsline {section}{\numberline {7.8}Math}{7}{section.7.8}%
 \contentsline {chapter}{\numberline {8}Geometry}{7}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}

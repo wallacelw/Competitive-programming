@@ -4,9 +4,44 @@
 
 \section{Network flow}
 
-\section{Matching}
+	In optimization theory, maximum flow problems involve finding a 
+	feasible flow through a flow network that obtains the maximum possible flow rate. 
 
-\section{DFS algorithms}
+	\kactlimport{dinic.cpp}
+
+	\subsection{Minimum Cut}
+
+	In computer science and optimization theory, the max-flow min-cut theorem states that in a flow network, 
+	the maximum amount of flow passing from the source to the sink is equal to the total weight of the edges 
+	in a minimum cut, i.e., the smallest total weight of the edges which if removed would disconnect the source from the sink. 
+
+	Let’s define an s-t cut C = (S-component, T-component) as a partition of V $\in$ G such that 
+	source s $\in$ S-component and sink t $\in$ T-component. Let’s also define a cut-set of C to be the set 
+	{(u, v) $\in$ E | u $\in$ S-component, v $\in$ T-component} such that if all edges in the cut-set of C are removed,
+	the Max Flow from s to t is 0 (i.e., s and t are disconnected). The cost of an s-t cut C is defined by the sum
+	of the capacities of the edges in the cut-set of C.
+
+	The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS)
+	from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong
+	to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to
+	the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value.
+	This is the minimum over all possible s-t cuts values.
+
+	\subsection{Matching with Flow}
+
+	By modeling a bipartite graph, with some Vertices (that will choose a match) to be on the L graph and some Vertices (that will be chosen) on the R.
+	Set the correct capacities for these edges and also for the edges that connects the sink and source. After this modeling
+	and running the dinic max flow algorithm, one will generate a possible matching (if it is possible).
+
+	A special case of matching is the perfect matching, which includes all vertices from the bipartite graph L and R.
+
+	A maximum matching has the maximum cadinality. A perfect matching is a maximum matching. 
+	But the opposite is not necessarity true.
+
+	It's possible to access dinic.edges, which is a vector that contains all edges and also its respective attributes, 
+	like the \textit{flow} passing through each edge. Remember to consider that negative flow exist for reverse edges.
+
+\section{Matching}
 
 \section{Coloring}
 
