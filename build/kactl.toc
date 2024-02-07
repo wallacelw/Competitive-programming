@@ -21,10 +21,11 @@
 \contentsline {subsubsection}{Normal distribution}{3}{section*.6}%
 \contentsline {section}{\numberline {2.9}Markov chains}{3}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Data structures}{3}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Disjoint Set Union}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Ordered Set}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Disjoint Set Union}{3}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Dynamic Programming}{3}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Convex Hull Trick}{3}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Numerical}{3}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Numerical}{4}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Number theory}{4}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Combinatorial}{4}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Permutations}{4}{section.7.1}%
@@ -34,9 +35,9 @@
 \contentsline {section}{\numberline {8.2}Network flow}{4}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Minimum Cut}{4}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Matching with Flow}{4}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}Matching}{4}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Coloring}{4}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Undirected Graph}{4}{section.8.5}%
+\contentsline {section}{\numberline {8.3}Matching}{5}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Coloring}{5}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Undirected Graph}{5}{section.8.5}%
 \contentsline {subsection}{\numberline {8.5.1}Bridges (Cut Edges)}{5}{subsection.8.5.1}%
 \contentsline {subsection}{\numberline {8.5.2}Bridge Tree}{5}{subsection.8.5.2}%
 \contentsline {subsection}{\numberline {8.5.3}Articulation Points}{5}{subsection.8.5.3}%
