@@ -80,7 +80,7 @@
 \contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{7}{subsection.8.6.3}%
 \contentsline {section}{\numberline {8.7}Trees}{7}{section.8.7}%
 \contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{7}{section.8.7}%
-\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{7}{lstnumber.8.10.54}%
+\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{8}{lstnumber.8.10.54}%
 \contentsline {section}{\numberline {8.8}Math}{8}{section.8.8}%
 \contentsline {chapter}{\numberline {9}Geometry}{8}{chapter.9}%
 \ttl@stoptoc {chapters@8}
@@ -92,7 +92,7 @@
 \contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{8}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Z-Function}{8}{section.10.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{8}{section.10.2}%
-\contentsline {section}{\numberline {10.3}KMP}{8}{section.10.3}%
+\contentsline {section}{\numberline {10.3}KMP}{9}{section.10.3}%
 \contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{9}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Manacher}{9}{section.10.4}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{9}{section.10.4}%

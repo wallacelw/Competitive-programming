@@ -53,7 +53,7 @@
 \contentsline {chapter}{\numberline {10}Strings}{8}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Hashing}{8}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Z-Function}{8}{section.10.2}%
-\contentsline {section}{\numberline {10.3}KMP}{8}{section.10.3}%
+\contentsline {section}{\numberline {10.3}KMP}{9}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Manacher}{9}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Booth}{9}{section.10.5}%
 \contentsline {chapter}{\numberline {11}Miscellaneous}{9}{chapter.11}%
