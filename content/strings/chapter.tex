@@ -54,6 +54,21 @@
 
     \kactlimport{zfunction.cpp}
 
+\section{KMP}
+
+    KMP stands for Knuth-Morris-Pratt and computes the prefix function.
+
+    You are given a string $s$ of length $n$. 
+    The prefix function for this string is defined as an array $\pi$ of length $n$, 
+    where $\pi[i]$ is the length of the longest proper prefix of the substring $s[0 \dots i]$
+    which is also a suffix of this substring. A proper prefix of a string is a prefix that
+    is not equal to the string itself. By definition, $\pi[0] = 0$.
+
+    For example, prefix function of string \textit{"abcabcd"} is $[0, 0, 0, 1, 2, 3, 0]$,
+    and prefix function of string \textit{"aabaaab"} is $[0, 1, 0, 1, 2, 2, 3]$.
+
+    \kactlimport{kmp.cpp}
+    
 \section{Manacher}
 
     Manacher's Algorithm is used to find all palindromes in a string.

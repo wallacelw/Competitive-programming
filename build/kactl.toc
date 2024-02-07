@@ -50,7 +50,8 @@
 \contentsline {chapter}{\numberline {9}Strings}{7}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Hashing}{7}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Z-Function}{8}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Manacher}{8}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Booth}{8}{section.9.4}%
+\contentsline {section}{\numberline {9.3}KMP}{8}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Manacher}{8}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Booth}{9}{section.9.5}%
 \contentsline {chapter}{\numberline {10}Miscellaneous}{9}{chapter.10}%
 \contentsfinish 
