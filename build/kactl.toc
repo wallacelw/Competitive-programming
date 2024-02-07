@@ -21,6 +21,7 @@
 \contentsline {subsubsection}{Normal distribution}{3}{section*.6}%
 \contentsline {section}{\numberline {2.9}Markov chains}{3}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Data structures}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Disjoint Set Union}{3}{section.3.1}%
 \contentsline {chapter}{\numberline {4}Numerical}{3}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Number theory}{3}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Combinatorial}{3}{chapter.6}%
@@ -34,16 +35,17 @@
 \contentsline {section}{\numberline {7.5}Coloring}{3}{section.7.5}%
 \contentsline {section}{\numberline {7.6}Undirected Graph}{3}{section.7.6}%
 \contentsline {subsection}{\numberline {7.6.1}Bridges (Cut Edges)}{3}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Bridge Tree}{3}{subsection.7.6.2}%
+\contentsline {subsection}{\numberline {7.6.2}Bridge Tree}{4}{subsection.7.6.2}%
 \contentsline {subsection}{\numberline {7.6.3}Articulation Points}{4}{subsection.7.6.3}%
 \contentsline {subsection}{\numberline {7.6.4}Block Cut Tree}{4}{subsection.7.6.4}%
+\contentsline {subsection}{\numberline {7.6.5}Minimum Spanning Tree}{5}{subsection.7.6.5}%
 \contentsline {section}{\numberline {7.7}Directed Graph}{5}{section.7.7}%
 \contentsline {subsection}{\numberline {7.7.1}Topological Sort}{5}{subsection.7.7.1}%
 \contentsline {subsection}{\numberline {7.7.2}Kosaraju}{5}{subsection.7.7.2}%
 \contentsline {subsection}{\numberline {7.7.3}2-SAT}{5}{subsection.7.7.3}%
 \contentsline {section}{\numberline {7.8}Trees}{6}{section.7.8}%
-\contentsline {section}{\numberline {7.9}Math}{6}{section.7.9}%
-\contentsline {chapter}{\numberline {8}Geometry}{6}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Strings}{6}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Miscellaneous}{6}{chapter.10}%
+\contentsline {section}{\numberline {7.9}Math}{7}{section.7.9}%
+\contentsline {chapter}{\numberline {8}Geometry}{7}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Strings}{7}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{7}{chapter.10}%
 \contentsfinish 
