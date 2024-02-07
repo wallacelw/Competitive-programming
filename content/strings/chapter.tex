@@ -1,1 +1,41 @@
 \chapter{Strings}
+
+\section{Z-Function}
+
+    Suppose we are given a string \textit{s} of length \textit{n}. 
+    The Z-function for this string is an array of length \textit{n} where the \textit{i-th}
+    element is equal to the greatest number of characters starting from the position \textit{i}
+    that coincide with the first characters of \textit{s} (the prefix of \textit{s})
+
+    The first element of the Z-function, z[0], is generally not well defined. 
+    This implementation assumes it as z[0] = 0. 
+    But it can also be interpreted as z[0] = n (all characters coincide).
+
+    Can be used to solve the following simples problems:
+
+    \begin{itemize}
+		\item Find all ocurrences of a pattern p in another string s. 
+        (p + '\$' + s) (z[i] == p.size())
+
+        \item Find all borders. A border of a string is a prefix that is also a suffix of 
+        the string but not the whole string. 
+        For example, the borders of abcababcab are ab and abcab. (z[8] = 2, z[5] = 5)
+        (z[i] = n-i)
+
+        \item Find all period lengths of a string. 
+        A period of a string is a prefix that can be used to generate the whole string by repeating
+        the prefix. The last repetition may be partial. For example, the periods of \textit{abcabca} 
+        are \textbf{abc}, \textbf{abcabc} and \textbf{abcabca}.
+
+        It works because (z[i] + i >= n) is the condition when the common characters of z[i] in addition
+        to the elements already passed, exceeds or is equal to the end of the string. For example:
+
+        \textit{abaababaab}
+        z[8] = 2
+
+        \textbf{abaababa} is the period; the remaining (z[i] characters) are a prefix of the period; 
+        and when all these characters are combined, it can form the string (which has n characters).
+
+	\end{itemize}
+
+    \kactlimport{zfunction.cpp}

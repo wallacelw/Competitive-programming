@@ -74,14 +74,16 @@
 \contentsline {section}{\numberline {7.7}Trees}{7}{section.7.7}%
 \contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{7}{section.7.7}%
 \contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{7}{lstnumber.7.10.54}%
-\contentsline {section}{\numberline {7.8}Math}{7}{section.7.8}%
-\contentsline {chapter}{\numberline {8}Geometry}{7}{chapter.8}%
+\contentsline {section}{\numberline {7.8}Math}{8}{section.7.8}%
+\contentsline {chapter}{\numberline {8}Geometry}{8}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
-\contentsline {chapter}{\numberline {9}Strings}{7}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Strings}{8}{chapter.9}%
 \ttl@stoptoc {chapters@8}
 \ttl@starttoc {chapters@9}
-\contentsline {chapter}{\numberline {10}Miscellaneous}{7}{chapter.10}%
+\contentsline {section}{\numberline {9.1}Z-Function}{8}{section.9.1}%
+\contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{8}{section.9.1}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{8}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
 \ttl@stoptoc {chapters@10}

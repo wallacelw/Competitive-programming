@@ -45,8 +45,9 @@
 \contentsline {subsection}{\numberline {7.6.2}Kosaraju}{6}{subsection.7.6.2}%
 \contentsline {subsection}{\numberline {7.6.3}2-SAT}{6}{subsection.7.6.3}%
 \contentsline {section}{\numberline {7.7}Trees}{7}{section.7.7}%
-\contentsline {section}{\numberline {7.8}Math}{7}{section.7.8}%
-\contentsline {chapter}{\numberline {8}Geometry}{7}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Strings}{7}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Miscellaneous}{7}{chapter.10}%
+\contentsline {section}{\numberline {7.8}Math}{8}{section.7.8}%
+\contentsline {chapter}{\numberline {8}Geometry}{8}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Strings}{8}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Z-Function}{8}{section.9.1}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{8}{chapter.10}%
 \contentsfinish 
