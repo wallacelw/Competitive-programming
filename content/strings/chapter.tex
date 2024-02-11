@@ -68,7 +68,53 @@
     and prefix function of string \textit{"aabaaab"} is $[0, 1, 0, 1, 2, 2, 3]$.
 
     \kactlimport{kmp.cpp}
+
+\section{Suffix Array} 
+
+    The suffix array is the array with size n, whose values are the indexes 
+    from the longest substring (0) to the smallest substring (n) after ordering it lexicographically. 
+    Example:
     
+    \begin{center}
+    \includegraphics[width=90mm]{content/strings/suffix-array.pdf}
+    \end{center}
+
+    Note that the lenght of the string i is: {s.size()-sa[i]}
+
+    \kactlimport{suffix-array.cpp}
+
+    Kasai generates an array of size n (like the suffix array), 
+    whose values indicates the lenght of the longest common prefix beetwen sa[i] and sa[i+1]
+
+    \kactlimport{kasai.cpp}
+
+    \textbf{Problems that can be solved:}
+
+    Numbers of Distinct Substrings: (n*(n+1))/2 - lcp[i] {for all i}
+
+    Longest Repeated Substring: biggest lcp[i]. The position can be found in sa[i]
+
+    Find how many distinct substrings there are for each len in [1:n]: Use delta encoding and the fact that lcp[i] counts the repeated substring between s.substr(sa[i]) and s.substr(sa[i+1]), which are the substrings corresponding to the commom prefix.
+
+    Find the k-th distinct substring: 
+
+    % string s; cin >> s;
+    % ll n = s.size();
+    
+    % auto sa = suffix_array(s);
+    % auto lcp = kasai(s, sa);
+
+    % ll k; cin >> k;
+
+    % for(ll i=0; i<n; i++) {
+    %     ll len = n-sa[i];
+    %     if (k <= len) {
+    %         cout << s.substr(sa[i], k) << endl;
+    %         break;
+    %     }
+    %     k += lcp[i] - len;
+    % }
+
 \section{Manacher}
 
     Manacher's Algorithm is used to find all palindromes in a string.

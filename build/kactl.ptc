@@ -97,10 +97,13 @@
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{9}{section.10.2}%
 \contentsline {section}{\numberline {10.3}KMP}{9}{section.10.3}%
 \contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{9}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Manacher}{9}{section.10.4}%
-\contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{9}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Booth}{10}{section.10.5}%
-\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{10}{section.10.5}%
+\contentsline {section}{\numberline {10.4}Suffix Array}{9}{section.10.4}%
+\contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{9}{section.10.4}%
+\contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{10}{lstnumber.10.4.20}%
+\contentsline {section}{\numberline {10.5}Manacher}{10}{section.10.5}%
+\contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{10}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Booth}{10}{section.10.6}%
+\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{10}{section.10.6}%
 \contentsline {chapter}{\numberline {11}Miscellaneous}{10}{chapter.11}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}
