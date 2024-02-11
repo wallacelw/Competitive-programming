@@ -25,3 +25,24 @@
     If both are used, $O(\alpha) \approx O(5)$
 
     \kactlimport{dsu.cpp}
+
+\section{Segment Tree}
+
+    Each node of the segment tree represents the cumulative value of a range.
+
+    \textbf{Observation:} For some problems, such as range distinct values query,
+    considerer offiline approach, ordering the queries by L for example. 
+
+    \kactlimport{segRecursive.cpp}
+    
+\section{Li-chao Tree}
+
+    Works for any type of function that has the \textbf{transcending property}:
+
+    Given two functions f(x),g(x) of that type, 
+    if f(t) is greater than/smaller than g(t) for some x=t,
+    then f(x) will be greater than/smaller than g(x) for x>t.
+    In other words, once f(x) “win/lose” g(x), f(x) will continue to “win/lose” g(x).
+
+    The most common one is the line function: $ ax + b $
+    

@@ -34,11 +34,14 @@
 \contentsline {subsection}{\texttt {ordered-set.cpp}\hspace {0.2em}}{3}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Disjoint Set Union}{3}{section.3.2}%
 \contentsline {subsection}{\texttt {dsu.cpp}\hspace {0.2em}}{3}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Dynamic Programming}{3}{chapter.4}%
+\contentsline {section}{\numberline {3.3}Segment Tree}{3}{section.3.3}%
+\contentsline {subsection}{\texttt {segRecursive.cpp}\hspace {0.2em}}{3}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Li-chao Tree}{4}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Dynamic Programming}{4}{chapter.4}%
 \ttl@stoptoc {chapters@3}
 \ttl@starttoc {chapters@4}
-\contentsline {section}{\numberline {4.1}Convex Hull Trick}{3}{section.4.1}%
-\contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{3}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Convex Hull Trick}{4}{section.4.1}%
+\contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{4}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Numerical}{4}{chapter.5}%
 \ttl@stoptoc {chapters@4}
 \ttl@starttoc {chapters@5}
@@ -56,30 +59,30 @@
 \contentsline {section}{\numberline {8.1}Fundamentals}{4}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Network flow}{4}{section.8.2}%
 \contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{4}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Minimum Cut}{4}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Matching with Flow}{4}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.1}Minimum Cut}{5}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Matching with Flow}{5}{subsection.8.2.2}%
 \contentsline {section}{\numberline {8.3}Matching}{5}{section.8.3}%
 \contentsline {section}{\numberline {8.4}Coloring}{5}{section.8.4}%
 \contentsline {section}{\numberline {8.5}Undirected Graph}{5}{section.8.5}%
 \contentsline {subsection}{\numberline {8.5.1}Bridges (Cut Edges)}{5}{subsection.8.5.1}%
 \contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{5}{subsection.8.5.1}%
 \contentsline {subsection}{\numberline {8.5.2}Bridge Tree}{5}{subsection.8.5.2}%
-\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{5}{subsection.8.5.2}%
-\contentsline {subsection}{\numberline {8.5.3}Articulation Points}{5}{subsection.8.5.3}%
-\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{5}{subsection.8.5.3}%
-\contentsline {subsection}{\numberline {8.5.4}Block Cut Tree}{5}{subsection.8.5.4}%
-\contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{5}{subsection.8.5.4}%
-\contentsline {subsection}{\numberline {8.5.5}Minimum Spanning Tree}{6}{subsection.8.5.5}%
-\contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{6}{subsection.8.5.5}%
-\contentsline {section}{\numberline {8.6}Directed Graph}{6}{section.8.6}%
-\contentsline {subsection}{\numberline {8.6.1}Topological Sort}{6}{subsection.8.6.1}%
-\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{6}{subsection.8.6.1}%
-\contentsline {subsection}{\numberline {8.6.2}Kosaraju}{6}{subsection.8.6.2}%
-\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{6}{subsection.8.6.2}%
+\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{6}{subsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.5.3}Articulation Points}{6}{subsection.8.5.3}%
+\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{6}{subsection.8.5.3}%
+\contentsline {subsection}{\numberline {8.5.4}Block Cut Tree}{6}{subsection.8.5.4}%
+\contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{6}{subsection.8.5.4}%
+\contentsline {subsection}{\numberline {8.5.5}Minimum Spanning Tree}{7}{subsection.8.5.5}%
+\contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{7}{subsection.8.5.5}%
+\contentsline {section}{\numberline {8.6}Directed Graph}{7}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Topological Sort}{7}{subsection.8.6.1}%
+\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{7}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Kosaraju}{7}{subsection.8.6.2}%
+\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{7}{subsection.8.6.2}%
 \contentsline {subsection}{\numberline {8.6.3}2-SAT}{7}{subsection.8.6.3}%
 \contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{7}{subsection.8.6.3}%
-\contentsline {section}{\numberline {8.7}Trees}{7}{section.8.7}%
-\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{7}{section.8.7}%
+\contentsline {section}{\numberline {8.7}Trees}{8}{section.8.7}%
+\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{8}{section.8.7}%
 \contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{8}{lstnumber.8.10.54}%
 \contentsline {section}{\numberline {8.8}Math}{8}{section.8.8}%
 \contentsline {chapter}{\numberline {9}Geometry}{8}{chapter.9}%
@@ -89,16 +92,16 @@
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
 \contentsline {section}{\numberline {10.1}Hashing}{8}{section.10.1}%
-\contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{8}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Z-Function}{8}{section.10.2}%
-\contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{8}{section.10.2}%
+\contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{9}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Z-Function}{9}{section.10.2}%
+\contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{9}{section.10.2}%
 \contentsline {section}{\numberline {10.3}KMP}{9}{section.10.3}%
 \contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{9}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Manacher}{9}{section.10.4}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{9}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Booth}{9}{section.10.5}%
-\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{9}{section.10.5}%
-\contentsline {chapter}{\numberline {11}Miscellaneous}{9}{chapter.11}%
+\contentsline {section}{\numberline {10.5}Booth}{10}{section.10.5}%
+\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{10}{section.10.5}%
+\contentsline {chapter}{\numberline {11}Miscellaneous}{10}{chapter.11}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}
 \ttl@stoptoc {chapters@11}
