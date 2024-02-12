@@ -11,21 +11,21 @@
 
 	\subsection{Minimum Cut}
 
-	In computer science and optimization theory, the max-flow min-cut theorem states that, in a flow network, 
-	the maximum amount of flow passing from the source to the sink is equal to the total weight of the edges 
-	in a minimum cut, i.e., the smallest total weight of the edges which if removed would disconnect the source from the sink. 
+In computer science and optimization theory, the max-flow min-cut theorem states that, in a flow network, 
+the maximum amount of flow passing from the source to the sink is equal to the total weight of the edges 
+in a minimum cut, i.e., the smallest total weight of the edges which if removed would disconnect the source from the sink. 
 
-	Let’s define an s-t cut C = (S-component, T-component) as a partition of V $\in$ G such that 
-	source s $\in$ S-component and sink t $\in$ T-component. Let’s also define a cut-set of C to be the set 
-	(u, v) $\in$ E | u $\in$ S-component, v $\in$ T-component such that if all edges in the cut-set of C are removed,
-	the Max Flow from s to t is 0 (i.e., s and t are disconnected). The cost of an s-t cut C is defined by the sum
-	of the capacities of the edges in the cut-set of C.
+Let's define an s-t cut C = (S-component, T-component) as a partition of V $\in$ G such that 
+source s $\in$ S-component and sink t $\in$ T-component. Let's also define a cut-set of C to be the set 
+(u, v) $\in$ E | u $\in$ S-component, v $\in$ T-component such that if all edges in the cut-set of C are removed,
+the Max Flow from s to t is 0 (i.e., s and t are disconnected). The cost of an s-t cut C is defined by the sum
+of the capacities of the edges in the cut-set of C.
 
-	The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS)
-	from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong
-	to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to
-	the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value.
-	This is the minimum over all possible s-t cuts values.
+The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS)
+from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong
+to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to
+the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value.
+This is the minimum over all possible s-t cuts values.
 
 	\subsection{Matching with Flow}
 

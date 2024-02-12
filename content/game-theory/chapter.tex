@@ -1,0 +1,232 @@
+\chapter{Game theory}
+
+\section{Classic Game}
+
+\begin{itemize}
+
+\item There are n piles (heaps), each one with $x_i$ stones.
+
+\item  Each turn, a players must remove t stones (non-zero) from a pile, turning $x_i$ into $y_i$.
+
+\item The game ends when it's impossible to make any more moves and the player without moves left lose.
+
+\end{itemize}
+
+\section{Bouton's Theorem}
+
+Let $s$ be the xor-sum value of all the piles sizes, 
+a state $s=0$ is a losing position and a state $s!=0$ is a winnig position
+
+\subsection{Proof}
+
+All wining positions will have at least one valid move to turn the game into a losing position.
+
+All losing positions will only have moves that turns the game into winning positions
+(except the base case when there are no piles left and the player already lost)
+
+\section{DAG Representation}
+
+Consider all game positions or states of the game as \textbf{Vertices} of a graph
+
+Valid moves are the transition between states, therefore, the directed \textbf{Edges} of the graph
+
+If a state has no outgoing edges, it's a dead end and a losing state (degenerated state). 
+
+If a state has only edges to winning states, therefore it is a losing state.
+
+if a state has at least one edge that is a losing state, it is a winning state.
+
+\section{Sprague-Grundy Theorem}
+
+Let's consider a state $u$ of a two-player impartial game and let $v_i$ be the states reachable from it.
+
+To this state, we can assign a fully equivalent game of Nim with one pile of size $x$. 
+The number $x$ is called the \textbf{Grundy value or nim-value or nimber} of the state $u$.
+
+If \textbf{all transitions} lead to a \textit{winning state},
+the current state must be a \textit{losing state} with nimber 0.
+
+If \textbf{at least one transition} lead to a \textit{losing state},
+the current state must be a \textit{winning state} with nimber > 0.
+
+The \textbf{MEX} operator satisfies both condition above and can be used to calculate the nim-value of a state:
+
+${nimber}_u =$ MEX of all ${{nimber}_v}_i$
+
+Viewing the game as a DAG, we can gradually calculate the Grundy values starting
+from vertices without outgoing edges (nimber=0).
+
+Note that the MEX operator \textbf{garantees} that all nim-values smaller than the considered nimber 
+can be reached, which is essentialy the nim game with a single heap with pile size = nimber. 
+
+There are only two operations that are used when considering a Sprague-Grundy game:
+
+\subsection{Composition}
+
+\textit{XOR operator to compose sub-games into a single composite game}
+
+When a game is played with multiple sub-games (as nim is played with multiple piles), 
+you are actually choosing one sub-game and making a valid move there 
+(choosing a pile and subtracting a value from it).
+
+The final result/winner will depend on all the sub-games played. Because you need to play all games.
+
+To compute the final result, one can simply consider the XOR of the nimbers of all sub-games.
+
+\subsection{Decomposition}
+
+\textit{MEX operator to compute the nimber of a state that has multiple transitions to other states}
+
+A state with nimber $x$ can be transitioned (decomposed) into all states with nimber $ y < x $
+
+Nevertheless a state may reach several states, only a single one will be used during the game.
+This shows the difference between \textbf{states} and \textbf{sub-games}: All sub-games must be played
+by the players, but the states of a sub-game may be ignored. 
+
+To compute the mex of a set efficiently:
+
+\kactlimport{mex.cpp}
+
+\section{Variations and Extensions}
+
+\subsection{Nim with Increases}
+
+Consider a modification of the classical nim game: a player can now add stones to a chosen pile instead of removing.
+
+Note that this extra rule needs to have a restriction to keep the game acyclic (finite game).
+
+\textbf{Lemma:} This move is not used in a winnig strategy and can be ignored.
+
+\textbf{Proof:} If a player adds $t$ stones in a pile, 
+the next player just needs to remove $t$ stones from this pile. 
+
+Considering that the game is finite and this ends sooner or later.
+
+\textbf{Example:}
+If the set of possible outcomes for a state is {0, 1, 2, 7, 8, 9}. 
+The nimber is 3, because the MEX is 3, which is the smallest nim-value you can't transition into 
+and also you can transition to all smaller nim-values.
+
+Note that {7, 8, 9} transitions can be ignored, because you can simply revert the play by subtracting the same amount.
+
+\section{Misère Game}
+
+In this version, the player who takes the last object loses.
+To consider this version, simply swap the winning and losing player of the normal version.
+
+\section{Staircase Nim}
+
+\subsection{Description}
+
+In Staircase Nim, there is a staircase with n steps, indexed from 0 to n-1. 
+In each step, there are zero or more coins.
+Two players play in turns. In his/her move, a player can choose a step ($i > 0$)
+and move one or more coins to step below it (i-1).
+The player who is unable to make a move lose the game.
+That means the game ends when all the coins are in step 0.
+
+\subsection{Strategy}
+
+We can divide the steps into two types, odd steps, and even steps.
+
+Now let's think what will happen if a player A move $x$ coins from an even step(non-zero) to an odd step.
+Player B can always move these same x coins to another even position and \textbf{the state of odd positions aren't affected}
+
+But if player A moves a coin from an odd step to an even step, similar logic won't work.
+Due to the degenerated case, there is a situation when x coins are moved from stair 1 to 0,
+and player B can't move these coins from stair 0 to -1 (not a valid move).
+
+From this argument, we can agree that coins in even steps are useless,
+they don't interfere to decide if a game state is winning or losing.
+
+Therefore, the staircase nim can be visualized as a simple nim game with only the odd steps.
+
+When stones are sent from an odd step to an even step, it is the same as removing stones from a pile in a classic nim game.
+
+And when stones are sent from even steps to odd ones, it is the same as the increasing variation described before.
+
+\section{Grundy's Game}
+
+Initially there is only one pile with x stones.
+Each turn, a player must divide a pile into two non-zero piles with different sizes.
+The player who can't do any more moves loses.
+
+\subsection{Degenerate (Base) States}
+
+x = 1 (nim-val = 0) (losing)
+
+x = 2 (nim-val = 0) (losing)
+
+\subsection{Other States}
+
+nim-val = MEX (all transitions)
+
+\subsubsection{Examples}
+
+\textbf{x = 3:}
+\begin{lstlisting}
+{2, 1} -> (0) xor (0) -> 0
+
+nim-val = MEX({0}) = 1
+\end{lstlisting}
+
+\textbf{x = 4:}
+\begin{lstlisting}
+{3, 1} -> (1) xor (0) -> 1
+
+nim-val = MEX({1}) = 0
+\end{lstlisting}
+
+\textbf{x = 5:}
+\begin{lstlisting}
+{4, 1} -> (0) xor (0) -> 0
+{3, 2} -> (1) xor (0) -> 1
+
+nim-val = MEX({0, 1}) = 2
+\end{lstlisting}
+
+\textbf{x = 6:}
+\begin{lstlisting}
+{5, 1} -> (2) xor (0) -> 2
+{4, 2} -> (0) xor (0) -> 0
+    
+nim-val = MEX({0, 2}) = 1
+\end{lstlisting}
+
+\textbf{Important observation:} All nimbers for (n $\ge$ 2000) are non-zero.
+(missing proof here and testing for values above 1e6).
+
+\section{Insta-Winning States}
+
+Classic nim game: if \textbf{all} piles become 0, you lose. (no more moves)
+
+Modified nim game: if \textbf{any} pile becomes 0, you lose.
+
+To adapt to this version of nim game, we create insta-winning states,
+which represents states that have a transition to any empty pile (will instantly win).
+Insta-winning states must have an specific nimber so they don't conflict with other nimbers when computing.
+A possible solution is nimber=INF, because no other nimber will be high enough to cause conflict. 
+
+Because of this adaptation, we can now ignore states with empty piles, and consider them with (null value = -1).
+And the (nimber = 0) now represents the states that only have transitions to insta-winning states.
+
+After this, beside winning states and losing states, we have added two new categories of states
+(insta-winning and empty-pile). Notice that:
+
+\begin{lstlisting}[language=raw]
+empty-pile <- insta-winning <- nimber(0)
+\end{lstlisting}
+
+Therefore, we have returned to the classical nim game and can proceed normally.
+
+OBS: \textit{Empty piles} (wasn't empty before) (nimber = -1) is different from \textit{Non-existent piles} (never existed) (nimber = 0)
+
+Usage Example: \url{https://codeforces.com/gym/101908/problem/B}
+
+\section{References}
+
+\url{https://cp-algorithms.com/game_theory/sprague-grundy-nim.html}
+
+\url{https://codeforces.com/blog/entry/66040}
+
+\url{https://brilliant.org/wiki/nim/}
