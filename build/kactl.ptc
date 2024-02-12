@@ -98,7 +98,7 @@
 \contentsline {section}{\numberline {10.3}KMP}{9}{section.10.3}%
 \contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{9}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Suffix Array}{9}{section.10.4}%
-\contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{9}{section.10.4}%
+\contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{9}{lstnumber.-1.10}%
 \contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{10}{lstnumber.10.4.20}%
 \contentsline {section}{\numberline {10.5}Manacher}{10}{section.10.5}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{10}{section.10.5}%

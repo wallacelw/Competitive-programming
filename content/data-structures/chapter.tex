@@ -4,19 +4,21 @@
 
     Policy Based Data Structures (PBDS) from gcc compiler
 
-    Ordered Multiset can be created using ordered\_set \textless pll\textgreater {val, idx}
+    Ordered Multiset can be created using ordered\_set\textless pll\textgreater {val, idx}
 
     \textbf{order\_of\_key()} can search for non-existent keys!
     
-    \textbf{find\_by\_order()} required existent key and return the 0-idx position of given value.
-    Therefore, it returns the numbers of elements that are smaller than the value given;
+    \textbf{find\_by\_order()} requires existent key and return the 0-idx position of the given value.
+    Therefore, it returns the numbers of elements that are smaller than the given value;
 
     \kactlimport{ordered-set.cpp}
 
 \section{Disjoint Set Union}
 
     There are two optional improvements:
+
         -Tree Balancing 
+        
         -Path Compression
 
     If one improvement is used, 
@@ -38,7 +40,7 @@
 \section{Convex Hull Trick}
 
     If multiple transitions of the DP can be seen as 
-    first degree polynomials (lines). CHT can be used to optimized It
+    first degree polynomials (lines). CHT can be used to optimized it
 
     Some valid functions:
 

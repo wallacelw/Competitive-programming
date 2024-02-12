@@ -74,46 +74,69 @@
     The suffix array is the array with size n, whose values are the indexes 
     from the longest substring (0) to the smallest substring (n) after ordering it lexicographically. 
     Example:
-    
-    \begin{center}
-    \includegraphics[width=90mm]{content/strings/suffix-array.pdf}
-    \end{center}
 
-    Note that the lenght of the string i is: {s.size()-sa[i]}
+    \begin{lstlisting}[language=raw]
+    Let the given string be "banana".
+
+    0 banana                          5 a
+    1 anana     Sort the Suffixes     3 ana
+    2 nana      ---------------->     1 anana  
+    3 ana        alphabetically       0 banana  
+    4 na                              4 na   
+    5 a                               2 nana
+    
+    So the suffix array for "banana" is {5, 3, 1, 0, 4, 2}
+    \end{lstlisting}
+
+    Note that the length of the string i is: (s.size()-sa[i])
 
     \kactlimport{suffix-array.cpp}
 
     Kasai generates an array of size n (like the suffix array), 
-    whose values indicates the lenght of the longest common prefix beetwen sa[i] and sa[i+1]
+    whose values indicates the lenght of the longest common prefix beetwen (sa[i] and sa[i+1])
 
     \kactlimport{kasai.cpp}
 
     \textbf{Problems that can be solved:}
 
-    Numbers of Distinct Substrings: (n*(n+1))/2 - lcp[i] {for all i}
+    Numbers of Distinct Substrings: 
+    
+    \begin{itemize}
+    \item $\frac{n(n+1)}{2} - lcp[i]$ (for all i)
+    \end{itemize}
 
-    Longest Repeated Substring: biggest lcp[i]. The position can be found in sa[i]
+    Longest Repeated Substring:
 
-    Find how many distinct substrings there are for each len in [1:n]: Use delta encoding and the fact that lcp[i] counts the repeated substring between s.substr(sa[i]) and s.substr(sa[i+1]), which are the substrings corresponding to the commom prefix.
+    \begin{itemize}
+    \item biggest lcp[i]. The position can be found in sa[i]
+    \end{itemize}
 
+    Find how many distinct substrings there are for each len in [1:n]:
+
+    \begin{itemize}
+    \item Use delta encoding and the fact that lcp[i] counts the repeated substring between s.substr(sa[i]) and s.substr(sa[i+1]), which are the substrings corresponding to the commom prefix.
+    \end{itemize}
+    
     Find the k-th distinct substring: 
 
-    % string s; cin >> s;
-    % ll n = s.size();
-    
-    % auto sa = suffix_array(s);
-    % auto lcp = kasai(s, sa);
+    \begin{lstlisting}
+    string s; cin >> s;
+    ll n = s.size();
 
-    % ll k; cin >> k;
+    auto sa = suffix_array(s);
+    auto lcp = kasai(s, sa);
 
-    % for(ll i=0; i<n; i++) {
-    %     ll len = n-sa[i];
-    %     if (k <= len) {
-    %         cout << s.substr(sa[i], k) << endl;
-    %         break;
-    %     }
-    %     k += lcp[i] - len;
-    % }
+    ll k; cin >> k;
+
+    for(ll i=0; i<n; i++) {
+        ll len = n-sa[i];
+        if (k <= len) {
+            cout << s.substr(sa[i], k) << endl;
+            break;
+        }
+        k += lcp[i] - len;
+    }
+    \end{lstlisting}
 
 \section{Manacher}
 
