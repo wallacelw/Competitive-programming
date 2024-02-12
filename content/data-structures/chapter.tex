@@ -4,7 +4,7 @@
 
     Policy Based Data Structures (PBDS) from gcc compiler
 
-    Ordered Multiset can be created using ordered\_set<pll> {val, idx}
+    Ordered Multiset can be created using ordered\_set \textless pll\textgreater {val, idx}
 
     \textbf{order\_of\_key()} can search for non-existent keys!
     
@@ -34,7 +34,21 @@
     considerer offiline approach, ordering the queries by L for example. 
 
     \kactlimport{segRecursive.cpp}
+
+\section{Convex Hull Trick}
+
+    If multiple transitions of the DP can be seen as 
+    first degree polynomials (lines). CHT can be used to optimized It
+
+    Some valid functions:
+
+    $ax + b$
     
+    $cx^2 + ax + b$ 
+    (ignore $cx^2$ if c is independent)
+
+    \kactlimport{cht-dynamic.cpp}
+
 \section{Li-chao Tree}
 
     Works for any type of function that has the \textbf{transcending property}:

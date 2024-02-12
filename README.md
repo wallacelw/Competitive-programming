@@ -53,6 +53,16 @@ int32_t main(){ sws;
 }  
 ```
 
+## KACTL notebook
+
+```bash
+
+sudo apt-get install texlive-latex-base
+
+sudo apt-get install texlive-latex-extra
+
+```
+
 ## Checklist
 
 **Thinking about solution:**

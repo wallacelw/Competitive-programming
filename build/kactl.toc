@@ -24,9 +24,9 @@
 \contentsline {section}{\numberline {3.1}Ordered Set}{3}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Disjoint Set Union}{3}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Segment Tree}{3}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Li-chao Tree}{4}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Convex Hull Trick}{4}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Li-chao Tree}{4}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Dynamic Programming}{4}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Convex Hull Trick}{4}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Numerical}{4}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Number theory}{4}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Combinatorial}{4}{chapter.7}%

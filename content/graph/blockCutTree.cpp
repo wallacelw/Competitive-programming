@@ -34,7 +34,7 @@
 // O(n+m)
 
 // 0-idx graph!!!
-vector<vll> g(MAX), tree, blocks; // 2-vertex-connected-COMPonentS
+vector<vll> g(MAX), tree, blocks; 
 vector<vector<pll>> blockEdges;
 stack<ll> st; // st for vertices,
 stack<pll> st2; // st2 for edges
