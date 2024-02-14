@@ -79,55 +79,62 @@
 \contentsline {chapter}{\numberline {9}Graph}{6}{chapter.9}%
 \ttl@stoptoc {chapters@8}
 \ttl@starttoc {chapters@9}
-\contentsline {section}{\numberline {9.1}Fundamentals}{6}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Network flow}{6}{section.9.2}%
-\contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{6}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Minimum Cut}{6}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Matching with Flow}{7}{subsection.9.2.2}%
-\contentsline {section}{\numberline {9.3}Matching}{7}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Coloring}{7}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Undirected Graph}{7}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Bridges (Cut Edges)}{7}{subsection.9.5.1}%
-\contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{7}{subsection.9.5.1}%
-\contentsline {subsection}{\numberline {9.5.2}Bridge Tree}{7}{subsection.9.5.2}%
-\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{7}{subsection.9.5.2}%
-\contentsline {subsection}{\numberline {9.5.3}Articulation Points}{7}{subsection.9.5.3}%
-\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{7}{subsection.9.5.3}%
+\contentsline {section}{\numberline {9.1}Network flow}{6}{section.9.1}%
+\contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{6}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Minimum Cut}{6}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Matching with Flow}{7}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}Matching}{7}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Coloring}{7}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Shortest Paths}{7}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Dijkstra}{7}{subsection.9.4.1}%
+\contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{7}{subsection.9.4.1}%
+\contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{7}{lstnumber.9.2.19}%
+\contentsline {subsection}{\numberline {9.4.2}Bellman-Ford}{7}{subsection.9.4.2}%
+\contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{7}{subsection.9.4.2}%
+\contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{7}{lstnumber.9.4.15}%
+\contentsline {section}{\numberline {9.5}Undirected Graph}{8}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Bridges (Cut Edges)}{8}{subsection.9.5.1}%
+\contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{8}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}Bridge Tree}{8}{subsection.9.5.2}%
+\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{8}{subsection.9.5.2}%
+\contentsline {subsection}{\numberline {9.5.3}Articulation Points}{8}{subsection.9.5.3}%
+\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{8}{subsection.9.5.3}%
 \contentsline {subsection}{\numberline {9.5.4}Block Cut Tree}{8}{subsection.9.5.4}%
 \contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{8}{subsection.9.5.4}%
-\contentsline {subsection}{\numberline {9.5.5}Minimum Spanning Tree}{8}{subsection.9.5.5}%
-\contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{8}{subsection.9.5.5}%
-\contentsline {section}{\numberline {9.6}Directed Graph}{8}{section.9.6}%
-\contentsline {subsection}{\numberline {9.6.1}Topological Sort}{8}{subsection.9.6.1}%
-\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{8}{subsection.9.6.1}%
-\contentsline {subsection}{\numberline {9.6.2}Kosaraju}{9}{subsection.9.6.2}%
-\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{9}{subsection.9.6.2}%
-\contentsline {subsection}{\numberline {9.6.3}2-SAT}{9}{subsection.9.6.3}%
-\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{9}{subsection.9.6.3}%
-\contentsline {section}{\numberline {9.7}Trees}{9}{section.9.7}%
-\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{9}{section.9.7}%
-\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{10}{lstnumber.9.10.54}%
-\contentsline {section}{\numberline {9.8}Math}{10}{section.9.8}%
-\contentsline {chapter}{\numberline {10}Geometry}{10}{chapter.10}%
+\contentsline {subsection}{\numberline {9.5.5}Strong Orientation}{9}{subsection.9.5.5}%
+\contentsline {subsection}{\numberline {9.5.6}Minimum Spanning Tree}{9}{subsection.9.5.6}%
+\contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{9}{subsection.9.5.6}%
+\contentsline {section}{\numberline {9.6}Directed Graph}{9}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Topological Sort}{9}{subsection.9.6.1}%
+\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{9}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.6.2}Kosaraju}{10}{subsection.9.6.2}%
+\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{10}{subsection.9.6.2}%
+\contentsline {subsection}{\numberline {9.6.3}2-SAT}{10}{subsection.9.6.3}%
+\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{10}{subsection.9.6.3}%
+\contentsline {section}{\numberline {9.7}Trees}{10}{section.9.7}%
+\contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{10}{section.9.7}%
+\contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{11}{lstnumber.9.14.54}%
+\contentsline {section}{\numberline {9.8}Math}{11}{section.9.8}%
+\contentsline {chapter}{\numberline {10}Geometry}{11}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
-\contentsline {chapter}{\numberline {11}Strings}{10}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Strings}{11}{chapter.11}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}
-\contentsline {section}{\numberline {11.1}Hashing}{10}{section.11.1}%
-\contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{10}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Z-Function}{10}{section.11.2}%
-\contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{11}{section.11.2}%
-\contentsline {section}{\numberline {11.3}KMP}{11}{section.11.3}%
-\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{11}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Suffix Array}{11}{section.11.4}%
-\contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{11}{lstnumber.-6.10}%
-\contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{11}{lstnumber.11.4.20}%
-\contentsline {section}{\numberline {11.5}Manacher}{11}{section.11.5}%
-\contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{11}{section.11.5}%
-\contentsline {section}{\numberline {11.6}Booth}{12}{section.11.6}%
-\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{12}{section.11.6}%
-\contentsline {chapter}{\numberline {12}Miscellaneous}{12}{chapter.12}%
+\contentsline {section}{\numberline {11.1}Hashing}{11}{section.11.1}%
+\contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{11}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Z-Function}{11}{section.11.2}%
+\contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{12}{section.11.2}%
+\contentsline {section}{\numberline {11.3}KMP}{12}{section.11.3}%
+\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{12}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Suffix Array}{12}{section.11.4}%
+\contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{12}{lstnumber.-6.10}%
+\contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{12}{lstnumber.11.4.20}%
+\contentsline {section}{\numberline {11.5}Manacher}{12}{section.11.5}%
+\contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{12}{section.11.5}%
+\contentsline {section}{\numberline {11.6}Booth}{13}{section.11.6}%
+\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{13}{section.11.6}%
+\contentsline {chapter}{\numberline {12}Miscellaneous}{13}{chapter.12}%
 \ttl@stoptoc {chapters@11}
 \ttl@starttoc {chapters@12}
 \ttl@stoptoc {chapters@12}

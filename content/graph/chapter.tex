@@ -1,7 +1,5 @@
 \chapter{Graph}
 
-\section{Fundamentals}
-
 \section{Network flow}
 
 	In optimization theory, maximum flow problems involve finding a 
@@ -44,6 +42,43 @@ This is the minimum over all possible s-t cuts values.
 \section{Matching}
 
 \section{Coloring}
+
+\section{Shortest Paths}
+
+	For weighted directed graphs
+
+	\subsection{Dijkstra}
+
+		Single Source and there \textbf{cannot} be any negative weighted edges. 
+
+		\kactlimport{dijkstra.cpp}
+
+		By inverting the sorting order, Dijkstra can be modified for the opposite operation: \textit{longest paths}.
+
+		Furthermore, Dijkstra be extended to keep track of more information, such as:
+
+		\begin{itemize}
+			\item how many minimum-price routes are there? (modulo $10^9+7$)
+			\item what is the minimum number of flights in a minimum-price route?
+			\item what is the maximum number of flights in a minimum-price route?
+		\end{itemize}
+
+		\kactlimport{extendedDijkstra.cpp}
+
+	\subsection{Bellman-Ford}
+
+	Single Source and it \textbf{supports} negative edges
+
+	\textbf{Conjecture:} After at most n-1 (Vertices-1) iterations, all shortest paths will be found.
+	
+	\kactlimport{bellman-ford.cpp}
+
+	By iterating once more, one can check if the last iteration reduced once again any distance. If so, it means that
+	there must be a negative cycle, because the shortest distance should have been found before elseway.
+	
+	To retrieve the negative cycle itself, one can keep track of the last vertice that reaches a considered vertice
+
+	\kactlimport{bellman-ford-cycle.cpp}
 
 \section{Undirected Graph}
 
@@ -102,6 +137,27 @@ This is the minimum over all possible s-t cuts values.
 
 	\kactlimport{blockCutTree.cpp}
 	
+	\subsection{Strong Orientation}
+
+	A \textbf{strong orientation} of an undirected graph is an assignment of a direction to each edge that makes it a strongly connected graph.
+	That is, after the orientation we should be able to visit any vertex from any vertex by following the directed edges.
+
+	Of course, this cannot be done to every graph. Consider a \textbf{bridge} in a graph.
+	We have to assign a direction to it and by doing so we make this bridge "crossable" in only one direction.
+	That means we can't go from one of the bridge's ends to the other, so we can't make the graph strongly connected.
+
+	Now consider a DFS through a bridgeless connected graph. Clearly, we will visit each vertex.
+	And since there are no bridges, we can remove any DFS tree edge and still be able to go from below the edge to
+	above the edge by using a path that contains at least one back edge. 
+	From this follows that from any vertex we can go to the root of the DFS tree. 
+	Also, from the root of the DFS tree we can visit any vertex we choose. We found a strong orientation!
+
+	In other words, to strongly orient a bridgeless connected graph, 
+	run a DFS on it and let the DFS tree edges point away from the DFS root and all other edges 
+	from the descendant to the ancestor in the DFS tree.
+
+	The result that bridgeless connected graphs are exactly the graphs that have strong orientations is called \textbf{Robbins' theorem}.
+
 	\subsection{Minimum Spanning Tree}
 
 	A minimum spanning tree (MST) or minimum weight spanning tree is a subset of the edges
@@ -111,7 +167,7 @@ This is the minimum over all possible s-t cuts values.
 
 	\kactlimport{kruskal.cpp}
 
-	\section{Directed Graph}
+\section{Directed Graph}
 
 	\subsection{Topological Sort}
 

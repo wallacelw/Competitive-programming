@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.2.12)  12 FEB 2024 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.2.12)  14 FEB 2024 13:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -690,6 +690,29 @@ runsystem(python3 content/tex/preprocessor.py --print-header "|dinic.cpp" -o bui
  (./build/header2.tmp) [6]
 runsystem(rm -f build/kactl.tmp)...executed.
 
+runsystem(python3 content/tex/preprocessor.py -i "content/graph/dijkstra.cpp" -o build/kactl.tmp )...executed.
+
+ (./build/kactl.tmp)
+runsystem(rm -f build/kactl.tmp)...executed.
+
+runsystem(python3 content/tex/preprocessor.py -i "content/graph/extendedDijkstra.cpp" -o build/kactl.tmp )...executed.
+
+ (./build/kactl.tmp)
+runsystem(rm -f build/kactl.tmp)...executed.
+
+runsystem(python3 content/tex/preprocessor.py -i "content/graph/bellman-ford.cpp" -o build/kactl.tmp )...executed.
+
+ (./build/kactl.tmp)
+runsystem(rm -f build/kactl.tmp)...executed.
+
+runsystem(python3 content/tex/preprocessor.py -i "content/graph/bellman-ford-cycle.cpp" -o build/kactl.tmp )...executed.
+
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "bellman-ford-cycle.cpp|bellman-ford-cycle.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [7]
+runsystem(rm -f build/kactl.tmp)...executed.
+
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/bridges.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
@@ -703,14 +726,14 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/articulation.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
-runsystem(python3 content/tex/preprocessor.py --print-header "articulation.cpp|articulation.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [7]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/blockCutTree.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)
+ (./build/kactl.tmp
+runsystem(python3 content/tex/preprocessor.py --print-header "blockCutTree.cpp|blockCutTree.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [8])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/kruskal.cpp" -o build/kactl.tmp )...executed.
@@ -723,7 +746,7 @@ runsystem(python3 content/tex/preprocessor.py -i "content/graph/toposort.cpp" -o
  (./build/kactl.tmp)
 runsystem(python3 content/tex/preprocessor.py --print-header "toposort.cpp|toposort.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [8]
+ (./build/header2.tmp) [9]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/kosaraju.cpp" -o build/kactl.tmp )...executed.
@@ -741,7 +764,7 @@ runsystem(python3 content/tex/preprocessor.py -i "content/graph/lca.cpp" -o buil
  (./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "lca.cpp|lca.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [9])
+ (./build/header2.tmp) [10])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/queryTree.cpp" -o build/kactl.tmp )...executed.
@@ -757,7 +780,7 @@ runsystem(python3 content/tex/preprocessor.py -i "content/strings/hashing.cpp" -
 (./build/kactl.tmp)
 runsystem(python3 content/tex/preprocessor.py --print-header "|hashing.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [10]
+ (./build/header2.tmp) [11]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/strings/zfunction.cpp" -o build/kactl.tmp )...executed.
@@ -785,7 +808,7 @@ runsystem(python3 content/tex/preprocessor.py -i "content/strings/manacher.cpp" 
  (./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "manacher.cpp|manacher.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [11]
+ (./build/header2.tmp) [12]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 25.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
@@ -799,7 +822,7 @@ Chapter 12.
 )
 runsystem(python3 content/tex/preprocessor.py --print-header "|booth.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [12] (./content/appendix/chapter.texpdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) has been already used, duplicate ignored
+ (./build/header2.tmp) [13] (./content/appendix/chapter.texpdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2 \chapter{Techniques}
@@ -948,7 +971,7 @@ l.36 	Bipartite
                 matching))
 runsystem(python3 content/tex/preprocessor.py --print-header "|techniques.txt" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [13]
+ (./build/header2.tmp) [14]
 \tf@ptc=\write5
 \openout5 = `kactl.ptc'.
 
@@ -963,18 +986,18 @@ Package rerunfilecheck Info: File `kactl.out' has not changed.
 (rerunfilecheck)             Checksum: FF099628286B3A93E35350193AE2E689;1189.
  ) 
 Here is how much of TeX's memory you used:
- 17462 strings out of 480247
- 264632 string characters out of 5896151
- 1580920 words of memory out of 5000000
- 33714 multiletter control sequences out of 15000+600000
+ 17601 strings out of 480247
+ 266895 string characters out of 5896151
+ 1579920 words of memory out of 5000000
+ 33734 multiletter control sequences out of 15000+600000
  482995 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,16n,77p,563b,2207s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/wawa/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/wawa/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti0700.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on build//kactl.pdf (14 pages, 766824 bytes).
+Output written on build//kactl.pdf (15 pages, 778364 bytes).
 PDF statistics:
- 2030 PDF objects out of 2073 (max. 8388607)
- 1882 compressed objects within 19 object streams
- 1319 named destinations out of 1440 (max. 500000)
+ 2165 PDF objects out of 2487 (max. 8388607)
+ 2014 compressed objects within 21 object streams
+ 1428 named destinations out of 1440 (max. 500000)
  107 words of extra memory for PDF output out of 10000 (max. 10000000)
 
