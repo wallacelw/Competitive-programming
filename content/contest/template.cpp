@@ -24,6 +24,7 @@ template<typename... A> void dbg(A const&... a){((cerr<<"{"<<a<<"} "), ...);cerr
 const int MAX = 3e5+10;
 const int INF = INT32_MAX;
 const long long MOD = 1e9+7;
+const long long INF = 0x3f3f3f3f3f3f3f3f;
 const long long LLINF = INT64_MAX;
 const long double EPS = 1e-7;
 const long double PI = acos(-1);

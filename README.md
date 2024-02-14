@@ -33,8 +33,8 @@ using namespace std;
 
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
-#define MSB(i) (32 - __builtin_clz(i)) // or 64 - clzll, clz=count_leading_zeros
-#define BITS(i) __builtin_popcountll(i) // count bits == 1
+#define MSB(i) (32 - __builtin_clz(i)) //64 - clzll
+#define BITS(i) __builtin_popcountll(i) //count set bits
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
@@ -44,6 +44,7 @@ template<typename... A> void dbg(A const&... a){((cerr<<"{"<<a<<"} "), ...);cerr
 const int MAX = 3e5+10;
 const int INF = INT32_MAX;
 const long long MOD = 1e9+7;
+const long long INF = 0x3f3f3f3f3f3f3f3f;
 const long long LLINF = INT64_MAX;
 const long double EPS = 1e-7;
 const long double PI = acos(-1);
