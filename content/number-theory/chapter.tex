@@ -5,10 +5,20 @@
     These sieves are used to find all primes up to an upper bound N, which is usually $10^7$
 
     \subsection{Eratosthenes}
-    
+
+    Eratosthenes uses less memory than the linear sieve and is almost as fast
+
     \kactlimport{eratosthenes.cpp}
 
     \subsection{Linear Sieve}
+
+    Due to the lp vector, one can compute the factorization of any number very quickly!
+
+    Can check primality with $lp[i] == i$
+
+    Uses more memory, because lp is a vector of int or ll and not bits.
+
+    \textbf{Proof of time complexity:}
 
     We need to prove that the algorithm sets all values
     $lp[]$ correctly, and that every value will be set exactly once. 
