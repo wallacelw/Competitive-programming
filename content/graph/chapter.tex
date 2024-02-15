@@ -162,7 +162,18 @@ This is the minimum over all possible s-t cuts values.
 	run a DFS on it and let the DFS tree edges point away from the DFS root and all other edges 
 	from the descendant to the ancestor in the DFS tree.
 
+	% https://cses.fi/problemset/result/8270539/
+
 	The result that bridgeless connected graphs are exactly the graphs that have strong orientations is called \textbf{Robbins' theorem}.
+
+		\subsubsection{Acyclic Graph Orientation}
+
+			\textbf{Problem:} Given an undirected graph, your task is to choose a direction for each edge so that the resulting directed graph is acyclic.
+
+			\textbf{Solution:} Do a dfs tree, every span-edge is oriented according to the dfs transversal,
+			and every back-edge is oriented contrary to the dfs transversal
+
+			% https://cses.fi/problemset/result/8476041/
 
 	\subsection{Minimum Spanning Tree}
 
