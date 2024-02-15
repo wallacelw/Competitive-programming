@@ -207,8 +207,8 @@ which represents states that have a transition to any empty pile (will instantly
 Insta-winning states must have an specific nimber so they don't conflict with other nimbers when computing.
 A possible solution is nimber=INF, because no other nimber will be high enough to cause conflict. 
 
-Because of this adaptation, we can now ignore states with empty piles, and consider them with (null value = -1).
-And the (nimber = 0) now represents the states that only have transitions to insta-winning states.
+Because of this adaptation, we can now ignore states with empty piles, and consider them with ($null value = -1$).
+And the ($nimber = 0$) now represents the states that only have transitions to insta-winning states.
 
 After this, beside winning states and losing states, we have added two new categories of states
 (insta-winning and empty-pile). Notice that:
@@ -219,7 +219,7 @@ empty-pile <- insta-winning <- nimber(0)
 
 Therefore, we have returned to the classical nim game and can proceed normally.
 
-OBS: \textit{Empty piles} (wasn't empty before) (nimber = -1) is different from \textit{Non-existent piles} (never existed) (nimber = 0)
+OBS: \textit{Empty piles} (wasn't empty before) ($nimber = -1$) is different from \textit{Non-existent piles} (never existed) (nimber = 0)
 
 Usage Example: \url{https://codeforces.com/gym/101908/problem/B}
 

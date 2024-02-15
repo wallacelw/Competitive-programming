@@ -61,6 +61,7 @@
 \contentsline {section}{\numberline {9.4}Shortest Paths}{7}{section.9.4}%
 \contentsline {subsection}{\numberline {9.4.1}Dijkstra}{7}{subsection.9.4.1}%
 \contentsline {subsection}{\numberline {9.4.2}Bellman-Ford}{7}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Floyd Warshall}{8}{subsection.9.4.3}%
 \contentsline {section}{\numberline {9.5}Undirected Graph}{8}{section.9.5}%
 \contentsline {subsection}{\numberline {9.5.1}Bridges (Cut Edges)}{8}{subsection.9.5.1}%
 \contentsline {subsection}{\numberline {9.5.2}Bridge Tree}{8}{subsection.9.5.2}%
@@ -77,10 +78,10 @@
 \contentsline {chapter}{\numberline {10}Geometry}{11}{chapter.10}%
 \contentsline {chapter}{\numberline {11}Strings}{11}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Hashing}{11}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Z-Function}{11}{section.11.2}%
+\contentsline {section}{\numberline {11.2}Z-Function}{12}{section.11.2}%
 \contentsline {section}{\numberline {11.3}KMP}{12}{section.11.3}%
 \contentsline {section}{\numberline {11.4}Suffix Array}{12}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Manacher}{12}{section.11.5}%
+\contentsline {section}{\numberline {11.5}Manacher}{13}{section.11.5}%
 \contentsline {section}{\numberline {11.6}Booth}{13}{section.11.6}%
 \contentsline {chapter}{\numberline {12}Miscellaneous}{13}{chapter.12}%
 \contentsfinish 

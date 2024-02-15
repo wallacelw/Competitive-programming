@@ -67,18 +67,24 @@ This is the minimum over all possible s-t cuts values.
 
 	\subsection{Bellman-Ford}
 
-	Single Source and it \textbf{supports} negative edges
+		Single Source and it \textbf{supports} negative edges
 
-	\textbf{Conjecture:} After at most n-1 (Vertices-1) iterations, all shortest paths will be found.
+		\textbf{Conjecture:} After at most n-1 (Vertices-1) iterations, all shortest paths will be found.
+		
+		\kactlimport{bellman-ford.cpp}
+
+		By iterating once more, one can check if the last iteration reduced once again any distance. If so, it means that
+		there must be a negative cycle, because the shortest distance should have been found before elseway.
+		
+		To retrieve the negative cycle itself, one can keep track of the last vertice that reaches a considered vertice
+
+		\kactlimport{bellman-ford-cycle.cpp}
 	
-	\kactlimport{bellman-ford.cpp}
+	\subsection{Floyd Warshall}
 
-	By iterating once more, one can check if the last iteration reduced once again any distance. If so, it means that
-	there must be a negative cycle, because the shortest distance should have been found before elseway.
-	
-	To retrieve the negative cycle itself, one can keep track of the last vertice that reaches a considered vertice
+	All-Pair Shortest Paths
 
-	\kactlimport{bellman-ford-cycle.cpp}
+	\kactlimport{floyd-warshall.cpp}
 
 \section{Undirected Graph}
 
