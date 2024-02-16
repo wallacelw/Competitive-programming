@@ -39,9 +39,49 @@ This is the minimum over all possible s-t cuts values.
 	It's possible to access dinic.edges, which is a vector that contains all edges and also its respective attributes, 
 	like the \textit{flow} passing through each edge. Remember to consider that negative flow exist for reverse edges.
 
+	\subsection{Maximum Independent Set}
+
+	\textbf{TODO: Add this blog}
+	\url{https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/maximum-independent-set-in-bipartite-graphs.html}
+
 \section{Matching}
 
+	\subsection{Hungarian}
+
+	Solves the \textbf{Assignment Problem:}
+
+	There are several standard formulations of the assignment problem (all of which are essentially equivalent). Here are some of them:
+
+	There are $n$ jobs and $n$ workers. Each worker specifies the amount of money they expect for a particular job.
+	Each worker can be assigned to only one job. The objective is to assign jobs to workers in a way that minimizes the total cost.
+
+	Given an $n \times n$ matrix $A$, the task is to select one number from each row such that exactly 
+	one number is chosen from each column, and the sum of the selected numbers is minimized.
+
+	Given an $n \times n$ matrix $A$, the task is to find a permutation $p$ of length $n$ such that the value
+	$\sum A[i]\left[p[i]\right]$ is minimized.
+
+	Consider a complete bipartite graph with $n$ vertices per part, where each edge is assigned a weight.
+	The objective is to find a perfect matching with the minimum total weight.
+
+	It is important to note that all the above scenarios are "square" problems, meaning both dimensions are always equal to
+	$n$. In practice, similar "rectangular" formulations are often encountered, where $n$ is not equal to 
+	$m$, and the task is to select $\min(n,m)$ elements. However, it can be observed that a "rectangular" 
+	problem can always be transformed into a "square" problem by adding rows or columns with zero or infinite values, respectively.
+
+	We also note that by analogy with the search for a minimum solution, one can also pose the problem of finding a maximum solution. 
+	However, these two problems are equivalent to each other: it is enough to multiply all the weights by $-1$.
+
+	\kactlimport{hungarian.cpp}
+	
 \section{Coloring}
+
+	\subsection{k-Coloring}
+
+		\textbf{TODO: Add this blog}
+		\url{https://codeforces.com/blog/entry/57496}
+		\url{https://en.wikipedia.org/wiki/Graph_coloring}
+		\url{https://open.kattis.com/problems/coloring}
 
 \section{Shortest Paths}
 
