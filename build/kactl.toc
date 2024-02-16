@@ -7,9 +7,9 @@
 \contentsline {section}{\numberline {3.3}Segment Trees}{2}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Recursive SegTree}{2}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}PA Segtree}{2}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Convex Hull Trick}{3}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Li-chao Tree}{3}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Dynamic Programming}{3}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Convex Hull Trick}{3}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Li-chao Tree}{3}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Game theory}{3}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Classic Game}{3}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Bouton's Theorem}{3}{section.5.2}%

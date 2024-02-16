@@ -1,1 +1,27 @@
 \chapter{Dynamic Programming}
+
+\section{Convex Hull Trick}
+
+    If multiple transitions of the DP can be seen as 
+    first degree polynomials (lines). CHT can be used to optimized it
+
+    Some valid functions:
+
+    $ax + b$
+    
+    $cx^2 + ax + b$ 
+    (ignore $cx^2$ if c is independent)
+
+    \kactlimport{cht-dynamic.cpp}
+
+\section{Li-chao Tree}
+
+    Works for any type of function that has the \textbf{transcending property}:
+
+    Given two functions f(x),g(x) of that type, 
+    if f(t) is greater than/smaller than g(t) for some x=t,
+    then f(x) will be greater than/smaller than g(x) for x>t.
+    In other words, once f(x) “win/lose” g(x), f(x) will continue to “win/lose” g(x).
+
+    The most common one is the line function: $ ax + b $
+    

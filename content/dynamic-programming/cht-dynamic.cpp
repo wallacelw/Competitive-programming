@@ -4,6 +4,7 @@
  * Description: Dynamic version of CHT, thefore, one can
  * insert lines in any order. There is no line removal operator
  * Time: O(\log{N}) per query and per insertion
+ * Status: Tested (https://cses.fi/problemset/result/8483913/)
  */
 
 // Convex Hull Trick Dinamico

@@ -21,12 +21,12 @@
 \contentsline {subsection}{\texttt {segRecursive.cpp}\hspace {0.2em}}{2}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}PA Segtree}{2}{subsection.3.3.2}%
 \contentsline {subsection}{\texttt {segPA.cpp}\hspace {0.2em}}{2}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Convex Hull Trick}{3}{section.3.4}%
-\contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{3}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Li-chao Tree}{3}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Dynamic Programming}{3}{chapter.4}%
 \ttl@stoptoc {chapters@3}
 \ttl@starttoc {chapters@4}
+\contentsline {section}{\numberline {4.1}Convex Hull Trick}{3}{section.4.1}%
+\contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{3}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Li-chao Tree}{3}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Game theory}{3}{chapter.5}%
 \ttl@stoptoc {chapters@4}
 \ttl@starttoc {chapters@5}
