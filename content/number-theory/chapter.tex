@@ -41,3 +41,36 @@
     $lp []$ there. Q.E.D.
 
     \kactlimport{linear-sieve.cpp}
+
+\section{Extended Euclid}
+
+    Solves the $ ax + by = gcd(a, b)$ equation.
+
+    \subsection{Inverse Multiplicative}
+
+    if \textbf{ $gcd(a, b) = 1$ }:
+
+    then:
+
+    $$ax + by \equiv 1$$
+
+    also, if you apply $\pmod{b}$ to the equation:
+
+    $$ ax \pmod{b} + by \pmod{b} \equiv 1 \pmod{b} $$
+    $$ ax \equiv 1 \pmod{b} $$
+
+    In other words, one can find the inverse multiplicative of any number $a$ in modulo $b$ if $gcd(a, b) = 1$
+
+    \subsection{Diofantine Equation}
+
+    $$ ax \equiv c \pmod{b} $$
+
+    if $g = gcd({a, b, c}) \neq 1$, divide everything by $g$.
+
+    After this, if $gcd(a, b) = 1$, find $a^{-1}$, then multiply both sides of the Diofantine equation.
+
+    $$ x \equiv c * a^{-1} \pmod{b} $$
+
+    After this, one has simply found $x$
+
+    \kactlimport{extended-euclid.cpp}
