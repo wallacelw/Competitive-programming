@@ -77,4 +77,5 @@
 \contentsline {section}{\numberline {11.5}Manacher}{13}{section.11.5}%
 \contentsline {section}{\numberline {11.6}Booth}{14}{section.11.6}%
 \contentsline {chapter}{\numberline {12}Miscellaneous}{14}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Ternary Search}{14}{section.12.1}%
 \contentsfinish 

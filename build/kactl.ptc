@@ -138,6 +138,8 @@
 \contentsline {chapter}{\numberline {12}Miscellaneous}{14}{chapter.12}%
 \ttl@stoptoc {chapters@11}
 \ttl@starttoc {chapters@12}
+\contentsline {section}{\numberline {12.1}Ternary Search}{14}{section.12.1}%
+\contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{14}{section.12.1}%
 \ttl@stoptoc {chapters@12}
 \ttl@starttoc {chapters@13}
 \contentsfinish 
