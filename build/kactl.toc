@@ -2,14 +2,15 @@
 \contentsline {chapter}{\numberline {2}Mathematics}{1}{chapter.2}%
 \contentsline {section}{\numberline {2.1}FFT}{1}{section.2.1}%
 \contentsline {chapter}{\numberline {3}Data structures}{2}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Ordered Set}{2}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Disjoint Set Union}{2}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Trie}{2}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Segment Trees}{2}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Recursive SegTree}{2}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}PA Segtree}{3}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.1}Stack}{2}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Ordered Set}{2}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Disjoint Set Union}{2}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Trie}{2}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Segment Trees}{3}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Recursive SegTree}{3}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}PA Segtree}{3}{subsection.3.5.2}%
 \contentsline {chapter}{\numberline {4}Dynamic Programming}{3}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Convex Hull Trick}{3}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Convex Hull Trick}{4}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Li-chao Tree}{4}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Game theory}{4}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Classic Game}{4}{section.5.1}%
@@ -19,8 +20,8 @@
 \contentsline {section}{\numberline {5.4}Sprague-Grundy Theorem}{4}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Composition}{4}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Decomposition}{4}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Variations and Extensions}{4}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Nim with Increases}{4}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.5}Variations and Extensions}{5}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Nim with Increases}{5}{subsection.5.5.1}%
 \contentsline {section}{\numberline {5.6}Misère Game}{5}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Staircase Nim}{5}{section.5.7}%
 \contentsline {subsection}{\numberline {5.7.1}Description}{5}{subsection.5.7.1}%
@@ -31,11 +32,11 @@
 \contentsline {subsubsection}{Examples}{5}{section*.1}%
 \contentsline {section}{\numberline {5.9}Insta-Winning States}{5}{section.5.9}%
 \contentsline {section}{\numberline {5.10}References}{5}{section.5.10}%
-\contentsline {chapter}{\numberline {6}Numerical}{5}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Number theory}{5}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Sieves}{5}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Eratosthenes}{5}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Linear Sieve}{5}{subsection.7.1.2}%
+\contentsline {chapter}{\numberline {6}Numerical}{6}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Number theory}{6}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Sieves}{6}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Eratosthenes}{6}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Linear Sieve}{6}{subsection.7.1.2}%
 \contentsline {section}{\numberline {7.2}Extended Euclid}{6}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Inverse Multiplicative}{6}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Diofantine Equation}{6}{subsection.7.2.2}%
@@ -54,28 +55,28 @@
 \contentsline {section}{\numberline {9.4}Shortest Paths}{8}{section.9.4}%
 \contentsline {subsection}{\numberline {9.4.1}Dijkstra}{8}{subsection.9.4.1}%
 \contentsline {subsection}{\numberline {9.4.2}Bellman-Ford}{8}{subsection.9.4.2}%
-\contentsline {subsection}{\numberline {9.4.3}Floyd Warshall}{8}{subsection.9.4.3}%
+\contentsline {subsection}{\numberline {9.4.3}Floyd Warshall}{9}{subsection.9.4.3}%
 \contentsline {section}{\numberline {9.5}Undirected Graph}{9}{section.9.5}%
 \contentsline {subsection}{\numberline {9.5.1}Bridges (Cut Edges)}{9}{subsection.9.5.1}%
 \contentsline {subsection}{\numberline {9.5.2}Bridge Tree}{9}{subsection.9.5.2}%
 \contentsline {subsection}{\numberline {9.5.3}Articulation Points}{9}{subsection.9.5.3}%
-\contentsline {subsection}{\numberline {9.5.4}Block Cut Tree}{9}{subsection.9.5.4}%
+\contentsline {subsection}{\numberline {9.5.4}Block Cut Tree}{10}{subsection.9.5.4}%
 \contentsline {subsection}{\numberline {9.5.5}Strong Orientation}{10}{subsection.9.5.5}%
 \contentsline {subsubsection}{Acyclic Graph Orientation}{10}{section*.2}%
-\contentsline {subsection}{\numberline {9.5.6}Minimum Spanning Tree}{10}{subsection.9.5.6}%
-\contentsline {section}{\numberline {9.6}Directed Graph}{10}{section.9.6}%
-\contentsline {subsection}{\numberline {9.6.1}Topological Sort}{10}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.5.6}Minimum Spanning Tree}{11}{subsection.9.5.6}%
+\contentsline {section}{\numberline {9.6}Directed Graph}{11}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Topological Sort}{11}{subsection.9.6.1}%
 \contentsline {subsection}{\numberline {9.6.2}Kosaraju}{11}{subsection.9.6.2}%
 \contentsline {subsection}{\numberline {9.6.3}2-SAT}{11}{subsection.9.6.3}%
-\contentsline {section}{\numberline {9.7}Trees}{11}{section.9.7}%
+\contentsline {section}{\numberline {9.7}Trees}{12}{section.9.7}%
 \contentsline {section}{\numberline {9.8}Math}{12}{section.9.8}%
 \contentsline {chapter}{\numberline {10}Geometry}{12}{chapter.10}%
 \contentsline {chapter}{\numberline {11}Strings}{12}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Hashing}{12}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Z-Function}{12}{section.11.2}%
+\contentsline {section}{\numberline {11.2}Z-Function}{13}{section.11.2}%
 \contentsline {section}{\numberline {11.3}KMP}{13}{section.11.3}%
 \contentsline {section}{\numberline {11.4}Suffix Array}{13}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Manacher}{13}{section.11.5}%
+\contentsline {section}{\numberline {11.5}Manacher}{14}{section.11.5}%
 \contentsline {section}{\numberline {11.6}Booth}{14}{section.11.6}%
 \contentsline {chapter}{\numberline {12}Miscellaneous}{14}{chapter.12}%
 \contentsline {section}{\numberline {12.1}Ternary Search}{14}{section.12.1}%
