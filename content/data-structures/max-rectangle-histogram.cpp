@@ -2,12 +2,13 @@
  * Author: Wallace
  * Date: 13/03/2024
  * Description: solves the problem of finding the maximum rectangle area
- * in a histogram setting (same bottom, different heights).
- * Time: O(n)
+ * in a grid setting (different widths, different heights)
+ * Time: O(n m)
+ * Status: Tested (https://cses.fi/problemset/result/8723636/)
  */
 
-// Example Problem: A fence consists of n vertical boards. The width of each board is 1 and their heights may vary.
-// You want to attach a rectangular advertisement to the fence. What is the maximum area of such an advertisement?
+// Example Problem: You are given a map of a forest where some squares are empty and some squares have trees.
+// What is the maximum area of a rectangular building that can be placed in the forest so that no trees must be cut down?
 
 ll maxRectangleHistogram(vector<ll> x) { // O(n)
     
@@ -39,8 +40,24 @@ ll maxRectangleHistogram(vector<ll> x) { // O(n)
 }
 
 int32_t main(){ sws;
-    ll n; cin >> n;
-    vector<ll> x;
-    for(ll i=0, a; i<n; i++) cin >> a, x.pb(a);
-    cout << maxRectangleHistogram(x) << endl;
-}  
+    ll n, m; cin >> n >> m;
+ 
+    vector<vector<ll>> grid(n, vector<ll>(m));
+ 
+    // convert the problem into N histogram subproblems, O(n m)
+    for(ll i=0; i<n; i++) {
+        for(ll j=0; j<m; j++) {
+            char c; cin >> c;
+            if (c == '*') grid[i][j] = 0;
+            else if (i == 0) grid[i][j] = 1;
+            else grid[i][j] = grid[i-1][j] + 1;
+        }
+    }
+ 
+    ll area = 0;
+    for(ll i=0; i<n; i++) {
+        area = max(area, maxRectangleHistogram(grid[i]));
+    }
+ 
+    cout << area << endl;
+} 
