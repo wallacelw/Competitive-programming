@@ -10,6 +10,7 @@ Greedy algorithm
 	Invariants
 	Huffman encoding
 Graph theory
+	Transform edges into vertices, duplicating the nodes of the graph
 	Dynamic graphs (extra book-keeping)
 	Breadth first search
 	Depth first search
