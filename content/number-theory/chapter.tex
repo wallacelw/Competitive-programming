@@ -6,41 +6,42 @@
 
     \subsection{Eratosthenes}
 
-    Eratosthenes uses less memory than the linear sieve and is almost as fast
+        Eratosthenes uses less memory than the linear sieve and is almost as fast
 
-    \kactlimport{eratosthenes.cpp}
+        \kactlimport{eratosthenes.cpp}
 
     \subsection{Linear Sieve}
 
-    Due to the lp vector, one can compute the factorization of any number very quickly!
+        Due to the lp vector, one can compute the factorization of any number very quickly!
 
-    Can check primality with $lp[i] == i$
+        Can check primality with $lp[i] == i$
 
-    Uses more memory, because lp is a vector of int or ll and not bits.
+        Uses more memory, because lp is a vector of int or ll and not bits.
 
-    \textbf{Proof of time complexity:}
+        \textbf{Proof of time complexity:}
 
-    We need to prove that the algorithm sets all values
-    $lp[]$ correctly, and that every value will be set exactly once. 
-    Hence, the algorithm will have linear runtime, since all the remaining actions of the algorithm, obviously, work for
-    $O(n)$.
+        We need to prove that the algorithm sets all values
+        $lp[]$ correctly, and that every value will be set exactly once. 
+        Hence, the algorithm will have linear runtime, since all the remaining actions of the algorithm, obviously, work for
+        $O(n)$.
 
-    Notice that every number $i$ has exactly one representation in form:
-    $$i = lp [i] \cdot x,$$
-    where 
-    $lp [i]$ is the minimal prime factor of 
-    $i$, and the number 
-    $x$ doesn't have any prime factors less than 
-    $lp [i]$, i.e.
-    $$lp [i] \le lp [x].$$
-    Now, let's compare this with the actions of our algorithm: in fact, for every 
-    $x$ it goes through all prime numbers it could be multiplied by, i.e. all prime numbers up to 
-    $lp [x]$ inclusive, in order to get the numbers in the form given above.
+        Notice that every number $i$ has exactly one representation in form:
+        $$i = lp [i] \cdot x,$$
+        where 
+        $lp [i]$ is the minimal prime factor of 
+        $i$, and the number 
+        $x$ doesn't have any prime factors less than 
+        $lp [i]$, i.e.
+        $$lp [i] \le lp [x].$$
+        Now, let's compare this with the actions of our algorithm: in fact, for every 
+        $x$ it goes through all prime numbers it could be multiplied by, i.e. all prime numbers up to 
+        $lp [x]$ inclusive, in order to get the numbers in the form given above.
 
-    Hence, the algorithm will go through every composite number exactly once, setting the correct values 
-    $lp []$ there. Q.E.D.
+        Hence, the algorithm will go through every composite number exactly once, setting the correct values 
+        $lp []$ there. Q.E.D.
 
-    \kactlimport{linear-sieve.cpp}
+        \kactlimport{linear-sieve.cpp}
+
 
 \section{Extended Euclid}
 
