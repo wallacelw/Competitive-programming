@@ -2,6 +2,12 @@
 
 \section{Stack}
 
+    An optimization for \textit{std::stack} is to use a \textit{std::vector} as the container, instead of \textit{std::deque} !
+
+    \begin{lstlisting}[language=c++]
+        stack<int, vector<int>> st;
+    \end{lstlisting}
+
     Can be used to efficiently solve the maximum rectangle in a histogram problem:
 
     \kactlimport{max-rectangle-histogram.cpp}
@@ -10,6 +16,37 @@
 
     \kactlimport{max-rectangle-grid.cpp}
 
+\section{List}
+
+    \textit{std::list} is a container that supports constant time insertion and removal of elements from anywhere in the container.
+
+    Adding, removing and moving the elements within the list or across several lists does not invalidate the iterators or references.
+    An iterator is invalidated only when the corresponding element is deleted.
+
+
+
+    \textbf{Element Access: O(1)}
+
+    \begin{itemize}
+    \item \textit{list.back()}
+    \item \textit{list.front()}
+    \end{itemize}
+
+    \textbf{Modifiers: O(1)}
+
+    \begin{itemize}
+    \item \textit{list.insert(itr, val)} 
+    inserts val before itr and returns an itr to the inserted value
+
+    \item \textit{list.erase(itr)} 
+    erases the element referenced by itr and returns the itr for the next value (or .end())
+
+    \item \textit{list.push\_back(val)}
+    \item \textit{list.pop\_back(val)}
+    \item \textit{list.push\_front(val)}
+    \item \textit{list.pop\_back(val)}
+    \end{itemize}
+    
 \section{Ordered Set}
 
     Policy Based Data Structures (PBDS) from gcc compiler
