@@ -35,6 +35,7 @@
 \contentsline {section}{\numberline {5.9}Insta-Winning States}{5}{section.5.9}%
 \contentsline {section}{\numberline {5.10}References}{6}{section.5.10}%
 \contentsline {chapter}{\numberline {6}Geometry}{6}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Manhattan Minimum Spanning Tree}{6}{section.6.1}%
 \contentsline {chapter}{\numberline {7}Graph}{6}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Network flow}{6}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Minimum Cut}{7}{subsection.7.1.1}%
@@ -47,15 +48,15 @@
 \contentsline {section}{\numberline {7.4}Shortest Paths}{8}{section.7.4}%
 \contentsline {subsection}{\numberline {7.4.1}Dijkstra}{8}{subsection.7.4.1}%
 \contentsline {subsection}{\numberline {7.4.2}Bellman-Ford}{8}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Floyd Warshall}{8}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.3}Floyd Warshall}{9}{subsection.7.4.3}%
 \contentsline {section}{\numberline {7.5}Undirected Graph}{9}{section.7.5}%
 \contentsline {subsection}{\numberline {7.5.1}Bridges (Cut Edges)}{9}{subsection.7.5.1}%
 \contentsline {subsection}{\numberline {7.5.2}Bridge Tree}{9}{subsection.7.5.2}%
 \contentsline {subsection}{\numberline {7.5.3}Articulation Points}{9}{subsection.7.5.3}%
-\contentsline {subsection}{\numberline {7.5.4}Block Cut Tree}{9}{subsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.5.4}Block Cut Tree}{10}{subsection.7.5.4}%
 \contentsline {subsection}{\numberline {7.5.5}Strong Orientation}{10}{subsection.7.5.5}%
 \contentsline {subsubsection}{Acyclic Graph Orientation}{10}{section*.2}%
-\contentsline {subsection}{\numberline {7.5.6}Minimum Spanning Tree}{10}{subsection.7.5.6}%
+\contentsline {subsection}{\numberline {7.5.6}Minimum Spanning Tree}{11}{subsection.7.5.6}%
 \contentsline {section}{\numberline {7.6}Directed Graph}{11}{section.7.6}%
 \contentsline {subsection}{\numberline {7.6.1}Topological Sort}{11}{subsection.7.6.1}%
 \contentsline {subsection}{\numberline {7.6.2}Kosaraju}{11}{subsection.7.6.2}%
@@ -71,9 +72,9 @@
 \contentsline {section}{\numberline {9.2}Extended Euclid}{13}{section.9.2}%
 \contentsline {subsection}{\numberline {9.2.1}Inverse Multiplicative}{13}{subsection.9.2.1}%
 \contentsline {subsection}{\numberline {9.2.2}Diofantine Equation}{13}{subsection.9.2.2}%
-\contentsline {chapter}{\numberline {10}Numerical}{13}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Strings}{13}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Hashing}{13}{section.11.1}%
+\contentsline {chapter}{\numberline {10}Numerical}{14}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Strings}{14}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Hashing}{14}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Z-Function}{14}{section.11.2}%
 \contentsline {section}{\numberline {11.3}KMP}{14}{section.11.3}%
 \contentsline {section}{\numberline {11.4}Suffix Array}{14}{section.11.4}%

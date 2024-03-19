@@ -6,10 +6,10 @@
  */
 
 struct DSU{
-    vll group, card;
+    vector<ll> group, card;
     DSU (ll n){
         n += 1; // 0-idx -> 1-idx
-        group = vll(n);
+        group = vector<ll>(n);
         iota(group.begin(), group.end(), 0);
         card = vll(n, 1);
     }
