@@ -28,7 +28,7 @@ struct Segtree {
  
     Node merge(Node a, Node b) {
         return Node {
-            // merge operaton:
+            // merge operation:
             a.ps + b.ps
         };
     }

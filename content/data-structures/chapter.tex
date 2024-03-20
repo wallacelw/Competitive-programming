@@ -90,8 +90,16 @@
 
     \subsection{Recursive SegTree}
 
-        \kactlimport{segRecursive.cpp}
+        \kactlimport{seg-recursive.cpp}
+
+    \subsection{Inverted Segtree}
+
+        Instead of keeping the prefix sum for all the children in each node, store only the delta encoding value.
+
+        Therefore, to check a value in a certain position, iterate and sum all delta values from root to leaf.
+
+        \kactlimport{seg-inverted.cpp}
 
     \subsection{PA Segtree}
 
-        \kactlimport{segPA.cpp}
+        \kactlimport{seg-pa.cpp}
