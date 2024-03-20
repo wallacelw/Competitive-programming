@@ -3,8 +3,8 @@
  * Date: 20/03/2024 
  * Description: Basic Inverted Segment Tree for
  * point query stored value, range increase
- * When initializing the segmente tree, remeber to choose the range limits (L, R)
- * Time: O(N \log{N}) to build, O(\log{N}) to increase or query
+ * When initializing, choose an appropriate value for n.
+ * Time: O(N \log{N}) to build, O(\log{N}) to range increase or point query
  * Status: Tested {https://atcoder.jp/contests/abc340/submissions/51471403}
  */
 
