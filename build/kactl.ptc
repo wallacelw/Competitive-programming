@@ -83,7 +83,7 @@
 \contentsline {section}{\numberline {7.4}Shortest Paths}{9}{section.7.4}%
 \contentsline {subsection}{\numberline {7.4.1}Dijkstra}{9}{subsection.7.4.1}%
 \contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{9}{subsection.7.4.1}%
-\contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{9}{lstnumber.7.4.19}%
+\contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{9}{lstnumber.7.4.21}%
 \contentsline {subsection}{\numberline {7.4.2}Bellman-Ford}{9}{subsection.7.4.2}%
 \contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{9}{subsection.7.4.2}%
 \contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{10}{lstnumber.7.6.15}%
