@@ -7,7 +7,7 @@
 
 	\kactlimport{dinic.cpp}
 	
-	\kactlimport{dinic2.cpp}
+	\kactlimport{dinitz.cpp}
 
 	\subsection{Minimum Cut}
 
@@ -40,6 +40,13 @@ This is the minimum over all possible s-t cuts values.
 
 	It's possible to access dinic.edges, which is a vector that contains all edges and also its respective attributes, 
 	like the \textit{flow} passing through each edge. Remember to consider that negative flow exist for reverse edges.
+
+	\subsection{Minimum Vertex Cover}
+
+	The \textbf{Konig's Theorem} describes an equivalence between the maximum matching
+	problem and the minimum vertex cover problem in bipartite graphs.
+
+	Therefore, the value for the maximum flow in a bipartite graph is the same value as the number of nodes in a minimum vertex cover.
 
 	\subsection{Maximum Independent Set}
 

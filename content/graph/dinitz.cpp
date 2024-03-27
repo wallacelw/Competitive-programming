@@ -9,7 +9,7 @@
  * Status: tested! https://www.spoj.com/submit/FASTFLOW/, 0.32s, plug it in (F)
  */
 
-struct Dinic {
+struct Dinitz {
     struct Edge {
         ll to, flow, cap, rev;
     };
@@ -18,7 +18,7 @@ struct Dinic {
     vector<ll> level, vis;
     ll src, sink, sz, maxFlow;
 
-    Dinic(ll n) {
+    Dinitz(ll n) {
         src = n+1, sink = n+2, sz = n+3;
         g.assign(sz, vector<Edge>());
         level.assign(sz, 0);
@@ -81,6 +81,7 @@ struct Dinic {
         }
         while(bfs()){
             for(ll i=0; i<sz; i++) vis[i] = 0;
+            #warning choose correct value for INF
             while(ll inc = dfs(src, INT32_MAX)) maxFlow += inc;
         }
         return maxFlow;
