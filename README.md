@@ -6,7 +6,7 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00), [Cebolinha](https://q
 ## Linux Alias
 
 ```bash
-alias comp='g++ -std=c++17 -O2 -g3 -ggdb3 -fsanitize=address,undefined -D_GLIBCXX_ASSERTIONS -Wall -Wextra -Wshadow -Wconversion -o test'
+alias comp='g++ -std=c++17 -O2 -g3 -ggdb3 -fsanitize=address,undefined -Wall -Wextra -Wshadow -Wconversion -o test'
 ```
 
 *-Wall -Wextra -Wconversion -Wshadow* shows warnings
