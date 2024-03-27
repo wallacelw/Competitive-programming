@@ -6,7 +6,7 @@ Créditos para: [Tiagosf00](https://github.com/Tiagosf00), [Cebolinha](https://q
 ## Linux Alias
 
 ```bash
-alias comp='g++ -std=c++17 -g3 -ggdb3 -O3 -Wall -Wextra -fsanitize=address,undefined -Wshadow -Wconversion -D_GLIBCXX_ASSERTIONS -o test'
+alias comp='g++ -std=c++17 -O2 -g3 -ggdb3 -fsanitize=address,undefined -Wall -Wextra -Wshadow -Wconversion -o test'
 ```
 
 *-Wall -Wextra -Wconversion -Wshadow* shows warnings
@@ -33,23 +33,26 @@ using namespace std;
 
 #define teto(a, b) ((a+b-1)/(b))
 #define LSB(i) ((i) & -(i))
-#define MSB(i) (32 - __builtin_clz(i)) //64 - clzll
-#define BITS(i) __builtin_popcountll(i) //count set bits
+#define MSB(i) (63 - __builtin_clzll(i)) // for ll
+#define BITS(i) __builtin_popcountll(i)
 
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+template<class A> void debug(A a) {
+    cout << "container: ";
+    for(auto b : a) cout << b << " ";
+    cout << endl;
+}
+template<class... A> void dbg(A const&... a) {
+    ((cout << "{" << a << "} "), ...);
+    cout << endl;
+}
 
-#define debug(a...) cerr<<#a<<": ";for(auto b:a)cerr<<b<<" ";cerr<<endl;
-template<typename... A> void dbg(A const&... a){((cerr<<"{"<<a<<"} "), ...);cerr<<endl;}
-
-const ll MAX = 3e5+10;
-const ll MOD = 1e9+7;
-const ll INF = 0x3f3f3f3f3f3f3f3f;
-const ll LLINF = INT64_MAX;
+const ll MAX = 2e5+10;
+const ll MOD = 1e9 + 7;
+const ll INF = INT32_MAX; // INT64_MAX
 const ld EPS = 1e-7;
 const ld PI = acos(-1);
 
 int32_t main(){ sws;
-
 }  
 ```
 
