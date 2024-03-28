@@ -1,5 +1,14 @@
 \chapter{Miscellaneous}
 
+\section{Read an Fraction Input}
+
+    \begin{lstlisting}[language=c++]
+        filesystem::path s; cin >> s;
+        ll num = stoll(s.parent_path());
+        ll den = stoll(s.filename());
+    \end{lstlisting}
+    
+
 \section{Ternary Search}
 
     \kactlimport{ternary-search.cpp}

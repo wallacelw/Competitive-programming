@@ -155,8 +155,9 @@
 \contentsline {chapter}{\numberline {12}Miscellaneous}{17}{chapter.12}%
 \ttl@stoptoc {chapters@11}
 \ttl@starttoc {chapters@12}
-\contentsline {section}{\numberline {12.1}Ternary Search}{17}{section.12.1}%
-\contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{17}{section.12.1}%
+\contentsline {section}{\numberline {12.1}Read an Fraction Input}{17}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Ternary Search}{17}{section.12.2}%
+\contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{17}{section.12.2}%
 \ttl@stoptoc {chapters@12}
 \ttl@starttoc {chapters@13}
 \contentsfinish 
