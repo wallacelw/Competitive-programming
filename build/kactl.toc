@@ -85,6 +85,7 @@
 \contentsline {section}{\numberline {11.5}Manacher}{16}{section.11.5}%
 \contentsline {section}{\numberline {11.6}Booth}{17}{section.11.6}%
 \contentsline {chapter}{\numberline {12}Miscellaneous}{17}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Read an Fraction Input}{17}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Ternary Search}{17}{section.12.2}%
+\contentsline {section}{\numberline {12.1}Random Generator}{17}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Read an Fraction Input}{17}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Ternary Search}{17}{section.12.3}%
 \contentsfinish 
