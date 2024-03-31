@@ -53,7 +53,7 @@ struct OpMOD{
     }
 
     // n! / (n-k)!
-    ll disposition(ll n, ll k){ // "Arranjo Simples"
+    ll arrangement(ll n, ll k){ // "Arranjo Simples"
         if(k > n) return 0;
         return mul(fact[n], ifact[n-k]);
     }

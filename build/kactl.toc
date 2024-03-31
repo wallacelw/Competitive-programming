@@ -70,22 +70,24 @@
 \contentsline {chapter}{\numberline {8}Mathematics}{14}{chapter.8}%
 \contentsline {section}{\numberline {8.1}FFT}{14}{section.8.1}%
 \contentsline {chapter}{\numberline {9}Number theory}{14}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Sieves}{14}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Eratosthenes}{14}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Linear Sieve}{14}{subsection.9.1.2}%
-\contentsline {section}{\numberline {9.2}Extended Euclid}{15}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Inverse Multiplicative}{15}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Diofantine Equation}{15}{subsection.9.2.2}%
-\contentsline {chapter}{\numberline {10}Numerical}{15}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Strings}{15}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Hashing}{15}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Z-Function}{15}{section.11.2}%
+\contentsline {section}{\numberline {9.1}Modular Arithmetic}{14}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Combinatorics}{15}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Sieves}{15}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Eratosthenes}{15}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Linear Sieve}{15}{subsection.9.3.2}%
+\contentsline {section}{\numberline {9.4}Extended Euclid}{15}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Inverse Multiplicative}{16}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Diofantine Equation}{16}{subsection.9.4.2}%
+\contentsline {chapter}{\numberline {10}Numerical}{16}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Strings}{16}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Hashing}{16}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Z-Function}{16}{section.11.2}%
 \contentsline {section}{\numberline {11.3}KMP}{16}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Suffix Array}{16}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Manacher}{16}{section.11.5}%
+\contentsline {section}{\numberline {11.4}Suffix Array}{17}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Manacher}{17}{section.11.5}%
 \contentsline {section}{\numberline {11.6}Booth}{17}{section.11.6}%
-\contentsline {chapter}{\numberline {12}Miscellaneous}{17}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Random Generator}{17}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Read an Fraction Input}{17}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Ternary Search}{17}{section.12.3}%
+\contentsline {chapter}{\numberline {12}Miscellaneous}{18}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Random Generator}{18}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Read an Fraction Input}{18}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Ternary Search}{18}{section.12.3}%
 \contentsfinish 

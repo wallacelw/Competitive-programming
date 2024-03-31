@@ -27,7 +27,7 @@ template<class... A> void dbg(A const&... a) {
 }
 
 const ll MAX = 2e5+10;
-const ll MOD = 1e9 + 7;
+const ll MOD = 998'244'353;
 const ll INF = INT32_MAX; // INT64_MAX
 const ld EPS = 1e-7;
 const ld PI = acos(-1);
