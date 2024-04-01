@@ -8,7 +8,7 @@
         stack<int, vector<int>> st;
     \end{lstlisting}
 
-    Can be used to efficiently solve the maximum rectangle in a histogram problem:
+    A stack can be used to efficiently solve the maximum rectangle in a histogram problem:
 
     \kactlimport{max-rectangle-histogram.cpp}
 
@@ -22,8 +22,6 @@
 
     Adding, removing and moving the elements within the list or across several lists does not invalidate the iterators or references.
     An iterator is invalidated only when the corresponding element is deleted.
-
-
 
     \textbf{Element Access: O(1)}
 
@@ -68,10 +66,10 @@
 
     There are two optional improvements:
 
-        -Tree Balancing 
-        
-        -Path Compression
-
+    \begin{itemize}
+        \item Tree Balancing 
+        \item Path Compression
+    \end{itemize}
     If one improvement is used, 
     the time complexity will become $O(\log{N})$
 
