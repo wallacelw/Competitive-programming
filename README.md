@@ -31,7 +31,7 @@ using namespace std;
 #define pll pair<ll, ll>
 #define vll vector<ll>
 
-#define teto(a, b) ((a+b-1)/(b))
+#define teto(a, b) (((a)+(b)-1)/(b))
 #define LSB(i) ((i) & -(i))
 #define MSB(i) (63 - __builtin_clzll(i)) // for ll
 #define BITS(i) __builtin_popcountll(i)

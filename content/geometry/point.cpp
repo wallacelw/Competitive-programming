@@ -3,15 +3,21 @@
  * Date: 01/04/2024
  * Description: Point struct for point operations, supports floating points and integers
  * Time: O(1)
- * Status: Not fully tested
+ * Status: copied from Tiago/Quirino, tested for int
  */
 
 const ld EPS = 1e-9;
 
 // T can be int, long long, float, double, long double
+template<class T> bool eq(T a, T b) {
+    if (is_integral<T>::value) return a == b;
+    else return abs(a-b) <= EPS;
+}
+
 template<class T> struct P {
     T x, y;
-    
+    ll id; // (optional)
+
     P(T xx=0, T yy=0): x(xx), y(yy) {}
 
     P operator +(P const& o) const { return { x+o.x, y+o.y }; }
@@ -21,15 +27,8 @@ template<class T> struct P {
     T operator *(P const& o) const { return x*o.x + y*o.y; }
     T operator ^(P const& o) const { return x*o.y - y*o.x; }
 
-    bool eq(T a, T b) {
-        if (is_integral<T>::value) return a == b;
-        else return abs(a-b) <= EPS;
-    }
-
-    bool operator <(P const& o) const {
-        if (!eq(x, o.x)) return x < o.x;
-        if (!eq(y, o.y)) return y < o.y;
-        return false;
+    bool operator <(P const& o) const { // enables sorting
+        return (eq(x, o.x) ? y < o.y : x < o.x);
     }
 
     bool operator ==(P const& o) const {
