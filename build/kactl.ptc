@@ -160,6 +160,7 @@
 \ttl@stoptoc {chapters@11}
 \ttl@starttoc {chapters@12}
 \contentsline {section}{\numberline {12.1}Random Generator}{18}{section.12.1}%
+\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{18}{section.12.1}%
 \contentsline {section}{\numberline {12.2}Read an Fraction Input}{18}{section.12.2}%
 \contentsline {section}{\numberline {12.3}Ternary Search}{18}{section.12.3}%
 \contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{18}{section.12.3}%
