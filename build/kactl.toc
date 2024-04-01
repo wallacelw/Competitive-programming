@@ -68,8 +68,8 @@
 \contentsline {section}{\numberline {6.8}Math}{14}{section.6.8}%
 \contentsline {chapter}{\numberline {7}Mathematics}{14}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Modular Arithmetic}{14}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Combinatorics}{15}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Factorial}{15}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.2}Combinatorics}{14}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Factorial}{14}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{15}{subsection.7.2.2}%
 \contentsline {section}{\numberline {7.3}FFT}{15}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Number theory}{15}{chapter.8}%
