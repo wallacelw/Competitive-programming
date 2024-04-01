@@ -15,25 +15,25 @@
 // requires point struct, at least the constructor and operator-
 
 vector<array<ll, 3>> manhattanMST(vector<point> ps) {
-	vector<ll> id(size(ps));
-	iota(id.begin(), id.end(), 0);
-	vector<array<ll, 3>> edges;
-	for(ll k=0; k<4; k++) {
-		sort(id.begin(), id.end(), [&](ll i, ll j) {
-		    return (ps[i]-ps[j]).x < (ps[j]-ps[i]).y;
+    vector<ll> id(size(ps));
+    iota(id.begin(), id.end(), 0);
+    vector<array<ll, 3>> edges;
+    for(ll k=0; k<4; k++) {
+        sort(id.begin(), id.end(), [&](ll i, ll j) {
+            return (ps[i]-ps[j]).x < (ps[j]-ps[i]).y;
         });
 
-		map<ll, ll> sweep;
-		for (ll i : id) {
-			for (auto it = sweep.lower_bound(-ps[i].y); it != sweep.end(); sweep.erase(it++)) {
-				ll j = it->ss;
-				point d = ps[i] - ps[j];
-				if (d.y > d.x) break;
-				edges.pb({d.y + d.x, i, j});
-			}
-			sweep[-ps[i].y] = i;
-		}
-		for (point& p : ps) if (k & 1) p.x = -p.x; else swap(p.x, p.y);
-	}
-	return edges;
+        map<ll, ll> sweep;
+        for (ll i : id) {
+            for (auto it = sweep.lower_bound(-ps[i].y); it != sweep.end(); sweep.erase(it++)) {
+                ll j = it->ss;
+                point d = ps[i] - ps[j];
+                if (d.y > d.x) break;
+                edges.pb({d.y + d.x, i, j});
+            }
+            sweep[-ps[i].y] = i;
+        }
+        for (point& p : ps) if (k & 1) p.x = -p.x; else swap(p.x, p.y);
+    }
+    return edges;
 }
