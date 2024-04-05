@@ -82,7 +82,7 @@
 \contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{9}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Matching}{9}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Hungarian}{9}{subsection.6.3.1}%
-\contentsline {subsection}{\texttt {hungarian.cpp}\hspace {0.2em}}{9}{subsection.6.3.1}%
+\contentsline {subsection}{\texttt {hungarian.cpp}\hspace {0.2em}}{10}{subsection.6.3.1}%
 \contentsline {section}{\numberline {6.4}Coloring}{10}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}k-Coloring}{10}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Shortest Paths}{10}{section.6.5}%
@@ -99,12 +99,12 @@
 \contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{11}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{11}{subsection.6.6.2}%
 \contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{11}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Articulation Points}{11}{subsection.6.6.3}%
-\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{11}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.3}Articulation Points}{12}{subsection.6.6.3}%
+\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{12}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{12}{subsection.6.6.4}%
 \contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{12}{subsection.6.6.4}%
 \contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{12}{subsection.6.6.5}%
-\contentsline {subsubsection}{Acyclic Graph Orientation}{12}{section*.2}%
+\contentsline {subsubsection}{Acyclic Graph Orientation}{13}{section*.2}%
 \contentsline {subsection}{\numberline {6.6.6}Minimum Spanning Tree}{13}{subsection.6.6.6}%
 \contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{13}{subsection.6.6.6}%
 \contentsline {section}{\numberline {6.7}Directed Graph}{13}{section.6.7}%
@@ -128,7 +128,7 @@
 \contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{15}{subsection.7.2.2}%
 \contentsline {subsection}{\texttt {combinatorics.cpp}\hspace {0.2em}}{15}{subsection.7.2.2}%
 \contentsline {section}{\numberline {7.3}FFT}{15}{section.7.3}%
-\contentsline {subsection}{\texttt {fft-simple.cpp}\hspace {0.2em}}{15}{section.7.3}%
+\contentsline {subsection}{\texttt {fft-simple.cpp}\hspace {0.2em}}{16}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Number theory}{16}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
@@ -140,34 +140,34 @@
 \contentsline {section}{\numberline {8.2}Extended Euclid}{16}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{16}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{16}{subsection.8.2.2}%
-\contentsline {subsection}{\texttt {extended-euclid.cpp}\hspace {0.2em}}{16}{subsection.8.2.2}%
-\contentsline {chapter}{\numberline {9}Numerical}{16}{chapter.9}%
+\contentsline {subsection}{\texttt {extended-euclid.cpp}\hspace {0.2em}}{17}{subsection.8.2.2}%
+\contentsline {chapter}{\numberline {9}Numerical}{17}{chapter.9}%
 \ttl@stoptoc {chapters@8}
 \ttl@starttoc {chapters@9}
-\contentsline {chapter}{\numberline {10}Strings}{16}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Strings}{17}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
-\contentsline {section}{\numberline {10.1}Hashing}{16}{section.10.1}%
+\contentsline {section}{\numberline {10.1}Hashing}{17}{section.10.1}%
 \contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{17}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Z-Function}{17}{section.10.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{17}{section.10.2}%
 \contentsline {section}{\numberline {10.3}KMP}{17}{section.10.3}%
 \contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{17}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Suffix Array}{17}{section.10.4}%
-\contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{17}{lstnumber.-7.10}%
-\contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{17}{lstnumber.10.4.20}%
+\contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{18}{lstnumber.-7.10}%
+\contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{18}{lstnumber.10.4.20}%
 \contentsline {section}{\numberline {10.5}Manacher}{18}{section.10.5}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{18}{section.10.5}%
 \contentsline {section}{\numberline {10.6}Booth}{18}{section.10.6}%
 \contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{18}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Miscellaneous}{18}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Miscellaneous}{19}{chapter.11}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}
-\contentsline {section}{\numberline {11.1}Random Generator}{18}{section.11.1}%
-\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{18}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Read an Fraction Input}{18}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Ternary Search}{18}{section.11.3}%
-\contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{18}{section.11.3}%
+\contentsline {section}{\numberline {11.1}Random Generator}{19}{section.11.1}%
+\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{19}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Read an Fraction Input}{19}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Ternary Search}{19}{section.11.3}%
+\contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{19}{section.11.3}%
 \ttl@stoptoc {chapters@11}
 \ttl@starttoc {chapters@12}
 \contentsfinish 

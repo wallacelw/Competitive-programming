@@ -56,10 +56,10 @@
 \contentsline {section}{\numberline {6.6}Undirected Graph}{11}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}Bridges (Cut Edges)}{11}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{11}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Articulation Points}{11}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.3}Articulation Points}{12}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{12}{subsection.6.6.4}%
 \contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{12}{subsection.6.6.5}%
-\contentsline {subsubsection}{Acyclic Graph Orientation}{12}{section*.2}%
+\contentsline {subsubsection}{Acyclic Graph Orientation}{13}{section*.2}%
 \contentsline {subsection}{\numberline {6.6.6}Minimum Spanning Tree}{13}{subsection.6.6.6}%
 \contentsline {section}{\numberline {6.7}Directed Graph}{13}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Topological Sort}{13}{subsection.6.7.1}%
@@ -80,16 +80,16 @@
 \contentsline {section}{\numberline {8.2}Extended Euclid}{16}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{16}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{16}{subsection.8.2.2}%
-\contentsline {chapter}{\numberline {9}Numerical}{16}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Strings}{16}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Hashing}{16}{section.10.1}%
+\contentsline {chapter}{\numberline {9}Numerical}{17}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Strings}{17}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Hashing}{17}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Z-Function}{17}{section.10.2}%
 \contentsline {section}{\numberline {10.3}KMP}{17}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Suffix Array}{17}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Manacher}{18}{section.10.5}%
 \contentsline {section}{\numberline {10.6}Booth}{18}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Miscellaneous}{18}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Random Generator}{18}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Read an Fraction Input}{18}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Ternary Search}{18}{section.11.3}%
+\contentsline {chapter}{\numberline {11}Miscellaneous}{19}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Random Generator}{19}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Read an Fraction Input}{19}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Ternary Search}{19}{section.11.3}%
 \contentsfinish 
