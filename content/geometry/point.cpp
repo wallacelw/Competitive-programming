@@ -27,7 +27,7 @@ template<class T> struct P {
     T operator *(P const& o) const { return x*o.x + y*o.y; }
     T operator ^(P const& o) const { return x*o.y - y*o.x; }
 
-    bool operator <(P const& o) const { // enables sorting
+    bool operator <(P const& o) const { // enables sorting, set, etc
         return (eq(x, o.x) ? y < o.y : x < o.x);
     }
 
