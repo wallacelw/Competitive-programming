@@ -5,29 +5,37 @@
  * Time: O(V + E)
 */
 
-int32_t main(){ sws;
-    // compute distance from source
-    vector<vll> g(n);
-    vector<ll> d(n);
-    vector<bool> vis(n);
+vector<vll> g(n);
+vector<ll> d(n);
+vector<bool> vis(n);
 
-    ll start = 1;
+void bfs(ll src, ll sink) {
+
     queue<ll> q;
-    q.push({0, start});
-    d[start] = 0;
+    q.push(src);
+    d[src] = 0;
+    vis[src] = 1;
 
     while(!q.empty()) {
         auto u = q.front(); q.pop();
 
-        for(auto v : g[u]) {
-            if (vis[v]) continue; 
-            vis[v] = 1;
+        // add here a special break condition if needed, ex:
+        if (u == sink) break;
 
-            d[v] = d[u] + 1;
-            q.push(v);
+        for(auto v : g[u]) {
+            
             // each v is added to queue only once
             // due to checking visited inside for(auto v : g[u]) 
             // and setting vis[v] = 1 before pushing to queue
+            if (!vis[v]) {
+                vis[v] = 1;
+                d[v] = d[u] + 1;
+                q.push(v);
+            } 
+
+            else { // already added to queue, but there may be a shorter path
+                d[v] = min(d[v], d[u] + 1);
+            }
         }
     }
 }  
