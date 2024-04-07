@@ -1,5 +1,5 @@
 /** 
- * Author: Wallace, Quirino
+ * Author: Quirino, Wallace
  * Date: 07/04/2024
  * Description: This second version may be slower due to dynamic allocation, queue, etc
  * but it's more readable, more memory efficient
@@ -22,12 +22,10 @@ struct Dinitz {
 
     // n need to be big enough for all nodes, including src/sink
     ll n, src, sink;
-    Dinitz(ll n_, ll s = -1, ll t = -1) : n(n_+10) {
+    Dinitz(ll nn, ll s = -1, ll t = -1) : n(nn+10) {
         src = (s == -1 ? n-2 : s);
         sink = (t == -1 ? n-1 : t);
         g.resize(n);
-        level.resize(n);
-        ptr.resize(n);
     }
 
     void addEdge(ll u, ll v, ll cap, ll rcap = 0) { // rcap = retrocapacity for bidiretional edges
@@ -36,10 +34,9 @@ struct Dinitz {
         g[v].push_back( (ll)edges.size() );
         edges.push_back({v, u, rcap});
     }
-
     
     bool bfs() {
-        for(ll i=0; i<n; i++) level[i] = -1; // not vis
+        level.assign(n, -1); // not vis
         level[src] = 0;
         queue<ll> q;
         q.push(src);
@@ -82,7 +79,7 @@ struct Dinitz {
             }
         }
         while (bfs()) {
-            for(ll i=0; i<n; i++) ptr[i] = 0;
+            ptr.assign(n, 0);
             while (ll newf = dfs(src, INF))
                 max_flow += newf;
         }
