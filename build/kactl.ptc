@@ -90,7 +90,7 @@
 \contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{10}{subsection.6.5.1}%
 \contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{10}{lstnumber.6.6.21}%
 \contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{10}{subsection.6.5.2}%
-\contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{10}{subsection.6.5.2}%
+\contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{11}{subsection.6.5.2}%
 \contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{11}{lstnumber.6.8.15}%
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{11}{subsection.6.5.3}%
 \contentsline {subsection}{\texttt {floyd-warshall.cpp}\hspace {0.2em}}{11}{subsection.6.5.3}%
@@ -117,17 +117,17 @@
 \contentsline {section}{\numberline {6.8}Trees}{14}{section.6.8}%
 \contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{14}{section.6.8}%
 \contentsline {subsection}{\texttt {queryTree.cpp}\hspace {0.2em}}{14}{lstnumber.6.19.54}%
-\contentsline {section}{\numberline {6.9}Math}{14}{section.6.9}%
-\contentsline {chapter}{\numberline {7}Mathematics}{14}{chapter.7}%
+\contentsline {section}{\numberline {6.9}Math}{15}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Mathematics}{15}{chapter.7}%
 \ttl@stoptoc {chapters@6}
 \ttl@starttoc {chapters@7}
-\contentsline {section}{\numberline {7.1}Modular Arithmetic}{14}{section.7.1}%
-\contentsline {subsection}{\texttt {modular.cpp}\hspace {0.2em}}{14}{section.7.1}%
+\contentsline {section}{\numberline {7.1}Modular Arithmetic}{15}{section.7.1}%
+\contentsline {subsection}{\texttt {modular.cpp}\hspace {0.2em}}{15}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Combinatorics}{15}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Factorial}{15}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{15}{subsection.7.2.2}%
 \contentsline {subsection}{\texttt {combinatorics.cpp}\hspace {0.2em}}{15}{subsection.7.2.2}%
-\contentsline {section}{\numberline {7.3}FFT}{15}{section.7.3}%
+\contentsline {section}{\numberline {7.3}FFT}{16}{section.7.3}%
 \contentsline {subsection}{\texttt {fft-simple.cpp}\hspace {0.2em}}{16}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Number theory}{16}{chapter.8}%
 \ttl@stoptoc {chapters@7}
@@ -138,8 +138,8 @@
 \contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{16}{subsection.8.1.2}%
 \contentsline {subsection}{\texttt {linear-sieve.cpp}\hspace {0.2em}}{16}{subsection.8.1.2}%
 \contentsline {section}{\numberline {8.2}Extended Euclid}{16}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{16}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{16}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{17}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{17}{subsection.8.2.2}%
 \contentsline {subsection}{\texttt {extended-euclid.cpp}\hspace {0.2em}}{17}{subsection.8.2.2}%
 \contentsline {chapter}{\numberline {9}Numerical}{17}{chapter.9}%
 \ttl@stoptoc {chapters@8}
@@ -152,14 +152,14 @@
 \contentsline {section}{\numberline {10.2}Z-Function}{17}{section.10.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{17}{section.10.2}%
 \contentsline {section}{\numberline {10.3}KMP}{17}{section.10.3}%
-\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{17}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Suffix Array}{17}{section.10.4}%
+\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{18}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Suffix Array}{18}{section.10.4}%
 \contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{18}{lstnumber.-7.10}%
 \contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{18}{lstnumber.10.4.20}%
 \contentsline {section}{\numberline {10.5}Manacher}{18}{section.10.5}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{18}{section.10.5}%
 \contentsline {section}{\numberline {10.6}Booth}{18}{section.10.6}%
-\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{18}{section.10.6}%
+\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{19}{section.10.6}%
 \contentsline {chapter}{\numberline {11}Miscellaneous}{19}{chapter.11}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}

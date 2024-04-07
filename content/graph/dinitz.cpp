@@ -1,89 +1,104 @@
 /** 
- * Author: Wallace
- * Date: 17/03/2024
+ * Author: Wallace, Quirino
+ * Date: 07/04/2024
  * Description: This second version may be slower due to dynamic allocation, queue, etc
  * but it's more readable, more memory efficient
  * Time: General Case, O(V^2 E); 
  * Unit Capacity, O((V+E) \sqrt{E});
  * Bipartite and unit capacity, O( (V+E) \sqrt{V})
- * Status: tested! https://www.spoj.com/submit/FASTFLOW/, 0.32s, plug it in (F)
+ * Status: tested! https://www.spoj.com/submit/FASTFLOW/, 0.37s, 
+ * slow for plug it in
+ * min cut tested(police chase): https://cses.fi/problemset/result/8951521/
  */
 
 struct Dinitz {
-    struct Edge {
-        ll to, flow, cap, rev;
+    struct Edge { // u -> v
+        ll u, v, cap, flow=0; // u is redundant, but nice for some problems
     };
-    
-    vector<vector<Edge>> g;
-    vector<ll> level, vis;
-    ll src, sink, sz, maxFlow;
 
-    Dinitz(ll n) {
-        src = n+1, sink = n+2, sz = n+3;
-        g.assign(sz, vector<Edge>());
-        level.assign(sz, 0);
-        vis.assign(sz, 0);
-        maxFlow = 0;
+    vector<Edge> edges;
+    vector<vector<ll>> g;
+    vector<ll> level, ptr;
+
+    // n need to be big enough for all nodes, including src/sink
+    ll n, src, sink;
+    Dinitz(ll n_, ll s = -1, ll t = -1) : n(n_+10) {
+        src = (s == -1 ? n-2 : s);
+        sink = (t == -1 ? n-1 : t);
+        g.resize(n);
+        level.resize(n);
+        ptr.resize(n);
     }
-    
-    void addEdge(ll u, ll v, ll c, ll rc = 0) {
-        ll id1 = (ll) g[u].size();
-        ll id2 = (ll) g[v].size();
-        g[u].pb( Edge({v, 0, c, id2}) );
-        g[v].pb( Edge({u, 0, rc, id1}) );
+
+    void addEdge(ll u, ll v, ll cap, ll rcap = 0) { // rcap = retrocapacity for bidiretional edges
+        g[u].push_back( (ll)edges.size() );
+        edges.push_back({u, v, cap});
+        g[v].push_back( (ll)edges.size() );
+        edges.push_back({v, u, rcap});
     }
+
     
-    bool bfs() { // creates layered subgraph
-        for(ll i=0; i<sz; i++) {
-            level[i] = -1; // not visited
-        }
+    bool bfs() {
+        for(ll i=0; i<n; i++) level[i] = -1; // not vis
         level[src] = 0;
-        queue<ll> q; q.push(src); 
-        while(!q.empty()) {
+        queue<ll> q;
+        q.push(src);
+        while (!q.empty()) {
             ll u = q.front(); q.pop();
-            if (u == sink) break;
-            for(auto [v, flow, cap, rev] : g[u]) {
-                if (flow >= cap or level[v] != -1) continue;
-                level[v] = level[u] + 1;
-                q.push(v);
+            for (auto eid : g[u]) {
+                auto e = edges[eid];
+                if (e.flow >= e.cap or level[e.v] != -1) continue;
+                level[e.v] = level[u] + 1;
+                q.push(e.v);
             }
         }
-        return (level[sink] == -1 ? false : true);
+        return level[sink] != -1;
     }
-    
-    ll dfs(ll u, ll minFlow){
-        if(u == sink) return minFlow;
-        for(ll &i = vis[u]; i<(ll)g[u].size(); i++){
-            auto &[v, flow, cap, rev] = g[u][i];
-            
-            if(flow >= cap or level[u]+1 != level[v]) continue;
-            
-            ll newFlow = min(minFlow, cap - flow);
-            ll adjustedFlow = dfs(v, newFlow);
 
-            if(adjustedFlow > 0){
-                flow += adjustedFlow;
-                g[v][rev].flow -= adjustedFlow;
-                return adjustedFlow;
-            }
+    ll dfs(ll u, ll f) {
+        if (f == 0 or u == sink) return f;
+        for (ll &i = ptr[u]; i < (ll)g[u].size(); i++) {
+            ll eid = g[u][i];
+            auto &e = edges[eid];
+            if(e.flow >= e.cap or level[u]+1 != level[e.v]) continue;
+            ll newf = dfs(e.v, min(f, e.cap - e.flow));
+            if (newf == 0) continue;
+            e.flow += newf;
+            edges[eid^1].flow -= newf;
+            return newf;
         }
         return 0;
     }
-    
-    ll compute(bool resetFlow = true){
-        if (resetFlow) {
-            for(ll i=0; i<sz; i++) {
-                for(auto &[v, flow, cap, rev] : g[i]) {
-                    flow = 0;
+
+    ll max_flow = 0;
+    ll flow(bool reset_flow = true) {
+        if (reset_flow) {
+            max_flow = 0;
+            for(ll u=0; u<n; u++) {
+                for(auto eid : g[u]) {
+                    auto &e = edges[eid];
+                    e.flow = 0;
                 }
             }
-            maxFlow = 0;
         }
-        while(bfs()){
-            for(ll i=0; i<sz; i++) vis[i] = 0;
-            #warning choose correct value for INF
-            while(ll inc = dfs(src, INT32_MAX)) maxFlow += inc;
+        while (bfs()) {
+            for(ll i=0; i<n; i++) ptr[i] = 0;
+            while (ll newf = dfs(src, INF))
+                max_flow += newf;
         }
-        return maxFlow;
+        return max_flow;
+    }
+
+    // minimum cut set cost = minimum cost = max flow
+    // minimum cut set is the minimum set of edges that, if removed, 
+    // will disrupt flow from source to sink and make it 0.
+    vector<pll> cut() {
+        vector<pll> cuts;
+        for (auto [u, v, cap, flow]: edges) {
+            if (level[u] != -1 and level[v] == -1) {
+                cuts.pb({u, v});
+            }
+        }
+        return cuts;
     }
 };
