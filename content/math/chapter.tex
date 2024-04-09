@@ -4,7 +4,24 @@
 
 	\kactlimport{modular.cpp}
 
+	\subsection{Lucas's Theorem}
+
+	$$ \binom{n}{m} \equiv \prod_{i=0}^k \binom{n_i}{m_i} \quad (\text{mod } p) $$ 
+
+	For $p$ prime. $n_i$ and $m_i$ are the coefficients of the representations of $n$ and $m$ in base $p$.
+
+	\textit{Example:}
+
+		11 (in base p=3) = $1 \cdot 3^2 + 0 \cdot 3^1 + 2 \cdot 3^0$
+
+		$\implies n_2 = 1, n_1 = 0, n_0 = 2$
+
 \section{Combinatorics}
+
+	\begin{align*}
+		\binom{n}{m} =  & \frac{ n! }{ m! \cdot (n-m)! }, & 0 <= m <= n \\
+						& 0, & otherwise
+	\end{align*}
 
 	\subsection{Factorial}
 
@@ -28,25 +45,40 @@
 			\end{tabular}
 		\end{center}
 
-\subsection{Combinatorial Struct}
+	\subsection{Combinatorial Struct}
 
-	\kactlimport{combinatorics.cpp}
-	
-	\textbf{Interesting Recursion:}
+		\kactlimport{combinatorics.cpp}
+
+	\subsection{Burside Lemma}
+
+	Let $G$ be a group that acts on a set $X$. The Burnside Lemma states that the number of distinct orbits is equal to the average number of points fixed by an element of G.
+    $$T = \frac{1}{|G|} \sum_{g \in G} |\texttt{fix}(g)|$$
+    Where a orbit $\texttt{orb}(x)$ is defined as
+    $$\texttt{orb}(x) = \{y \in X : \exists g \in G \ gx = y \}$$
+    and $\texttt{fix}(g)$ is the set of elements in $X$ fixed by $g$
+    $$\texttt{fix}(g) = \{x \in X : gx = x\}$$
+    
+    \textbf{Example:} With $k$ distinct types of beads how many distinct necklaces of size $n$ can be made? Considering that two necklaces are equal if the rotation of one gives the other.
+    \begin{center}
+    \includegraphics[scale=.6, keepaspectratio]{content/math/Burnside.png}
+    \end{center}
+	$$\frac{1}{n} \sum_{i=1}^n k^{\gcd(i, n)}$$
+
+	\subsection{Interesting Recursion}
 
 	$$ f(a, b) = f(a-1, b) + f(a, b-1) $$
 
-	$$ \implies f(a, b) = \frac{(a+b)!}{a! b!} = comb(a+b, a) $$
+	$$ \implies f(a, b) = \frac{(a+b)!}{a! b!} = \binom{a+b}{a} $$
 
 	\textit{Proof:}
 	
 	\begin{align*}
-	   &f(a, b) = \frac{(a+b)!}{a! b!}  \\ 
+	&f(a, b) = \frac{(a+b)!}{a! b!}  \\ 
 	\implies &f(a-1, b) = \frac{(a-1+b)!}{(a-1)! b!}, f(a, b-1) = \frac{(a+b-1)!}{a! (b-1)!}  \\
 	\implies &f(a-1, b) + f(a, b-1) = \frac{(a-1+b)!}{(a-1)! b!} + \frac{(a+b-1)!}{a! (b-1)!}  \\
 	\implies &f(a, b) = (a+b-1)! \cdot ( \frac{1}{(a-1)!(b)!} + \frac{1}{(a)!(b-1)!} )  \\
 	\implies &f(a, b) = (a+b-1)! \cdot ( \frac{a+b}{a! b!} ) \\
-	\implies &f(a, b) = \frac{(a+b)!}{a! b!} = comb(a+b, a) 
+	\implies &f(a, b) = \frac{(a+b)!}{a! b!} = \binom{a+b}{a} 
 	\end{align*}
 
 \section{FFT}

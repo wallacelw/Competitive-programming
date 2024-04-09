@@ -69,25 +69,28 @@
 \contentsline {section}{\numberline {6.8}Trees}{15}{section.6.8}%
 \contentsline {chapter}{\numberline {7}Mathematics}{16}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Modular Arithmetic}{16}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Lucas's Theorem}{16}{subsection.7.1.1}%
 \contentsline {section}{\numberline {7.2}Combinatorics}{16}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Factorial}{16}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{16}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Burside Lemma}{17}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{17}{subsection.7.2.4}%
 \contentsline {section}{\numberline {7.3}FFT}{17}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Number theory}{17}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Sieves}{17}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Eratosthenes}{17}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{17}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Extended Euclid}{17}{section.8.2}%
+\contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{18}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Extended Euclid}{18}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{18}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{18}{subsection.8.2.2}%
 \contentsline {chapter}{\numberline {9}Numerical}{18}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Strings}{18}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Hashing}{18}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Z-Function}{18}{section.10.2}%
-\contentsline {section}{\numberline {10.3}KMP}{18}{section.10.3}%
+\contentsline {section}{\numberline {10.3}KMP}{19}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Suffix Array}{19}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Manacher}{19}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Booth}{19}{section.10.6}%
+\contentsline {section}{\numberline {10.6}Booth}{20}{section.10.6}%
 \contentsline {chapter}{\numberline {11}Miscellaneous}{20}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Random Generator}{20}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Read an Fraction Input}{20}{section.11.2}%
