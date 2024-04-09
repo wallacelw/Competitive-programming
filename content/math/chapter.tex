@@ -58,11 +58,36 @@
     and $\texttt{fix}(g)$ is the set of elements in $X$ fixed by $g$
     $$\texttt{fix}(g) = \{x \in X : gx = x\}$$
     
-    \textbf{Example:} With $k$ distinct types of beads how many distinct necklaces of size $n$ can be made? Considering that two necklaces are equal if the rotation of one gives the other.
-    \begin{center}
-    \includegraphics[scale=.6, keepaspectratio]{content/math/Burnside.png}
+    \textbf{Example1:} With $k$ distinct types of beads how many distinct necklaces of size $n$ can be made? Considering that two necklaces are equal if the rotation of one gives the other.
+    
+	\begin{center}
+    \includegraphics[scale=.6, keepaspectratio]{content/math/Burnside-Necklace.png}
     \end{center}
 	$$\frac{1}{n} \sum_{i=1}^n k^{\gcd(i, n)}$$
+
+	\textbf{Example2:} Count the number of different n $\times$ n grids whose each square is black or white.
+
+	Two grids are considered to be different if it is not possible to rotate one of them so that they look the same.
+	
+	\begin{center}
+	\includegraphics[scale=.1, keepaspectratio]{content/math/Burnside-Grid.png}
+	\end{center}
+
+	$$ G (Rotations) = 0^{\circ}, 90^{\circ}, 180^{\circ}, 270^{\circ} $$
+
+	\begin{centering}
+	\begin{align*}
+	f(rotation) = & \\
+	0^{\circ}: 				& 2^{(n^2)}  \\
+	90^{\circ}/270^{\circ}:	& 2^{ \frac{n^2}{4} }, & n_{even} \\
+							& 2^{ \frac{n^2-1}{4} } \cdot 2 , & n_{odd} \\
+	180^{\circ}:			& 2^{ \frac{n^2}{2} }, & n_{even} \\
+							& 2^{ \frac{n^2-1}{2} } \cdot 2 , & n_{odd}
+	\end{align*}
+	\end{centering}
+
+	
+	$$ans = \frac{1}{4} (f(0^{\circ}) + f(90^{\circ}) + f(180^{\circ}) + f(270^{\circ})) $$
 
 	\subsection{Interesting Recursion}
 

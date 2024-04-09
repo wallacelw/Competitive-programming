@@ -134,12 +134,12 @@
 \contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{17}{subsection.7.2.4}%
 \contentsline {section}{\numberline {7.3}FFT}{17}{section.7.3}%
 \contentsline {subsection}{\texttt {fft-simple.cpp}\hspace {0.2em}}{17}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Number theory}{17}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Number theory}{18}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
-\contentsline {section}{\numberline {8.1}Sieves}{17}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Eratosthenes}{17}{subsection.8.1.1}%
-\contentsline {subsection}{\texttt {eratosthenes.cpp}\hspace {0.2em}}{17}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.1}Sieves}{18}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Eratosthenes}{18}{subsection.8.1.1}%
+\contentsline {subsection}{\texttt {eratosthenes.cpp}\hspace {0.2em}}{18}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{18}{subsection.8.1.2}%
 \contentsline {subsection}{\texttt {linear-sieve.cpp}\hspace {0.2em}}{18}{subsection.8.1.2}%
 \contentsline {section}{\numberline {8.2}Extended Euclid}{18}{section.8.2}%
@@ -154,14 +154,14 @@
 \ttl@starttoc {chapters@10}
 \contentsline {section}{\numberline {10.1}Hashing}{18}{section.10.1}%
 \contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{18}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Z-Function}{18}{section.10.2}%
+\contentsline {section}{\numberline {10.2}Z-Function}{19}{section.10.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{19}{section.10.2}%
 \contentsline {section}{\numberline {10.3}KMP}{19}{section.10.3}%
 \contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{19}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Suffix Array}{19}{section.10.4}%
 \contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{19}{lstnumber.-7.10}%
 \contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{19}{lstnumber.10.4.20}%
-\contentsline {section}{\numberline {10.5}Manacher}{19}{section.10.5}%
+\contentsline {section}{\numberline {10.5}Manacher}{20}{section.10.5}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{20}{section.10.5}%
 \contentsline {section}{\numberline {10.6}Booth}{20}{section.10.6}%
 \contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{20}{section.10.6}%
