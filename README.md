@@ -1,7 +1,7 @@
 # Competitive-programming
 Algoritmos e ideias de Programação Competitiva
 
-Créditos para: [Tiagosf00](https://github.com/Tiagosf00), [Cebolinha](https://quirino.net/).
+Créditos para: [Tiagosf00](https://github.com/Tiagosf00), [Cebolinha](https://quirino.net/), [Kactl](https://github.com/kth-competitive-programming/kactl), [BrunoMonteiro](https://github.com/brunomaletta/Biblioteca)
 
 ## Linux Alias
 
