@@ -34,11 +34,12 @@
 \ttl@starttoc {chapters@3}
 \contentsline {section}{\numberline {3.1}Knuth Optimization}{5}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Conditions}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\texttt {knuth.cpp}\hspace {0.2em}}{5}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}Slope}{5}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Convex Hull Trick}{5}{subsection.3.2.1}%
 \contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{5}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Li-chao Tree}{5}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}SOS DP}{5}{section.3.3}%
+\contentsline {subsection}{\numberline {3.2.2}Li-chao Tree}{6}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}SOS DP}{6}{section.3.3}%
 \contentsline {subsection}{\texttt {sos-dp.cpp}\hspace {0.2em}}{6}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Game theory}{6}{chapter.4}%
 \ttl@stoptoc {chapters@3}
@@ -50,7 +51,7 @@
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{6}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Composition}{6}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Decomposition}{6}{subsection.4.4.2}%
-\contentsline {subsection}{\texttt {mex.cpp}\hspace {0.2em}}{6}{subsection.4.4.2}%
+\contentsline {subsection}{\texttt {mex.cpp}\hspace {0.2em}}{7}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{7}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{7}{subsection.4.5.1}%
 \contentsline {section}{\numberline {4.6}Misère Game}{7}{section.4.6}%
@@ -62,12 +63,12 @@
 \contentsline {subsection}{\numberline {4.8.2}Other States}{7}{subsection.4.8.2}%
 \contentsline {subsubsection}{Examples}{7}{section*.1}%
 \contentsline {section}{\numberline {4.9}Insta-Winning States}{7}{section.4.9}%
-\contentsline {section}{\numberline {4.10}References}{7}{section.4.10}%
-\contentsline {chapter}{\numberline {5}Geometry}{7}{chapter.5}%
+\contentsline {section}{\numberline {4.10}References}{8}{section.4.10}%
+\contentsline {chapter}{\numberline {5}Geometry}{8}{chapter.5}%
 \ttl@stoptoc {chapters@4}
 \ttl@starttoc {chapters@5}
-\contentsline {section}{\numberline {5.1}Point Struct}{7}{section.5.1}%
-\contentsline {subsection}{\texttt {point.cpp}\hspace {0.2em}}{7}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Point Struct}{8}{section.5.1}%
+\contentsline {subsection}{\texttt {point.cpp}\hspace {0.2em}}{8}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Line Struct}{8}{section.5.2}%
 \contentsline {subsection}{\texttt {line.cpp}\hspace {0.2em}}{8}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{8}{section.5.3}%
@@ -78,10 +79,10 @@
 \contentsline {section}{\numberline {6.1}Fundamentals}{8}{section.6.1}%
 \contentsline {subsection}{\texttt {dfs.cpp}\hspace {0.2em}}{8}{section.6.1}%
 \contentsline {subsection}{\texttt {bfs.cpp}\hspace {0.2em}}{8}{lstnumber.6.1.19}%
-\contentsline {section}{\numberline {6.2}Network flow}{8}{section.6.2}%
-\contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{8}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Network flow}{9}{section.6.2}%
+\contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{9}{section.6.2}%
 \contentsline {subsection}{\texttt {dinitz.cpp}\hspace {0.2em}}{9}{lstnumber.6.3.86}%
-\contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{9}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{10}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{10}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{10}{subsection.6.2.3}%
 \contentsline {subsection}{\texttt {min-vertex-cover.cpp}\hspace {0.2em}}{10}{subsection.6.2.3}%
@@ -91,20 +92,20 @@
 \contentsline {subsection}{\texttt {min-cost-dinitz.cpp}\hspace {0.2em}}{10}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Hungarian}{11}{subsection.6.3.2}%
 \contentsline {subsection}{\texttt {hungarian.cpp}\hspace {0.2em}}{11}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}Coloring}{11}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}k-Coloring}{11}{subsection.6.4.1}%
-\contentsline {section}{\numberline {6.5}Shortest Paths}{11}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Dijkstra}{11}{subsection.6.5.1}%
-\contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{11}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.4}Coloring}{12}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}k-Coloring}{12}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Shortest Paths}{12}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Dijkstra}{12}{subsection.6.5.1}%
+\contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{12}{subsection.6.5.1}%
 \contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{12}{lstnumber.6.8.21}%
 \contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{12}{subsection.6.5.2}%
 \contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{12}{subsection.6.5.2}%
 \contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{12}{lstnumber.6.10.15}%
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{12}{subsection.6.5.3}%
 \contentsline {subsection}{\texttt {floyd-warshall.cpp}\hspace {0.2em}}{12}{subsection.6.5.3}%
-\contentsline {section}{\numberline {6.6}Undirected Graph}{12}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Bridges (Cut Edges)}{12}{subsection.6.6.1}%
-\contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{12}{subsection.6.6.1}%
+\contentsline {section}{\numberline {6.6}Undirected Graph}{13}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Bridges (Cut Edges)}{13}{subsection.6.6.1}%
+\contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{13}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{13}{subsection.6.6.2}%
 \contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{13}{subsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.6.3}Articulation Points}{13}{subsection.6.6.3}%
@@ -117,9 +118,9 @@
 \contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{14}{subsection.6.6.6}%
 \contentsline {section}{\numberline {6.7}Directed Graph}{14}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Topological Sort}{14}{subsection.6.7.1}%
-\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{14}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Kosaraju}{14}{subsection.6.7.2}%
-\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{14}{subsection.6.7.2}%
+\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{15}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Kosaraju}{15}{subsection.6.7.2}%
+\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{15}{subsection.6.7.2}%
 \contentsline {subsection}{\numberline {6.7.3}2-SAT}{15}{subsection.6.7.3}%
 \contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{15}{subsection.6.7.3}%
 \contentsline {section}{\numberline {6.8}Trees}{15}{section.6.8}%
@@ -131,14 +132,14 @@
 \contentsline {section}{\numberline {7.1}Modular Arithmetic}{16}{section.7.1}%
 \contentsline {subsection}{\texttt {modular.cpp}\hspace {0.2em}}{16}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Lucas's Theorem}{16}{subsection.7.1.1}%
-\contentsline {section}{\numberline {7.2}Combinatorics}{16}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Factorial}{16}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{16}{subsection.7.2.2}%
-\contentsline {subsection}{\texttt {combinatorics.cpp}\hspace {0.2em}}{16}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.2}Combinatorics}{17}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Factorial}{17}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{17}{subsection.7.2.2}%
+\contentsline {subsection}{\texttt {combinatorics.cpp}\hspace {0.2em}}{17}{subsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.2.3}Burside Lemma}{17}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{17}{subsection.7.2.4}%
-\contentsline {section}{\numberline {7.3}FFT}{17}{section.7.3}%
-\contentsline {subsection}{\texttt {fft-simple.cpp}\hspace {0.2em}}{17}{section.7.3}%
+\contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{18}{subsection.7.2.4}%
+\contentsline {section}{\numberline {7.3}FFT}{18}{section.7.3}%
+\contentsline {subsection}{\texttt {fft-simple.cpp}\hspace {0.2em}}{18}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Number theory}{18}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
@@ -147,9 +148,9 @@
 \contentsline {subsection}{\texttt {eratosthenes.cpp}\hspace {0.2em}}{18}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{18}{subsection.8.1.2}%
 \contentsline {subsection}{\texttt {linear-sieve.cpp}\hspace {0.2em}}{18}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Extended Euclid}{18}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{18}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{18}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.2}Extended Euclid}{19}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{19}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{19}{subsection.8.2.2}%
 \contentsline {subsection}{\texttt {extended-euclid.cpp}\hspace {0.2em}}{19}{subsection.8.2.2}%
 \contentsline {chapter}{\numberline {9}Numerical}{19}{chapter.9}%
 \ttl@stoptoc {chapters@8}
@@ -161,15 +162,15 @@
 \contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{19}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Z-Function}{19}{section.10.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{19}{section.10.2}%
-\contentsline {section}{\numberline {10.3}KMP}{19}{section.10.3}%
-\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{19}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Suffix Array}{19}{section.10.4}%
+\contentsline {section}{\numberline {10.3}KMP}{20}{section.10.3}%
+\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{20}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Suffix Array}{20}{section.10.4}%
 \contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{20}{lstnumber.-7.10}%
 \contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{20}{lstnumber.10.4.20}%
 \contentsline {section}{\numberline {10.5}Manacher}{20}{section.10.5}%
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{20}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Booth}{20}{section.10.6}%
-\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{20}{section.10.6}%
+\contentsline {section}{\numberline {10.6}Booth}{21}{section.10.6}%
+\contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{21}{section.10.6}%
 \contentsline {chapter}{\numberline {11}Miscellaneous}{21}{chapter.11}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}
