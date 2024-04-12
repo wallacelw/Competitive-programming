@@ -1,6 +1,33 @@
 \chapter{Dynamic Programming}
 
-\section{Convex Hull Trick}
+\section{Knuth Optimization}
+
+    Knuth's optimization, also known as the Knuth-Yao Speedup, is a special case of dynamic programming on ranges, that can optimize the time complexity of solutions by a linear factor, from $O(n^3)$ for standard range DP to $O(n^2)$.
+
+\subsection{Conditions}
+
+    The Speedup is applied for transitions of the form:
+
+    $$dp(i, j) = \min_{i \leq k < j} [ dp(i, k) + dp(k+1, j) + C(i, j) ].$$
+
+    Similar to divide and conquer DP, let $opt(i, j)$ be the value of $k$ that minimizes the expression in the transition ($opt$ is referred to as the "optimal splitting point" further in this article). The optimization requires that the following holds:
+
+    $$opt(i, j-1) \leq opt(i, j) \leq opt(i+1, j).$$
+
+    We can show that it is true when the cost function 
+    $C$ satisfies the following conditions for $a \leq b \leq c \leq d$:
+
+    $C(b, c) \leq C(a, d)$;
+
+    $C(a, c) + C(b, d) \leq C(a, d) + C(b, c)$ (the quadrangle inequality [QI]).
+
+    A common cost function that satisfies the above condition is the \textbf{sum of the values in a subaray}.
+
+    \kactlimport{knuth.cpp}
+
+\section{Slope}
+
+\subsection{Convex Hull Trick}
 
     If multiple transitions of the DP can be seen as 
     first degree polynomials (lines). CHT can be used to optimized it
@@ -14,7 +41,7 @@
 
     \kactlimport{cht-dynamic.cpp}
 
-\section{Li-chao Tree}
+\subsection{Li-chao Tree}
 
     Works for any type of function that has the \textbf{transcending property}:
 

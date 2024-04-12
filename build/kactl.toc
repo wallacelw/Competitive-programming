@@ -12,8 +12,11 @@
 \contentsline {subsection}{\numberline {2.7.2}Inverted Segtree}{4}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}PA Segtree}{4}{subsection.2.7.3}%
 \contentsline {chapter}{\numberline {3}Dynamic Programming}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Convex Hull Trick}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Li-chao Tree}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.1}Knuth Optimization}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Conditions}{5}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Slope}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Convex Hull Trick}{5}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Li-chao Tree}{5}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}SOS DP}{5}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Game theory}{6}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Classic Game}{6}{section.4.1}%
@@ -23,9 +26,9 @@
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{6}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Composition}{6}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Decomposition}{6}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Variations and Extensions}{6}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{6}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Misère Game}{6}{section.4.6}%
+\contentsline {section}{\numberline {4.5}Variations and Extensions}{7}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{7}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Misère Game}{7}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Staircase Nim}{7}{section.4.7}%
 \contentsline {subsection}{\numberline {4.7.1}Description}{7}{subsection.4.7.1}%
 \contentsline {subsection}{\numberline {4.7.2}Strategy}{7}{subsection.4.7.2}%
@@ -37,14 +40,14 @@
 \contentsline {section}{\numberline {4.10}References}{7}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{7}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Point Struct}{7}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Line Struct}{7}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Line Struct}{8}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{8}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Graph}{8}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fundamentals}{8}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Network flow}{8}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{9}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{9}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{9}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{10}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{10}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{10}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Minimum Cost Matching}{10}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Minimum Cost with Dinitz}{10}{subsection.6.3.1}%
@@ -57,7 +60,7 @@
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{12}{subsection.6.5.3}%
 \contentsline {section}{\numberline {6.6}Undirected Graph}{12}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}Bridges (Cut Edges)}{12}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{12}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{13}{subsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.6.3}Articulation Points}{13}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{13}{subsection.6.6.4}%
 \contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{14}{subsection.6.6.5}%
@@ -92,8 +95,8 @@
 \contentsline {section}{\numberline {10.4}Suffix Array}{19}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Manacher}{20}{section.10.5}%
 \contentsline {section}{\numberline {10.6}Booth}{20}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Miscellaneous}{20}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Random Generator}{20}{section.11.1}%
+\contentsline {chapter}{\numberline {11}Miscellaneous}{21}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Random Generator}{21}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Read an Fraction Input}{21}{section.11.2}%
 \contentsline {section}{\numberline {11.3}Ternary Search}{21}{section.11.3}%
 \contentsfinish 
