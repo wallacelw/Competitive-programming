@@ -12,91 +12,91 @@
 \contentsline {subsection}{\numberline {2.7.2}Inverted Segtree}{4}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}PA Segtree}{4}{subsection.2.7.3}%
 \contentsline {chapter}{\numberline {3}Dynamic Programming}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Knuth Optimization}{5}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Conditions}{5}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Slope}{5}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Convex Hull Trick}{5}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Li-chao Tree}{6}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}SOS DP}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.1}Divide-Conquer Optimization}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Knuth Optimization}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Conditions}{5}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Slope Optimizations}{6}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Convex Hull Trick}{6}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Li-chao Tree}{6}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}SOS DP}{6}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Game theory}{6}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Classic Game}{6}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Bouton's Theorem}{6}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Proof}{6}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}DAG Representation}{6}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{6}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Composition}{6}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Decomposition}{6}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.2}Bouton's Theorem}{7}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Proof}{7}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}DAG Representation}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{7}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Composition}{7}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Decomposition}{7}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{7}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{7}{subsection.4.5.1}%
 \contentsline {section}{\numberline {4.6}Misère Game}{7}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Staircase Nim}{7}{section.4.7}%
 \contentsline {subsection}{\numberline {4.7.1}Description}{7}{subsection.4.7.1}%
 \contentsline {subsection}{\numberline {4.7.2}Strategy}{7}{subsection.4.7.2}%
-\contentsline {section}{\numberline {4.8}Grundy's Game}{7}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{7}{subsection.4.8.1}%
-\contentsline {subsection}{\numberline {4.8.2}Other States}{7}{subsection.4.8.2}%
-\contentsline {subsubsection}{Examples}{7}{section*.1}%
-\contentsline {section}{\numberline {4.9}Insta-Winning States}{7}{section.4.9}%
+\contentsline {section}{\numberline {4.8}Grundy's Game}{8}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{8}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Other States}{8}{subsection.4.8.2}%
+\contentsline {subsubsection}{Examples}{8}{section*.1}%
+\contentsline {section}{\numberline {4.9}Insta-Winning States}{8}{section.4.9}%
 \contentsline {section}{\numberline {4.10}References}{8}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{8}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Point Struct}{8}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Line Struct}{8}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{8}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Graph}{8}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Fundamentals}{8}{section.6.1}%
+\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{9}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Graph}{9}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Fundamentals}{9}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Network flow}{9}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{10}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{10}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{10}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{10}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Minimum Cost Matching}{10}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Minimum Cost with Dinitz}{10}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{11}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Minimum Cost Matching}{11}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Minimum Cost with Dinitz}{11}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Hungarian}{11}{subsection.6.3.2}%
 \contentsline {section}{\numberline {6.4}Coloring}{12}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}k-Coloring}{12}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Shortest Paths}{12}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Dijkstra}{12}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{12}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{12}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{13}{subsection.6.5.3}%
 \contentsline {section}{\numberline {6.6}Undirected Graph}{13}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}Bridges (Cut Edges)}{13}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{13}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Articulation Points}{13}{subsection.6.6.3}%
-\contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{13}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.3}Articulation Points}{14}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{14}{subsection.6.6.4}%
 \contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{14}{subsection.6.6.5}%
-\contentsline {subsubsection}{Acyclic Graph Orientation}{14}{section*.2}%
-\contentsline {subsection}{\numberline {6.6.6}Minimum Spanning Tree}{14}{subsection.6.6.6}%
-\contentsline {section}{\numberline {6.7}Directed Graph}{14}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Topological Sort}{14}{subsection.6.7.1}%
+\contentsline {subsubsection}{Acyclic Graph Orientation}{15}{section*.2}%
+\contentsline {subsection}{\numberline {6.6.6}Minimum Spanning Tree}{15}{subsection.6.6.6}%
+\contentsline {section}{\numberline {6.7}Directed Graph}{15}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Topological Sort}{15}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Kosaraju}{15}{subsection.6.7.2}%
 \contentsline {subsection}{\numberline {6.7.3}2-SAT}{15}{subsection.6.7.3}%
-\contentsline {section}{\numberline {6.8}Trees}{15}{section.6.8}%
-\contentsline {chapter}{\numberline {7}Mathematics}{16}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Modular Arithmetic}{16}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Lucas's Theorem}{16}{subsection.7.1.1}%
+\contentsline {section}{\numberline {6.8}Trees}{16}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Mathematics}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Modular Arithmetic}{17}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Lucas's Theorem}{17}{subsection.7.1.1}%
 \contentsline {section}{\numberline {7.2}Combinatorics}{17}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Factorial}{17}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{17}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Burside Lemma}{17}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.3}Burside Lemma}{18}{subsection.7.2.3}%
 \contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{18}{subsection.7.2.4}%
 \contentsline {section}{\numberline {7.3}FFT}{18}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Number theory}{18}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Sieves}{18}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Eratosthenes}{18}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{18}{subsection.8.1.2}%
+\contentsline {chapter}{\numberline {8}Number theory}{19}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Sieves}{19}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Eratosthenes}{19}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{19}{subsection.8.1.2}%
 \contentsline {section}{\numberline {8.2}Extended Euclid}{19}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{19}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{19}{subsection.8.2.2}%
-\contentsline {chapter}{\numberline {9}Numerical}{19}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Strings}{19}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Hashing}{19}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Z-Function}{19}{section.10.2}%
-\contentsline {section}{\numberline {10.3}KMP}{20}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Suffix Array}{20}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Manacher}{20}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Booth}{21}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Miscellaneous}{21}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Random Generator}{21}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Read an Fraction Input}{21}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Ternary Search}{21}{section.11.3}%
+\contentsline {chapter}{\numberline {9}Strings}{19}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Hashing}{19}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Z-Function}{20}{section.9.2}%
+\contentsline {section}{\numberline {9.3}KMP}{20}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Suffix Array}{20}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Manacher}{21}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Booth}{21}{section.9.6}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{21}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Random Generator}{21}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Read an Fraction Input}{21}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Ternary Search}{21}{section.10.3}%
 \contentsfinish 

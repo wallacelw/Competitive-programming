@@ -12,37 +12,36 @@
 
 struct num{
     ld a {0.0}, b {0.0};
-    num(){}
-    num(ld na) : a{na}{}
+    num() {}
+    num(ld na) : a{na} {}
     num(ld na, ld nb) : a{na}, b{nb} {}
-    const num operator+(const num &c) const{
+    const num operator +(const num &c) const{
         return num(a + c.a, b + c.b);
     }
-    const num operator-(const num &c) const{
+    const num operator -(const num &c) const{
         return num(a - c.a, b - c.b);
     }
-    const num operator*(const num &c) const{
+    const num operator *(const num &c) const{
         return num(a*c.a - b*c.b, a*c.b + b*c.a);
     }
-    const num operator/(const int &c) const{
-         return num(a/c, b/c);
+    const num operator /(const int &c) const{
+        return num(a/c, b/c);
     }
 };
 
-void fft(vector<num> &a, bool invert){
+void fft(vector<num> &a, bool invert) {
     int n = (int)a.size();
-    for(int i=1,j=0;i<n;i++){
+    for(int i=1,j=0;i<n;i++) {
         int bit = n>>1;
-        for(; j&bit; bit>>=1)
+        for(; j&bit; bit>>=1) 
             j^=bit;
         j^=bit;
-        if(i<j)
-            swap(a[i], a[j]);
+        if(i<j) swap(a[i], a[j]);
     }
-    for(int len = 2; len <= n; len <<= 1){
+    for(int len = 2; len <= n; len <<= 1) {
         ld ang = 2 * PI / len * (invert ? -1 : 1);
         num wlen(cos(ang), sin(ang));
-        for(int i=0;i<n;i+=len){
+        for(int i=0; i<n; i+=len) {
             num w(1);
             for (int j=0;j<len/2;j++){
                 num u = a[i+j], v = a[i+j+len/2] * w;
@@ -74,6 +73,6 @@ vector<ll> multiply(vector<int> const& a, vector<int> const& b){
     vector<ll> result(n);
     for(int i=0;i<n;i++)
         result[i] = (ll) round(fa[i].a);
-    while(result.back()==0) result.pop_back();
+    // while(result.back()==0) result.pop_back();
     return result;
 }
