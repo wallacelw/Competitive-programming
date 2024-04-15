@@ -1,5 +1,5 @@
 /**
- * Author: Wallace, CP-Algorithms
+ * Author:  CP-Algorithms, Wallace
  * Date: 07/02/2024
  * Description: Computes the prefix function
  * Time: O(n)
@@ -8,10 +8,10 @@
 
 vector<ll> kmp(string &s) { // O(n)
     ll n = (ll) s.length();
-    vector<ll> pi(n);
-    for (ll i = 1; i < n; i++) {
+    vector<ll> pi(n, 0); // pi[0] = 0
+    for (ll i=1; i<n; i++) {
         ll j = pi[i-1];
-        while (j > 0 && s[i] != s[j])
+        while (j > 0 and s[i] != s[j])
             j = pi[j-1];
         if (s[i] == s[j])
             j++;

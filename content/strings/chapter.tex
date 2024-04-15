@@ -68,6 +68,13 @@
     and prefix function of string \textit{"aabaaab"} is $[0, 1, 0, 1, 2, 2, 3]$.
 
     \kactlimport{kmp.cpp}
+    
+    \subsection{Patterns in a String}
+
+        Given a string $p$ (pattern) and a string $s$, we want to find and display the positions of all occurrences of the string $p$ in the string $s$.
+
+        \textbf{Solution:} Concatenate $p + '\$' + s$, each position where $pi[i] == p.size() \implies$ a match of the pattern in this substring.
+
 
 \section{Suffix Array} 
 
