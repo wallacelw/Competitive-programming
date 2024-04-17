@@ -164,8 +164,8 @@
 \contentsline {section}{\numberline {9.2}Z-Function}{20}{section.9.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{20}{section.9.2}%
 \contentsline {section}{\numberline {9.3}KMP}{20}{section.9.3}%
+\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{21}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Patterns in a String}{21}{subsection.9.3.1}%
-\contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{21}{subsection.9.3.1}%
 \contentsline {section}{\numberline {9.4}Suffix Array}{21}{section.9.4}%
 \contentsline {subsection}{\texttt {suffix-array.cpp}\hspace {0.2em}}{21}{lstnumber.-7.10}%
 \contentsline {subsection}{\texttt {kasai.cpp}\hspace {0.2em}}{21}{lstnumber.9.4.20}%
@@ -173,6 +173,8 @@
 \contentsline {subsection}{\texttt {manacher.cpp}\hspace {0.2em}}{21}{section.9.5}%
 \contentsline {section}{\numberline {9.6}Booth}{22}{section.9.6}%
 \contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{22}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Suffix Automaton}{22}{section.9.7}%
+\contentsline {subsection}{\texttt {suffix-automaton.cpp}\hspace {0.2em}}{22}{section.9.7}%
 \contentsline {chapter}{\numberline {10}Miscellaneous}{22}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
