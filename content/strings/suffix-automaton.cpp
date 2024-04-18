@@ -203,4 +203,54 @@ struct Automaton {
         ll sz = p.size();
         return ton[u].fpos - sz + 1;
     }
+
+    // p4. Longest Common Substring of P and S
+
+    string lcs(string &p) { // O( p.size() )
+
+        ll cur = 1, match = 0, best = 0, pos = 0;
+
+        for(ll i=0; i<(ll)p.size(); i++) {
+            auto c = p[i];
+
+            while(cur > 1 and !ton[cur].down.count(c)) {
+                cur = ton[cur].link;
+                match = ton[cur].len;
+            }
+            if (ton[cur].down.count(c)) {
+                cur = ton[cur][c];
+                match++;
+            }
+            if (match > best) {
+                best = match;
+                pos = i;
+            }
+        }
+
+        return p.substr(pos - best + 1, best);
+    }
+
+
+    // --------- //
+    // Debugging //
+    // --------- //
+
+    using T = tuple<ll, ll, char>;
+    vector<T> edges() {
+        vector<T> ans;
+        for(ll i=1; i<n; i++) {
+            for(auto [c, j] : ton[i].down) {
+                ans.pb({i, j, c});
+            }
+        }
+        return ans;
+    }
+
+    vector<pll> links() {
+        vector<pll> ans;
+        for(ll i=1; i<n; i++) {
+            ans.pb({i, ton[i].link});
+        }
+        return ans;
+    }
 };
