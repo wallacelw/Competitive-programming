@@ -41,3 +41,7 @@ int32_t main(){ sws;
     auto duration = duration_cast<milliseconds>(stop - start);
     cout << duration.count() << endl;
 }  
+
+// add to beginning
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")

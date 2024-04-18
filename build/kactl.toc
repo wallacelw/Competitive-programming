@@ -101,5 +101,5 @@
 \contentsline {chapter}{\numberline {10}Miscellaneous}{22}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Random Generator}{22}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Read an Fraction Input}{22}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Ternary Search}{23}{section.10.3}%
+\contentsline {section}{\numberline {10.3}Ternary Search}{22}{section.10.3}%
 \contentsfinish 
