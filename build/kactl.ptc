@@ -175,14 +175,14 @@
 \contentsline {subsection}{\texttt {booth.cpp}\hspace {0.2em}}{22}{section.9.6}%
 \contentsline {section}{\numberline {9.7}Suffix Automaton}{22}{section.9.7}%
 \contentsline {subsection}{\texttt {suffix-automaton.cpp}\hspace {0.2em}}{22}{section.9.7}%
-\contentsline {chapter}{\numberline {10}Miscellaneous}{22}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{23}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
-\contentsline {section}{\numberline {10.1}Random Generator}{22}{section.10.1}%
-\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{22}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Read an Fraction Input}{22}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Ternary Search}{22}{section.10.3}%
-\contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{22}{section.10.3}%
+\contentsline {section}{\numberline {10.1}Random Generator}{23}{section.10.1}%
+\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{23}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Read an Fraction Input}{23}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Ternary Search}{23}{section.10.3}%
+\contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{23}{section.10.3}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}
 \contentsfinish 
