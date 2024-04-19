@@ -98,6 +98,8 @@
 \contentsline {section}{\numberline {9.5}Manacher}{21}{section.9.5}%
 \contentsline {section}{\numberline {9.6}Booth}{22}{section.9.6}%
 \contentsline {section}{\numberline {9.7}Suffix Automaton}{22}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Concepts:}{22}{subsection.9.7.1}%
+\contentsline {subsection}{\numberline {9.7.2}Implementation:}{22}{subsection.9.7.2}%
 \contentsline {chapter}{\numberline {10}Miscellaneous}{23}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Random Generator}{23}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Read an Fraction Input}{23}{section.10.2}%
