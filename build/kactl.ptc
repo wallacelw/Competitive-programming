@@ -180,8 +180,8 @@
 \contentsline {chapter}{\numberline {10}Miscellaneous}{23}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
-\contentsline {section}{\numberline {10.1}Random Generator}{23}{section.10.1}%
-\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{23}{section.10.1}%
+\contentsline {section}{\numberline {10.1}Random Generator}{24}{section.10.1}%
+\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{24}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Read an Fraction Input}{24}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Ternary Search}{24}{section.10.3}%
 \contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{24}{section.10.3}%

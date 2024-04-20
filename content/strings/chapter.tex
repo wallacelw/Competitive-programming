@@ -207,7 +207,11 @@
         \item The $fpos$ attribute represents the minimal element in the $endpos$ set. In other words, the first endpos.
 
         \item Considering only the edges in $down$, the automaton is a \textbf{DAG}. Considering only the edges in $link$, the automaton is a \textbf{tree}.
-        
+
+        \item Some nodes are called marked as \textbf{terminal states}, which represent the suffixes of the main string $s$. 
+        The terminal states are achieved starting from the node of $s$ and following the links until the root. 
+        The node containing $s$ is a terminal state and the root isn't.
+
     \end{itemize}
 
     The number of vertices that are created is upper bounded by \textbf{$O(2n)$} and the number of edges is bounded by \textbf{$O(3n)$}.
