@@ -176,28 +176,45 @@
 
     \begin{itemize}
 
-        \item The substrings of the string $s$ can be decomposed into equivalence classes according to their end positions $endpos$.
+        \item All substrings of the string $s$ can be decomposed into equivalence classes according to their end positions $endpos$.
+
         \item The $endpos$ is a subset of positions (0-idx) of $s$ that contains exacly all the end postitions (of the last character)
-        in which there is an occurence (simultaneously) of this class of substrings.
+        in which there is an occurence of this class of substrings (all of them at once).
+
         \item Each unique substring will be represented by exacly one vertex and each vertex (except root) 
-        wil represent one or more substrings, which are all $endpos-equivalent$.
-        \item The substrings represented by a node are suffixes of each other (each one smaller by one), whose length $\in [minlen, len]$.
-        \item A vertex can then be represented by the longest substring with length $len$,
+        will represent one or more substrings, which are all $endpos-equivalent$.
+
+        \item In the implementation, due to contrains, there is a variable called $endpos$, which has the cardinality of the set instead of the set itself.
         and the characters of this substring can be obtained transversing from the root to this node adding all characters from the edges.
+
+        \item All paths from the root creates an unique substring, and the terminal node reached by this path transversal represents this substring.
+
+        \item Therefore, all substrings represented in a node are actually paths in the automaton starting from the root and ending at this node.
+
+        \item A vertex can then be represented by the longest substring with length $len$.
+
         \item The suffix link of a node $u$ points to the node that cointains a bigger subset $endpos(link(u))$,
         that contains all position from $endpos(u)$ ($endpos(u) \subset endpos(link(u))$). Naturally, the root has the set of all positions.
+
+        \item The substrings represented by a node are suffixes of each other (each one smaller by one), whose length $\in [minlen, len]$,
+
         \item If we start from an arbitrary state $u$ and follow the suffix links, eventually we will reach the root.
         In this case we obtain a sequence of disjoint intervals $[minlen(u_i); len(u_i)]$, 
         which in union forms the continuous interval $[0; len(v_0)]$.
-        \item the $minlen$ can be stored implicitly, because $minlen(u) = len(link(u)) + 1$.
 
+        \item The $minlen$ can be stored implicitly, because $minlen(u) = len(link(u)) + 1$.
+
+        \item The $fpos$ attribute represents the minimal element in the $endpos$ set. In other words, the first endpos.
+
+        \item Considering only the edges in $down$, the automaton is a \textbf{DAG}. Considering only the edges in $link$, the automaton is a \textbf{tree}.
+        
     \end{itemize}
 
     The number of vertices that are created is upper bounded by \textbf{$O(2n)$} and the number of edges is bounded by \textbf{$O(3n)$}.
 
     \subsection{Implementation:}
 
-    The implementation can be changed to use a fixed vector for adjacent edges intead of a map.
-    This will reduce the time complexity to $O(n)$ and the memory to $O(n k)$, where $k$ is the size of the alphabet. 
+    The implementation can be changed to use a a map instead of a fixed vector for adjacent edges.
+    This will increase the time complexity to $O(n \log{k} + constant of map)$ and the memory to can be sparse.
 
     \kactlimport{suffix-automaton.cpp}

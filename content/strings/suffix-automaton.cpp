@@ -1,75 +1,84 @@
 /**
- * Author: CP-algo, Wallace
- * Date: 17/04/2024
+ * Author: Wallace, CP-algo, MagePetrus, AlbertoTDNeto
+ * Date: 20/04/2024
  * Description: Suffix automaton, each node represents a set of end-pos equivalent substrings.
  * Solves A LOT of tasks!
- * Time: O(n log{k}), n = s.size(), k = characters used
+ * Time: O(n) to create all nodes, O(n log{n}) to compute endpos size
  * Status: Tested in CSES
 */
 
+// obs: O(alphabet) is considered constant
+const ll alphabet = 27; // index #26 = char('{') (separator)
+
 struct Automaton {
     struct State {
-        ll len = 0, link = 1;
-        map<char, ll> down = {}; // 0 => non existent edge
-        ll cnt = 0, fpos = -1;
-
-        ll& operator [](const char c) {
-            return down[c];
+        ll link = 1, len = 0;
+        array<ll, alphabet> down = {}; // 0 => non existent edge
+        ll endpos = 0, fpos = -1;
+ 
+        ll& operator [](const char &c) {
+            return down[c-'a'];
         }
     };
- 
+
     ll n = 2; // number of states
     vector<State> ton; // short for automaton :D
-    vector<ll> order_len;
     string s;
     
     Automaton(string ss) : s(ss) {
         // root = 1, root.link = 0 (0 is a dummy node)
-        ton.assign(2, {0, 0});
-
+        ton.assign(2, {0});
         for(auto c : s) add(c);
-
-        for(ll i=1; i<n; i++) order_len.pb(i);
-        sort(order_len.begin(), order_len.end(), [&](auto l, auto r) {
-            return ton[l].len > ton[r].len;
-        });
-        for(auto i : order_len) {
-            ll j = ton[i].link;
-            if (j != 1) ton[j].cnt += ton[i].cnt;
+        
+        // build(); // remove if O(nlogn) is too much (s.size() ~ 2e6)
+    }
+ 
+    vector<pair<ll, ll>> order; // nodes ordered by len (decreasing)
+    void build() { // compute endpos O(n log(n))
+        for(ll i=1; i<n; i++) {
+            order.pb({ton[i].len, i});
         }
+        sort(order.rbegin(), order.rend());
+        for(auto [len, i] : order) {
+            ton[ ton[i].link ].endpos += ton[i].endpos;
+        }
+    }
+    
+    ll minlen(ll u) {
+        return 1 + ton[ ton[u].link ].len;
     }
 
     ll last = 1;
     void add(char c) {
-        ll cur = n++;
+        ll u = n++;
         ll p = last;
-        last = cur;
-
-        State node; // state[cur]
+        last = u;
+ 
+        State node; // state[u]
         node.len = ton[p].len + 1;
-        node.cnt = 1;
+        node.endpos = 1;
         node.fpos = node.len - 1;
         ton.pb(node);
-
-        for (;p and !ton[p].down.count(c); p = ton[p].link) 
-            ton[p][c] = cur;
-
+ 
+        for (;p and !ton[p][c]; p = ton[p].link) 
+            ton[p][c] = u;
+ 
         if (p == 0) return;
-
+ 
         ll q = ton[p][c];
         if (ton[p].len + 1 == ton[q].len) {
-            ton[cur].link = q;
+            ton[u].link = q;
             return;
         }
-
+ 
 		ll clone = n++;
         State node2 = ton[q]; // state[clone]
-        node2.cnt = 0;
+        node2.endpos = 0;
         node2.len = ton[p].len + 1;
         ton.pb(node2);
-
-		ton[cur].link = ton[q].link = clone;
-
+ 
+		ton[u].link = ton[q].link = clone;
+ 
 		for (; ton[p][c] == q; p = ton[p].link)
             ton[p][c] = clone;
 	}
@@ -78,22 +87,21 @@ struct Automaton {
     // Tasks //
     // ----- //
 
-    // s1. Number of distinct substrings
+    // s1. Number of distinct substrings 
     // separated in a vector by their lengths
-    // using the property that: minlen(cur) = 1 + len(link(cur))
-    // and that state[cur] cover all the substrings (suffixes) 
+    // knowing that a state[u] cover all the substrings (suffixes) 
     // of size [minlen, len] represented by this state
+    // Obs: for non-distinct substrings, the histogram is simply n, n-1, ... , 2, 1
 
-    vector<ll> distinctSubstrings() { // O(n)
+    vector<ll> histogram() { // O(n)
         ll sz = s.size();
         vector<ll> ans(sz+1, 0);
  
         for(ll i=2; i<n; i++) {
-            ll j = ton[i].link;
-            ll minlen = 1 + ton[j].len;
+            ll mnlen = minlen(i);
             ll len = ton[i].len;
- 
-            ans[minlen] += 1;
+
+            ans[mnlen] += 1;
             if (len + 1 <= sz)
                 ans[len + 1] -= 1;
         }
@@ -112,39 +120,48 @@ struct Automaton {
     
     // Additionally, by creating the automaton on the duplicated string (S+S),
     // the k-th substring with k = s.size(), will give us the Smallest cyclic shift (Minimal Rotation)
-    // This may have a big complexity nevertheless, need to optimize
+    // For huge strings, remeber to not build() endpos which is O(n logn)
 
-    // number of substrings below node (including node)
+    // ps: number of substrings below node (including node)
     // ps[0] -> include repeated substring, ps[1] -> consider only distinct
     vector<ll> ps[2]; 
 
-    void buildPS() {
+    void buildPS() { // O(n)
+        assert(!order.empty()); // assert if build() was called
+
         ps[0].assign(n, 0), ps[1].assign(n, 0);
 
         for(ll k : {0, 1}) {
-            for(auto i : order_len) {
-                if (i != 1) 
-                    ps[k][i] = (k ? 1 : ton[i].cnt);
+            for(auto [len, u] : order) {
+                if (u != 1) {
+                    ps[k][u] = (k ? 1 : ton[u].endpos);
+                }
 
-                for(auto [c, j] : ton[i].down) {
-                    ps[k][i] += ps[k][j];
+                for(auto v : ton[u].down) if (v) {
+                    ps[k][u] += ps[k][v];
                 }
             }
         }
     }
 
     string substring(ll k, bool distinct = true) { // O(V+E) = O(2sz+ 3sz) = O(5sz), sz = s.size()
-        assert(!ps[0].empty());
+        assert(!ps[0].empty()); // assert if buildPS() was called
  
         string ans = ""; // {k = 0} will return the empty string ""
  
         function<void (ll)> dfs = [&](ll u) {
             if (k <= 0) return;
-            for(auto [c, v] : ton[u].down) {
+            for(ll inc = 0; inc<alphabet; inc++) {
+                char c = char('a' + inc);
+
+                ll v = ton[u][c];
+                if (!v) continue;
+
                 ll sum = ps[distinct][v];
+
                 if (k <= sum) {
                     ans += c;
-                    k -= (distinct ? 1 : ton[v].cnt);
+                    k -= (distinct ? 1 : ton[v].endpos);
                     dfs(v);
                     if (k <= 0) return;
                 }
@@ -168,7 +185,7 @@ struct Automaton {
     ll prefixPattern(string &p) { // O( p.size() )
         ll ans = 0, cur = 1;
         for(auto c : p) {
-            if (ton[cur].down.count(c)) {
+            if (ton[cur][c]) {
                 cur = ton[cur][c];
                 ans += 1;
             }
@@ -180,14 +197,15 @@ struct Automaton {
     // p2. Count the numbers of occurrences of a pattern P
 
     ll countPattern(string &p) { // O( p.size() )
+        assert(!order.empty()); // check if build() was called
         ll u = 1;
         for(auto c : p) {
-            if (ton[u].down.count(c)) {
-                u = ton[u].down[c];
+            if (ton[u][c]) {
+                u = ton[u][c];
             }
             else return 0; // no match
         }
-        return ton[u].cnt;
+        return ton[u].endpos;
     }
 
     // p3. Find the first position in which occurred the pattern (0-idx)
@@ -195,8 +213,8 @@ struct Automaton {
     ll firstPattern(string &p) { // O( p.size() )
         ll u = 1;
         for(auto c : p) {
-            if (ton[u].down.count(c)) {
-                u = ton[u].down[c];
+            if (ton[u][c]) {
+                u = ton[u][c];
             }
             else return -1; // no match
         }
@@ -205,22 +223,28 @@ struct Automaton {
     }
 
     // p4. Longest Common Substring of P and S
+    // In addition to returning the lcs, 
+    // it returns an dp array with the lcs size for each end position i
 
-    string lcs(string &p) { // O( p.size() )
-
-        ll cur = 1, match = 0, best = 0, pos = 0;
+    string lcs(string &p, vector<ll> &dp) { // O( p.size() )
+        dp.assign(p.size(), 0);
+        
+        ll u = 1, match = 0, best = 0, pos = 0;
 
         for(ll i=0; i<(ll)p.size(); i++) {
             auto c = p[i];
 
-            while(cur > 1 and !ton[cur].down.count(c)) {
-                cur = ton[cur].link;
-                match = ton[cur].len;
+            while(u > 1 and !ton[u][c]) { // no edge -> follow link
+                u = ton[u].link;
+                match = ton[u].len;
             }
-            if (ton[cur].down.count(c)) {
-                cur = ton[cur][c];
+
+            if (ton[u][c]) {
+                u = ton[u][c];
                 match++;
             }
+
+            dp[i] = match;
             if (match > best) {
                 best = match;
                 pos = i;
@@ -228,29 +252,5 @@ struct Automaton {
         }
 
         return p.substr(pos - best + 1, best);
-    }
-
-
-    // --------- //
-    // Debugging //
-    // --------- //
-
-    using T = tuple<ll, ll, char>;
-    vector<T> edges() {
-        vector<T> ans;
-        for(ll i=1; i<n; i++) {
-            for(auto [c, j] : ton[i].down) {
-                ans.pb({i, j, c});
-            }
-        }
-        return ans;
-    }
-
-    vector<pll> links() {
-        vector<pll> ans;
-        for(ll i=1; i<n; i++) {
-            ans.pb({i, ton[i].link});
-        }
-        return ans;
     }
 };
