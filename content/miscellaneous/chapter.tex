@@ -12,7 +12,49 @@
         cin >> num >> c >> den;
     \end{lstlisting}
     
-
 \section{Ternary Search}
 
     \kactlimport{ternary-search.cpp}
+
+\section{Bit optimization}
+
+    \textbf{use popcnt pragma!!}
+
+    \begin{lstlisting}[language=c++]
+    #pragma GCC target("popcnt")
+    \end{lstlisting}
+
+    \subsection{Operations}
+
+    \begin{align*}
+        intersection & \hspace{5mm} & a \cap b     & \hspace{5mm} &  a \& b \\
+        union        & \hspace{5mm} & a  \cup b    & \hspace{5mm} &  a | b \\
+        complement   & \hspace{5mm} & \overline{a} & \hspace{5mm} &  ~a \\
+        difference   & \hspace{5mm} & a - b        & \hspace{5mm} &  a \& (~b) \\
+    \end{align*}
+
+    \begin{itemize} 
+        \item \textbf{\_\_builtin\_clz(x)}: the number of zeros at the beginning of the number
+        \item \textbf{\_\_builtin\_ctz(x)}: the number of zeros at the end of the number
+        \item \textbf{\_\_builtin\_popcount(x)}: the number of ones in the number
+        \item \textbf{\_\_builtin\_parity(x)}: the parity (even or odd) of the number of ones
+
+        \item \textbf{LSB(i)}: ((i) \& -(i))
+        \item \textbf{MSB(i)}: (63 - \_\_builtin\_clzll(i)), for ll
+
+        \item \textbf{bitset $<$k$>$ bs(str)}: create a bitset of size k from a binary string representation
+        \item \textbf{bitset $<$k$>$ bs(num)}: create a bitset of size k from a integer representation
+        \item \textbf{str = bs.to\_string()}: return the binary string representation of the bitset
+        \item \textbf{num = bs.to\_ullong()()}: return the unsigned integer representation of the bitset
+    \end{itemize}
+    
+    \subsection{Problems}
+    
+    \begin{itemize}
+        \item \textbf{Hamming Distance:} When comparing two binary strings of size $k$, if the size of the strings are small enough, 
+        just represent them as integers (uint or ulong) and do \textit{\_\_builtin\_popcount(a \^ b)} to compute the hamming distance in $O(1)$ instead of $O(k)$.
+
+        \item \textbf{Counting subgrids:} If the desired size if not small enough, divide into continuous segments of acceptable sizes (such as k=64 for unsigned long long).
+        Then, the complexity of $O(N)$ can be reduced to $O(N/64)$. For more versatility, and huge sizes, one can use bitset<k> directly, but it is a little bit slower.
+
+    \end{itemize}
