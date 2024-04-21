@@ -41,12 +41,26 @@
 
         \item \textbf{LSB(i)}: ((i) \& -(i))
         \item \textbf{MSB(i)}: (63 - \_\_builtin\_clzll(i)), for ll
+    \end{itemize}
+    
+    \subsection{Bitset}
 
+    Bitset are very convenient for bitwise operations. Beside common operators, there are other useful ones already built in:
+    
+    \begin{itemize} 
         \item \textbf{bitset $<$k$>$ bs(str)}: create a bitset of size k from a binary string representation
         \item \textbf{bitset $<$k$>$ bs(num)}: create a bitset of size k from a integer representation
         \item \textbf{str = bs.to\_string()}: return the binary string representation of the bitset
         \item \textbf{num = bs.to\_ullong()()}: return the unsigned integer representation of the bitset
+        \item \textbf{bs.\_Find\_first()}: returns the first set bit (from LSB to MSB)
+        \item \textbf{bs.\_Find\_next(idx)}: returns the next set bit after idx (not including idx of course)
     \end{itemize}
+
+    Note that, if there isn't any set bit after idx, BS.\_Find\_next(idx) will return BS.size(); 
+    same as calling BS.\_Find\_first() when bitset is clear;
+
+    The complexity of bitwise operations for the bitset is $O(\frac{size}{32})$ or $O(\frac{size}{64})$, 
+    depending on the architecture of the computer.
     
     \subsection{Problems}
     

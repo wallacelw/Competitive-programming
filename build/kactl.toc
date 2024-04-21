@@ -106,5 +106,6 @@
 \contentsline {section}{\numberline {10.3}Ternary Search}{24}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Bit optimization}{24}{section.10.4}%
 \contentsline {subsection}{\numberline {10.4.1}Operations}{24}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}Problems}{24}{subsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.4.2}Bitset}{24}{subsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.4.3}Problems}{24}{subsection.10.4.3}%
 \contentsfinish 
