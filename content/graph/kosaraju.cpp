@@ -27,7 +27,7 @@ struct Kosaraju {
     }
 
     Kosaraju(vector<vll> &g_) 
-      : g(g_), n(g_.size()-1) { // 1-idx
+      : n(g_.size()-1), g(g_) { // 1-idx
 
         gi.assign(n+1, vll());
         for(ll i=1; i<=n; i++) {
