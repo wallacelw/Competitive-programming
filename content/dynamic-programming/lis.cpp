@@ -1,5 +1,5 @@
 /**
- * Author: Wallace
+ * Author: Wallace, USACO
  * Date: 22/04/2024
  * Description: Computes the LIS size and also the auxiliar vector used to compute it.
  * the LIS is STRICTLY INCREASING, but the given array can have duplicated values, the algorithm still works!
@@ -20,4 +20,20 @@ pair<ll, vector<ll>> lis(vector<ll> x) {
     }
     ll sz = lower_bound(mn.begin(), mn.end(), INF) - mn.begin() - 1;
     return {sz, mn};
+}
+
+// alternative code from USACO (not tested, but should work and vector index is off by an offset of -1)
+int find_lis(vector<int> a) {
+	vector<int> dp;
+	for (int i : a) {
+		int pos = lower_bound(dp.begin(), dp.end(), i) - dp.begin();
+		if (pos == dp.size()) {
+			// we can have a new, longer increasing subsequence!
+			dp.push_back(i);
+		} else {
+			// oh ok, at least we can make the ending element smaller
+			dp[pos] = i;
+		}
+	}
+	return dp.size();
 }

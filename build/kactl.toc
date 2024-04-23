@@ -30,8 +30,8 @@
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{8}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Composition}{8}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Decomposition}{8}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Variations and Extensions}{8}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{8}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.5}Variations and Extensions}{9}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{9}{subsection.4.5.1}%
 \contentsline {section}{\numberline {4.6}Misère Game}{9}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Staircase Nim}{9}{section.4.7}%
 \contentsline {subsection}{\numberline {4.7.1}Description}{9}{subsection.4.7.1}%
@@ -50,7 +50,7 @@
 \contentsline {section}{\numberline {6.1}Fundamentals}{10}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Network flow}{10}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{11}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{11}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{12}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{12}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{12}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Minimum Cost Matching}{12}{section.6.3}%
@@ -91,16 +91,16 @@
 \contentsline {section}{\numberline {8.2}Extended Euclid}{20}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{20}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{20}{subsection.8.2.2}%
-\contentsline {chapter}{\numberline {9}Strings}{20}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Strings}{21}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Hashing}{21}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Z-Function}{21}{section.9.2}%
 \contentsline {section}{\numberline {9.3}KMP}{21}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Patterns in a String}{21}{subsection.9.3.1}%
-\contentsline {section}{\numberline {9.4}Suffix Array}{21}{section.9.4}%
+\contentsline {section}{\numberline {9.4}Suffix Array}{22}{section.9.4}%
 \contentsline {section}{\numberline {9.5}Manacher}{22}{section.9.5}%
 \contentsline {section}{\numberline {9.6}Booth}{22}{section.9.6}%
-\contentsline {section}{\numberline {9.7}Suffix Automaton}{22}{section.9.7}%
-\contentsline {subsection}{\numberline {9.7.1}Concepts:}{22}{subsection.9.7.1}%
+\contentsline {section}{\numberline {9.7}Suffix Automaton}{23}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Concepts:}{23}{subsection.9.7.1}%
 \contentsline {subsection}{\numberline {9.7.2}Implementation:}{23}{subsection.9.7.2}%
 \contentsline {chapter}{\numberline {10}Miscellaneous}{24}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Random Generator}{24}{section.10.1}%
