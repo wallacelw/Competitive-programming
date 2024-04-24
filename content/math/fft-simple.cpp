@@ -10,7 +10,7 @@
 // #define ld long double
 // const ld PI = acos(-1);
 
-struct num{
+struct num {
     ld a {0.0}, b {0.0};
     num() {}
     num(ld na) : a{na} {}
@@ -51,10 +51,10 @@ void fft(vector<num> &a, bool invert) {
             }
         }
     }
-    if(invert)
-      for(num &x: a)
-          x = x/n;
-
+    if(invert) {
+        for(num &x: a) 
+            x = x/n;
+    }
 }
 
 vector<ll> multiply(vector<int> const& a, vector<int> const& b){
