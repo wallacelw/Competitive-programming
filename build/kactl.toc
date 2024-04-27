@@ -48,8 +48,8 @@
 \contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{10}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Graph}{10}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fundamentals}{10}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Network flow}{10}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{11}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.2}Network flow}{11}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{12}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{12}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{12}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{12}{subsection.6.2.4}%
@@ -59,7 +59,7 @@
 \contentsline {section}{\numberline {6.4}Coloring}{13}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}k-Coloring}{13}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Shortest Paths}{13}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Dijkstra}{13}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.1}Dijkstra}{14}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{14}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{14}{subsection.6.5.3}%
 \contentsline {section}{\numberline {6.6}Undirected Graph}{14}{section.6.6}%
@@ -72,40 +72,40 @@
 \contentsline {subsection}{\numberline {6.6.6}Minimum Spanning Tree}{16}{subsection.6.6.6}%
 \contentsline {section}{\numberline {6.7}Directed Graph}{16}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Topological Sort}{16}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Kosaraju}{16}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.2}Kosaraju}{17}{subsection.6.7.2}%
 \contentsline {subsection}{\numberline {6.7.3}2-SAT}{17}{subsection.6.7.3}%
 \contentsline {section}{\numberline {6.8}Trees}{17}{section.6.8}%
 \contentsline {chapter}{\numberline {7}Mathematics}{18}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Modular Arithmetic}{18}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Lucas's Theorem}{18}{subsection.7.1.1}%
 \contentsline {section}{\numberline {7.2}Combinatorics}{18}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Factorial}{18}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{18}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.1}Factorial}{19}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{19}{subsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.2.3}Burside Lemma}{19}{subsection.7.2.3}%
 \contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{19}{subsection.7.2.4}%
-\contentsline {section}{\numberline {7.3}FFT}{19}{section.7.3}%
+\contentsline {section}{\numberline {7.3}FFT}{20}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Number theory}{20}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Sieves}{20}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Eratosthenes}{20}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Linear Sieve}{20}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Extended Euclid}{20}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{20}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{20}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.2}Extended Euclid}{21}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Inverse Multiplicative}{21}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Diofantine Equation}{21}{subsection.8.2.2}%
 \contentsline {chapter}{\numberline {9}Strings}{21}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Hashing}{21}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Z-Function}{21}{section.9.2}%
 \contentsline {section}{\numberline {9.3}KMP}{21}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Patterns in a String}{21}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.1}Patterns in a String}{22}{subsection.9.3.1}%
 \contentsline {section}{\numberline {9.4}Suffix Array}{22}{section.9.4}%
 \contentsline {section}{\numberline {9.5}Manacher}{22}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Booth}{22}{section.9.6}%
+\contentsline {section}{\numberline {9.6}Booth}{23}{section.9.6}%
 \contentsline {section}{\numberline {9.7}Suffix Automaton}{23}{section.9.7}%
 \contentsline {subsection}{\numberline {9.7.1}Concepts:}{23}{subsection.9.7.1}%
 \contentsline {subsection}{\numberline {9.7.2}Implementation:}{23}{subsection.9.7.2}%
-\contentsline {chapter}{\numberline {10}Miscellaneous}{24}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Random Generator}{24}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Read an Fraction Input}{24}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Ternary Search}{24}{section.10.3}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{25}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Random Generator}{25}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Read an Fraction Input}{25}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Ternary Search}{25}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Bit optimization}{25}{section.10.4}%
 \contentsline {subsection}{\numberline {10.4.1}Operations}{25}{subsection.10.4.1}%
 \contentsline {subsection}{\numberline {10.4.2}Bitset}{25}{subsection.10.4.2}%

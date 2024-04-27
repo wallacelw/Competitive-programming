@@ -2,6 +2,19 @@
 
 \section{Fundamentals}
 
+	\textbf{Curious Property of DFS:} 
+	
+	\begin{itemize}
+	\item Given an undirected graph, assign each node to a set \textit{A}.
+	\item Run a Depth-First-Search starting at any node.
+	\item Whenever the DFS visits a new node N, remove N from \textit{A} and add it to the path set \textit{P}.
+	\item Whenever the DFS backtracks from node N, remove N from the path and add it to set \textit{B}.
+	\item Repeat until $|A| = |B|$. Which \textbf{will always occur}, because, in each operation, \textit{A} decreases by one and \textit{B} keeps it value. 
+	Or, \textit{B} decreases by one and \textit{A} keeps it value.
+	\item The DFS guarantees that \textit{A} and \textit{B} never have neighbouring nodes. 
+	Because the set of nodes in Path \textit{P} separates them.
+	\end{itemize}
+	
 	\kactlimport{dfs.cpp}
 
 	\kactlimport{bfs.cpp}
