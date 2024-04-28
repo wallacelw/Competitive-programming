@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Contest}{1}{chapter.1}%
 \ttl@starttoc {chapters@1}
 \contentsline {section}{\texttt {template.cpp}\hspace {0.2em}}{1}{chapter.1}%
-\contentsline {section}{\texttt {.bashrc}\hspace {0.2em}}{1}{lstnumber.1.1.47}%
+\contentsline {section}{\texttt {.bashrc}\hspace {0.2em}}{1}{lstnumber.1.1.33}%
 \contentsline {section}{\texttt {hash.sh}\hspace {0.2em}}{1}{lstnumber.1.2.1}%
 \contentsline {section}{\texttt {troubleshoot.txt}\hspace {0.2em}}{1}{lstnumber.1.3.3}%
 \contentsline {chapter}{\numberline {2}Data structures}{1}{chapter.2}%
@@ -35,7 +35,7 @@
 \ttl@stoptoc {chapters@2}
 \ttl@starttoc {chapters@3}
 \contentsline {section}{\numberline {3.1}Longest Increasing Subsequence}{5}{section.3.1}%
-\contentsline {subsection}{\texttt {lis.cpp}\hspace {0.2em}}{6}{section.3.1}%
+\contentsline {subsection}{\texttt {lis.cpp}\hspace {0.2em}}{5}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{6}{section.3.2}%
 \contentsline {subsection}{\texttt {divide-conquer-dp.cpp}\hspace {0.2em}}{6}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Knuth Optimization}{6}{section.3.3}%
