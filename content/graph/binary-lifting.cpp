@@ -1,8 +1,8 @@
 /** 
  * Author: Wallace, Maxwell
  * Date: 03/02/2024
- * Description: Binary Lifting for min, max weight
- * present in a simple path 
+ * Description: Binary Lifting to compute the min, max edge weight
+ * present in the simple path {a, lca(a, b), b} 
  * Time: $O(N \log(N))$ to build; $O(\log(N))$ per query
 */
 

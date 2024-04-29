@@ -79,12 +79,28 @@
         \item Tree Balancing 
         \item Path Compression
     \end{itemize}
+
     If one improvement is used, 
     the time complexity will become $O(\log{N})$
 
     If both are used, $O(\alpha) \approx O(5)$
 
+    In addition, the \textbf{rollback operation} may be implemented, but it requires to exclude \textit{path compression} optimization.
+
     \kactlimport{dsu.cpp}
+
+    \subsection{Dynamic Connectivity}
+
+    Consider an undirected graph that consists of $n$ nodes and $m$ edges. There are two types of events that can happen:
+
+    \begin{itemize}
+    \item A new edge is created between nodes a and b.
+    \item An existing edge between nodes a and b is removed.
+    \end{itemize}
+    
+    Your task is to report the number of components after every event (and before all events).
+
+    \kactlimport{query-tree.cpp}
 
 \section{Trie}
 
