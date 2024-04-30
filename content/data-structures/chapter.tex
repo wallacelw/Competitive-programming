@@ -108,6 +108,30 @@
     
     \kactlimport{trie.cpp}
 
+\section{Fenwick Tree}
+
+    Also called \textbf{Binary Indexed Tree (BIT)}.
+
+    \textit{Observation:} BIT cannot support min/max queries, because it's mandatory to have an inverse operation.
+
+    Let's define $g(i)$ as the number acquired after removing the $LSB(i)$ from $i$:
+
+        $$ g(i) = i - LSB(i) = i - (i \& (-i)) $$
+
+    Then, each value of the \textbf{Bit vector} will be resposible to store the range value of the interval:
+
+        $$ (g(i), i] $$
+
+    Therefore, to retrieve the value in an arbitrary range $[1, x]$, it's only necessary to merge:
+
+        $$ Bit[i] + Bit[g(i)] + Bit[g(g(i))] + ... + Bit[last], last >= 1$$
+
+    In the \textbf{1-Indexed implementation}, $Bit[0]$ is undefined and not used.
+
+    \kactlimport{fenwick-tree.cpp}
+    
+    \kactlimport{fenwick-tree-2D.cpp}
+
 \section{Segment Trees}
 
     Each node of the segment tree represents the cumulative value of a range.
