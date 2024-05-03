@@ -6,7 +6,7 @@
  * Status: tested!
  */
 
-struct DSU{
+struct DSU {
     vector<ll> group, card;
 
     DSU (ll n) : group(n+1), card(n+1, 1) { // 1-idx
