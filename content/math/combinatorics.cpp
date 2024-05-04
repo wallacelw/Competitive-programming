@@ -37,6 +37,7 @@ struct Combinatorics {
     }
 
     // "Permutacao com repeticao"
+    // Also called: Multinomial coefficients
     // n objects to place in n spaces
     // some objects are equal
     // therefore, we consider the possible re-orderings

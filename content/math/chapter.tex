@@ -121,3 +121,19 @@ For faster linear recurrence computation with matrix exponentiation.
 $$ Base * Operator^{k} = Result $$
 
 \kactlimport{matrix.cpp}
+
+\subsection{Minimum Path Length with exactly k edges}
+
+Consider a directed weighted graph having $n$ nodes and $m$ edges.
+Your task is to calculate the minimum path length from node $1$ to node $n$ with exactly $k$ edges.
+
+This task is solved the using matrix exponentiation the 
+same way as the problem of \textbf{Counting the Number of Paths with exactly k edges}.
+But there are some modifications in the matrix properties: 
+
+The $null$ (and default) element is now $INF$. The identity is composed of $0$ in the diagonal.
+And the product of matrices defined as:
+
+$$ AB[i, j] = \min^{n}_{k=1} (AB[i, j], A[i,k] + B[k, j]) $$
+
+Finally, the operator matrix contains the value of the minimum weight in each pairwise nodes or $INF$ (if no edges). 
