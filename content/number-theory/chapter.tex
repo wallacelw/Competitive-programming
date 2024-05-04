@@ -1,4 +1,119 @@
-\chapter{Number theory}
+\chapter{Number Theory}
+
+\section{Modular Arithmetic}
+
+	\kactlimport{modular.cpp}
+
+	\subsection{Lucas's Theorem}
+
+	$$ \binom{n}{m} \equiv \prod_{i=0}^k \binom{n_i}{m_i} \quad (\text{mod } p) $$ 
+
+	For $p$ prime. $n_i$ and $m_i$ are the coefficients of the representations of $n$ and $m$ in base $p$.
+
+	\textit{Example:}
+
+		11 (in base p=3) = $1 \cdot 3^2 + 0 \cdot 3^1 + 2 \cdot 3^0$
+
+		$\implies n_2 = 1, n_1 = 0, n_0 = 2$
+
+\subsection{Fermat's Little Theorem}
+
+Fermat's little theorem states that if $p$ is a prime number, then for any integer $a$, the number $a^p - a$ is an integer multiple of $p$:
+
+$$ a^{p} \equiv a {\pmod {p}} $$
+
+If a is not divisible by p, that is, if a is coprime to p, then Fermat's little theorem is equivalent to:
+
+$$ a^{p-1} \equiv 1 {\pmod {p}} $$
+
+In other words, when doing a double exponentiation. Do:
+
+$$ a^{b^c} {\pmod {p}} \equiv a^{ ({b^c} {\pmod {p-1}}) } {\pmod {p}} $$
+
+\section{Divisibility}
+
+    ``a is divisible by b'' or
+    ``a is a multiple of b'' or
+    ``b is a divisor of a'' or
+    ``b is a factor of a'' or
+    ``b divides a'' or
+    ``$(b | a)$''
+
+    $$ a \% b == 0 $$
+
+    ``a1, a2 are divisible by b''
+    $$ gcd(a1, a2) \% b = 0 $$
+
+    ``a is divisible by b1 and b2''
+    $$ a \% lcm(b1, b2) = 0 $$
+
+    \subsection{Euclid}
+    $$ a = bq + r $$
+
+    \subsection{Lema 1 - Transitivity}
+
+    ``a is divisible by b and b is divisible by c''
+
+    $$ (a | b) , (b | c)  \implies (a | c) $$
+
+    \subsection{Lema 2}
+    $$ (a | b) , (a | c) => a | (rb + sc) $$
+
+    \subsection{Lema 3}
+    $$ d = gcd(a, b) \implies gcd(a/d, b/d) = 1 $$
+
+    \subsection{Lema 4}
+    $$ d = gcd(a, b) \implies d = ra + sb \implies (d_0 | a), (d_0 | b) \implies (d_0 | d) $$
+    
+    \subsection{Lema 5}
+    $$ (a | bc), gcd(a, b) = 1 \implies (a | c) $$
+
+    \subsection{Lema 6}
+    $$ a = bq+r, {1 <= r < b} \implies gcd(a, b) = gcd(b, r) $$
+
+\subsection{Greatest Common Divisor (GCD)}
+
+    $$ gcd(a) = a $$
+    $$ gcd(a, b, c) = gcd( gcd(a, b), c ) $$ 
+    $$ gcd(a, b) = (a*b) / lcm(a, b) $$
+
+\subsection{Least Commom Multiple (LCM)}
+
+    $$ lcm(a) = a $$
+    $$ lcm(a, b, c) = lcm( lcm(a, b), c ) $$
+    $$ lcm(a, b) = (a*b) / gcd(a, b) $$
+
+\subsection{Observation}
+
+\textit{std-c++17} implements $gcd()$ function, which works correctly for negative numbers as well:
+
+$$ gcd(a,b) = gcd(-a,-b) = gcd(-a,b) = gcd(a,-b) $$
+
+\section{Closed Formulas related to divisors of a number}
+
+Let $n$ be a number represented by it's prime factors $p_i$ and respective exponents $e_i$:
+
+$$ n = p_1^{e_1} \cdot p_2^{e_2} \cdots p_k^{e_k} $$
+
+\subsection{Number of Divisors}
+
+$$ d(n) = (e_1 + 1) \cdot (e_2 + 1) \cdots (e_k + 1) $$
+$$ C_i = C_{i-1} \cdot (e_i + 1) $$
+
+\subsection{Sum of Divisors}
+
+$$ \sigma(n) = \frac{p_1^{e_1 + 1} - 1}{p_1 - 1} \cdot \frac{p_2^{e_2 + 1} - 1}{p_2 - 1} \cdots \frac{p_k^{e_k + 1} - 1}{p_k - 1} $$
+
+$$ S_i = S_{i-1} \cdot \frac{p_i^{e_i + i} - 1}{p_i - 1} $$
+
+\subsection{Product of Divisors}
+
+$$ P_i = (P_{i-1})^{(e_i + 1)} \cdot ({p_i}^{(e_i(e_i + 1))/2})^{C_{i-1}} $$
+
+where, $ C_i = $ ``Number of Divisors considering $i$ factors''.
+And remeber to use \textbf{Fermat's Little Theorem}
+
+
 
 \section{Sieves}
 

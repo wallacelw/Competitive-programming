@@ -1,21 +1,5 @@
 \chapter{Mathematics}
 
-\section{Modular Arithmetic}
-
-	\kactlimport{modular.cpp}
-
-	\subsection{Lucas's Theorem}
-
-	$$ \binom{n}{m} \equiv \prod_{i=0}^k \binom{n_i}{m_i} \quad (\text{mod } p) $$ 
-
-	For $p$ prime. $n_i$ and $m_i$ are the coefficients of the representations of $n$ and $m$ in base $p$.
-
-	\textit{Example:}
-
-		11 (in base p=3) = $1 \cdot 3^2 + 0 \cdot 3^1 + 2 \cdot 3^0$
-
-		$\implies n_2 = 1, n_1 = 0, n_0 = 2$
-
 \section{Combinatorics}
 
 	\begin{align*}
@@ -137,3 +121,21 @@ And the product of matrices defined as:
 $$ AB[i, j] = \min^{n}_{k=1} (AB[i, j], A[i,k] + B[k, j]) $$
 
 Finally, the operator matrix contains the value of the minimum weight in each pairwise nodes or $INF$ (if no edges). 
+
+\section{Series' Closed Formulas}
+
+\subsection{Natural Number Summation (PA)}
+
+$$ 1 + 2 + 3 + 4 + 5 + ... + n-1 + n $$
+$$ = \sum_{i=1}^n i = \frac{ n(n+1) }{ 2 } $$
+
+\subsection{Natural Number Quadratic Summation}
+
+$$ 1 + 4 + 9 + 16 + 25 + ... + (n-1)^2 + n^2 $$
+$$ = \sum_{i=1}^n i^2 = \frac{ n(n+1)(2n+1) }{ 6 } $$
+
+\subsection{Triangular Numbers Summation}
+
+$$ 1 + 3 + 6 + 10 + 15 + ... + \frac{(n-1)(n)}{2} + \frac{(n)(n+1)}{2} $$
+$$ = \sum_{i=1}^n \frac{i(i+1)}{2} = \frac{1}{2}(\sum_{i=1}^n i^2 + \sum_{i=1}^n i) $$
+$$ = \frac{1}{2} ( \frac{ n(n+1) }{ 2 } + \frac{ n(n+1)(2n+1) }{ 6 }) $$
