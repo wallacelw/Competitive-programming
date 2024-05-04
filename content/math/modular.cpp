@@ -8,7 +8,7 @@
 
 // supports operations between int/ll and mint,
 // and it will return a mint object independently of the order of operations
-template <ll P> struct Z {
+template<ll P> struct Z {
     ll val;
 
     Z(ll a = 0) {
