@@ -18,7 +18,7 @@ struct DSU {
     }
     
     // returns false if a and b are already in the same component
-    bool join(ll a ,ll b) {
+    bool join(ll a, ll b) {
         a = find(a), b = find(b);
         if (a == b) return false;
         if (card[a] < card[b]) swap(a, b);
