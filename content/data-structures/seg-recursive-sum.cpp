@@ -10,22 +10,17 @@
 
 // [0, n] segtree for range sum query, point increase
 // 0 or 1-idx
-ll L=0, R;
 struct Segtree {
-
     struct Node {
         // null element:
         ll ps = 0;
     };
- 
-    vector<Node> tree;
-    vector<ll> v;
     
-    Segtree(ll n) {
-		R = n;
-        v.assign(n+1, 0);
-        tree.assign(4*(n+1), Node{});
-    }
+    ll L=0, R;
+    vector<ll> v;
+    vector<Node> tree;
+    
+    Segtree(ll n) : R(n), v(n+1), tree(4*(n+1)) {}
  
     Node merge(Node a, Node b) {
         return Node {
@@ -34,7 +29,7 @@ struct Segtree {
         };
     }
  
-    void build(ll l=L, ll r=R, ll i=1 ) {
+    void build(ll l, ll r, ll i=1) {
         if (l == r) {
             tree[i] = Node {
                 // leaf element:
@@ -48,8 +43,11 @@ struct Segtree {
             tree[i] = merge(tree[2*i], tree[2*i+1]);
         }
     }
+    void build() {
+        build(L, R, 1);
+    }
  
-    void increase(ll idx=1, ll val=0, ll l=L, ll r=R, ll i=1 ) {
+    void increase(ll idx, ll val, ll l, ll r, ll i) {
         if (l == r) {
             // increase operation:
             tree[i].ps += val;
@@ -61,10 +59,11 @@ struct Segtree {
             tree[i] = merge(tree[2*i], tree[2*i+1]);
         }
     }
- 
-    Node query(ll left=L, ll right=R, ll l=L, ll r=R, ll i=1) {
-        // left/right are the range limits for the query
-        // l / r are the internal variables of the tree
+    void increase(ll idx, ll val) {
+        increase(idx, val, L, R, 1);
+    }
+
+    Node query(ll left, ll right, ll l, ll r, ll i) {
         if (right < l or r < left){
             // null element:
             return Node{};
@@ -77,5 +76,8 @@ struct Segtree {
                 query(left, right, mid+1, r, 2*i+1)
             );
         }
+    }
+    Node query(ll left, ll right) {
+        return query(left, right, L, R, 1);
     }
 };

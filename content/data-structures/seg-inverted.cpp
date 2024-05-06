@@ -5,36 +5,31 @@
  * point query stored value, range increase
  * When initializing, choose an appropriate value for n.
  * Time: O(N \log(N)) to build, O(\log{N}) to range increase or point query
- * Status: Tested {https://atcoder.jp/contests/abc340/submissions/51471403}
+ * Status: Tested (https://atcoder.jp/contests/abc340/submissions/53206762)
  */
 
 // [0, n] segtree for point query stored value, range increase
 // 0 or 1-idx
-ll L=0, R;
 struct Segtree {
-
     struct Node {
         // null element:
         ll ps = 0;
     };
- 
-    vector<Node> tree;
+
+    ll L=0, R;
     vector<ll> v;
-    
-    Segtree(ll n) {
-		R = n;
-        v.assign(n+1, 0);
-        tree.assign(4*(n+1), Node{});
-    }
- 
+    vector<Node> tree;
+
+    Segtree(ll n) : R(n), v(n+1), tree(4*(n+1)) {}
+
     Node merge(Node a, Node b) {
         return Node {
             // merge operation:
             a.ps + b.ps
         };
     }
- 
-    void build(ll l=L, ll r=R, ll i=1 ) {
+
+    void build(ll l, ll r, ll i) {
         if (l == r) {
             tree[i] = Node {
                 // leaf element:
@@ -48,23 +43,27 @@ struct Segtree {
             tree[i] = Node{};
         }
     }
- 
-    void increase(ll left, ll right, ll val=0, ll l=L, ll r=R, ll i=1 ) {
-        if (right < l or r < left) {
-            return;
-        }
+    void build() {
+        build(L, R, 1);
+    }
+
+    void increase(ll val, ll left, ll right, ll l, ll r, ll i) {
+        if (right < l or r < left) return;
         else if (left <= l and r <= right) {
             // increase operation
             tree[i].ps += val;
         }
         else {
             ll mid = (l+r)/2;
-            increase(left, right, val, l, mid, 2*i);
-            increase(left, right, val, mid+1, r, 2*i+1);
+            increase(val, left, right, l, mid, 2*i);
+            increase(val, left, right, mid+1, r, 2*i+1);
         }
     }
+    void increase(ll val, ll left, ll right) {
+        increase(val, left, right, L, R, 1);
+    }
  
-    Node query(ll idx, ll l=L, ll r=R, ll i=1) {
+    Node query(ll idx, ll l, ll r, ll i) {
         if (l == r) {
             return tree[i];
         }
@@ -75,5 +74,8 @@ struct Segtree {
             else 
                 return merge(tree[i], query(idx, mid+1, r, 2*i+1));
         }
+    }
+    Node query(ll idx) {
+        return query(idx, L, R, 1);
     }
 };
