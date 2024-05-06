@@ -3,7 +3,7 @@
  * Date: 12/04/2024
  * Description: Optimize an $O(m n^2)$ dp to $O(m n log(n))$ using divide and conquer. 
  * cost function must have quadrangle inequality ("wider is worse")
- * Time: O(m n log(n)) 
+ * Time: O(m n \log{n}) 
  * Status: Tested (https://cses.fi/problemset/result/8998923/)
 */
 

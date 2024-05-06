@@ -4,7 +4,7 @@
  * Description: Basic Inverted Segment Tree for
  * point query stored value, range increase
  * When initializing, choose an appropriate value for n.
- * Time: O(N \log{N}) to build, O(\log{N}) to range increase or point query
+ * Time: O(N \log(N)) to build, O(\log{N}) to range increase or point query
  * Status: Tested {https://atcoder.jp/contests/abc340/submissions/51471403}
  */
 

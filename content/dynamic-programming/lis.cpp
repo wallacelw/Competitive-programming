@@ -3,7 +3,7 @@
  * Date: 22/04/2024
  * Description: Computes the LIS size and also the auxiliar vector used to compute it.
  * the LIS is STRICTLY INCREASING, but the given array can have duplicated values, the algorithm still works!
- * Time: O(n log{n})
+ * Time: O(n \log{n})
  * Status: Tested (https://cses.fi/problemset/result/9087101/)
 */
 

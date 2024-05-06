@@ -3,7 +3,7 @@
  * Date: 14/02/2024 
  * Description: Seg with PA (Progressao Aritmetica / Arithmetic Progression)
  * When initializing the segmente tree, remeber to choose the range limits (L, R) and call build()
- * Time: O(N \log{N}) to build, O(\log{N}) to increase or query
+ * Time: O(N \log(N)) to build, O(\log(N)) to increase or query
  * Status: Tested {https://cses.fi/problemset/result/8475932/}
  */
 

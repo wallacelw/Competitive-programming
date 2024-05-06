@@ -2,7 +2,7 @@
  * Author: AlbertoTDNeto
  * Date: 14/04/2024
  * Description: Using Slope trick, compute the min cost to modify arry to be non-decreasing
- * Time: O(n log(n))
+ * Time: O(n \log{n})
  * Status: Tested
 */
 

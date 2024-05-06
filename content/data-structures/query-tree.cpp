@@ -3,7 +3,7 @@
  * Date: 28/04/2024
  * Description: All queries have an active intervals, build a tree to store these queries
  * and iterate it in dfs order with rollbacks. The code below solves the specific problem of Dynamic Conectivity.
- * Time: O(n log^2(n))
+ * Time: O(n \log^2(n))
  * Status: Tested (https://cses.fi/problemset/result/9136292/)
 */
 

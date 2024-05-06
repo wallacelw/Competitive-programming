@@ -2,7 +2,7 @@
  * Author: Bruno Monteiro, Wallace
  * Date: 22/04/2024
  * Description: Implicit Treap
- * Time: O(log{n}) with high probability
+ * Time: O(\log(n)) with high probability
  * Status: Tested(but it can be improved and the increment() function is not tested yet)
  */
 

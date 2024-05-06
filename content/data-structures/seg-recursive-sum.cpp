@@ -4,7 +4,7 @@
  * Description: Basic Recursive Segment Tree for
  * points increase and range sum query.
  * When initializing, choose an appropriate value for n.
- * Time: O(N \log{N}) to build, O(\log{N}) to increase or query
+ * Time: O(N \log(N)) to build, O(\log(N)) to increase or query
  * Status: Tested {https://cses.fi/problemset/result/8449411/}
  */
 

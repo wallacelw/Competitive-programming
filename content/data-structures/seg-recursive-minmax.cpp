@@ -4,7 +4,7 @@
  * Description: Basic Recursive Segment Tree for
  * point update, range min/max query
  * When initializing, choose an appropriate value for n.
- * Time: O(N \log{N}) to build, O(\log{N}) to update or query
+ * Time: O(N \log(N)) to build, O(\log(N)) to update or query
  * Status: Tested {https://atcoder.jp/contests/abl/submissions/51473171}
  */
 

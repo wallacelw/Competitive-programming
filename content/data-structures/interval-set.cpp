@@ -4,7 +4,7 @@
  * Description: A set that contains closed [l, r] interval which are disjoint (no intersection).
  * This set is ordered and each interval [l1, r1] < [l2, r2] has r1 < l2.
  * When a new interval is added, it checks which intersections will occur and rearranges the intervals.
- * Time: O(log(N)) per insertion, slow constant
+ * Time: O(\log(N)) per insertion, slow constant
  * Status: Tested (https://codeforces.com/group/DFlg3zUlDY/contest/446247/problem/C)
  */
 

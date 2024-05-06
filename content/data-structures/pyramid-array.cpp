@@ -2,7 +2,7 @@
  * Author: Wallace
  * Date: 12/04/2024
  * Description: algorithm to find the min-cost of sorting an array in a pyramid order
- * Time: O(N log(N)), or O(N log^2(N)) if iterating the map directly
+ * Time: O(N \log(N)), or O(N \log^2(N)) if iterating the map directly
  * Status: Tested in cses, https://codeforces.com/gym/102082(G)
  */
 

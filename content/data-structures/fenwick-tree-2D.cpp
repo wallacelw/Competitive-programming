@@ -2,7 +2,7 @@
  * Author: Wallace
  * Date: 30/04/2024
  * Description: Simple 2D Fenwick Tree with point increase, 2D range sum query. 1-idx
- * Time: O(log{n} \cdot log{m}) to add, get psum, or range sum query
+ * Time: O(\log(n) \cdot \log(m)) to add, get psum, or range sum query
  * Status: Tested (https://cses.fi/problemset/result/9148069/)
 */
 
