@@ -11,16 +11,18 @@ struct Dinitz {
         ll u, v, cost, cap, flow=0;
     };
 
+    ll n, src, sink;
     vector<Edge> edges;
     vector<vector<ll>> g;
     vector<ll> dist, ptr; // uses dist instead of level
 
-    // n need to be big enough for all nodes, including src/sink
-    ll n, src, sink;
-    Dinitz(ll nn, ll s = -1, ll t = -1) : n(nn+10) {
-        src = (s == -1 ? n-2 : s);
-        sink = (t == -1 ? n-1 : t);
-        g.resize(n);
+    Dinitz(ll nn) : n(nn+10), g(n) {
+        src = n-2;
+        sink = n-1;
+    }
+    Dinitz(ll nn, ll s, ll t) : n(nn+10), g(n) {
+        src = s;
+        sink = t;
     }
 
     void addEdge(ll u, ll v, ll cost, ll cap, ll rcap = 0) { // rcap = retrocapacity for bidiretional edges
