@@ -8,8 +8,7 @@
  * Status: Tested {https://atcoder.jp/contests/abl/submissions/53206666}
  */
 
-// [0, n] segtree for point update, range min/max query
-// 0 or 1-idx
+// [0, n] segtree for point assignment update, range min/max query
 struct Segtree {
     struct Node {
         // null element:

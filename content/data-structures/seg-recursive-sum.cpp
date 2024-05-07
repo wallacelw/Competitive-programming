@@ -9,7 +9,6 @@
  */
 
 // [0, n] segtree for range sum query, point increase
-// 0 or 1-idx
 struct Segtree {
     struct Node {
         // null element:

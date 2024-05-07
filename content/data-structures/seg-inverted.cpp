@@ -9,7 +9,6 @@
  */
 
 // [0, n] segtree for point query stored value, range increase
-// 0 or 1-idx
 struct Segtree {
     struct Node {
         // null element:
