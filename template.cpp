@@ -4,9 +4,9 @@
 using namespace std;
 #define sws cin.tie(0)->sync_with_stdio(0)
 
+typedef long long ll;
+typedef long double ld;
 #define endl '\n'
-#define ll long long
-#define ld long double
 #define pb push_back
 #define ff first
 #define ss second
@@ -33,12 +33,6 @@ const ll INF = INT64_MAX; // INT32_MAX
 const ld EPS = 1e-7;
 const ld PI = acos(-1);
 
-void solve() {
-    
-}
-
 int32_t main(){ sws;
-    ll tt = 1;
-    //ll tt; cin >> tt;
-    while(tt--) solve();
+
 }
