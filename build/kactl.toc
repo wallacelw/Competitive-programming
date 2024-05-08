@@ -20,18 +20,18 @@
 \contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{8}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Knuth Optimization}{8}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Conditions}{8}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Slope Optimizations}{8}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Convex Hull Trick}{8}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.4}Slope Optimizations}{9}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Convex Hull Trick}{9}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Li-chao Tree}{9}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Slope Trick}{9}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}SOS DP}{10}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Bit optimization}{10}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Operations}{10}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{10}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Problems}{10}{subsection.3.6.3}%
-\contentsline {chapter}{\numberline {4}Game theory}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Classic Game}{10}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Bouton's Theorem}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {3.6.3}Problems}{11}{subsection.3.6.3}%
+\contentsline {chapter}{\numberline {4}Game theory}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Classic Game}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Bouton's Theorem}{11}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Proof}{11}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}DAG Representation}{11}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{11}{section.4.4}%
@@ -39,10 +39,10 @@
 \contentsline {subsection}{\numberline {4.4.2}Decomposition}{11}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{11}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{11}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Misère Game}{11}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Staircase Nim}{11}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Description}{11}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Strategy}{11}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.6}Misère Game}{12}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Staircase Nim}{12}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Description}{12}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Strategy}{12}{subsection.4.7.2}%
 \contentsline {section}{\numberline {4.8}Grundy's Game}{12}{section.4.8}%
 \contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{12}{subsection.4.8.1}%
 \contentsline {subsection}{\numberline {4.8.2}Other States}{12}{subsection.4.8.2}%
@@ -51,14 +51,14 @@
 \contentsline {section}{\numberline {4.10}References}{12}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{12}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Point Struct}{12}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Line Struct}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Line Struct}{13}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{13}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Graph}{13}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fundamentals}{13}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Network flow}{13}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{14}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{14}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{14}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{15}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{15}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Minimum Cost Matching}{15}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Minimum Cost with Dinitz}{15}{subsection.6.3.1}%
@@ -71,7 +71,7 @@
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{17}{subsection.6.5.3}%
 \contentsline {section}{\numberline {6.6}Undirected Graph}{17}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}Bridges (Cut Edges)}{17}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{17}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{18}{subsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.6.3}Articulation Points}{18}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{18}{subsection.6.6.4}%
 \contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{19}{subsection.6.6.5}%
@@ -96,7 +96,7 @@
 \contentsline {section}{\numberline {7.4}Series' Closed Formulas}{23}{section.7.4}%
 \contentsline {subsection}{\numberline {7.4.1}Natural Number Summation (PA)}{23}{subsection.7.4.1}%
 \contentsline {subsection}{\numberline {7.4.2}Natural Number Quadratic Summation}{23}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Triangular Numbers Summation}{23}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.3}Triangular Numbers Summation}{24}{subsection.7.4.3}%
 \contentsline {chapter}{\numberline {8}Number Theory}{24}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Modular Arithmetic}{24}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Lucas's Theorem}{24}{subsection.8.1.1}%
@@ -111,8 +111,8 @@
 \contentsline {subsection}{\numberline {8.2.7}Lema 6}{24}{subsection.8.2.7}%
 \contentsline {subsection}{\numberline {8.2.8}Greatest Common Divisor (GCD)}{24}{subsection.8.2.8}%
 \contentsline {subsection}{\numberline {8.2.9}Least Commom Multiple (LCM)}{24}{subsection.8.2.9}%
-\contentsline {subsection}{\numberline {8.2.10}Observation}{24}{subsection.8.2.10}%
-\contentsline {section}{\numberline {8.3}Closed Formulas related to divisors of a number}{24}{section.8.3}%
+\contentsline {subsection}{\numberline {8.2.10}Observation}{25}{subsection.8.2.10}%
+\contentsline {section}{\numberline {8.3}Closed Formulas related to divisors of a number}{25}{section.8.3}%
 \contentsline {subsection}{\numberline {8.3.1}Number of Divisors}{25}{subsection.8.3.1}%
 \contentsline {subsection}{\numberline {8.3.2}Sum of Divisors}{25}{subsection.8.3.2}%
 \contentsline {subsection}{\numberline {8.3.3}Product of Divisors}{25}{subsection.8.3.3}%
@@ -122,8 +122,8 @@
 \contentsline {section}{\numberline {8.5}Extended Euclid}{25}{section.8.5}%
 \contentsline {subsection}{\numberline {8.5.1}Inverse Multiplicative}{25}{subsection.8.5.1}%
 \contentsline {subsection}{\numberline {8.5.2}Diofantine Equation}{25}{subsection.8.5.2}%
-\contentsline {chapter}{\numberline {9}Strings}{25}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Hashing}{25}{section.9.1}%
+\contentsline {chapter}{\numberline {9}Strings}{26}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Hashing}{26}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Z-Function}{26}{section.9.2}%
 \contentsline {section}{\numberline {9.3}KMP}{26}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Patterns in a String}{26}{subsection.9.3.1}%
@@ -136,7 +136,7 @@
 \contentsline {chapter}{\numberline {10}Miscellaneous}{29}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Ternary Search}{29}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Random Generator}{29}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Read an Fraction Input}{29}{section.10.3}%
+\contentsline {section}{\numberline {10.3}Read an Fraction Input}{30}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Getline}{30}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Rounding Half to Even}{30}{section.10.5}%
 \contentsfinish 

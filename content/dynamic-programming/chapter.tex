@@ -9,34 +9,41 @@
 
 \section{Divide-Conquer Optimization}
 
-    Some dynamic programming problems have a recurrence of this form:
+        Some dynamic programming problems have a recurrence of this form:
 
-        $$ dp(i, j) = \min_{1 \leq k \leq j} dp(i - 1, k - 1) + C(k, j) $$
+        $$ dp[i][k] = \min_{1 \leq j \leq i} dp[j - 1][k - 1] + C(j, i) $$
 
-        where $C(k, j)$ is a cost function and $dp(i, j) = 0$ when $j \leq 0$ (using 1-idx).
+        Where $dp[i][k] $ is the \textit{min cost} considering the element up to $i$ with exactly $k$ partitions.
 
-        Say $ 0 \leq i < m $ and $1 \leq j \leq n$, and evaluating $C$ takes $O(1)$ time. 
+        Additionally, $C(j, i)$ is the cost of the partition $[j, i]$ and $dp[i][k] = 0$ when $k = 0$.
+
+        Say $ 1 \leq i \leq n $ (1-idx) and $1 \leq k \leq m$, and evaluating $C$ takes $O(1)$ time. 
         Then the straightforward evaluation of the above recurrence is $O(m n^2)$. There are
-        $m \times n$ states, and $n$ transitions for each state.
+        $n \times m$ states, and $n$ transitions for each state.
 
-        Let $opt(i, j)$ be the value of $k$ that minimizes the above expression. 
-        Assuming that the cost function satisfies the quadrangle inequality, we can show that
-        $opt(i, j-1) \leq opt(i, j)$ for all $i, j$. This is known as the monotonicity condition. 
-        Then, we can apply divide and conquer DP. The optimal "splitting point" for a fixed 
-        $i$ increases as $j$ increases.
+        Let $opt(i, k)$ be the value of $j$ that minimizes the above expression, $opt(i, k)$ is the optimal splitting point.
 
-        This lets us solve for all states more efficiently. Say we compute 
-        $opt(i, j)$ for some fixed $i$ and $j$. 
-        Then for any $j' < j$ we know that $opt(i, j') \leq opt(i, j)$. 
-        This means when computing $opt(i, j')$, we don't have to consider as many splitting points!
+        Assuming that the cost function satisfies the \textit{quadrangle inequality} (``wider is worse''), we can show that
+        $opt(i-1, k) \leq opt(i, k)$ for all ${i, k}$. This is known as the \textit{monotonicity condition}. In other words,
+        for a fixed $k$, the optimal splitting point $opt(i, k)$ increases as $i$ increases.
 
-        To minimize the runtime, we apply the idea behind divide and conquer. First, compute
-        $opt(i, n / 2)$. Then, compute 
-        $opt(i, n / 4)$, knowing that it is less than or equal to $opt(i, n / 2)$; 
-        and $opt(i, 3 n / 4)$ knowing that it is greater than or equal to $opt(i, n / 2)$. 
+        This lets us solve for all states more efficiently. Say we computed $opt(i, k)$ for some fixed $i$ and $k$. 
+        Then, for any $i' < i$, we know that $opt(i', k) \leq opt(i, k)$. 
+        This means when computing $opt(i', k)$, we don't have to consider as many splitting points!
+
+        To minimize the runtime, we use this property and apply the idea behind \textit{divide and conquer} 
+        and call the functions to solve recursively. Compute the $opt(l, mid)$ and using this value, 
+        solve $opt(l, mid-1)$ and $opt(mid+1, r)$.
         
-        By recursively keeping track of the lower and upper bounds on 
-        $opt$, we reach a $O(n \log n)$ runtime per $i$. Each possible value of $opt(i, j)$ only appears in $\log n$ different nodes.
+        By recursively keeping track of the lower and upper bounds on $opt$, 
+        we reach a $O(n \log n)$ runtime per $k$. Each possible value of $opt(i, k)$ only appears in $\log n$ different nodes.
+
+        \textbf{Problems that can be solved:}
+
+        \begin{itemize}
+        \item Subarray Squares: cost = square of the sum in each partition.
+        \item Houses and Schools: each partition has a school, and the cost is the accumulated walking time for each house.
+        \end{itemize}
 
         \kactlimport{divide-conquer-dp.cpp}
 

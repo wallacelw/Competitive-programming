@@ -48,8 +48,8 @@
 \contentsline {section}{\numberline {3.3}Knuth Optimization}{8}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Conditions}{8}{subsection.3.3.1}%
 \contentsline {subsection}{\texttt {knuth.cpp}\hspace {0.2em}}{8}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Slope Optimizations}{8}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Convex Hull Trick}{8}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.4}Slope Optimizations}{9}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Convex Hull Trick}{9}{subsection.3.4.1}%
 \contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{9}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Li-chao Tree}{9}{subsection.3.4.2}%
 \contentsline {subsection}{\texttt {lichao.cpp}\hspace {0.2em}}{9}{subsection.3.4.2}%
@@ -60,12 +60,12 @@
 \contentsline {section}{\numberline {3.6}Bit optimization}{10}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Operations}{10}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{10}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Problems}{10}{subsection.3.6.3}%
-\contentsline {chapter}{\numberline {4}Game theory}{10}{chapter.4}%
+\contentsline {subsection}{\numberline {3.6.3}Problems}{11}{subsection.3.6.3}%
+\contentsline {chapter}{\numberline {4}Game theory}{11}{chapter.4}%
 \ttl@stoptoc {chapters@3}
 \ttl@starttoc {chapters@4}
-\contentsline {section}{\numberline {4.1}Classic Game}{10}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Bouton's Theorem}{10}{section.4.2}%
+\contentsline {section}{\numberline {4.1}Classic Game}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Bouton's Theorem}{11}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Proof}{11}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}DAG Representation}{11}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{11}{section.4.4}%
@@ -74,10 +74,10 @@
 \contentsline {subsection}{\texttt {mex.cpp}\hspace {0.2em}}{11}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{11}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{11}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Misère Game}{11}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Staircase Nim}{11}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Description}{11}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Strategy}{11}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.6}Misère Game}{12}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Staircase Nim}{12}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Description}{12}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Strategy}{12}{subsection.4.7.2}%
 \contentsline {section}{\numberline {4.8}Grundy's Game}{12}{section.4.8}%
 \contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{12}{subsection.4.8.1}%
 \contentsline {subsection}{\numberline {4.8.2}Other States}{12}{subsection.4.8.2}%
@@ -89,8 +89,8 @@
 \ttl@starttoc {chapters@5}
 \contentsline {section}{\numberline {5.1}Point Struct}{12}{section.5.1}%
 \contentsline {subsection}{\texttt {point.cpp}\hspace {0.2em}}{12}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Line Struct}{12}{section.5.2}%
-\contentsline {subsection}{\texttt {line.cpp}\hspace {0.2em}}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Line Struct}{13}{section.5.2}%
+\contentsline {subsection}{\texttt {line.cpp}\hspace {0.2em}}{13}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{13}{section.5.3}%
 \contentsline {subsection}{\texttt {manhattanMST.cpp}\hspace {0.2em}}{13}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Graph}{13}{chapter.6}%
@@ -104,7 +104,7 @@
 \contentsline {subsection}{\texttt {dinitz.cpp}\hspace {0.2em}}{14}{lstnumber.6.3.86}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{14}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{14}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{14}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{15}{subsection.6.2.3}%
 \contentsline {subsection}{\texttt {min-vertex-cover.cpp}\hspace {0.2em}}{15}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{15}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Minimum Cost Matching}{15}{section.6.3}%
@@ -117,7 +117,7 @@
 \contentsline {section}{\numberline {6.5}Shortest Paths}{16}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Dijkstra}{16}{subsection.6.5.1}%
 \contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{16}{subsection.6.5.1}%
-\contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{16}{lstnumber.6.8.21}%
+\contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{17}{lstnumber.6.8.21}%
 \contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{17}{subsection.6.5.2}%
 \contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{17}{subsection.6.5.2}%
 \contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{17}{lstnumber.6.10.15}%
@@ -126,8 +126,8 @@
 \contentsline {section}{\numberline {6.6}Undirected Graph}{17}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}Bridges (Cut Edges)}{17}{subsection.6.6.1}%
 \contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{17}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{17}{subsection.6.6.2}%
-\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{17}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{18}{subsection.6.6.2}%
+\contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{18}{subsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.6.3}Articulation Points}{18}{subsection.6.6.3}%
 \contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{18}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{18}{subsection.6.6.4}%
@@ -145,7 +145,7 @@
 \contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{20}{subsection.6.7.3}%
 \contentsline {section}{\numberline {6.8}Trees}{20}{section.6.8}%
 \contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{20}{section.6.8}%
-\contentsline {subsection}{\texttt {binary-lifting.cpp}\hspace {0.2em}}{20}{lstnumber.6.21.54}%
+\contentsline {subsection}{\texttt {binary-lifting.cpp}\hspace {0.2em}}{21}{lstnumber.6.21.54}%
 \contentsline {subsection}{\numberline {6.8.1}Small To Large}{21}{subsection.6.8.1}%
 \contentsline {subsection}{\texttt {sack.cpp}\hspace {0.2em}}{21}{subsection.6.8.1}%
 \contentsline {chapter}{\numberline {7}Mathematics}{21}{chapter.7}%
@@ -167,7 +167,7 @@
 \contentsline {section}{\numberline {7.4}Series' Closed Formulas}{23}{section.7.4}%
 \contentsline {subsection}{\numberline {7.4.1}Natural Number Summation (PA)}{23}{subsection.7.4.1}%
 \contentsline {subsection}{\numberline {7.4.2}Natural Number Quadratic Summation}{23}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Triangular Numbers Summation}{23}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.3}Triangular Numbers Summation}{24}{subsection.7.4.3}%
 \contentsline {chapter}{\numberline {8}Number Theory}{24}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
@@ -185,8 +185,8 @@
 \contentsline {subsection}{\numberline {8.2.7}Lema 6}{24}{subsection.8.2.7}%
 \contentsline {subsection}{\numberline {8.2.8}Greatest Common Divisor (GCD)}{24}{subsection.8.2.8}%
 \contentsline {subsection}{\numberline {8.2.9}Least Commom Multiple (LCM)}{24}{subsection.8.2.9}%
-\contentsline {subsection}{\numberline {8.2.10}Observation}{24}{subsection.8.2.10}%
-\contentsline {section}{\numberline {8.3}Closed Formulas related to divisors of a number}{24}{section.8.3}%
+\contentsline {subsection}{\numberline {8.2.10}Observation}{25}{subsection.8.2.10}%
+\contentsline {section}{\numberline {8.3}Closed Formulas related to divisors of a number}{25}{section.8.3}%
 \contentsline {subsection}{\numberline {8.3.1}Number of Divisors}{25}{subsection.8.3.1}%
 \contentsline {subsection}{\numberline {8.3.2}Sum of Divisors}{25}{subsection.8.3.2}%
 \contentsline {subsection}{\numberline {8.3.3}Product of Divisors}{25}{subsection.8.3.3}%
@@ -199,11 +199,11 @@
 \contentsline {subsection}{\numberline {8.5.1}Inverse Multiplicative}{25}{subsection.8.5.1}%
 \contentsline {subsection}{\numberline {8.5.2}Diofantine Equation}{25}{subsection.8.5.2}%
 \contentsline {subsection}{\texttt {extended-euclid.cpp}\hspace {0.2em}}{25}{subsection.8.5.2}%
-\contentsline {chapter}{\numberline {9}Strings}{25}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Strings}{26}{chapter.9}%
 \ttl@stoptoc {chapters@8}
 \ttl@starttoc {chapters@9}
-\contentsline {section}{\numberline {9.1}Hashing}{25}{section.9.1}%
-\contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{25}{section.9.1}%
+\contentsline {section}{\numberline {9.1}Hashing}{26}{section.9.1}%
+\contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{26}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Z-Function}{26}{section.9.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{26}{section.9.2}%
 \contentsline {section}{\numberline {9.3}KMP}{26}{section.9.3}%
@@ -227,7 +227,7 @@
 \contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{29}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Random Generator}{29}{section.10.2}%
 \contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{29}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Read an Fraction Input}{29}{section.10.3}%
+\contentsline {section}{\numberline {10.3}Read an Fraction Input}{30}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Getline}{30}{section.10.4}%
 \contentsline {subsection}{\texttt {getline.cpp}\hspace {0.2em}}{30}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Rounding Half to Even}{30}{section.10.5}%
