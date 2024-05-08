@@ -41,8 +41,10 @@
         \textbf{Problems that can be solved:}
 
         \begin{itemize}
-        \item Subarray Squares: cost = square of the sum in each partition.
-        \item Houses and Schools: each partition has a school, and the cost is the accumulated walking time for each house.
+        \item \textbf{Subarray Squares}: \textit{cost} = square of the sum in each partition.
+        \item \textbf{Houses and Schools}: each partition has a school at the \textit{right endpoint}, 
+        and the cost is the accumulated walking time for each house, split in the middle, each half walking to the closest school.
+        Precomputed $dp[i][1]$ considers the left border only walking right. Finally, $ans$ is computed with $dp[i][m]$ + walking left of the remaining right border.
         \end{itemize}
 
         \kactlimport{divide-conquer-dp.cpp}
