@@ -230,6 +230,8 @@
 \contentsline {section}{\numberline {10.3}Read an Fraction Input}{29}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Getline}{30}{section.10.4}%
 \contentsline {subsection}{\texttt {getline.cpp}\hspace {0.2em}}{30}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Rounding Half to Even}{30}{section.10.5}%
+\contentsline {subsection}{\texttt {half-to-even.cpp}\hspace {0.2em}}{30}{section.10.5}%
 \ttl@stoptoc {chapters@10}
 \ttl@starttoc {chapters@11}
 \contentsfinish 
