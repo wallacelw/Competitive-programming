@@ -16,9 +16,6 @@ struct directedMST { // 0-idx
         ll lazy = 0;
         Node *l = NULL, *r = NULL;
 
-        Node() {}
-        Node(ll a, ll b) : lazy(0), l(NULL), r(NULL) { val = {a, b}; }
-
         void push() {
             val.ff += lazy;
             if (l) l->lazy += lazy;
@@ -74,7 +71,7 @@ struct directedMST { // 0-idx
 
     ll solve() {
         for(auto [u, v, w] : edges) {
-            join(h[v], new Node(w, u));
+            join(h[v], new Node({{w, u} }));
         }
 
         vector<ll> p(n, -1), path(n);
