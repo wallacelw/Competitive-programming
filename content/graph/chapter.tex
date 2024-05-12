@@ -265,15 +265,6 @@
 
 			% https://cses.fi/problemset/result/8476041/
 
-	\subsection{Minimum Spanning Tree}
-
-	A minimum spanning tree (MST) or minimum weight spanning tree is a subset of the edges
-	of a connected, edge-weighted undirected graph that connects all the vertices together,
-	without any cycles and with the minimum possible total edge weight.
-	That is, it is a spanning tree whose sum of edge weights is as small as possible.
-
-	\kactlimport{kruskal.cpp}
-
 \section{Directed Graph}
 
 	\subsection{Topological Sort}
@@ -312,6 +303,26 @@
 		(opting for the variables that appers latter in the sorted order)
 
 		\kactlimport{2sat.cpp}
+
+\section{Minimum Spanning Tree}
+
+\subsection{Undirected Minimum Spanning Tree}
+
+	A \textbf{minimum spanning tree (MST)} or minimum weight spanning tree is a subset of the edges
+	of a connected, edge-weighted undirected graph that connects all the vertices together,
+	without any cycles and with the minimum possible total edge weight.
+	That is, it is a spanning tree whose sum of edge weights is as small as possible.
+
+	\kactlimport{kruskal.cpp}
+
+\subsection{Directed Minimum Spanning Tree}
+
+	A \textbf{spanning arborescence of minimum weight}, sometimes called an \textbf{optimum branching},
+	is the directed analog of the \textit{minimum spanning tree problem}.
+
+	\subsubsection{Edmonds' algorithm with Tarjan's optimization}
+
+	\kactlimport{directed-mst.cpp}
 
 \section{Trees}
 
