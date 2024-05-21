@@ -181,6 +181,7 @@
 
     Note that, if there isn't any set bit after idx, BS.\_Find\_next(idx) will return BS.size(); 
     same as calling BS.\_Find\_first() when bitset is clear;
+    One can use \textbf{bs.\_Find\_next(idx-1)} to include idx. The function does accept negative index. 
 
     The complexity of bitwise operations for the bitset is $O(\frac{size}{32})$ or $O(\frac{size}{64})$, 
     depending on the architecture of the computer.
