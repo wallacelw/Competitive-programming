@@ -132,13 +132,14 @@
 \contentsline {section}{\numberline {8.4}Suffix Array}{27}{section.8.4}%
 \contentsline {section}{\numberline {8.5}Manacher}{28}{section.8.5}%
 \contentsline {section}{\numberline {8.6}Booth}{28}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Suffix Automaton}{28}{section.8.7}%
-\contentsline {subsection}{\numberline {8.7.1}Concepts:}{28}{subsection.8.7.1}%
-\contentsline {subsection}{\numberline {8.7.2}Implementation:}{29}{subsection.8.7.2}%
-\contentsline {chapter}{\numberline {9}Miscellaneous}{30}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Ternary Search}{30}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Random Generator}{30}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Read an Fraction Input}{30}{section.9.3}%
+\contentsline {section}{\numberline {8.7}Aho-Corasick}{28}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Suffix Automaton}{29}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Concepts:}{29}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Implementation:}{29}{subsection.8.8.2}%
+\contentsline {chapter}{\numberline {9}Miscellaneous}{31}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Ternary Search}{31}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Random Generator}{31}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Read an Fraction Input}{31}{section.9.3}%
 \contentsline {section}{\numberline {9.4}Getline}{31}{section.9.4}%
 \contentsline {section}{\numberline {9.5}Rounding Half to Even}{31}{section.9.5}%
 \contentsfinish 

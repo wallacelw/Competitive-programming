@@ -1,9 +1,17 @@
+/**
+ * Author: Lucas Sala Tanka, Jose Leite (aka, chico nelson)
+ * Date: 27/05/2024
+ * Description: É aho porra, acha todos os match de stringzinhas em stringzonas
+ * Time: O(n) add(), O(n A) init() 
+ * Status: Tested (https://cses.fi/paste/e355c20eca8e4c55618380/)
+ */
+
 const int A = 26;
 int to[N][A];
 int ne = 2, fail[N];
 vector<int> term[N];
 vector<int> g[N];
- 
+
 void add(string str, int id){
     int p = 1;
     for(auto c: str){
@@ -13,14 +21,14 @@ void add(string str, int id){
     }
     term[p].push_back(id);
 }
- 
+
 int compress(int x){
     if(term[x].size() > 0 or x == 1){
         return x;
     }
     return fail[x] = compress(fail[x]);
 }
- 
+
 void init(){
     for(int i = 0; i < ne; i++) fail[i] = 1;
     queue<int> q; q.push(1);
@@ -39,3 +47,4 @@ void init(){
         }
         g[fail[u]].push_back(u);
     }
+}
