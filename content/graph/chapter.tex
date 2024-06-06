@@ -176,6 +176,23 @@
 
 	\kactlimport{floyd-warshall.cpp}
 
+\section{Eulerian Path}
+
+	An \textit{Eulerian trail (or Eulerian path)} is a trail in a finite graph that visits every edge exactly once 
+	(allowing for revisiting vertices). Similarly, an \textit{Eulerian circuit or Eulerian cycle} is an Eulerian trail 
+	that starts and ends on the same vertex. 
+
+	\textbf{Euler's Theorem:} A connected graph has an Euler cycle if and only if every vertex has even degree.
+
+	An \textbf{Eulerian Graph} is a graph with an eulerian circuit, which implies that it is connected and 
+	also all vertices have even degree.
+
+	\begin{center}
+	\includegraphics[scale=.1, keepaspectratio]{content/graph/Eulerian-Path-Existence.png}
+	\end{center}
+
+	\kactlimport{hierholzer.cpp}
+
 \section{Undirected Graph}
 
 	Bridges and Articulation Points are concepts for undirected graphs!
