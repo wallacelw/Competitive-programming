@@ -191,6 +191,11 @@
 	\includegraphics[scale=.1, keepaspectratio]{content/graph/Eulerian-Path-Existence.png}
 	\end{center}
 
+	If there are extra edges, which ones can be removed to generate a maximum size euler path?
+
+	\textbf{Answer:} In an undirected graph, one can remove the ones connecting two \textit{odd} degree 
+	nodes, turning then into \textit{even} ones. Do this until there are less or equal than 2 \textit{odd} degree nodes. 
+
 	\kactlimport{hierholzer.cpp}
 
 \section{Undirected Graph}
