@@ -1,9 +1,12 @@
+Fix answer
 Recursion
 Divide and conquer
 	Finding interesting points in N log N
 Algorithm analysis
 	Master theorem
 	Amortized time complexity
+	Square Root
+	Harmonic Series
 Greedy algorithm
 	Scheduling
 	Max contiguous subvector sum
@@ -19,6 +22,7 @@ Graph theory
 	MST: Prim's algorithm
 	Bellman-Ford
 	Konig's theorem and vertex cover
+	Independent Set
 	Min-cost max flow
 	Lovasz toggle
 	Matrix tree theorem
@@ -59,6 +63,7 @@ Dynamic programming
 	3^n set cover
 	Divide and conquer
 	Knuth optimization
+	Slope trick
 	Convex hull optimizations
 	RMQ (sparse table a.k.a 2^k-jumps)
 	Bitonic cycle
@@ -112,6 +117,10 @@ Numerical methods
 Matrices
 	Gaussian elimination
 	Exponentiation by squaring
+XorBasis
+FFT
+	Polinomial Product
+	Convolution
 Sorting
 	Radix sort
 Geometry
@@ -134,10 +143,12 @@ Strings
 	Longest common substring
 	Palindrome subsequences
 	Knuth-Morris-Pratt
+	Z-String
 	Tries
 	Rolling polynomial hashes
 	Suffix array
 	Suffix tree
+	Suffix Automata
 	Aho-Corasick
 	Manacher's algorithm
 	Letter position lists

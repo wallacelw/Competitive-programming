@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.3)  6 JUN 2024 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  21 JUN 2024 20:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -462,24 +462,24 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (build//kactl.aux)
 \openout1 = `kactl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 \c@lstlisting=\count310
 
 *geometry* driver: auto-detecting
@@ -535,7 +535,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 12.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -545,9 +545,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count317
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
  (build//kactl.out) (build//kactl.out)
 \@outlinefile=\write3
 \openout3 = `kactl.out'.
@@ -560,7 +560,7 @@ pdfTeX warning: pdflatex (file content/tex/unb.pdf): PDF inclusion: found PDF ve
 <unb.pdf, id=40, 844.80002pt x 422.40001pt>
 File: unb.pdf Graphic file (type pdf)
 <use unb.pdf>
-Package pdftex.def Info: unb.pdf  used on input line 12.
+Package pdftex.def Info: unb.pdf  used on input line 13.
 (pdftex.def)             Requested size: 85.35826pt x 42.6743pt.
 [0
 
@@ -588,7 +588,7 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 20.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 24.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
@@ -603,11 +603,6 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ))
 runsystem(rm -f build/kactl.tmp)...executed.
 
-runsystem(python3 content/tex/preprocessor.py -i "content/contest/hash.sh" -o build/kactl.tmp -l raw)...executed.
-
- (./build/kactl.tmp)
-runsystem(rm -f build/kactl.tmp)...executed.
-
 runsystem(python3 content/tex/preprocessor.py -i "content/contest/troubleshoot.txt" -o build/kactl.tmp -l raw)...executed.
 
  (./build/kactl.tmp)) (./content/data-structures/chapter.tex
@@ -619,9 +614,9 @@ runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/max-re
 (./build/kactl.tmp
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 17.
-) [1
+ [1
 
-]
+])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/max-rectangle-grid.cpp" -o build/kactl.tmp )...executed.
@@ -664,14 +659,14 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/query-tree.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|query-tree.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [3]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/trie.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "trie.cpp|trie.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [3])
+ (./build/kactl.tmp)
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/fenwick-tree.cpp" -o build/kactl.tmp )...executed.
@@ -700,22 +695,22 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/seg-inverted.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|seg-inverted.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [5]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/seg-lazy-sum.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "seg-lazy-sum.cpp|seg-lazy-sum.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [5])
+ (./build/kactl.tmp)
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/seg-pa.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)
+ (./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "|seg-pa.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [6]
+ (./build/header2.tmp) [6])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/data-structures/treap.cpp" -o build/kactl.tmp )...executed.
@@ -726,18 +721,18 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/lis.cpp" -o build/kactl.tmp )...executed.
 
-(./build/kactl.tmp)
+(./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "lis.cpp|lis.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [7]
+ (./build/header2.tmp) [7])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/divide-conquer-dp.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)
+ (./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "|divide-conquer-dp.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [8]
+ (./build/header2.tmp) [8])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/knuth.cpp" -o build/kactl.tmp )...executed.
@@ -770,10 +765,10 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <7> not available
 )
 
 pdfTeX warning: pdflatex (file ./content/dynamic-programming/sos-example.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<content/dynamic-programming/sos-example.pdf, id=1502, 577.40718pt x 295.1025pt>
+<content/dynamic-programming/sos-example.pdf, id=1500, 577.40718pt x 295.1025pt>
 File: content/dynamic-programming/sos-example.pdf Graphic file (type pdf)
 <use content/dynamic-programming/sos-example.pdf>
-Package pdftex.def Info: content/dynamic-programming/sos-example.pdf  used on input line 137.
+Package pdftex.def Info: content/dynamic-programming/sos-example.pdf  used on input line 140.
 (pdftex.def)             Requested size: 256.0748pt x 130.88115pt.
 runsystem(rm -f build/kactl.tmp)...executed.
 
@@ -789,7 +784,7 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/game-theory/mex.cpp" -o build/kactl.tmp )...executed.
 
 (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "|mex.cpp" -o build/header2.tmp)...executed.
+runsystem(python3 content/tex/preprocessor.py --print-header "|sos-dp.cpp" -o build/header2.tmp)...executed.
 
  (./build/header2.tmp) [11])
 runsystem(python3 content/tex/preprocessor.py --print-header "|mex.cpp" -o build/header2.tmp)...executed.
@@ -887,13 +882,13 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/floyd-warshall.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
-<content/graph/Eulerian-Path-Existence.png, id=2441, 2742.245pt x 2055.68pt>
+<content/graph/Eulerian-Path-Existence.png, id=2444, 2742.245pt x 2055.68pt>
 File: content/graph/Eulerian-Path-Existence.png Graphic file (type png)
 <use content/graph/Eulerian-Path-Existence.png>
-Package pdftex.def Info: content/graph/Eulerian-Path-Existence.png  used on input line 191.
+Package pdftex.def Info: content/graph/Eulerian-Path-Existence.png  used on input line 200.
 (pdftex.def)             Requested size: 274.24055pt x 205.58003pt.
 
-Overfull \hbox (8.70918pt too wide) in paragraph at lines 191--192
+Overfull \hbox (8.70918pt too wide) in paragraph at lines 200--201
  [] 
  []
 
@@ -902,14 +897,14 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/hierholzer.cpp" -o build/kactl.tmp )...executed.
 
 (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|hierholzer.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [18 <./content/graph/Eulerian-Path-Existence.png>]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/bridges.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
-runsystem(python3 content/tex/preprocessor.py --print-header "bridges.cpp|bridges.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [18 <./content/graph/Eulerian-Path-Existence.png>]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/bridgeTree.cpp" -o build/kactl.tmp )...executed.
@@ -925,9 +920,12 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/blockCutTree.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "|blockCutTree.cpp" -o build/header2.tmp)...executed.
+runsystem(python3 content/tex/preprocessor.py --print-header "articulation.cpp|blockCutTree.cpp" -o build/header2.tmp)...executed.
 
  (./build/header2.tmp) [19])
+runsystem(python3 content/tex/preprocessor.py --print-header "|blockCutTree.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [20]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/toposort.cpp" -o build/kactl.tmp )...executed.
@@ -945,7 +943,7 @@ runsystem(python3 content/tex/preprocessor.py -i "content/graph/2sat.cpp" -o bui
  (./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "2sat.cpp|2sat.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [20])
+ (./build/header2.tmp) [21])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/kruskal.cpp" -o build/kactl.tmp )...executed.
@@ -955,10 +953,10 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/directed-mst.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "directed-mst.cpp|directed-mst.cpp" -o build/header2.tmp)...executed.
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|directed-mst.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [21])
+ (./build/header2.tmp) [22]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/lca.cpp" -o build/kactl.tmp )...executed.
@@ -973,30 +971,30 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/sack.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "sack.cpp|sack.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [22])) (./content/math/chapter.tex
+ (./build/kactl.tmp)) (./content/math/chapter.tex
 Chapter 7.
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/math/modular.cpp" -o build/kactl.tmp )...executed.
 
-(./build/kactl.tmp)
+(./build/kactl.tmp
+runsystem(python3 content/tex/preprocessor.py --print-header "modular.cpp|modular.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [23])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/math/combinatorics.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "combinatorics.cpp|combinatorics.cpp" -o build/header2.tmp)...executed.
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|combinatorics.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [23])
-<content/math/Burnside-Necklace.png, id=3338, 144.54pt x 147.55125pt>
+ (./build/header2.tmp) [24]
+<content/math/Burnside-Necklace.png, id=3428, 144.54pt x 147.55125pt>
 File: content/math/Burnside-Necklace.png Graphic file (type png)
 <use content/math/Burnside-Necklace.png>
 Package pdftex.def Info: content/math/Burnside-Necklace.png  used on input line 78.
 (pdftex.def)             Requested size: 86.72466pt x 88.53142pt.
-<content/math/Burnside-Grid.png, id=3339, 1172.38pt x 1170.3725pt>
+<content/math/Burnside-Grid.png, id=3429, 1172.38pt x 1170.3725pt>
 File: content/math/Burnside-Grid.png Graphic file (type png)
 <use content/math/Burnside-Grid.png>
 Package pdftex.def Info: content/math/Burnside-Grid.png  used on input line 87.
@@ -1005,10 +1003,10 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/math/bishops.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "bishops.cpp|bishops.cpp" -o build/header2.tmp)...executed.
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|bishops.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [24 <./content/math/Burnside-Necklace.png> <./content/math/Burnside-Grid.png>])
+ (./build/header2.tmp) [25 <./content/math/Burnside-Necklace.png> <./content/math/Burnside-Grid.png>]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/math/eratosthenes.cpp" -o build/kactl.tmp )...executed.
@@ -1018,10 +1016,10 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/math/linear-sieve.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "eratosthenes.cpp|eratosthenes.cpp" -o build/header2.tmp)...executed.
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "linear-sieve.cpp|linear-sieve.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [25])
+ (./build/header2.tmp) [26]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/math/extended-euclid.cpp" -o build/kactl.tmp )...executed.
@@ -1036,10 +1034,10 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/math/matrix.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
+ (./build/kactl.tmp)
 runsystem(python3 content/tex/preprocessor.py --print-header "matrix.cpp|matrix.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [26])) (./content/strings/chapter.tex
+ (./build/header2.tmp) [27]) (./content/strings/chapter.tex
 Chapter 8.
 runsystem(rm -f build/kactl.tmp)...executed.
 
@@ -1050,10 +1048,10 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/strings/zfunction.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "|hashing.cpp" -o build/header2.tmp)...executed.
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "zfunction.cpp|zfunction.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [27])
+ (./build/header2.tmp) [28]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/strings/kmp.cpp" -o build/kactl.tmp )...executed.
@@ -1074,13 +1072,13 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/strings/manacher.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "manacher.cpp|manacher.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [28]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 25.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))
+)
+runsystem(python3 content/tex/preprocessor.py --print-header "manacher.cpp|manacher.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [29])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/strings/booth.cpp" -o build/kactl.tmp )...executed.
@@ -1095,10 +1093,10 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/strings/aho2.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "aho2.cpp|aho2.cpp" -o build/header2.tmp)...executed.
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|aho2.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [29])
+ (./build/header2.tmp) [30]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/strings/suffix-automaton.cpp" -o build/kactl.tmp )...executed.
@@ -1106,21 +1104,21 @@ runsystem(python3 content/tex/preprocessor.py -i "content/strings/suffix-automat
  (./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "|suffix-automaton.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [30])) (./content/miscellaneous/chapter.tex
+ (./build/header2.tmp) [31])) (./content/miscellaneous/chapter.tex
 Chapter 9.
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/miscellaneous/ternary-search.cpp" -o build/kactl.tmp )...executed.
 
-(./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "ternary-search.cpp|ternary-search.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [31])
+(./build/kactl.tmp)
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/miscellaneous/random.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)
+ (./build/kactl.tmp
+runsystem(python3 content/tex/preprocessor.py --print-header "random.cpp|random.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [32])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/miscellaneous/getline.cpp" -o build/kactl.tmp )...executed.
@@ -1133,7 +1131,7 @@ runsystem(python3 content/tex/preprocessor.py -i "content/miscellaneous/half-to-
  (./build/kactl.tmp))
 runsystem(python3 content/tex/preprocessor.py --print-header "|half-to-even.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [32] (./content/appendix/chapter.texpdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) has been already used, duplicate ignored
+ (./build/header2.tmp) [33] (./content/appendix/chapter.texpdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2 \chapter{Techniques}
@@ -1150,139 +1148,183 @@ l.3 ...ing}[language=raw,caption={techniques.txt}]
                                                   pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4 Recursion
-             pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.2}) has been already used, duplicate ignored
+l.4 Fix 
+        answerpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.5 Divide 
-           and conquerpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.3}) has been already used, duplicate ignored
+l.5 Recursion
+             pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.6 	Finding 
-             interesting points in N log NpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.4}) has been already used, duplicate ignored
+l.6 Divide 
+           and conquerpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.7 Algorithm 
-              analysispdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.5}) has been already used, duplicate ignored
+l.7 	Finding 
+             interesting points in N log NpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.8 	Master 
-            theorempdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.6}) has been already used, duplicate ignored
+l.8 Algorithm 
+              analysispdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9 	Amortized 
-               time complexitypdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.7}) has been already used, duplicate ignored
+l.9 	Master 
+            theorempdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.10 Greedy 
-            algorithmpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.8}) has been already used, duplicate ignored
+l.10 	Amortized 
+                time complexitypdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.11 	Scheduling
-                pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.9}) has been already used, duplicate ignored
+l.11 	Square 
+             RootpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.12 	Max 
-          contiguous subvector sumpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.10}) has been already used, duplicate ignored
+l.12 	Harmonic 
+               SeriespdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13 	Invariants
-                pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.11}) has been already used, duplicate ignored
+l.13 Greedy 
+            algorithmpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14 	Huffman 
-              encodingpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.12}) has been already used, duplicate ignored
+l.14 	Scheduling
+                pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15 Graph 
-           theorypdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.13}) has been already used, duplicate ignored
+l.15 	Max 
+          contiguous subvector sumpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.16 	Transform 
-                edges into vertices, duplicating the nodes of the graphpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.14}) has been already used, duplicate ignored
+l.16 	Invariants
+                pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 	Dynamic 
-              graphs (extra book-keeping)pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.15}) has been already used, duplicate ignored
+l.17 	Huffman 
+              encodingpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 	Breadth 
-              first searchpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.16}) has been already used, duplicate ignored
+l.18 Graph 
+           theorypdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 	Depth 
-            first searchpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.17}) has been already used, duplicate ignored
+l.19 	Transform 
+                edges into vertices, duplicating the nodes of the graphpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 	* 
-        Normal trees / DFS treespdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.18}) has been already used, duplicate ignored
+l.20 	Dynamic 
+              graphs (extra book-keeping)pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.21 	Dijkstra'
-               s algorithmpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.19}) has been already used, duplicate ignored
+l.21 	Breadth 
+              first searchpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 	MST:
-           Prim's algorithmpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.20}) has been already used, duplicate ignored
+l.22 	Depth 
+            first searchpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 	Bellman-
-              FordpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.21}) has been already used, duplicate ignored
+l.23 	* 
+        Normal trees / DFS treespdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 	Konig'
-            s theorem and vertex coverpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.22}) has been already used, duplicate ignored
+l.24 	Dijkstra'
+               s algorithmpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 	Min-
-          cost max flowpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.23}) has been already used, duplicate ignored
+l.25 	MST:
+           Prim's algorithmpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.23}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.26 	Lovasz 
-             togglepdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.24}) has been already used, duplicate ignored
+l.26 	Bellman-
+              FordpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.24}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 	Matrix 
-             tree theorempdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.25}) has been already used, duplicate ignored
+l.27 	Konig'
+            s theorem and vertex coverpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.25}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 	Maximal 
-              matching, general graphspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.26}) has been already used, duplicate ignored
+l.28 	Independent 
+                  SetpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.26}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 	Hopcroft-
-               KarppdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.27}) has been already used, duplicate ignored
+l.29 	Min-
+          cost max flowpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.27}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 	Hall'
-           s marriage theorempdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.28}) has been already used, duplicate ignored
+l.30 	Lovasz 
+             togglepdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.28}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 	Graphical 
-                sequencespdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.29}) has been already used, duplicate ignored
+l.31 	Matrix 
+             tree theorempdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.29}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 	Floyd-
-            WarshallpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.30}) has been already used, duplicate ignored
+l.32 	Maximal 
+              matching, general graphspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.30}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 	Euler 
-            cyclespdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.31}) has been already used, duplicate ignored
+l.33 	Hopcroft-
+               KarppdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.31}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 	Flow 
-           networkspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.32}) has been already used, duplicate ignored
+l.34 	Hall'
+           s marriage theorempdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.32}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 	* 
-        Augmenting pathspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.33}) has been already used, duplicate ignored
+l.35 	Graphical 
+                sequencespdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 	* 
-        Edmonds-Karp))
+l.36 	Floyd-
+            WarshallpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.34}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.37 	Euler 
+            cyclespdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.35}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.38 	Flow 
+           networkspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.36}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.39 	* 
+        Augmenting pathspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.37}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 	* 
+        Edmonds-KarppdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.38}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.41 	Bipartite 
+                matchingpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.39}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 	Min.
+           path coverpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.40}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 	Topological 
+                  sortingpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.41}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.44 	Strongly 
+               connected componentspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.42}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.45 	2-S
+         ATpdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.43}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 	Cut 
+          vertices, cut-edges and biconnected componentspdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1.1.44}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.47 	Edge 
+           coloring))
 runsystem(python3 content/tex/preprocessor.py --print-header "|techniques.txt" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [33]
+ (./build/header2.tmp) [34]
 \tf@ptc=\write5
 \openout5 = `kactl.ptc'.
 
@@ -1297,18 +1339,18 @@ Package rerunfilecheck Info: File `kactl.out' has not changed.
 (rerunfilecheck)             Checksum: E07A7B963FEE64559E6B20371893E640;876.
  ) 
 Here is how much of TeX's memory you used:
- 21006 strings out of 478287
- 319634 string characters out of 5849290
- 1767517 words of memory out of 5000000
- 34458 multiletter control sequences out of 15000+600000
+ 21071 strings out of 480247
+ 320688 string characters out of 5896151
+ 1735958 words of memory out of 5000000
+ 34224 multiletter control sequences out of 15000+600000
  482590 words of font info for 78 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  75i,16n,77p,563b,2206s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on build//kactl.pdf (34 pages, 1647858 bytes).
+ </home/wawa/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/wawa/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti0700.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on build//kactl.pdf (35 pages, 1640732 bytes).
 PDF statistics:
- 5449 PDF objects out of 6186 (max. 8388607)
- 5296 compressed objects within 53 object streams
- 4237 named destinations out of 4296 (max. 500000)
+ 5508 PDF objects out of 6186 (max. 8388607)
+ 5353 compressed objects within 54 object streams
+ 4283 named destinations out of 4296 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
