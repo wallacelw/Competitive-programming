@@ -169,8 +169,9 @@
 \contentsline {subsection}{\numberline {7.2.5}Couting Bishops}{25}{subsection.7.2.5}%
 \contentsline {subsection}{\texttt {bishops.cpp}\hspace {0.2em}}{25}{subsection.7.2.5}%
 \contentsline {section}{\numberline {7.3}Number Theory}{25}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Divisibility}{25}{subsection.7.3.1}%
-\contentsline {subsubsection}{Euclid}{25}{section*.4}%
+\contentsline {subsection}{\numberline {7.3.1}Highly Composite Numbers}{25}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Divisibility}{25}{subsection.7.3.2}%
+\contentsline {subsubsection}{Euclid}{26}{section*.4}%
 \contentsline {subsubsection}{Lema 1 - Transitivity}{26}{section*.5}%
 \contentsline {subsubsection}{Lema 2}{26}{section*.6}%
 \contentsline {subsubsection}{Lema 3}{26}{section*.7}%
@@ -179,16 +180,16 @@
 \contentsline {subsubsection}{Lema 6}{26}{section*.10}%
 \contentsline {subsubsection}{Greatest Common Divisor (GCD)}{26}{section*.11}%
 \contentsline {subsubsection}{Least Commom Multiple (LCM)}{26}{section*.12}%
-\contentsline {subsection}{\numberline {7.3.2}Closed Formulas related to divisors of a number}{26}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Closed Formulas related to divisors of a number}{26}{subsection.7.3.3}%
 \contentsline {subsubsection}{Number of Divisors}{26}{section*.13}%
 \contentsline {subsubsection}{Sum of Divisors}{26}{section*.14}%
 \contentsline {subsubsection}{Product of Divisors}{26}{section*.15}%
-\contentsline {subsection}{\numberline {7.3.3}Sieves}{26}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Sieves}{26}{subsection.7.3.4}%
 \contentsline {subsubsection}{Eratosthenes}{26}{section*.16}%
 \contentsline {subsection}{\texttt {eratosthenes.cpp}\hspace {0.2em}}{26}{section*.16}%
 \contentsline {subsubsection}{Linear Sieve}{26}{section*.17}%
 \contentsline {subsection}{\texttt {linear-sieve.cpp}\hspace {0.2em}}{26}{section*.17}%
-\contentsline {subsection}{\numberline {7.3.4}Extended Euclid}{26}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}Extended Euclid}{27}{subsection.7.3.5}%
 \contentsline {subsubsection}{Inverse Multiplicative}{27}{section*.18}%
 \contentsline {subsubsection}{Diofantine Equation}{27}{section*.19}%
 \contentsline {subsection}{\texttt {extended-euclid.cpp}\hspace {0.2em}}{27}{section*.19}%
@@ -208,7 +209,7 @@
 \contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{28}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Z-Function}{28}{section.8.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{28}{section.8.2}%
-\contentsline {section}{\numberline {8.3}KMP}{28}{section.8.3}%
+\contentsline {section}{\numberline {8.3}KMP}{29}{section.8.3}%
 \contentsline {subsection}{\texttt {kmp.cpp}\hspace {0.2em}}{29}{section.8.3}%
 \contentsline {subsection}{\numberline {8.3.1}Patterns in a String}{29}{subsection.8.3.1}%
 \contentsline {section}{\numberline {8.4}Suffix Array}{29}{section.8.4}%
@@ -222,7 +223,7 @@
 \contentsline {subsection}{\texttt {aho.cpp}\hspace {0.2em}}{30}{section.8.7}%
 \contentsline {subsection}{\texttt {aho2.cpp}\hspace {0.2em}}{30}{lstnumber.8.8.42}%
 \contentsline {section}{\numberline {8.8}Suffix Automaton}{30}{section.8.8}%
-\contentsline {subsection}{\numberline {8.8.1}Concepts:}{30}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.1}Concepts:}{31}{subsection.8.8.1}%
 \contentsline {subsection}{\numberline {8.8.2}Implementation:}{31}{subsection.8.8.2}%
 \contentsline {subsection}{\texttt {suffix-automaton.cpp}\hspace {0.2em}}{31}{subsection.8.8.2}%
 \contentsline {chapter}{\numberline {9}Miscellaneous}{32}{chapter.9}%
@@ -230,8 +231,8 @@
 \ttl@starttoc {chapters@9}
 \contentsline {section}{\numberline {9.1}Ternary Search}{32}{section.9.1}%
 \contentsline {subsection}{\texttt {ternary-search.cpp}\hspace {0.2em}}{32}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Random Generator}{32}{section.9.2}%
-\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{32}{section.9.2}%
+\contentsline {section}{\numberline {9.2}Random Generator}{33}{section.9.2}%
+\contentsline {subsection}{\texttt {random.cpp}\hspace {0.2em}}{33}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Read an Fraction Input}{33}{section.9.3}%
 \contentsline {section}{\numberline {9.4}Getline}{33}{section.9.4}%
 \contentsline {subsection}{\texttt {getline.cpp}\hspace {0.2em}}{33}{section.9.4}%
