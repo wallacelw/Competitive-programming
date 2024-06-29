@@ -15,6 +15,10 @@ alias comp='g++ -std=c++17 -O2 -g3 -ggdb3 -fsanitize=address,undefined -Wall -We
 
 *-g3 -ggdb3* shows more details for compilation errors (line that ocurred error)
 
+## Vscode
+
+Toggle terminal Ctrl + '
+
 ## KACTL notebook
 
 ```bash
