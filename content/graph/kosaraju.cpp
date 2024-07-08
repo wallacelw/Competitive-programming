@@ -26,19 +26,14 @@ struct Kosaraju {
         for(auto v : gi[u]) if (comp[v] == -1) dfs2(v, c);
     }
 
-    Kosaraju(vector<vll> &g_) 
-      : n(g_.size()-1), g(g_) { // 1-idx
+    Kosaraju(vector<vll> &g_) : n(g_.size()-1), g(g_),
+        gi(n+1), gc(n+1), vis(n+1, 0), comp(n+1, -1), st() { // 1-idx
 
-        gi.assign(n+1, vll());
-        for(ll i=1; i<=n; i++) {
-            for(auto j : g[i])
-                gi[j].pb(i);
+        for(ll u=1; u<=n; u++) {
+            for(auto v : g[u]) {
+                gi[v].pb(u);
+            }
         }
-
-        gc.assign(n+1, vll());
-        vis.assign(n+1, 0);
-        comp.assign(n+1, -1);
-        st = stack<ll, vll>();
 
         for(ll i=1; i<=n; i++) if (!vis[i]) dfs(i);
 
@@ -47,9 +42,12 @@ struct Kosaraju {
             if (comp[u] == -1) dfs2(u, u);
         }
 
-        for(ll u=1; u<=n; u++)
-            for(auto v : g[u])
-                if (comp[u] != comp[v]) 
+        for(ll u=1; u<=n; u++) {
+            for(auto v : g[u]) {
+                if (comp[u] != comp[v]) {
                     gc[comp[u]].pb(comp[v]);
+                }
+            }
+        }
     }
 };
