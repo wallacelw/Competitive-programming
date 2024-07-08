@@ -31,8 +31,8 @@
 \contentsline {subsection}{\texttt {seg-recursive-minmax.cpp}\hspace {0.2em}}{5}{lstnumber.2.11.72}%
 \contentsline {subsection}{\numberline {2.8.2}Inverted Segtree}{5}{subsection.2.8.2}%
 \contentsline {subsection}{\texttt {seg-inverted.cpp}\hspace {0.2em}}{5}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Lazy Segtree}{6}{subsection.2.8.3}%
-\contentsline {subsection}{\texttt {seg-lazy-sum.cpp}\hspace {0.2em}}{6}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.3}Lazy Segtree}{5}{subsection.2.8.3}%
+\contentsline {subsection}{\texttt {seg-lazy-sum.cpp}\hspace {0.2em}}{5}{subsection.2.8.3}%
 \contentsline {subsection}{\numberline {2.8.4}PA Segtree}{6}{subsection.2.8.4}%
 \contentsline {subsection}{\texttt {seg-pa.cpp}\hspace {0.2em}}{6}{subsection.2.8.4}%
 \contentsline {section}{\numberline {2.9}Treap}{7}{section.2.9}%
@@ -56,7 +56,7 @@
 \contentsline {subsection}{\texttt {slope-trick.cpp}\hspace {0.2em}}{10}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}SOS DP}{10}{section.3.5}%
 \contentsline {subsection}{\texttt {sos-dp.cpp}\hspace {0.2em}}{10}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Bit optimization}{11}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Bit optimization}{10}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Operations}{11}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{11}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Problems}{11}{subsection.3.6.3}%
@@ -236,8 +236,10 @@
 \contentsline {section}{\numberline {9.3}Read an Fraction Input}{33}{section.9.3}%
 \contentsline {section}{\numberline {9.4}Getline}{33}{section.9.4}%
 \contentsline {subsection}{\texttt {getline.cpp}\hspace {0.2em}}{33}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Rounding Half to Even}{33}{section.9.5}%
-\contentsline {subsection}{\texttt {half-to-even.cpp}\hspace {0.2em}}{33}{section.9.5}%
+\contentsline {section}{\numberline {9.5}Merge Sort}{33}{section.9.5}%
+\contentsline {subsection}{\texttt {merge-sort.cpp}\hspace {0.2em}}{33}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Rounding Half to Even}{33}{section.9.6}%
+\contentsline {subsection}{\texttt {half-to-even.cpp}\hspace {0.2em}}{33}{section.9.6}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
 \contentsfinish 

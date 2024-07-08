@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.8}Segment Trees}{4}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Recursive SegTree}{4}{subsection.2.8.1}%
 \contentsline {subsection}{\numberline {2.8.2}Inverted Segtree}{5}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Lazy Segtree}{6}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.3}Lazy Segtree}{5}{subsection.2.8.3}%
 \contentsline {subsection}{\numberline {2.8.4}PA Segtree}{6}{subsection.2.8.4}%
 \contentsline {section}{\numberline {2.9}Treap}{7}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Dynamic Programming}{7}{chapter.3}%
@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Li-chao Tree}{9}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Slope Trick}{10}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}SOS DP}{10}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Bit optimization}{11}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Bit optimization}{10}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Operations}{11}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{11}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Problems}{11}{subsection.3.6.3}%
@@ -143,5 +143,6 @@
 \contentsline {section}{\numberline {9.2}Random Generator}{33}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Read an Fraction Input}{33}{section.9.3}%
 \contentsline {section}{\numberline {9.4}Getline}{33}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Rounding Half to Even}{33}{section.9.5}%
+\contentsline {section}{\numberline {9.5}Merge Sort}{33}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Rounding Half to Even}{33}{section.9.6}%
 \contentsfinish 
