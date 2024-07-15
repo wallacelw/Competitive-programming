@@ -27,5 +27,5 @@ ll extendedEuclid(ll a, ll b, ll &x, ll &y) {
 ll inv(ll val, ll m) { 
     ll x, y;
     extendedEuclid(val, m, x, y);
-    return x;
+    return ((x % m) + m) % m;;
 }
