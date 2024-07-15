@@ -21,3 +21,11 @@ ll extendedEuclid(ll a, ll b, ll &x, ll &y) {
     }
     return a1;
 }
+
+// returns val^(-1) (mod m)
+// <=> gcd(val, m) == 1
+ll inv(ll val, ll m) { 
+    ll x, y;
+    extendedEuclid(val, m, x, y);
+    return x;
+}
