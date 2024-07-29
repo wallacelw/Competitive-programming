@@ -1,7 +1,7 @@
 /**
  * Author: Wallace
  * Date: 05/04/2024
- * Description: Simple DFS template for anonymous function
+ * Description: Simple DFS template with lambda syntax
  * Time: O(V + E)
 */
 

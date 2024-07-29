@@ -112,14 +112,15 @@
 \contentsline {subsection}{\numberline {6.3.2}Hungarian}{16}{subsection.6.3.2}%
 \contentsline {subsection}{\texttt {hungarian.cpp}\hspace {0.2em}}{16}{subsection.6.3.2}%
 \contentsline {section}{\numberline {6.4}Coloring}{17}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}k-Coloring}{17}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.1}Compute the Chromatic Number}{17}{subsection.6.4.1}%
+\contentsline {subsection}{\texttt {chromatic-number.cpp}\hspace {0.2em}}{17}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Shortest Paths}{17}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Dijkstra}{17}{subsection.6.5.1}%
 \contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{17}{subsection.6.5.1}%
-\contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{17}{lstnumber.6.8.21}%
+\contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{17}{lstnumber.6.9.21}%
 \contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{17}{subsection.6.5.2}%
 \contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{17}{subsection.6.5.2}%
-\contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{17}{lstnumber.6.10.15}%
+\contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{18}{lstnumber.6.11.15}%
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{18}{subsection.6.5.3}%
 \contentsline {subsection}{\texttt {floyd-warshall.cpp}\hspace {0.2em}}{18}{subsection.6.5.3}%
 \contentsline {section}{\numberline {6.6}Eulerian Path}{18}{section.6.6}%
@@ -131,7 +132,7 @@
 \contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{19}{subsection.6.7.2}%
 \contentsline {subsection}{\numberline {6.7.3}Articulation Points}{19}{subsection.6.7.3}%
 \contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{19}{subsection.6.7.3}%
-\contentsline {subsection}{\numberline {6.7.4}Block Cut Tree}{19}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.4}Block Cut Tree}{20}{subsection.6.7.4}%
 \contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{20}{subsection.6.7.4}%
 \contentsline {subsection}{\numberline {6.7.5}Strong Orientation}{21}{subsection.6.7.5}%
 \contentsline {subsubsection}{Acyclic Graph Orientation}{21}{section*.2}%
@@ -150,7 +151,7 @@
 \contentsline {subsection}{\texttt {directed-mst.cpp}\hspace {0.2em}}{22}{section*.3}%
 \contentsline {section}{\numberline {6.10}Trees}{23}{section.6.10}%
 \contentsline {subsection}{\texttt {lca.cpp}\hspace {0.2em}}{23}{section.6.10}%
-\contentsline {subsection}{\texttt {binary-lifting.cpp}\hspace {0.2em}}{23}{lstnumber.6.23.54}%
+\contentsline {subsection}{\texttt {binary-lifting.cpp}\hspace {0.2em}}{23}{lstnumber.6.24.54}%
 \contentsline {subsection}{\numberline {6.10.1}Small To Large}{23}{subsection.6.10.1}%
 \contentsline {subsection}{\texttt {sack.cpp}\hspace {0.2em}}{23}{subsection.6.10.1}%
 \contentsline {chapter}{\numberline {7}Mathematics}{23}{chapter.7}%

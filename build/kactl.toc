@@ -64,7 +64,7 @@
 \contentsline {subsection}{\numberline {6.3.1}Minimum Cost with Dinitz}{16}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Hungarian}{16}{subsection.6.3.2}%
 \contentsline {section}{\numberline {6.4}Coloring}{17}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}k-Coloring}{17}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.1}Compute the Chromatic Number}{17}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Shortest Paths}{17}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Dijkstra}{17}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{17}{subsection.6.5.2}%
@@ -74,7 +74,7 @@
 \contentsline {subsection}{\numberline {6.7.1}Bridges (Cut Edges)}{19}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Bridge Tree}{19}{subsection.6.7.2}%
 \contentsline {subsection}{\numberline {6.7.3}Articulation Points}{19}{subsection.6.7.3}%
-\contentsline {subsection}{\numberline {6.7.4}Block Cut Tree}{19}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.4}Block Cut Tree}{20}{subsection.6.7.4}%
 \contentsline {subsection}{\numberline {6.7.5}Strong Orientation}{21}{subsection.6.7.5}%
 \contentsline {subsubsection}{Acyclic Graph Orientation}{21}{section*.2}%
 \contentsline {section}{\numberline {6.8}Directed Graph}{21}{section.6.8}%

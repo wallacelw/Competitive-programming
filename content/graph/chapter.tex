@@ -132,12 +132,24 @@
 	
 \section{Coloring}
 
-	\subsection{k-Coloring}
+	\textbf{Chromatic Number} is the \textit{minimum} number of colors to color all the vertices, so that no two adjacent vertices have the same color.
 
-		\textbf{TODO: Add this blog}
-		\url{https://codeforces.com/blog/entry/57496}
-		\url{https://en.wikipedia.org/wiki/Graph_coloring}
-		\url{https://open.kattis.com/problems/coloring}
+	\textbf{Chromatic Polynomial} $P(K)$ is the number of ways to color a graph with $K$ colors. 
+
+	A \textbf{k-coloring} is the same as a partition of the vertex set into $k$ independent sets, and the terms \textit{k-partite} and \textit{k-colorable} have the same meaning.
+	
+	A \textit{clique} of size $N$ will force the Chromatic Number to be at least $N$. It is a \textit{lower bound}.
+
+	The \textbf{maximum vertex degree $(+1)$} in an undirected graph will be the \textit{upper bound} on the Chromatic Number.
+
+	\textbf{2-colorable graphs} are exactly the bipartite graphs.
+
+	\textbf{Four color theorem} states that every planar graph can be 4-colored. 
+	A planar graph is a graph that can be drawn in a 2D plane without edges intersecting.
+
+	\subsection{Compute the Chromatic Number}
+	
+		\kactlimport{chromatic-number.cpp}
 
 \section{Shortest Paths}
 
