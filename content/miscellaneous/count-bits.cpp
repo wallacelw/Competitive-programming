@@ -3,6 +3,7 @@
  * Date: 01/08/2024
  * Description: count the numbers with bit b set in range [0, n] and [l, r]
  * Time: O(1)
+ * Status: Tested (https://cses.fi/problemset/result/10046957/)
 */
 
 // count of numbers with bit b set in range [0, n]
