@@ -145,4 +145,5 @@
 \contentsline {section}{\numberline {9.4}Getline}{33}{section.9.4}%
 \contentsline {section}{\numberline {9.5}Merge Sort}{33}{section.9.5}%
 \contentsline {section}{\numberline {9.6}Rounding Half to Even}{33}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Count Bits in a range}{33}{section.9.7}%
 \contentsfinish 
