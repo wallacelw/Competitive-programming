@@ -36,17 +36,18 @@ template<ll P> struct Z {
     }
     friend Z operator *(Z lhs, Z rhs) { return lhs *= rhs; }
 
-    Z fexp(Z x, ll i) {
-        if (i == 0) return 1;
-        if (i == 1) return x;
-        Z m = fexp(x, i/2);
-        m *= m;
-        if (i & 1) return m * x;
-        else return m;
+    Z operator ^(ll i) const {
+        Z ans = 1, aux = val;
+        while(i) {
+            if (i & 1) ans *= aux;
+            aux *= aux;
+            i >>= 1;
+        }
+        return ans;
     }
 
     Z& operator /=(Z rhs) {
-        return *this *= fexp(rhs, P-2);
+        return *this *= rhs^(P-2);
     }
     friend Z operator /(Z lhs, Z rhs) { return lhs /= rhs; }
 

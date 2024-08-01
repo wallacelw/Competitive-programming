@@ -1,11 +1,10 @@
 /**
  * Author: Wallace, Quirino
- * Date: 31/03/2024
+ * Date: 01/08/2024
  * Description: basic operations for combinatorics problems under a certain modulo
  * Time: O(n) to construct, ~O(1) operations
  * Status: permutations and arrangements needs to be verified
 */
-
 
 // remeber to import mint struct !!
 struct Combinatorics {
@@ -19,56 +18,56 @@ struct Combinatorics {
         for (ll i=n; i>0; i--) ifact[i-1] = ifact[i] * i;
     }
 
-    // "Combinacao / Binomio de Newton"
+    // Combination, "Combinacao"
     // n objects to place in k spaces
     // the order doesn't matter, so we consider the re-orderings
     // = n! / (k! * (n-k)!) 
-    mint combination(ll n, ll k) {
+    mint C(ll n, ll k) {
         if (k < 0 or n < k) return 0;
         return fact[n] * ifact[k] * ifact[n-k];
     }
 
-    // "Permutacao"
+    // Permutation, "Permutacao"
     // n objects to place in n spaces
     // = n!
-    mint permutation(ll n) {
+    mint P(ll n) {
         if (n < 0) return 0;
         return fact[n];
     }
 
-    // "Permutacao com repeticao"
+    // Permutation with Repetition, "Permutacao com repeticao"
     // Also called: Multinomial coefficients
     // n objects to place in n spaces
     // some objects are equal
     // therefore, we consider the possible re-orderings
     // = n! / (k1! k2! k3!)
-    mint permutationRepetition(ll n, vector<ll> vec) {
+    mint PR(ll n, vector<ll> vec) {
         if (n < 0) return 0;
         mint ans = fact[n];
         for(auto val : vec) ans *= ifact[val];
         return ans;
     }
 
-    // "Arranjo Simples"
+    // Arrangement, "Arranjo Simples"
     // n objects to place in k spaces (k < n)
     // n * (n-1) * ... * (n-k+1)
     // = n! / (n-k)!
-    mint arrangement(ll n, ll k) {
+    mint A(ll n, ll k) {
         if (n < 0) return 0;
         return fact[n] * ifact[n-k];
     }
 
-    // "Pontos e Virgulas"
+    // Stars and Bars, "Pontos e Virgulas"
     // n stars to distribute among
     // k distint groups, that can contain 0, 1 or more stars
     // separated by k-1 bars 
     // = (n+k-1)! / ( n! * (k-1)! ) 
-    mint starsBars(ll n, ll k) {
+    mint SB(ll n, ll k) {
         if (k == 0) {
             if (n == 0) return 1;
             else return 0;
         }
-        return combination(n + k - 1, k - 1);
+        return C(n + k - 1, k - 1);
     }
 
     // a derangement is a permutation of the elements of a set 
