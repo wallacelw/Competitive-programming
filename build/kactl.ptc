@@ -244,6 +244,8 @@
 \contentsline {subsection}{\texttt {half-to-even.cpp}\hspace {0.2em}}{33}{section.9.6}%
 \contentsline {section}{\numberline {9.7}Count Bits in a range}{33}{section.9.7}%
 \contentsline {subsection}{\texttt {count-bits.cpp}\hspace {0.2em}}{33}{section.9.7}%
+\contentsline {section}{\numberline {9.8}Count Digits in a range}{33}{section.9.8}%
+\contentsline {subsection}{\texttt {count-digits.cpp}\hspace {0.2em}}{33}{section.9.8}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
 \contentsfinish 
