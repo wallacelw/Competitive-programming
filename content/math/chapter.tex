@@ -120,13 +120,7 @@
 	\implies &f(a, b) = \frac{(a+b)!}{a! b!} = \binom{a+b}{a} 
 	\end{align*}
 
-	\subsection{Couting Bishops}
-
-	\kactlimport{bishops.cpp}
-
-
-
-
+	
 \section{Number Theory}
 
 \subsection{Highly Composite Numbers}
@@ -354,3 +348,15 @@ $$ = \sum_{i=1}^n i^2 = \frac{ n(n+1)(2n+1) }{ 6 } $$
 $$ 1 + 3 + 6 + 10 + 15 + ... + \frac{(n-1)(n)}{2} + \frac{(n)(n+1)}{2} $$
 $$ = \sum_{i=1}^n \frac{i(i+1)}{2} = \frac{1}{2}(\sum_{i=1}^n i^2 + \sum_{i=1}^n i) $$
 $$ = \frac{1}{2} ( \frac{ n(n+1) }{ 2 } + \frac{ n(n+1)(2n+1) }{ 6 }) $$
+
+\section{Xor Basis}
+
+A basis is composed of $N$ \textbf{linearly indepedent} vectors, 
+meaning that no combination of vectors can form another vector also present in the basis.
+
+Therefore, each generatable vector has an \textbf{unique} combination that forms it. 
+
+Consequently, the number of generatable vectors is $2^N$, $N$ is the number of vectors present in the basis.
+
+
+\kactlimport{xor-basis.cpp}
