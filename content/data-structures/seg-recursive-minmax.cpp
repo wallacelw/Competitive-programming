@@ -49,7 +49,7 @@ struct Segtree {
 
     void update(ll idx, ll val, ll l, ll r, ll i) {
         if (l == r) {
-            // increase operation:
+            // update operation:
             tree[i].mn = tree[i].mx = val;
         }
         else {
