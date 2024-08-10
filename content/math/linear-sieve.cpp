@@ -7,21 +7,20 @@
  * Status: Tested (https://codeforces.com/contest/776/submission/246424361)
  */
 
-vector<ll> primes, lp(MAX);
-// lp[i] = smallest prime divisor of i
+vector<ll> primes, sp(MAX); // MAX = ~1e7
+// sp[i] = smallest prime divisor of i
+// after running sieve(), sp[i] == i for primes
 
-void linearSieve(ll n) {
+void sieve(ll n) {
     for (ll i=2; i <= n; i++) {
-        if (lp[i] == 0) { // i is prime
-            lp[i] = i; // {lp[i] == i} for prime numbers
+        if (sp[i] == 0) { // i is prime
+            sp[i] = i; // {sp[i] == i} for prime numbers
             primes.pb(i);
         }
-        // visit every composite number that has primes[j] as the lp
+        // visit every composite number that has primes[j] as the sp
         for (ll j = 0; i * primes[j] <= n; j++) {
-            lp[i * primes[j]] = primes[j];
-            
-            if (primes[j] == lp[i])
-                break;
+            sp[i * primes[j]] = primes[j];
+            if (primes[j] == sp[i]) break;
         }
     }
 }

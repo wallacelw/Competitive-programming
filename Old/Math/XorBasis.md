@@ -2,10 +2,10 @@
 
 ```cpp
 struct XorBasis {
-    vector<ll> basis;
+    vector<ll> B;
     
     ll reduce(ll vec) {
-        for(auto b : basis) vec = min(vec, vec^b);
+        for(auto b : B) vec = min(vec, vec^b);
         return vec;
     }
 

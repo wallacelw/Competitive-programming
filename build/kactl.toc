@@ -96,15 +96,14 @@
 \contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{24}{subsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.2.3}Burside Lemma}{25}{subsection.7.2.3}%
 \contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{25}{subsection.7.2.4}%
-\contentsline {subsection}{\numberline {7.2.5}Couting Bishops}{25}{subsection.7.2.5}%
 \contentsline {section}{\numberline {7.3}Number Theory}{25}{section.7.3}%
 \contentsline {subsection}{\numberline {7.3.1}Highly Composite Numbers}{25}{subsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.3.2}Divisibility}{25}{subsection.7.3.2}%
-\contentsline {subsubsection}{Euclid}{26}{section*.4}%
-\contentsline {subsubsection}{Lema 1 - Transitivity}{26}{section*.5}%
-\contentsline {subsubsection}{Lema 2}{26}{section*.6}%
-\contentsline {subsubsection}{Lema 3}{26}{section*.7}%
-\contentsline {subsubsection}{Lema 4}{26}{section*.8}%
+\contentsline {subsubsection}{Euclid}{25}{section*.4}%
+\contentsline {subsubsection}{Lema 1 - Transitivity}{25}{section*.5}%
+\contentsline {subsubsection}{Lema 2}{25}{section*.6}%
+\contentsline {subsubsection}{Lema 3}{25}{section*.7}%
+\contentsline {subsubsection}{Lema 4}{25}{section*.8}%
 \contentsline {subsubsection}{Lema 5}{26}{section*.9}%
 \contentsline {subsubsection}{Lema 6}{26}{section*.10}%
 \contentsline {subsubsection}{Greatest Common Divisor (GCD)}{26}{section*.11}%
@@ -116,16 +115,18 @@
 \contentsline {subsection}{\numberline {7.3.4}Sieves}{26}{subsection.7.3.4}%
 \contentsline {subsubsection}{Eratosthenes}{26}{section*.16}%
 \contentsline {subsubsection}{Linear Sieve}{26}{section*.17}%
-\contentsline {subsection}{\numberline {7.3.5}Extended Euclid}{27}{subsection.7.3.5}%
-\contentsline {subsubsection}{Inverse Multiplicative}{27}{section*.18}%
-\contentsline {subsubsection}{Diofantine Equation}{27}{section*.19}%
+\contentsline {subsection}{\numberline {7.3.5}Factorization}{26}{subsection.7.3.5}%
+\contentsline {subsection}{\numberline {7.3.6}Extended Euclid}{26}{subsection.7.3.6}%
+\contentsline {subsubsection}{Inverse Multiplicative}{26}{section*.18}%
+\contentsline {subsubsection}{Diofantine Equation}{26}{section*.19}%
 \contentsline {section}{\numberline {7.4}FFT}{27}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Matrix}{27}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Minimum Path Length with exactly k edges}{28}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.1}Minimum Path Length with exactly k edges}{27}{subsection.7.5.1}%
 \contentsline {section}{\numberline {7.6}Series' Closed Formulas}{28}{section.7.6}%
 \contentsline {subsection}{\numberline {7.6.1}Natural Number Summation (PA)}{28}{subsection.7.6.1}%
 \contentsline {subsection}{\numberline {7.6.2}Natural Number Quadratic Summation}{28}{subsection.7.6.2}%
 \contentsline {subsection}{\numberline {7.6.3}Triangular Numbers Summation}{28}{subsection.7.6.3}%
+\contentsline {section}{\numberline {7.7}Xor Basis}{28}{section.7.7}%
 \contentsline {chapter}{\numberline {8}Strings}{28}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Hashing}{28}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Z-Function}{28}{section.8.2}%
@@ -135,7 +136,7 @@
 \contentsline {section}{\numberline {8.5}Manacher}{29}{section.8.5}%
 \contentsline {section}{\numberline {8.6}Booth}{30}{section.8.6}%
 \contentsline {section}{\numberline {8.7}Aho-Corasick}{30}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Suffix Automaton}{30}{section.8.8}%
+\contentsline {section}{\numberline {8.8}Suffix Automaton}{31}{section.8.8}%
 \contentsline {subsection}{\numberline {8.8.1}Concepts:}{31}{subsection.8.8.1}%
 \contentsline {subsection}{\numberline {8.8.2}Implementation:}{31}{subsection.8.8.2}%
 \contentsline {chapter}{\numberline {9}Miscellaneous}{32}{chapter.9}%
@@ -147,4 +148,5 @@
 \contentsline {section}{\numberline {9.6}Rounding Half to Even}{33}{section.9.6}%
 \contentsline {section}{\numberline {9.7}Count Bits in a range}{33}{section.9.7}%
 \contentsline {section}{\numberline {9.8}Count Digits in a range}{33}{section.9.8}%
+\contentsline {section}{\numberline {9.9}Couting Bishops}{33}{section.9.9}%
 \contentsfinish 
