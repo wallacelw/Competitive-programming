@@ -1,25 +1,25 @@
 /**
  * Author: Wallace
  * Date: 20/03/2024 
- * Description: Basic Recursive Segment Tree for
+ * Description: Basic Recursive Segment tree for
  * point update, range min/max query
- * When initializing, choose an appropriate value for n.
+ * When initializing, choose an appropriate value for (n = R) and call build()
  * Time: O(N \log(N)) to build, O(\log(N)) to update or query
- * Status: Tested {https://atcoder.jp/contests/abl/submissions/53206666}
+ * Status: Tested {https://atcoder.jp/contests/abl/submissions/56586493}
  */
 
 // [0, n] segtree for point assignment update, range min/max query
 struct Segtree {
     struct Node {
-        // null element:
+        // correctly initialize default null values:
         ll mn = INF, mx = -INF;
     };
 
     ll L=0, R;
     vector<ll> v;
-    vector<Node> tree;
+    vector<Node> t;
     
-    Segtree(ll n) : R(n), v(n+1), tree(4*(n+1)) {}
+    Segtree(ll n) : R(n), v(n+1), t(4*(n+1)) {}
  
     Node merge(Node a, Node b) {
         return Node {
@@ -31,53 +31,51 @@ struct Segtree {
 
     void build(ll l, ll r, ll i) {
         if (l == r) {
-            tree[i] = Node {
+            t[i] = Node {
                 // leaf element:
-                v[l], v[l]
+                v[l],
+                v[l]
             };
+            return;
         }
-        else {
-            ll mid = (l+r)/2;
-            build(l, mid, 2*i);
-            build(mid+1, r, 2*i+1);
-            tree[i] = merge(tree[2*i], tree[2*i+1]);
-        }
+        ll mid = (l+r)/2;
+        build(l, mid, 2*i);
+        build(mid+1, r, 2*i+1);
+        t[i] = merge(t[2*i], t[2*i+1]);
     }
     void build() {
         build(L, R, 1);
     }
 
-    void update(ll idx, ll val, ll l, ll r, ll i) {
+    void update(ll pos, ll val, ll l, ll r, ll i) {
         if (l == r) {
-            // update operation:
-            tree[i].mn = tree[i].mx = val;
+            // update(assignment) operation:
+            t[i].mn = t[i].mx = val;
+            return;
         }
-        else {
-            ll mid = (l+r)/2;
-            if (idx <= mid) update(idx, val, l, mid, 2*i);
-            else update(idx, val, mid+1, r, 2*i+1);
-            tree[i] = merge(tree[2*i], tree[2*i+1]);
-        }
+        ll mid = (l+r)/2;
+        if (pos <= mid)
+            update(pos, val, l, mid, 2*i);
+        else 
+            update(pos, val, mid+1, r, 2*i+1);
+        t[i] = merge(t[2*i], t[2*i+1]);
     }
-    void update(ll idx, ll val) {
-        update(idx, val, L, R, 1);
+    void update(ll pos, ll val) {
+        update(pos, val, L, R, 1);
     }
-
-    Node query(ll left, ll right, ll l, ll r, ll i) {
-        if (right < l or r < left){
-            // null element:
-            return Node{};
-        }
-        else if (left <= l and r <= right) return tree[i]; 
-        else{
-            ll mid = (l+r)/2;
-            return merge(
-                query(left, right, l, mid, 2*i), 
-                query(left, right, mid+1, r, 2*i+1)
-            );
-        }
+    
+    // [a, b] are the range limits for the query
+    // [l, r] are the internal variables of the t
+    Node query(ll a, ll b, ll l, ll r, ll i) {    
+        if (b < l or r < a) return Node{}; // default null value
+        else if (a <= l and r <= b) return t[i];
+        ll mid = (l+r)/2;
+        return merge(
+            query(a, b, l, mid, 2*i), 
+            query(a, b, mid+1, r, 2*i+1)
+        );
     }
-    Node query(ll left, ll right) {
-        return query(left, right, L, R, 1);
+    Node query(ll a, ll b) {
+        return query(a, b, L, R, 1);
     }
 };

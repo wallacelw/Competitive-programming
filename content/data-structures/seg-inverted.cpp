@@ -1,80 +1,76 @@
 /**
  * Author: Wallace
- * Date: 20/03/2024 
- * Description: Basic Inverted Segment Tree for
+ * Date: 10/08/2024
+ * Description: Basic Inverted Segment tree for
  * point query stored value, range increase
- * When initializing, choose an appropriate value for n.
+ * When initializing, choose an appropriate value for n=R.
  * Time: O(N \log(N)) to build, O(\log{N}) to range increase or point query
- * Status: Tested (https://atcoder.jp/contests/abc340/submissions/53206762)
+ * Status: Tested (https://atcoder.jp/contests/abc340/submissions/56587017)
  */
 
 // [0, n] segtree for point query stored value, range increase
 struct Segtree {
     struct Node {
-        // null element:
-        ll ps = 0;
+        // correctly initialize default null values:
+        ll sum = 0;
     };
 
     ll L=0, R;
     vector<ll> v;
-    vector<Node> tree;
+    vector<Node> t;
 
-    Segtree(ll n) : R(n), v(n+1), tree(4*(n+1)) {}
+    Segtree(ll n) : R(n), v(n+1), t(4*(n+1)) {}
 
     Node merge(Node a, Node b) {
         return Node {
             // merge operation:
-            a.ps + b.ps
+            a.sum + b.sum
         };
     }
 
     void build(ll l, ll r, ll i) {
         if (l == r) {
-            tree[i] = Node {
+            t[i] = Node {
                 // leaf element:
                 v[l]
             };
+            return;
         }
-        else {
-            ll mid = (l+r)/2;
-            build(l, mid, 2*i);
-            build(mid+1, r, 2*i+1);
-            tree[i] = Node{};
-        }
+        ll mid = (l+r)/2;
+        build(l, mid, 2*i);
+        build(mid+1, r, 2*i+1);
+        t[i] = Node{};
     }
     void build() {
         build(L, R, 1);
     }
-
-    void increase(ll val, ll left, ll right, ll l, ll r, ll i) {
-        if (right < l or r < left) return;
-        else if (left <= l and r <= right) {
+    
+    // [a, b] are the range limits for the query
+    // [l, r] are the internal variables of the t
+    void increase(ll inc, ll a, ll b, ll l, ll r, ll i) {
+        if (b < l or r < a) return;
+        else if (a <= l and r <= b) {
             // increase operation
-            tree[i].ps += val;
+            t[i].sum += inc;
+            return;
         }
-        else {
-            ll mid = (l+r)/2;
-            increase(val, left, right, l, mid, 2*i);
-            increase(val, left, right, mid+1, r, 2*i+1);
-        }
+        ll mid = (l+r)/2;
+        increase(inc, a, b, l, mid, 2*i);
+        increase(inc, a, b, mid+1, r, 2*i+1);
     }
-    void increase(ll val, ll left, ll right) {
-        increase(val, left, right, L, R, 1);
+    void increase(ll inc, ll a, ll b) {
+        increase(inc, a, b, L, R, 1);
     }
  
-    Node query(ll idx, ll l, ll r, ll i) {
-        if (l == r) {
-            return tree[i];
-        }
-        else {
-            ll mid = (l+r)/2;
-            if (idx <= mid) 
-                return merge(tree[i], query(idx, l, mid, 2*i));
-            else 
-                return merge(tree[i], query(idx, mid+1, r, 2*i+1));
-        }
+    Node query(ll pos, ll l, ll r, ll i) {
+        if (l == r) return t[i];
+        ll mid = (l+r)/2;
+        if (pos <= mid) 
+            return merge(t[i], query(pos, l, mid, 2*i));
+        else 
+            return merge(t[i], query(pos, mid+1, r, 2*i+1));
     }
-    Node query(ll idx) {
-        return query(idx, L, R, 1);
+    Node query(ll pos) {
+        return query(pos, L, R, 1);
     }
 };

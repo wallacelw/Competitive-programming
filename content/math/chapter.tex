@@ -341,12 +341,16 @@ In addition, each generatable vector using only vector of the basis has an \text
 Given that you can use $M$ vectors in your disposal and $N$ of them ($N \leq M$) forms the base, each generatable vector
 can be generated using $2^(M-N)$ unique linear combinations of the given vectors.
 
-Instead of integers, bitsets can be used to for the xor basis. 
+The dimension of the \textit{kernel} is $M-N$, which represents redundant vectors.
+
+Instead of integers, bitsets can also be used to for the xor basis. 
 
 \textbf{Solves:}
 
 \begin{itemize}
-	\item 
+	\item Find if a certain vector can be formed by the basis ( \textit{ if(reduce(val) != 0) } )
+	\item Find how many linear combinations form a certain vector ( \textit{ans = $2^(dim(kernel))$} )
+	\item Find the maximum vector that can be formed ( \textit{mx = max(mx, mx\^b)})
 \end{itemize}
 
 \kactlimport{xor-basis.cpp}
