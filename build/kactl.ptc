@@ -23,41 +23,43 @@
 \contentsline {subsection}{\texttt {query-tree.cpp}\hspace {0.2em}}{3}{subsection.2.5.1}%
 \contentsline {section}{\numberline {2.6}Trie}{4}{section.2.6}%
 \contentsline {subsection}{\texttt {trie.cpp}\hspace {0.2em}}{4}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Fenwick Tree}{4}{section.2.7}%
-\contentsline {subsection}{\texttt {fenwick-tree.cpp}\hspace {0.2em}}{4}{section.2.7}%
-\contentsline {subsection}{\texttt {fenwick-tree-2D.cpp}\hspace {0.2em}}{4}{lstnumber.2.10.26}%
-\contentsline {section}{\numberline {2.8}Segment Trees}{4}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Recursive SegTree}{4}{subsection.2.8.1}%
-\contentsline {subsection}{\texttt {seg-recursive-sum.cpp}\hspace {0.2em}}{4}{subsection.2.8.1}%
-\contentsline {subsection}{\texttt {seg-recursive-minmax.cpp}\hspace {0.2em}}{5}{lstnumber.2.12.69}%
-\contentsline {subsection}{\numberline {2.8.2}Inverted Segtree}{5}{subsection.2.8.2}%
-\contentsline {subsection}{\texttt {seg-inverted.cpp}\hspace {0.2em}}{5}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Lazy Segtree}{5}{subsection.2.8.3}%
-\contentsline {subsection}{\texttt {seg-lazy-sum.cpp}\hspace {0.2em}}{5}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}PA Segtree}{6}{subsection.2.8.4}%
-\contentsline {subsection}{\texttt {seg-pa.cpp}\hspace {0.2em}}{6}{subsection.2.8.4}%
-\contentsline {section}{\numberline {2.9}Treap}{7}{section.2.9}%
-\contentsline {subsection}{\texttt {treap.cpp}\hspace {0.2em}}{7}{section.2.9}%
+\contentsline {section}{\numberline {2.7}Sparse Table}{4}{section.2.7}%
+\contentsline {subsection}{\texttt {sparse-table.cpp}\hspace {0.2em}}{4}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Fenwick Tree}{4}{section.2.8}%
+\contentsline {subsection}{\texttt {fenwick-tree.cpp}\hspace {0.2em}}{4}{section.2.8}%
+\contentsline {subsection}{\texttt {fenwick-tree-2D.cpp}\hspace {0.2em}}{4}{lstnumber.2.11.26}%
+\contentsline {section}{\numberline {2.9}Segment Trees}{4}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Recursive SegTree}{5}{subsection.2.9.1}%
+\contentsline {subsection}{\texttt {seg-recursive-sum.cpp}\hspace {0.2em}}{5}{subsection.2.9.1}%
+\contentsline {subsection}{\texttt {seg-recursive-minmax.cpp}\hspace {0.2em}}{5}{lstnumber.2.13.69}%
+\contentsline {subsection}{\numberline {2.9.2}Inverted Segtree}{5}{subsection.2.9.2}%
+\contentsline {subsection}{\texttt {seg-inverted.cpp}\hspace {0.2em}}{5}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Lazy Segtree}{6}{subsection.2.9.3}%
+\contentsline {subsection}{\texttt {seg-lazy-sum.cpp}\hspace {0.2em}}{6}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}PA Segtree}{6}{subsection.2.9.4}%
+\contentsline {subsection}{\texttt {seg-pa.cpp}\hspace {0.2em}}{6}{subsection.2.9.4}%
+\contentsline {section}{\numberline {2.10}Treap}{7}{section.2.10}%
+\contentsline {subsection}{\texttt {treap.cpp}\hspace {0.2em}}{7}{section.2.10}%
 \contentsline {chapter}{\numberline {3}Dynamic Programming}{7}{chapter.3}%
 \ttl@stoptoc {chapters@2}
 \ttl@starttoc {chapters@3}
-\contentsline {section}{\numberline {3.1}Longest Increasing Subsequence}{7}{section.3.1}%
-\contentsline {subsection}{\texttt {lis.cpp}\hspace {0.2em}}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.1}Longest Increasing Subsequence}{8}{section.3.1}%
+\contentsline {subsection}{\texttt {lis.cpp}\hspace {0.2em}}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{8}{section.3.2}%
 \contentsline {subsection}{\texttt {divide-conquer-dp.cpp}\hspace {0.2em}}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Knuth Optimization}{8}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Conditions}{8}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.3}Knuth Optimization}{9}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Conditions}{9}{subsection.3.3.1}%
 \contentsline {subsection}{\texttt {knuth.cpp}\hspace {0.2em}}{9}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Slope Optimizations}{9}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Convex Hull Trick}{9}{subsection.3.4.1}%
 \contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{9}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Li-chao Tree}{9}{subsection.3.4.2}%
-\contentsline {subsection}{\texttt {lichao.cpp}\hspace {0.2em}}{9}{subsection.3.4.2}%
+\contentsline {subsection}{\texttt {lichao.cpp}\hspace {0.2em}}{10}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Slope Trick}{10}{subsection.3.4.3}%
 \contentsline {subsection}{\texttt {slope-trick.cpp}\hspace {0.2em}}{10}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}SOS DP}{10}{section.3.5}%
-\contentsline {subsection}{\texttt {sos-dp.cpp}\hspace {0.2em}}{10}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Bit optimization}{10}{section.3.6}%
+\contentsline {subsection}{\texttt {sos-dp.cpp}\hspace {0.2em}}{11}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Bit optimization}{11}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Operations}{11}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{11}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Problems}{11}{subsection.3.6.3}%
@@ -69,8 +71,8 @@
 \contentsline {subsection}{\numberline {4.2.1}Proof}{11}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}DAG Representation}{11}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{11}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Composition}{11}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Decomposition}{11}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.1}Composition}{12}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Decomposition}{12}{subsection.4.4.2}%
 \contentsline {subsection}{\texttt {mex.cpp}\hspace {0.2em}}{12}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{12}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{12}{subsection.4.5.1}%
@@ -82,7 +84,7 @@
 \contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{12}{subsection.4.8.1}%
 \contentsline {subsection}{\numberline {4.8.2}Other States}{12}{subsection.4.8.2}%
 \contentsline {subsubsection}{Examples}{12}{section*.1}%
-\contentsline {section}{\numberline {4.9}Insta-Winning States}{12}{section.4.9}%
+\contentsline {section}{\numberline {4.9}Insta-Winning States}{13}{section.4.9}%
 \contentsline {section}{\numberline {4.10}References}{13}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{13}{chapter.5}%
 \ttl@stoptoc {chapters@4}
@@ -97,8 +99,8 @@
 \ttl@stoptoc {chapters@5}
 \ttl@starttoc {chapters@6}
 \contentsline {section}{\numberline {6.1}Fundamentals}{13}{section.6.1}%
-\contentsline {subsection}{\texttt {dfs.cpp}\hspace {0.2em}}{13}{section.6.1}%
-\contentsline {subsection}{\texttt {bfs.cpp}\hspace {0.2em}}{13}{lstnumber.6.1.19}%
+\contentsline {subsection}{\texttt {dfs.cpp}\hspace {0.2em}}{14}{section.6.1}%
+\contentsline {subsection}{\texttt {bfs.cpp}\hspace {0.2em}}{14}{lstnumber.6.1.19}%
 \contentsline {section}{\numberline {6.2}Network flow}{14}{section.6.2}%
 \contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{14}{section.6.2}%
 \contentsline {subsection}{\texttt {dinitz.cpp}\hspace {0.2em}}{14}{lstnumber.6.3.86}%
@@ -106,7 +108,7 @@
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{15}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{15}{subsection.6.2.3}%
 \contentsline {subsection}{\texttt {min-vertex-cover.cpp}\hspace {0.2em}}{15}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{15}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{16}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Minimum Cost Matching}{16}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Minimum Cost with Dinitz}{16}{subsection.6.3.1}%
 \contentsline {subsection}{\texttt {min-cost-dinitz.cpp}\hspace {0.2em}}{16}{subsection.6.3.1}%
@@ -119,8 +121,8 @@
 \contentsline {subsection}{\numberline {6.5.1}Dijkstra}{17}{subsection.6.5.1}%
 \contentsline {subsection}{\texttt {dijkstra.cpp}\hspace {0.2em}}{17}{subsection.6.5.1}%
 \contentsline {subsection}{\texttt {extendedDijkstra.cpp}\hspace {0.2em}}{17}{lstnumber.6.9.21}%
-\contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{17}{subsection.6.5.2}%
-\contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{17}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{18}{subsection.6.5.2}%
+\contentsline {subsection}{\texttt {bellman-ford.cpp}\hspace {0.2em}}{18}{subsection.6.5.2}%
 \contentsline {subsection}{\texttt {bellman-ford-cycle.cpp}\hspace {0.2em}}{18}{lstnumber.6.11.15}%
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{18}{subsection.6.5.3}%
 \contentsline {subsection}{\texttt {floyd-warshall.cpp}\hspace {0.2em}}{18}{subsection.6.5.3}%
@@ -131,8 +133,8 @@
 \contentsline {subsection}{\texttt {bridges.cpp}\hspace {0.2em}}{19}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Bridge Tree}{19}{subsection.6.7.2}%
 \contentsline {subsection}{\texttt {bridgeTree.cpp}\hspace {0.2em}}{19}{subsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.7.3}Articulation Points}{19}{subsection.6.7.3}%
-\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{19}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.3}Articulation Points}{20}{subsection.6.7.3}%
+\contentsline {subsection}{\texttt {articulation.cpp}\hspace {0.2em}}{20}{subsection.6.7.3}%
 \contentsline {subsection}{\numberline {6.7.4}Block Cut Tree}{20}{subsection.6.7.4}%
 \contentsline {subsection}{\texttt {blockCutTree.cpp}\hspace {0.2em}}{20}{subsection.6.7.4}%
 \contentsline {subsection}{\numberline {6.7.5}Strong Orientation}{21}{subsection.6.7.5}%

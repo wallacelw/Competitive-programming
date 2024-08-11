@@ -8,24 +8,25 @@
 \contentsline {section}{\numberline {2.5}Disjoint Set Union}{3}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Dynamic Connectivity}{3}{subsection.2.5.1}%
 \contentsline {section}{\numberline {2.6}Trie}{4}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Fenwick Tree}{4}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Segment Trees}{4}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Recursive SegTree}{4}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Inverted Segtree}{5}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Lazy Segtree}{5}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}PA Segtree}{6}{subsection.2.8.4}%
-\contentsline {section}{\numberline {2.9}Treap}{7}{section.2.9}%
+\contentsline {section}{\numberline {2.7}Sparse Table}{4}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Fenwick Tree}{4}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Segment Trees}{4}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Recursive SegTree}{5}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Inverted Segtree}{5}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Lazy Segtree}{6}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}PA Segtree}{6}{subsection.2.9.4}%
+\contentsline {section}{\numberline {2.10}Treap}{7}{section.2.10}%
 \contentsline {chapter}{\numberline {3}Dynamic Programming}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Longest Increasing Subsequence}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{7}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Knuth Optimization}{8}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Conditions}{8}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.1}Longest Increasing Subsequence}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Knuth Optimization}{9}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Conditions}{9}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Slope Optimizations}{9}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Convex Hull Trick}{9}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Li-chao Tree}{9}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Slope Trick}{10}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}SOS DP}{10}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Bit optimization}{10}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Bit optimization}{11}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Operations}{11}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{11}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Problems}{11}{subsection.3.6.3}%
@@ -35,8 +36,8 @@
 \contentsline {subsection}{\numberline {4.2.1}Proof}{11}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}DAG Representation}{11}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{11}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Composition}{11}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Decomposition}{11}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.1}Composition}{12}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Decomposition}{12}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{12}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{12}{subsection.4.5.1}%
 \contentsline {section}{\numberline {4.6}Misère Game}{12}{section.4.6}%
@@ -47,7 +48,7 @@
 \contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{12}{subsection.4.8.1}%
 \contentsline {subsection}{\numberline {4.8.2}Other States}{12}{subsection.4.8.2}%
 \contentsline {subsubsection}{Examples}{12}{section*.1}%
-\contentsline {section}{\numberline {4.9}Insta-Winning States}{12}{section.4.9}%
+\contentsline {section}{\numberline {4.9}Insta-Winning States}{13}{section.4.9}%
 \contentsline {section}{\numberline {4.10}References}{13}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{13}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Point Struct}{13}{section.5.1}%
@@ -59,7 +60,7 @@
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{15}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{15}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{15}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{15}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{16}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Minimum Cost Matching}{16}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Minimum Cost with Dinitz}{16}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Hungarian}{16}{subsection.6.3.2}%
@@ -67,13 +68,13 @@
 \contentsline {subsection}{\numberline {6.4.1}Compute the Chromatic Number}{17}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Shortest Paths}{17}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Dijkstra}{17}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{17}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.2}Bellman-Ford}{18}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Floyd Warshall}{18}{subsection.6.5.3}%
 \contentsline {section}{\numberline {6.6}Eulerian Path}{18}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Undirected Graph}{19}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Bridges (Cut Edges)}{19}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Bridge Tree}{19}{subsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.7.3}Articulation Points}{19}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.3}Articulation Points}{20}{subsection.6.7.3}%
 \contentsline {subsection}{\numberline {6.7.4}Block Cut Tree}{20}{subsection.6.7.4}%
 \contentsline {subsection}{\numberline {6.7.5}Strong Orientation}{21}{subsection.6.7.5}%
 \contentsline {subsubsection}{Acyclic Graph Orientation}{21}{section*.2}%
