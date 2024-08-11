@@ -1,9 +1,9 @@
 /**
  * Author: Wallace
- * Date: 03/08/2024
+ * Date: 11/08/2024
  * Description: Xor Basis
- * Time: O(size(base)) reduce(), add(); size(base) <= 64 for long long
- * Status: Tested!
+ * Time: O(size(base)) = O(\log{mx\_val});
+ * Status: Tested with lots of problems
 */
 
 struct XorBasis {
@@ -20,35 +20,87 @@ struct XorBasis {
     }
 };
 
-
 // Extended // 
 struct XorBasis {
-    vector<ll> basis;
+    vector<ll> B;
     ll mx = 0;
 
     ll reduce(ll vec) {
-        for(auto b : basis) vec = min(vec, vec^b);
+        if (!vec) return 0;
+        for(auto b : B) vec = min(vec, vec^b);
         return vec;
     }
 
-    void add(ll vec) {
+    bool add(ll vec) {
         ll val = reduce(vec);
         if (val) {
-            basis.pb(val);
+            B.pb(val);
             mx = max(mx, mx^val);
+            return true;
         }
+        return false;
     }
 
     ll dim() {
-        return basis.size();
+        return B.size();
     }
     
-    void jordan() {
-        sort(basis.begin(), basis.end(), greater<ll>());
-        for(ll i=1; i<(ll)basis.size(); i++) {
+    // Gaussian elimination in O(dim^2)
+    // each bit below and above the pivot are zeroed
+    // Basis will be ordered from MSB to LSB
+    void gaussJordan() { 
+        sort(B.begin(), B.end(), greater<ll>());
+        for(ll i=1; i<(ll)B.size(); i++) {
             for(ll j=0; j<i; j++) {
-                basis[j] = min(basis[j], basis[j]^basis[i]);
+                B[j] = min(B[j], B[j]^B[i]);
             }
         }
     }
 };
+
+// Problem description: (Ivan and Burgers)
+// given a static array x[1, N]
+// for each query, answer then max xor-sum of any subset in subarray [L, R]
+// Contrains: 1 <= L <= R <= N, N <= 5e5, Q <= 5e5
+
+// Probably the complexity is O(N log^2(N) + Q)
+// Similarly, we can answer other type of queries related to xor-basis,
+// because we will have it computed (Atcoder: H - Xor Query)
+int32_t main(){ sws;
+    ll n; cin >> n;
+
+    vector<ll> x(n+1);
+    for(ll i=1; i<=n; i++) {
+        cin >> x[i];
+    }
+
+    vector<vector<pll>> queries(n+1);
+    ll q; cin >> q;
+    for(ll i=1; i<=q; i++) {
+        ll l, r; cin >> l >> r;
+        queries[r].pb({l, i});
+    }
+    
+    vector<XorBasis> xb(n+1); // extended version of XorBasis
+    vector<ll> ans(q+1);
+
+    for(ll r=1; r<=n; r++) {
+
+        // O(de bom), maybe log?
+        for(ll l=r; l>=1; l--) {
+            if (!xb[l].add(x[r])) break;
+            // We can break here, because this xor-basis of L already contains a basis that doesn't need x[r]
+            // Therefore, the xor-basis of L-1, L-2, ..., which contains the xor-basis of L, also doesn't need x[r]
+        }
+
+        // solve all queries ending in r,
+        // knowing that all xor-basis are computed up to r.
+        for(auto [left, i] : queries[r]) {
+            ans[i] = xb[left].mx;
+        }
+    }
+
+    for(ll i=1; i<=q; i++) {
+        cout << ans[i] << endl;
+    }
+}

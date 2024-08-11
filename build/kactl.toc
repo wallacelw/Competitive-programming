@@ -17,9 +17,9 @@
 \contentsline {section}{\numberline {2.9}Treap}{7}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Dynamic Programming}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Longest Increasing Subsequence}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Knuth Optimization}{9}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Conditions}{9}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.2}Divide-Conquer Optimization}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Knuth Optimization}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Conditions}{8}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Slope Optimizations}{9}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Convex Hull Trick}{9}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Li-chao Tree}{9}{subsection.3.4.2}%
@@ -127,26 +127,28 @@
 \contentsline {subsection}{\numberline {7.6.2}Natural Number Quadratic Summation}{28}{subsection.7.6.2}%
 \contentsline {subsection}{\numberline {7.6.3}Triangular Numbers Summation}{28}{subsection.7.6.3}%
 \contentsline {section}{\numberline {7.7}Xor Basis}{28}{section.7.7}%
-\contentsline {chapter}{\numberline {8}Strings}{28}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Hashing}{28}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Z-Function}{28}{section.8.2}%
+\contentsline {subsection}{\numberline {7.7.1}Note:}{28}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Solves:}{28}{subsection.7.7.2}%
+\contentsline {chapter}{\numberline {8}Strings}{29}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Hashing}{29}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Z-Function}{29}{section.8.2}%
 \contentsline {section}{\numberline {8.3}KMP}{29}{section.8.3}%
 \contentsline {subsection}{\numberline {8.3.1}Patterns in a String}{29}{subsection.8.3.1}%
 \contentsline {section}{\numberline {8.4}Suffix Array}{29}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Manacher}{29}{section.8.5}%
+\contentsline {section}{\numberline {8.5}Manacher}{30}{section.8.5}%
 \contentsline {section}{\numberline {8.6}Booth}{30}{section.8.6}%
 \contentsline {section}{\numberline {8.7}Aho-Corasick}{30}{section.8.7}%
 \contentsline {section}{\numberline {8.8}Suffix Automaton}{31}{section.8.8}%
 \contentsline {subsection}{\numberline {8.8.1}Concepts:}{31}{subsection.8.8.1}%
-\contentsline {subsection}{\numberline {8.8.2}Implementation:}{31}{subsection.8.8.2}%
-\contentsline {chapter}{\numberline {9}Miscellaneous}{32}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Ternary Search}{32}{section.9.1}%
+\contentsline {subsection}{\numberline {8.8.2}Implementation:}{32}{subsection.8.8.2}%
+\contentsline {chapter}{\numberline {9}Miscellaneous}{33}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Ternary Search}{33}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Random Generator}{33}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Read an Fraction Input}{33}{section.9.3}%
 \contentsline {section}{\numberline {9.4}Getline}{33}{section.9.4}%
 \contentsline {section}{\numberline {9.5}Merge Sort}{33}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Rounding Half to Even}{33}{section.9.6}%
-\contentsline {section}{\numberline {9.7}Count Bits in a range}{33}{section.9.7}%
-\contentsline {section}{\numberline {9.8}Count Digits in a range}{33}{section.9.8}%
-\contentsline {section}{\numberline {9.9}Couting Bishops}{33}{section.9.9}%
+\contentsline {section}{\numberline {9.6}Rounding Half to Even}{34}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Count Bits in a range}{34}{section.9.7}%
+\contentsline {section}{\numberline {9.8}Count Digits in a range}{34}{section.9.8}%
+\contentsline {section}{\numberline {9.9}Couting Bishops}{34}{section.9.9}%
 \contentsfinish 
