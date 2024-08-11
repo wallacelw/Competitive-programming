@@ -112,7 +112,25 @@
 
 \section{Sparse Table}
 
-    % TODO, add comments here
+    There are two requisites for using sparse tables:
+    
+    \begin{itemize}
+        \item \textbf{Immutability} on the array.
+        \item \textbf{Associative} property on the operator.
+    \end{itemize}
+
+    And for the $O(1)$ complexity, the operator also has to have the \textbf{Idempotence} property
+    \textit(overlap friendly/agnostic). Meaning that when considering $f([a, c], f[b, d])$, it has the same value 
+    as $f([a, d])$ even though there is an overlap in $[b, c]$. $(a \leq b \leq c \leq d)$.
+
+    \textbf{Associative Operators:}
+
+    \textit{sum, product, xor, concatenation, union}
+
+    \textbf{Associative and Idempotent Operators:}
+
+    \textit{min, max, gcd, lcm, and, or, intersection}
+
     \kactlimport{sparse-table.cpp}
 
 \section{Fenwick Tree}
