@@ -56,6 +56,6 @@ struct BinaryLifting {
     }
 
     ll lca(ll a, ll b, ll root) { // lca(a, b) when tree is rooted at 'root'
-        return lca(a, b)^lca(b, root)^lca(a, root); //magic
+        return lca(a, b)^lca(b, root)^lca(a, root); // magic
     }
 };

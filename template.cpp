@@ -15,7 +15,7 @@ typedef long double ld;
 
 #define teto(a, b) (((a)+(b)-1)/(b))
 #define LSB(i) ((i) & -(i))
-#define MSB(i) (63 - __builtin_clzll(i))
+#define MSB(i) (64 - 1 - __builtin_clzll(i))
 #define BITS(i) __builtin_popcountll(i)
 
 template<class A, class B> auto& operator<<(ostream &os, pair<A, B> p) { 
