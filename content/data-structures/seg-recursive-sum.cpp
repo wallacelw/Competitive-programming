@@ -28,7 +28,7 @@ struct Segtree {
         };
     }
  
-    void build(ll l, ll r, ll i=1) {
+    void build(ll l, ll r, ll i) {
         if (l == r) {
             t[i] = Node {
                 // leaf element:
