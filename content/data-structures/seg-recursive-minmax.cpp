@@ -64,8 +64,6 @@ struct Segtree {
         update(pos, val, L, R, 1);
     }
     
-    // [a, b] are the range limits for the query
-    // [l, r] are the internal variables of the t
     Node query(ll a, ll b, ll l, ll r, ll i) {    
         if (b < l or r < a) return Node{}; // default null value
         else if (a <= l and r <= b) return t[i];

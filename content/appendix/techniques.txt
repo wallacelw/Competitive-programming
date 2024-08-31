@@ -8,23 +8,28 @@ Algorithm analysis
 	Square Root
 	Harmonic Series
 Greedy algorithm
+	Invert order
+	Pigeonhole
+	Random
+	Sorting
+	Swap argument 
 	Scheduling
 	Max contiguous subvector sum
 	Invariants
 	Huffman encoding
 Graph theory
 	Transform edges into vertices, duplicating the nodes of the graph
-	Dynamic graphs (extra book-keeping)
-	Breadth first search
-	Depth first search
-	* Normal trees / DFS trees
-	Dijkstra's algorithm
+	DFS tree
+	Euler tour (tin, tout)
 	MST: Prim's algorithm
 	Bellman-Ford
 	Konig's theorem and vertex cover
 	Independent Set
-	Min-cost max flow
-	Lovasz toggle
+	Otimiza com min-cut
+	7-th
+	Centroid
+	Hungarian
+	Min-cost max flowx
 	Matrix tree theorem
 	Maximal matching, general graphs
 	Hopcroft-Karp
@@ -33,7 +38,7 @@ Graph theory
 	Floyd-Warshall
 	Euler cycles
 	Flow networks
-	* Augmenting paths
+	* Augmenting paths 
 	* Edmonds-Karp
 	Bipartite matching
 	Min. path cover
@@ -41,6 +46,9 @@ Graph theory
 	Strongly connected components
 	2-SAT
 	Cut vertices, cut-edges and biconnected components
+	Bridge Trees
+	Block Cut Tree
+	Virtual Tree
 	Edge coloring
 	* Trees
 	Vertex coloring
@@ -49,13 +57,15 @@ Graph theory
 	Diameter and centroid
 	K'th shortest path
 	Shortest cycle
+	SQRT
 Dynamic programming
 	Knapsack
+	Knapsack n(sqrt n)
 	Coin change
 	Longest common subsequence
 	Longest increasing subsequence
-	Number of paths in a dag
-	Shortest path in a dag
+	Number of paths in a DAG
+	Shortest path in a DAG
 	Dynprog over intervals
 	Dynprog over subsets
 	Dynprog over probabilities
@@ -64,7 +74,9 @@ Dynamic programming
 	Divide and conquer
 	Knuth optimization
 	Slope trick
-	Convex hull optimizations
+	Convex hull optimizations (CHT, Lichao)
+	SOS DP
+	Bitmask DP
 	RMQ (sparse table a.k.a 2^k-jumps)
 	Bitonic cycle
 	Log partitioning (loop over most restricted)
@@ -169,3 +181,12 @@ Data structures
 	Monotone queues / monotone stacks / sliding queues
 	Sliding queue using 2 stacks
 	Persistent segment tree
+Queries Problems
+	MO
+	SQRT
+	Treap
+	Sparse table
+	Ordered Set
+	Segment Tree
+	Splay tree
+	Query Tree (store queries in tree, then dfs with rollback)

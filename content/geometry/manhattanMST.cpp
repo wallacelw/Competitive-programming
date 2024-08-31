@@ -12,7 +12,7 @@
  */
 
 
-// requires point struct, at least the constructor and operator-
+// import point struct (constructor and -operator)
 
 vector<array<ll, 3>> manhattanMST(vector<point> ps) {
     vector<ll> id(size(ps));

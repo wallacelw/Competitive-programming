@@ -6,11 +6,17 @@
 	
 	\begin{itemize}
 	\item Given an undirected graph, assign each node to a set \textit{A}.
+	
 	\item Run a Depth-First-Search starting at any node.
+	
 	\item Whenever the DFS visits a new node N, remove N from \textit{A} and add it to the path set \textit{P}.
+	
 	\item Whenever the DFS backtracks from node N, remove N from the path and add it to set \textit{B}.
-	\item Repeat until $|A| = |B|$. Which \textbf{will always occur}, because, in each operation, \textit{A} decreases by one and \textit{B} keeps it value. 
+	
+	\item Repeat until $|A| = |B|$. Which \textbf{will always occur}, because, 
+	in each operation, \textit{A} decreases by one and \textit{B} keeps its value. 
 	Or, \textit{B} decreases by one and \textit{A} keeps it value.
+	
 	\item The DFS guarantees that \textit{A} and \textit{B} never have neighbouring nodes. 
 	Because the set of nodes in Path \textit{P} separates them.
 	\end{itemize}
@@ -29,57 +35,58 @@
 	\kactlimport{dinitz.cpp}
 
 	% for notebook generation
-    \vspace{6pts}
+    \vspace{75pts}
 
 	\subsection{Matching with Flow}
 
-		By modeling a bipartite graph, with some Vertices (that will choose a match) to be on the L graph and some Vertices (that will be chosen) on the R.
-		Set the correct capacities for these edges and also for the edges that connects the sink and source. After this modeling
-		and running the dinic max flow algorithm, one will generate a possible matching (if it is possible).
+By modeling a bipartite graph, with some Vertices (that will choose a match) 
+to be on the L graph and some Vertices (that will be chosen) on the R.
+Set the correct capacities for these edges and also for the edges that connects the sink and source. After this modeling
+and running the dinic max flow algorithm, one will generate a possible matching (if it is possible).
 
-		A special case of matching is the perfect matching, which includes all vertices from the bipartite graph L and R.
+A special case of matching is the perfect matching, which includes all vertices from the bipartite graph L and R.
 
-		A maximum matching has the maximum cadinality. A perfect matching is a maximum matching. 
-		But the opposite is not necessarity true.
+A maximum matching has the maximum cadinality. A perfect matching is a maximum matching. 
+But the opposite is not necessarity true.
 
-		It's possible to access dinic.edges, which is a vector that contains all edges and also its respective attributes, 
-		like the \textit{flow} passing through each edge. Remember to consider that negative flow exist for reverse edges.
+It's possible to access dinic.edges, which is a vector that contains all edges and also its respective attributes, 
+like the \textit{flow} passing through each edge. Remember to consider that negative flow exist for reverse edges.
 
-	\subsection{Minimum Cut}
+\subsection{Minimum Cut}
 
-		In computer science and optimization theory, the max-flow min-cut theorem states that, in a flow network, 
-		the maximum amount of flow passing from the source to the sink is equal to the total weight of the edges 
-		in a minimum cut, i.e., the smallest total weight of the edges which if removed would disconnect the source from the sink. 
+In computer science and optimization theory, the max-flow min-cut theorem states that, in a flow network, 
+the maximum amount of flow passing from the source to the sink is equal to the total weight of the edges 
+in a minimum cut, i.e., the smallest total weight of the edges which if removed would disconnect the source from the sink. 
 
-		Let's define an s-t cut C = (S-component, T-component) as a partition of V $\in$ G such that 
-		source s $\in$ S-component and sink t $\in$ T-component. Let's also define a cut-set of C to be the set 
-		(u, v) $\in$ E | u $\in$ S-component, v $\in$ T-component such that if all edges in the cut-set of C are removed,
-		the Max Flow from s to t is 0 (i.e., s and t are disconnected). The cost of an s-t cut C is defined by the sum
-		of the capacities of the edges in the cut-set of C.
+Let's define an s-t cut C = (S-component, T-component) as a partition of V $\in$ G such that 
+source s $\in$ S-component and sink t $\in$ T-component. Let's also define a cut-set of C to be the set 
+(u, v) $\in$ E | u $\in$ S-component, v $\in$ T-component such that if all edges in the cut-set of C are removed,
+the Max Flow from s to t is 0 (i.e., s and t are disconnected). The cost of an s-t cut C is defined by the sum
+of the capacities of the edges in the cut-set of C.
 
-		The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS)
-		from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong
-		to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to
-		the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value.
-		This is the minimum over all possible s-t cuts values.
+The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS)
+from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong
+to the S-component. All other unreachable vertices belong to the T-component. All edges connecting the S-component to
+the T-component belong to the cut-set of C. The Min Cut value is equal to the Max Flow value.
+This is the minimum over all possible s-t cuts values.
 
-	\subsection{Minimum Vertex Cover}
+\subsection{Minimum Vertex Cover}
 
-		The \textbf{Konig's Theorem} describes an equivalence between the maximum matching
-		problem and the minimum vertex cover problem in bipartite graphs.
+	The \textbf{Konig's Theorem} describes an equivalence between the maximum matching
+	problem and the minimum vertex cover problem in bipartite graphs.
 
-		Therefore, the value for the maximum flow in a bipartite graph is the same value as the number of nodes in a minimum vertex cover.
+	Therefore, the value for the maximum flow in a bipartite graph is the same value as the number of nodes in a minimum vertex cover.
 
-		To retrieve the set of vertices of the minimum vertex cover:
-		\begin{itemize}
-			\item Give orientation to the edges, matched edges start from the right side of the graph to the left side, and free edges start from the left side of the graph to the right side.
-			\item Run DFS from unmatched nodes of the left side, in this traversal some nodes will become visited, others will stay unvisited.
-			\item The MVC nodes are the visited nodes from the right side, and unvisited nodes from the left side.
-		\end{itemize}
+	To retrieve the set of vertices of the minimum vertex cover:
+	\begin{itemize}
+		\item Give orientation to the edges, matched edges start from the right side of the graph to the left side, and free edges start from the left side of the graph to the right side.
+		\item Run DFS from unmatched nodes of the left side, in this traversal some nodes will become visited, others will stay unvisited.
+		\item The MVC nodes are the visited nodes from the right side, and unvisited nodes from the left side.
+	\end{itemize}
 
-		$$ MVC = Visited_{Right} \cup Unvisited_{Left} $$
+	$$ MVC = Visited_{Right} \cup Unvisited_{Left} $$
 
-		\kactlimport{min-vertex-cover.cpp}
+	\kactlimport{min-vertex-cover.cpp}
 	
 	% for notebook generation
 	\vspace{5pts}
@@ -96,9 +103,9 @@
 
 		Therefore, to acquire the \textbf{Maximum Independent Set}, run the MVC algorithm and subtract them from the set of vertices and it will end up with the maxIS.
 
-\section{Minimum Cost Matching}
-	
-	\subsection{Minimum Cost with Dinitz}
+	\subsection{Min Cost Max Flow}
+
+		Dinitz's algorithm with weighted edges.
 
 		\kactlimport{min-cost-dinitz.cpp}
 
@@ -276,8 +283,6 @@
 
 	\kactlimport{blockCutTree.cpp}
 	
-	% for notebook generation
-	\newpage
 
 	\subsection{Strong Orientation}
 
@@ -391,6 +396,8 @@ A tree can have a single centroid or two centroids.
 
 \kactlimport{centroid.cpp}
 
+\vspace{5pt}
+
 \subsection{Centroid Decomposition}
 
 After finding a centroid, and removing it from the tree, several subtrees will be formed.
@@ -401,12 +408,17 @@ By ordering the nodes by the time it was removed, we can create the centroid tre
 
 \subsection{Centroid Tree}
 
+\vspace{5pt}
+
 \begin{itemize}
 	\item 1. The centroid tree has height of $O(\log{n}$);
+
 	\item 2. A vertex belongs to the component (original tree) of \textbf{all} its ancestors (centroid tree).
+	
 	\item 3. The path from $a$ to $b$ (original tree) can be decomposed into the path from $a$ to $lca(a,b)$ 
 	and the path from $lca(a,b)$ to $b$ (centroid tree).
 	\textbf{Note} that the distance between nodes it's still measured in reference to the original tree.
+	
 	\item 4. Each one of the $n^2$ paths of the original tree is the concatenation of 
 	two paths in a set of $O(n \log(n))$ paths from a node to all its ancestors in the 
 	centroid tree.
@@ -415,6 +427,8 @@ By ordering the nodes by the time it was removed, we can create the centroid tre
 % use tiagosf00 code
 
 \subsection{Tree Isomorphism}
+
+\vspace{10pt}
 
 \kactlimport{isomorphism.cpp}
 

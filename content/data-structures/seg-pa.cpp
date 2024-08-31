@@ -67,10 +67,8 @@ struct SegtreePA {
         lazy[i] = {0, 0};
     }
  
+    // PA: x = growth coeficient, y = constant
     void increase(ll x, ll y, ll a, ll b, ll l, ll r, ll i) {
-        // PA: x = ratio, y = constant
-        // [a, b] are the range limits for the query
-        // [l, r] are the internal variables of the t
         push(l, r, i);
         if (b < l or r < a) return;
         else if (a <= l and r <= b) {

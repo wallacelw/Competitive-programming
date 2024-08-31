@@ -45,8 +45,6 @@ struct Segtree {
         build(L, R, 1);
     }
     
-    // [a, b] are the range limits for the query
-    // [l, r] are the internal variables of the t
     void increase(ll inc, ll a, ll b, ll l, ll r, ll i) {
         if (b < l or r < a) return;
         else if (a <= l and r <= b) {

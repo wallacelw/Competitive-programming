@@ -76,8 +76,6 @@ struct SegtreeLazy {
         }
     }
 
-    // [a, b] are the range limits for the query
-    // [l, r] are the internal variables of the t
     void update(ll val, ll type, ll a, ll b, ll l, ll r, ll i) {
         push(l, r, i);
         if (b < l or r < a) return;

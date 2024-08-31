@@ -83,6 +83,14 @@ Nevertheless a state may reach several states, only a single one will be used du
 This shows the difference between \textbf{states} and \textbf{sub-games}: All sub-games must be played
 by the players, but the states of a sub-game may be ignored. 
 
+\textbf{Example:}
+
+If the set of possible outcomes for a state is {0, 1, 2, 7, 8, 9}. 
+The nimber is 3, because the MEX is 3, which is the smallest nim-value you can't transition into 
+and also you can transition to all smaller nim-values.
+
+Note that {7, 8, 9} transitions can be ignored.
+
 To compute the mex of a set efficiently:
 
 \kactlimport{mex.cpp}
@@ -100,15 +108,6 @@ Note that this extra rule needs to have a restriction to keep the game acyclic (
 \textbf{Proof:} If a player adds $t$ stones in a pile, 
 the next player just needs to remove $t$ stones from this pile. 
 
-Considering that the game is finite and this ends sooner or later.
-
-\textbf{Example:}
-If the set of possible outcomes for a state is {0, 1, 2, 7, 8, 9}. 
-The nimber is 3, because the MEX is 3, which is the smallest nim-value you can't transition into 
-and also you can transition to all smaller nim-values.
-
-Note that {7, 8, 9} transitions can be ignored, because you can simply revert the play by subtracting the same amount.
-
 \section{Misère Game}
 
 In this version, the player who takes the last object loses.
@@ -120,7 +119,7 @@ To consider this version, simply swap the winning and losing player of the norma
 
 In Staircase Nim, there is a staircase with n steps, indexed from 0 to n-1. 
 In each step, there are zero or more coins.
-Two players play in turns. In his/her move, a player can choose a step ($i > 0$)
+Two players play in turns. In ones move, a player can choose a step ($i > 0$)
 and move one or more coins to step below it (i-1).
 The player who is unable to make a move lose the game.
 That means the game ends when all the coins are in step 0.
@@ -150,9 +149,6 @@ And when stones are sent from even steps to odd ones, it is the same as the incr
 Initially there is only one pile with x stones.
 Each turn, a player must divide a pile into two non-zero piles with different sizes.
 The player who can't do any more moves loses.
-
-% for notebook generation
-\vspace{5pts}
 
 \subsection{Degenerate (Base) States}
 

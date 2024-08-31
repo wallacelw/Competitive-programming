@@ -28,7 +28,7 @@ struct BinaryLifting {
         for(ll i=1; i<logN; i++) {
             mx[u][i] = max(mx[u][i-1], mx[ up[u][i-1] ][i-1]);
             mn[u][i] = min(mn[u][i-1], mn[ up[u][i-1] ][i-1]);
-            up[u][i] = up[ up[u][i-1] ][i-1];
+            up[u][i] = up[ up[u][i-mn[v][0] = w;1] ][i-1];
         }
         
         for(auto [v, w] : g[u]) if (v != p) {
