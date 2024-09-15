@@ -35,34 +35,52 @@
 	\kactlimport{dinitz.cpp}
 
 	% for notebook generation
-    \vspace{75pts}
+    \newpage
 
-	\subsection{Matching with Flow}
+	\vspace{1 pt}
 
-By modeling a bipartite graph, with some Vertices (that will choose a match) 
-to be on the L graph and some Vertices (that will be chosen) on the R.
-Set the correct capacities for these edges and also for the edges that connects the sink and source. After this modeling
-and running the dinic max flow algorithm, one will generate a possible matching (if it is possible).
+\subsection{Matching with Flow}
 
-A special case of matching is the perfect matching, which includes all vertices from the bipartite graph L and R.
+\vspace{12 pt}
 
-A maximum matching has the maximum cadinality. A perfect matching is a maximum matching. 
-But the opposite is not necessarity true.
+	By modeling a bipartite graph, with some Vertices 
+	(that will choose a match) 
+	to be on the L graph and some Vertices (that will be chosen) on the R.
+	Set the correct capacities for these edges 
+	and also for the edges that connects the sink and source. 
+	After this modeling
+	and running the dinic max flow algorithm, 
+	one will generate a possible matching (if it is possible).
 
-It's possible to access dinic.edges, which is a vector that contains all edges and also its respective attributes, 
-like the \textit{flow} passing through each edge. Remember to consider that negative flow exist for reverse edges.
+
+	A special case of matching is the perfect matching, 
+	which includes all vertices from the bipartite graph L and R.
+
+	A maximum matching has the maximum cadinality. 
+	A perfect matching is a maximum matching. 
+	But the opposite is not necessarity true.
+
+	It's possible to access dinic.edges, 
+	which is a vector that contains all edges and also its 
+	respective attributes, 
+	like the \textit{flow} passing through each edge. 
+	Remember to consider that negative flow exist for reverse edges.
+
+\vspace{1pt}
 
 \subsection{Minimum Cut}
+
+\vspace{12pt}
 
 In computer science and optimization theory, the max-flow min-cut theorem states that, in a flow network, 
 the maximum amount of flow passing from the source to the sink is equal to the total weight of the edges 
 in a minimum cut, i.e., the smallest total weight of the edges which if removed would disconnect the source from the sink. 
 
-Let's define an s-t cut C = (S-component, T-component) as a partition of V $\in$ G such that 
+{Let's define an s-t cut C = (S-component, T-component) as a partition of V $\in$ G such that 
 source s $\in$ S-component and sink t $\in$ T-component. Let's also define a cut-set of C to be the set 
 (u, v) $\in$ E | u $\in$ S-component, v $\in$ T-component such that if all edges in the cut-set of C are removed,
 the Max Flow from s to t is 0 (i.e., s and t are disconnected). The cost of an s-t cut C is defined by the sum
-of the capacities of the edges in the cut-set of C.
+of the capacities of the edges in the cut-set of $C$.}
 
 The by-product of computing Max Flow is Min Cut! After Max Flow algorithm stops, we run graph traversal (DFS/BFS)
 from source s again. All reachable vertices from source s using positive weighted edges in the residual graph belong
@@ -72,6 +90,8 @@ This is the minimum over all possible s-t cuts values.
 
 \subsection{Minimum Vertex Cover}
 
+\vspace{12 pt}
+
 	The \textbf{Konig's Theorem} describes an equivalence between the maximum matching
 	problem and the minimum vertex cover problem in bipartite graphs.
 
@@ -80,16 +100,15 @@ This is the minimum over all possible s-t cuts values.
 	To retrieve the set of vertices of the minimum vertex cover:
 	\begin{itemize}
 		\item Give orientation to the edges, matched edges start from the right side of the graph to the left side, and free edges start from the left side of the graph to the right side.
+		
 		\item Run DFS from unmatched nodes of the left side, in this traversal some nodes will become visited, others will stay unvisited.
+		
 		\item The MVC nodes are the visited nodes from the right side, and unvisited nodes from the left side.
 	\end{itemize}
 
 	$$ MVC = Visited_{Right} \cup Unvisited_{Left} $$
 
 	\kactlimport{min-vertex-cover.cpp}
-	
-	% for notebook generation
-	\vspace{5pts}
 
 	\subsection{Maximum Independent Set}
 
@@ -137,6 +156,8 @@ This is the minimum over all possible s-t cuts values.
 
 		\kactlimport{hungarian.cpp}
 	
+\newpage
+
 \section{Coloring}
 
 	\textbf{Chromatic Number} is the \textit{minimum} number of colors to color all the vertices, so that no two adjacent vertices have the same color.
@@ -154,8 +175,10 @@ This is the minimum over all possible s-t cuts values.
 	\textbf{Four color theorem} states that every planar graph can be 4-colored. 
 	A planar graph is a graph that can be drawn in a 2D plane without edges intersecting.
 
+
 	\subsection{Compute the Chromatic Number}
-	
+
+
 		\kactlimport{chromatic-number.cpp}
 
 \section{Shortest Paths}
@@ -283,6 +306,7 @@ This is the minimum over all possible s-t cuts values.
 
 	\kactlimport{blockCutTree.cpp}
 	
+	\kactlimport{block-cut-tree.cpp}
 
 	\subsection{Strong Orientation}
 
@@ -377,6 +401,8 @@ This is the minimum over all possible s-t cuts values.
 	\subsubsection{Edmonds' algorithm with Tarjan's optimization}
 
 	\kactlimport{directed-mst.cpp}
+
+\newpage
 
 \section{Trees}
 
