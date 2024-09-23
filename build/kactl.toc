@@ -5,9 +5,9 @@
 \contentsline {section}{\numberline {2.3}Ordered Set}{2}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Pyramid Array min-cost}{2}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Interval Set}{2}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Disjoint Set Union}{3}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Disjoint Set Union}{2}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Dynamic Connectivity}{3}{subsection.2.5.1}%
-\contentsline {section}{\numberline {2.6}Trie}{4}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Trie}{3}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Sparse Table}{4}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Fenwick Tree}{4}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Segment Trees}{5}{section.2.9}%

@@ -16,12 +16,12 @@
 \contentsline {subsection}{\texttt {pyramid-array.cpp}\hspace {0.2em}}{2}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Interval Set}{2}{section.2.4}%
 \contentsline {subsection}{\texttt {interval-set.cpp}\hspace {0.2em}}{2}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Disjoint Set Union}{3}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Disjoint Set Union}{2}{section.2.5}%
 \contentsline {subsection}{\texttt {dsu.cpp}\hspace {0.2em}}{3}{section.2.5}%
 \contentsline {subsection}{\texttt {dsu-rollback.cpp}\hspace {0.2em}}{3}{lstnumber.2.6.21}%
 \contentsline {subsection}{\numberline {2.5.1}Dynamic Connectivity}{3}{subsection.2.5.1}%
 \contentsline {subsection}{\texttt {query-tree.cpp}\hspace {0.2em}}{3}{subsection.2.5.1}%
-\contentsline {section}{\numberline {2.6}Trie}{4}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Trie}{3}{section.2.6}%
 \contentsline {subsection}{\texttt {trie.cpp}\hspace {0.2em}}{4}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Sparse Table}{4}{section.2.7}%
 \contentsline {subsection}{\texttt {sparse-table.cpp}\hspace {0.2em}}{4}{section.2.7}%
@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {2.9}Segment Trees}{5}{section.2.9}%
 \contentsline {subsection}{\numberline {2.9.1}Recursive SegTree}{5}{subsection.2.9.1}%
 \contentsline {subsection}{\texttt {seg-recursive-sum.cpp}\hspace {0.2em}}{5}{subsection.2.9.1}%
-\contentsline {subsection}{\texttt {seg-recursive-minmax.cpp}\hspace {0.2em}}{5}{lstnumber.2.13.67}%
+\contentsline {subsection}{\texttt {seg-recursive-minmax.cpp}\hspace {0.2em}}{5}{lstnumber.2.13.84}%
 \contentsline {subsection}{\numberline {2.9.2}Inverted Segtree}{5}{subsection.2.9.2}%
 \contentsline {subsection}{\texttt {seg-inverted.cpp}\hspace {0.2em}}{5}{subsection.2.9.2}%
 \contentsline {subsection}{\numberline {2.9.3}Lazy Segtree}{6}{subsection.2.9.3}%

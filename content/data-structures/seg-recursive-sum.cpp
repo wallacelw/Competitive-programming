@@ -45,23 +45,40 @@ struct Segtree {
         build(L, R, 1);
     }
  
-    void increase(ll pos, ll inc, ll l, ll r, ll i) {
+    void add(ll pos, ll inc, ll l, ll r, ll i) {
         if (l == r) {
-            // increase operation:
+            // add operation:
             t[i].sum += inc;
             return;
         }
         ll mid = (l+r)/2;
         if (pos <= mid) 
-            increase(pos, inc, l, mid, 2*i);
+            add(pos, inc, l, mid, 2*i);
         else 
-            increase(pos, inc, mid+1, r, 2*i+1);
+            add(pos, inc, mid+1, r, 2*i+1);
         t[i] = merge(t[2*i], t[2*i+1]);
     }
-    void increase(ll pos, ll inc) {
-        increase(pos, inc, L, R, 1);
+    void add(ll pos, ll inc) {
+        add(pos, inc, L, R, 1);
     }
-
+ 
+    void assign(ll pos, ll val, ll l, ll r, ll i) {
+        if (l == r) {
+            // assign operation:
+            t[i].sum = val;
+            return;
+        }
+        ll mid = (l+r)/2;
+        if (pos <= mid) 
+            assign(pos, val, l, mid, 2*i);
+        else 
+            assign(pos, val, mid+1, r, 2*i+1);
+        t[i] = merge(t[2*i], t[2*i+1]);
+    }
+    void assign(ll pos, ll val) {
+        assign(pos, val, L, R, 1);
+    }
+ 
     Node query(ll a, ll b, ll l, ll r, ll i) {
         if (b < l or r < a) return Node{}; // default null value
         else if (a <= l and r <= b) return t[i];
