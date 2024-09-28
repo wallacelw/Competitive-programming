@@ -30,7 +30,7 @@ ld ternary_search(ld l, ld r){
     }
     return f(l); // check here for min/max
 }
-
+    
 
 /*
 Integer and Max Version:
