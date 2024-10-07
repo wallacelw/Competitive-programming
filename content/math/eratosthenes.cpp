@@ -5,7 +5,6 @@
  * Time: O(N \log{\log{N}})
  */
 
-// O (N log^2(N) ) -> Teorema de Merten
 vector<ll> primes {2, 3};
 bitset<MAX> sieve; // {sieve[i] == 1} if i is prime
 // MAX can be ~1e7

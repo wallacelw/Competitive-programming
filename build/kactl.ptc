@@ -210,23 +210,25 @@
 \contentsline {subsubsection}{Inverse Multiplicative}{29}{section*.18}%
 \contentsline {subsubsection}{Diofantine Equation}{29}{section*.19}%
 \contentsline {subsection}{\texttt {extended-euclid.cpp}\hspace {0.2em}}{29}{section*.19}%
+\contentsline {subsection}{\numberline {7.3.7}Euler's totient function}{30}{subsection.7.3.7}%
+\contentsline {subsection}{\texttt {totient.cpp}\hspace {0.2em}}{30}{subsection.7.3.7}%
 \contentsline {section}{\numberline {7.4}FFT}{30}{section.7.4}%
 \contentsline {subsection}{\texttt {fft-simple.cpp}\hspace {0.2em}}{30}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Matrix}{30}{section.7.5}%
 \contentsline {subsection}{\texttt {matrix.cpp}\hspace {0.2em}}{30}{section.7.5}%
 \contentsline {subsection}{\numberline {7.5.1}Minimum Path Length with exactly k edges}{30}{subsection.7.5.1}%
-\contentsline {section}{\numberline {7.6}Series' Closed Formulas}{30}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Natural Number Summation (PA)}{30}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Natural Number Quadratic Summation}{30}{subsection.7.6.2}%
+\contentsline {section}{\numberline {7.6}Series' Closed Formulas}{31}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Natural Number Summation (PA)}{31}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Natural Number Quadratic Summation}{31}{subsection.7.6.2}%
 \contentsline {subsection}{\numberline {7.6.3}Triangular Numbers Summation}{31}{subsection.7.6.3}%
 \contentsline {section}{\numberline {7.7}Xor Basis}{31}{section.7.7}%
 \contentsline {subsection}{\numberline {7.7.1}Note:}{31}{subsection.7.7.1}%
 \contentsline {subsection}{\numberline {7.7.2}Solves:}{31}{subsection.7.7.2}%
 \contentsline {subsection}{\texttt {xor-basis.cpp}\hspace {0.2em}}{31}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Strings}{31}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Strings}{32}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
-\contentsline {section}{\numberline {8.1}Hashing}{31}{section.8.1}%
+\contentsline {section}{\numberline {8.1}Hashing}{32}{section.8.1}%
 \contentsline {subsection}{\texttt {hashing.cpp}\hspace {0.2em}}{32}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Z-Function}{32}{section.8.2}%
 \contentsline {subsection}{\texttt {zfunction.cpp}\hspace {0.2em}}{32}{section.8.2}%
@@ -245,8 +247,8 @@
 \contentsline {subsection}{\texttt {aho2.cpp}\hspace {0.2em}}{34}{lstnumber.8.8.42}%
 \contentsline {section}{\numberline {8.8}Suffix Automaton}{34}{section.8.8}%
 \contentsline {subsection}{\numberline {8.8.1}Concepts:}{34}{subsection.8.8.1}%
-\contentsline {subsection}{\numberline {8.8.2}Implementation:}{34}{subsection.8.8.2}%
-\contentsline {subsection}{\texttt {suffix-automaton.cpp}\hspace {0.2em}}{34}{subsection.8.8.2}%
+\contentsline {subsection}{\numberline {8.8.2}Implementation:}{35}{subsection.8.8.2}%
+\contentsline {subsection}{\texttt {suffix-automaton.cpp}\hspace {0.2em}}{35}{subsection.8.8.2}%
 \contentsline {chapter}{\numberline {9}Miscellaneous}{36}{chapter.9}%
 \ttl@stoptoc {chapters@8}
 \ttl@starttoc {chapters@9}
