@@ -59,35 +59,36 @@
 \contentsline {subsection}{\texttt {cht-dynamic.cpp}\hspace {0.2em}}{10}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Li-chao Tree}{11}{subsection.3.4.2}%
 \contentsline {subsection}{\texttt {lichao.cpp}\hspace {0.2em}}{11}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Slope Trick}{11}{subsection.3.4.3}%
-\contentsline {subsection}{\texttt {slope-trick.cpp}\hspace {0.2em}}{11}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}SOS DP}{11}{section.3.5}%
+\contentsline {subsection}{\texttt {li-chao-sparse.cpp}\hspace {0.2em}}{11}{lstnumber.3.5.69}%
+\contentsline {subsection}{\numberline {3.4.3}Slope Trick}{12}{subsection.3.4.3}%
+\contentsline {subsection}{\texttt {slope-trick.cpp}\hspace {0.2em}}{12}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}SOS DP}{12}{section.3.5}%
 \contentsline {subsection}{\texttt {sos-dp.cpp}\hspace {0.2em}}{12}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Bit optimization}{12}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Operations}{12}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{12}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Problems}{12}{subsection.3.6.3}%
-\contentsline {chapter}{\numberline {4}Game theory}{12}{chapter.4}%
+\contentsline {subsection}{\numberline {3.6.3}Problems}{13}{subsection.3.6.3}%
+\contentsline {chapter}{\numberline {4}Game theory}{13}{chapter.4}%
 \ttl@stoptoc {chapters@3}
 \ttl@starttoc {chapters@4}
-\contentsline {section}{\numberline {4.1}Classic Game}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Bouton's Theorem}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Proof}{12}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}DAG Representation}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.1}Classic Game}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Bouton's Theorem}{13}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Proof}{13}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}DAG Representation}{13}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{13}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Composition}{13}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Decomposition}{13}{subsection.4.4.2}%
 \contentsline {subsection}{\texttt {mex.cpp}\hspace {0.2em}}{13}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Variations and Extensions}{13}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{13}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Misère Game}{13}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Staircase Nim}{13}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Description}{13}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Strategy}{13}{subsection.4.7.2}%
-\contentsline {section}{\numberline {4.8}Grundy's Game}{13}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{13}{subsection.4.8.1}%
-\contentsline {subsection}{\numberline {4.8.2}Other States}{13}{subsection.4.8.2}%
-\contentsline {subsubsection}{Examples}{13}{section*.1}%
+\contentsline {section}{\numberline {4.5}Variations and Extensions}{14}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{14}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Misère Game}{14}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Staircase Nim}{14}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Description}{14}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Strategy}{14}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Grundy's Game}{14}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{14}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Other States}{14}{subsection.4.8.2}%
+\contentsline {subsubsection}{Examples}{14}{section*.1}%
 \contentsline {section}{\numberline {4.9}Insta-Winning States}{14}{section.4.9}%
 \contentsline {section}{\numberline {4.10}References}{14}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{14}{chapter.5}%
@@ -95,11 +96,11 @@
 \ttl@starttoc {chapters@5}
 \contentsline {section}{\numberline {5.1}Point Struct}{14}{section.5.1}%
 \contentsline {subsection}{\texttt {point.cpp}\hspace {0.2em}}{14}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Line Struct}{14}{section.5.2}%
-\contentsline {subsection}{\texttt {line.cpp}\hspace {0.2em}}{14}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{14}{section.5.3}%
-\contentsline {subsection}{\texttt {manhattanMST.cpp}\hspace {0.2em}}{14}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Graph}{14}{chapter.6}%
+\contentsline {section}{\numberline {5.2}Line Struct}{15}{section.5.2}%
+\contentsline {subsection}{\texttt {line.cpp}\hspace {0.2em}}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{15}{section.5.3}%
+\contentsline {subsection}{\texttt {manhattanMST.cpp}\hspace {0.2em}}{15}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Graph}{15}{chapter.6}%
 \ttl@stoptoc {chapters@5}
 \ttl@starttoc {chapters@6}
 \contentsline {section}{\numberline {6.1}Fundamentals}{15}{section.6.1}%
@@ -107,7 +108,7 @@
 \contentsline {subsection}{\texttt {bfs.cpp}\hspace {0.2em}}{15}{lstnumber.6.1.19}%
 \contentsline {section}{\numberline {6.2}Network flow}{15}{section.6.2}%
 \contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{15}{section.6.2}%
-\contentsline {subsection}{\texttt {dinitz.cpp}\hspace {0.2em}}{15}{lstnumber.6.3.86}%
+\contentsline {subsection}{\texttt {dinitz.cpp}\hspace {0.2em}}{16}{lstnumber.6.3.86}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{17}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{17}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{17}{subsection.6.2.3}%
@@ -144,12 +145,13 @@
 \contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{23}{subsection.6.6.5}%
 \contentsline {subsubsection}{Acyclic Graph Orientation}{23}{section*.2}%
 \contentsline {section}{\numberline {6.7}Directed Graph}{23}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Topological Sort}{23}{subsection.6.7.1}%
-\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{23}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Kosaraju}{23}{subsection.6.7.2}%
-\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{23}{subsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.7.3}2-SAT}{23}{subsection.6.7.3}%
-\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{23}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.1}Functional Graph}{23}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Topological Sort}{23}{subsection.6.7.2}%
+\contentsline {subsection}{\texttt {toposort.cpp}\hspace {0.2em}}{23}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}Kosaraju}{23}{subsection.6.7.3}%
+\contentsline {subsection}{\texttt {kosaraju.cpp}\hspace {0.2em}}{23}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.4}2-SAT}{23}{subsection.6.7.4}%
+\contentsline {subsection}{\texttt {2sat.cpp}\hspace {0.2em}}{23}{subsection.6.7.4}%
 \contentsline {section}{\numberline {6.8}Minimum Spanning Tree}{24}{section.6.8}%
 \contentsline {subsection}{\numberline {6.8.1}Undirected Minimum Spanning Tree}{24}{subsection.6.8.1}%
 \contentsline {subsection}{\texttt {kruskal.cpp}\hspace {0.2em}}{24}{subsection.6.8.1}%

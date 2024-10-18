@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  7 OCT 2024 10:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.3)  18 OCT 2024 11:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -776,6 +776,14 @@ runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/li
  (./build/kactl.tmp)
 runsystem(rm -f build/kactl.tmp)...executed.
 
+runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/li-chao-sparse.cpp" -o build/kactl.tmp )...executed.
+
+ (./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "|li-chao-sparse.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [11]
+runsystem(rm -f build/kactl.tmp)...executed.
+
 runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/slope-trick.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp
@@ -788,29 +796,26 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <7> not available
 )
 
 pdfTeX warning: pdflatex (file ./content/dynamic-programming/sos-example.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<content/dynamic-programming/sos-example.pdf, id=1681, 577.40718pt x 295.1025pt>
+<content/dynamic-programming/sos-example.pdf, id=1861, 577.40718pt x 295.1025pt>
 File: content/dynamic-programming/sos-example.pdf Graphic file (type pdf)
 <use content/dynamic-programming/sos-example.pdf>
-Package pdftex.def Info: content/dynamic-programming/sos-example.pdf  used on input line 140.
+Package pdftex.def Info: content/dynamic-programming/sos-example.pdf  used on input line 142.
 (pdftex.def)             Requested size: 256.0748pt x 130.88115pt.
-runsystem(python3 content/tex/preprocessor.py --print-header "|slope-trick.cpp" -o build/header2.tmp)...executed.
-
-(./build/header2.tmp) [11]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/sos-dp.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)) (./content/game-theory/chapter.tex
-Chapter 4.
+(./build/kactl.tmp)
 runsystem(python3 content/tex/preprocessor.py --print-header "|sos-dp.cpp" -o build/header2.tmp)...executed.
 
-(./build/header2.tmp) [12 <./content/dynamic-programming/sos-example.pdf>]
+ (./build/header2.tmp) [12 <./content/dynamic-programming/sos-example.pdf>]) (./content/game-theory/chapter.tex
+Chapter 4.
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/game-theory/mex.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)
-runsystem(python3 content/tex/preprocessor.py --print-header "|mex.cpp" -o build/header2.tmp)...executed.
+(./build/kactl.tmp)
+runsystem(python3 content/tex/preprocessor.py --print-header "mex.cpp|mex.cpp" -o build/header2.tmp)...executed.
 
  (./build/header2.tmp) [13]) (./content/geometry/chapter.tex
 Chapter 5.
@@ -818,7 +823,10 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/geometry/point.cpp" -o build/kactl.tmp )...executed.
 
-(./build/kactl.tmp)
+(./build/kactl.tmp
+runsystem(python3 content/tex/preprocessor.py --print-header "point.cpp|point.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [14])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/geometry/line.cpp" -o build/kactl.tmp )...executed.
@@ -830,14 +838,11 @@ runsystem(python3 content/tex/preprocessor.py -i "content/geometry/manhattanMST.
 
  (./build/kactl.tmp)) (./content/graph/chapter.tex
 Chapter 6.
-runsystem(python3 content/tex/preprocessor.py --print-header "manhattanMST.cpp|manhattanMST.cpp" -o build/header2.tmp)...executed.
-
-(./build/header2.tmp) [14]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/dfs.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)
+(./build/kactl.tmp)
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/bfs.cpp" -o build/kactl.tmp )...executed.
@@ -847,15 +852,15 @@ runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/dinic.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp)
+ (./build/kactl.tmp
+runsystem(python3 content/tex/preprocessor.py --print-header "dinic.cpp|dinic.cpp" -o build/header2.tmp)...executed.
+
+ (./build/header2.tmp) [15])
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/dinitz.cpp" -o build/kactl.tmp )...executed.
 
- (./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "dinitz.cpp|dinitz.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [15])
+ (./build/kactl.tmp)
 runsystem(python3 content/tex/preprocessor.py --print-header "|dinitz.cpp" -o build/header2.tmp)...executed.
 
  (./build/header2.tmp) [16]
@@ -913,7 +918,7 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/floyd-warshall.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
-<content/graph/Eulerian-Path-Existence.png, id=2668, 2742.245pt x 2055.68pt>
+<content/graph/Eulerian-Path-Existence.png, id=2760, 2742.245pt x 2055.68pt>
 File: content/graph/Eulerian-Path-Existence.png Graphic file (type png)
 <use content/graph/Eulerian-Path-Existence.png>
 Package pdftex.def Info: content/graph/Eulerian-Path-Existence.png  used on input line 242.
@@ -1043,12 +1048,12 @@ runsystem(python3 content/tex/preprocessor.py -i "content/math/combinatorics.cpp
 runsystem(python3 content/tex/preprocessor.py --print-header "|combinatorics.cpp" -o build/header2.tmp)...executed.
 
  (./build/header2.tmp) [27]
-<content/math/Burnside-Necklace.png, id=3875, 144.54pt x 147.55125pt>
+<content/math/Burnside-Necklace.png, id=3968, 144.54pt x 147.55125pt>
 File: content/math/Burnside-Necklace.png Graphic file (type png)
 <use content/math/Burnside-Necklace.png>
 Package pdftex.def Info: content/math/Burnside-Necklace.png  used on input line 78.
 (pdftex.def)             Requested size: 86.72466pt x 88.53142pt.
-<content/math/Burnside-Grid.png, id=3876, 1172.38pt x 1170.3725pt>
+<content/math/Burnside-Grid.png, id=3969, 1172.38pt x 1170.3725pt>
 File: content/math/Burnside-Grid.png Graphic file (type png)
 <use content/math/Burnside-Grid.png>
 Package pdftex.def Info: content/math/Burnside-Grid.png  used on input line 87.
@@ -1433,18 +1438,18 @@ Package rerunfilecheck Info: File `kactl.out' has not changed.
 (rerunfilecheck)             Checksum: E07A7B963FEE64559E6B20371893E640;876.
  ) 
 Here is how much of TeX's memory you used:
- 21899 strings out of 480247
- 333665 string characters out of 5896151
- 1788958 words of memory out of 5000000
- 34345 multiletter control sequences out of 15000+600000
+ 22013 strings out of 478287
+ 335358 string characters out of 5849290
+ 1794004 words of memory out of 5000000
+ 34618 multiletter control sequences out of 15000+600000
  482944 words of font info for 79 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  75i,16n,77p,563b,2208s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/wawa/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/wawa/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti0700.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on build//kactl.pdf (39 pages, 1707195 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on build//kactl.pdf (39 pages, 1722376 bytes).
 PDF statistics:
- 6335 PDF objects out of 7423 (max. 8388607)
- 6166 compressed objects within 62 object streams
- 4951 named destinations out of 5155 (max. 500000)
+ 6446 PDF objects out of 7423 (max. 8388607)
+ 6276 compressed objects within 63 object streams
+ 5043 named destinations out of 5155 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
