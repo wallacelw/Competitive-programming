@@ -11,7 +11,7 @@ vector<ll> primes, sp(MAX); // MAX = ~1e7
 // sp[i] = smallest prime divisor of i
 // after running sieve(), sp[i] == i for primes
 
-void sieve(ll n) {
+void sieve(ll n = MAX - 1) {
     for (ll i=2; i <= n; i++) {
         if (sp[i] == 0) { // i is prime
             sp[i] = i; // {sp[i] == i} for prime numbers
