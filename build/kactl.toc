@@ -154,9 +154,9 @@
 \contentsline {chapter}{\numberline {9}Miscellaneous}{36}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Ternary Search}{36}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Random Generator}{36}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Read an Fraction Input}{36}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Getline}{36}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Merge Sort}{36}{section.9.5}%
+\contentsline {section}{\numberline {9.3}Fraction Class}{36}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Getline}{37}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Merge Sort}{37}{section.9.5}%
 \contentsline {section}{\numberline {9.6}Rounding Half to Even}{37}{section.9.6}%
 \contentsline {section}{\numberline {9.7}Count Bits in a range}{37}{section.9.7}%
 \contentsline {section}{\numberline {9.8}Count Digits in a range}{37}{section.9.8}%
