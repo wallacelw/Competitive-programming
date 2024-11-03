@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.3)  3 NOV 2024 15:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.3)  3 NOV 2024 18:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -813,9 +813,14 @@ runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/so
 (./build/kactl.tmp
 runsystem(python3 content/tex/preprocessor.py --print-header "sos-dp.cpp|sos-dp.cpp" -o build/header2.tmp)...executed.
 
- (./build/header2.tmp) [12 <./content/dynamic-programming/sos-example.pdf>])) (./content/game-theory/chapter.tex
+ (./build/header2.tmp) [12 <./content/dynamic-programming/sos-example.pdf>])
+runsystem(rm -f build/kactl.tmp)...executed.
+
+runsystem(python3 content/tex/preprocessor.py -i "content/dynamic-programming/knapsack-01.cpp" -o build/kactl.tmp )...executed.
+
+ (./build/kactl.tmp)) (./content/game-theory/chapter.tex
 Chapter 4.
-runsystem(python3 content/tex/preprocessor.py --print-header "|sos-dp.cpp" -o build/header2.tmp)...executed.
+runsystem(python3 content/tex/preprocessor.py --print-header "|knapsack-01.cpp" -o build/header2.tmp)...executed.
 
 (./build/header2.tmp) [13]
 runsystem(rm -f build/kactl.tmp)...executed.
@@ -843,14 +848,14 @@ runsystem(python3 content/tex/preprocessor.py -i "content/geometry/manhattanMST.
 
  (./build/kactl.tmp)) (./content/graph/chapter.tex
 Chapter 6.
+runsystem(python3 content/tex/preprocessor.py --print-header "manhattanMST.cpp|manhattanMST.cpp" -o build/header2.tmp)...executed.
+
+(./build/header2.tmp) [15]
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/dfs.cpp" -o build/kactl.tmp )...executed.
 
-(./build/kactl.tmp
-runsystem(python3 content/tex/preprocessor.py --print-header "manhattanMST.cpp|dfs.cpp" -o build/header2.tmp)...executed.
-
- (./build/header2.tmp) [15])
+ (./build/kactl.tmp)
 runsystem(rm -f build/kactl.tmp)...executed.
 
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/bfs.cpp" -o build/kactl.tmp )...executed.
@@ -926,7 +931,7 @@ runsystem(rm -f build/kactl.tmp)...executed.
 runsystem(python3 content/tex/preprocessor.py -i "content/graph/floyd-warshall.cpp" -o build/kactl.tmp )...executed.
 
  (./build/kactl.tmp)
-<content/graph/Eulerian-Path-Existence.png, id=2841, 2742.245pt x 2055.68pt>
+<content/graph/Eulerian-Path-Existence.png, id=2866, 2742.245pt x 2055.68pt>
 File: content/graph/Eulerian-Path-Existence.png Graphic file (type png)
 <use content/graph/Eulerian-Path-Existence.png>
 Package pdftex.def Info: content/graph/Eulerian-Path-Existence.png  used on input line 242.
@@ -1056,12 +1061,12 @@ runsystem(python3 content/tex/preprocessor.py -i "content/math/combinatorics.cpp
 runsystem(python3 content/tex/preprocessor.py --print-header "|combinatorics.cpp" -o build/header2.tmp)...executed.
 
  (./build/header2.tmp) [28]
-<content/math/Burnside-Necklace.png, id=4049, 144.54pt x 147.55125pt>
+<content/math/Burnside-Necklace.png, id=4074, 144.54pt x 147.55125pt>
 File: content/math/Burnside-Necklace.png Graphic file (type png)
 <use content/math/Burnside-Necklace.png>
 Package pdftex.def Info: content/math/Burnside-Necklace.png  used on input line 78.
 (pdftex.def)             Requested size: 86.72466pt x 88.53142pt.
-<content/math/Burnside-Grid.png, id=4050, 1172.38pt x 1170.3725pt>
+<content/math/Burnside-Grid.png, id=4075, 1172.38pt x 1170.3725pt>
 File: content/math/Burnside-Grid.png Graphic file (type png)
 <use content/math/Burnside-Grid.png>
 Package pdftex.def Info: content/math/Burnside-Grid.png  used on input line 87.
@@ -1454,18 +1459,18 @@ Package rerunfilecheck Info: File `kactl.out' has not changed.
 (rerunfilecheck)             Checksum: E07A7B963FEE64559E6B20371893E640;876.
  ) 
 Here is how much of TeX's memory you used:
- 22203 strings out of 478287
- 338219 string characters out of 5849290
+ 22230 strings out of 478287
+ 338635 string characters out of 5849290
  1792004 words of memory out of 5000000
  34640 multiletter control sequences out of 15000+600000
  482944 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,16n,77p,563b,2206s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on build//kactl.pdf (41 pages, 1731685 bytes).
+Output written on build//kactl.pdf (41 pages, 1735087 bytes).
 PDF statistics:
- 6647 PDF objects out of 7423 (max. 8388607)
- 6473 compressed objects within 65 object streams
- 5203 named destinations out of 6186 (max. 500000)
+ 6678 PDF objects out of 7423 (max. 8388607)
+ 6503 compressed objects within 66 object streams
+ 5228 named destinations out of 6186 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

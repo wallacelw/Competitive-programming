@@ -69,6 +69,8 @@
 \contentsline {subsection}{\numberline {3.6.1}Operations}{13}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{13}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Problems}{13}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Knapsack}{13}{section.3.7}%
+\contentsline {subsection}{\texttt {knapsack-01.cpp}\hspace {0.2em}}{13}{section.3.7}%
 \contentsline {chapter}{\numberline {4}Game theory}{13}{chapter.4}%
 \ttl@stoptoc {chapters@3}
 \ttl@starttoc {chapters@4}
@@ -90,7 +92,7 @@
 \contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{14}{subsection.4.8.1}%
 \contentsline {subsection}{\numberline {4.8.2}Other States}{14}{subsection.4.8.2}%
 \contentsline {subsubsection}{Examples}{14}{section*.1}%
-\contentsline {section}{\numberline {4.9}Insta-Winning States}{14}{section.4.9}%
+\contentsline {section}{\numberline {4.9}Insta-Winning States}{15}{section.4.9}%
 \contentsline {section}{\numberline {4.10}References}{15}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{15}{chapter.5}%
 \ttl@stoptoc {chapters@4}
@@ -104,7 +106,7 @@
 \contentsline {chapter}{\numberline {6}Graph}{15}{chapter.6}%
 \ttl@stoptoc {chapters@5}
 \ttl@starttoc {chapters@6}
-\contentsline {section}{\numberline {6.1}Fundamentals}{15}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Fundamentals}{16}{section.6.1}%
 \contentsline {subsection}{\texttt {dfs.cpp}\hspace {0.2em}}{16}{section.6.1}%
 \contentsline {subsection}{\texttt {bfs.cpp}\hspace {0.2em}}{16}{lstnumber.6.1.19}%
 \contentsline {section}{\numberline {6.2}Network flow}{16}{section.6.2}%
