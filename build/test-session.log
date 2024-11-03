@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.2.3)  3 FEB 2024 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.3)  3 NOV 2024 15:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -451,8 +451,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count309
 \l__pdf_internal_box=\box103
-)
-No file test-session.aux.
+) (build//test-session.aux)
 \openout1 = `test-session.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -474,6 +473,7 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 \c@lstlisting=\count310
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -540,6 +540,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
 LaTeX Info: Redefining \nameref on input line 7.
+ (build//test-session.out) (build//test-session.out)
 \@outlinefile=\write3
 \openout3 = `test-session.out'.
 
@@ -579,19 +580,13 @@ runsystem(rm -f build/header2.tmp)...executed.
 runsystem(rm -f build/kactl.tmp)...executed.
 
  (build//test-session.aux)
-
-Package rerunfilecheck Warning: File `test-session.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `test-session.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `test-session.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13913 strings out of 478287
- 215848 string characters out of 5849290
- 711302 words of memory out of 5000000
+ 13919 strings out of 478287
+ 215986 string characters out of 5849290
+ 711305 words of memory out of 5000000
  31897 multiletter control sequences out of 15000+600000
  473727 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
