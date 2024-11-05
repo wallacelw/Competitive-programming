@@ -2,9 +2,10 @@
  * Author: Wallace
  * Date: 04/11/2024
  * Description: By precomputing, for each position, and, for each power of two, the value of a range, 
- * Anwer quickly any query with assossiative operations.
+ * Anwer quickly any query with assossiative operations. 
+ * Using power before index, makes the implementation more cache friendly and much faster.
  * Time: O(n \log{n}) for precomputing, O(1) or O(\log{n}) per query
- * Status: Tested (https://judge.yosupo.jp/submission/247093, https://judge.yosupo.jp/submission/247097)
+ * Status: Tested (https://judge.yosupo.jp/submission/247103, https://judge.yosupo.jp/submission/247104)
  */
 
 // computes the MSB = the floor of log2(i) in O(1)
@@ -20,23 +21,23 @@ struct SparseTable {
     }
 
     ll n, logn;
-    vector<vector<T>> st; // st[i][a] covers range [i, i+2^a)
+    vector<vector<T>> st; // st[a][i] covers range [i, i+2^a)
 
     // 0-idx: [0, n)
     SparseTable(vector<T> &v) : n(v.size()) {
         logn = MSB(n) + 1;
 
-        st = vector(n, vector(logn, T()));
+        st = vector(logn, vector(n, T()));
 
         for(ll i=0; i<n; i++) {
-            st[i][0] = v[i];
+            st[0][i] = v[i];
         }
 
         for(ll a=1; a<logn; a++) {
             for(ll i=0; i + (1 << a) <= n; i++) {
-                st[i][a] = f(
-                    st[i][a-1],
-                    st[i + (1 << (a-1))][a-1]
+                st[a][i] = f(
+                    st[a-1][i],
+                    st[a-1][i + (1 << (a-1))]
                 );
             }
         }
@@ -44,20 +45,20 @@ struct SparseTable {
 
     // constant query for functions with Idempotence (overlap friendly)
     T query(ll l, ll r) { // query for [l, r] in O(1)
-        if (l == r) return st[l][0];
+        if (l == r) return st[0][l];
         ll a = MSB(r-l+1);
         return f(
-            st[l][a], 
-            st[r - (1 << a) + 1][a]
+            st[a][l], 
+            st[a][r - (1 << a) + 1]
         );
     }
 
     // logarithmic query for functions without Idempotence
     T query(ll l, ll r) { // query for [l, r] in O(log(n))
-        T ans = {0}; // define the correct default null value here !!
+        T ans = {INF}; // define the correct default null value here !!
         for(ll a=logn-1; a>=0; a--) {
             if ((1 << a) <= (r-l+1)) {
-                ans = f(ans, st[l][a]);
+                ans = f(ans, st[a][l]);
                 l += 1 << a;
             }
         }
