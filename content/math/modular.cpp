@@ -16,25 +16,25 @@ template<ll P> struct Z {
         if (val < 0) val += P;
     }
 
-    Z& operator +=(Z rhs) {
-        val += rhs.val;
+    Z& operator +=(Z r) {
+        val += r.val;
         if (val >= P) val -= P;
         return *this;
     }
-    friend Z operator +(Z lhs, Z rhs) { return lhs += rhs; }
+    friend Z operator +(Z l, Z r) { return l += r; }
 
-    Z& operator -=(Z rhs) {
-        val += P - rhs.val;
+    Z& operator -=(Z r) {
+        val += P - r.val;
         if (val >= P) val -= P;
         return *this;
     }
-    friend Z operator -(Z lhs, Z rhs) { return lhs -= rhs; }
+    friend Z operator -(Z l, Z r) { return l -= r; }
 
-    Z& operator *=(Z rhs) {
-        val = (val * rhs.val) % P;
+    Z& operator *=(Z r) {
+        val = (val * r.val) % P;
         return *this;
     }
-    friend Z operator *(Z lhs, Z rhs) { return lhs *= rhs; }
+    friend Z operator *(Z l, Z r) { return l *= r; }
 
     Z operator ^(ll i) const {
         Z ans = 1, aux = val;
@@ -46,14 +46,14 @@ template<ll P> struct Z {
         return ans;
     }
 
-    Z& operator /=(Z rhs) {
-        return *this *= rhs^(P-2);
+    Z& operator /=(Z r) {
+        return *this *= r^(P-2);
     }
-    friend Z operator /(Z lhs, Z rhs) { return lhs /= rhs; }
+    friend Z operator /(Z l, Z r) { return l /= r; }
 
-    bool operator ==(Z rhs) { return val == rhs.val; }
+    bool operator ==(Z r) { return val == r.val; }
 
-    bool operator !=(Z rhs) { return val != rhs.val; }
+    bool operator !=(Z r) { return val != r.val; }
 
     friend ostream& operator <<(ostream& out, Z a) { return out << a.val; }
 
