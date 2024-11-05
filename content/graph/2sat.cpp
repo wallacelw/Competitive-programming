@@ -62,7 +62,7 @@ struct TwoSat {
         gi[b].pb(a);
     }
 
-    // force a state to be a certain variable (must be chosen)
+    // force a variable to be a certain state (must be chosen)
     void force(ll a, bool fa) {
         add(a, fa^1, a, fa);
     }

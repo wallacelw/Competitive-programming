@@ -36,9 +36,9 @@
 \contentsline {chapter}{\numberline {4}Game theory}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Classic Game}{13}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Bouton's Theorem}{13}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Proof}{13}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}DAG Representation}{13}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{13}{section.4.4}%
+\contentsline {subsection}{\numberline {4.2.1}Proof}{14}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}DAG Representation}{14}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{14}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Composition}{14}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Decomposition}{14}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{14}{section.4.5}%
@@ -47,17 +47,17 @@
 \contentsline {section}{\numberline {4.7}Staircase Nim}{14}{section.4.7}%
 \contentsline {subsection}{\numberline {4.7.1}Description}{14}{subsection.4.7.1}%
 \contentsline {subsection}{\numberline {4.7.2}Strategy}{14}{subsection.4.7.2}%
-\contentsline {section}{\numberline {4.8}Grundy's Game}{14}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{14}{subsection.4.8.1}%
-\contentsline {subsection}{\numberline {4.8.2}Other States}{14}{subsection.4.8.2}%
-\contentsline {subsubsection}{Examples}{14}{section*.1}%
+\contentsline {section}{\numberline {4.8}Grundy's Game}{15}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Degenerate (Base) States}{15}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Other States}{15}{subsection.4.8.2}%
+\contentsline {subsubsection}{Examples}{15}{section*.1}%
 \contentsline {section}{\numberline {4.9}Insta-Winning States}{15}{section.4.9}%
 \contentsline {section}{\numberline {4.10}References}{15}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{15}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Point Struct}{15}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Line Struct}{15}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{15}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Graph}{15}{chapter.6}%
+\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{16}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Graph}{16}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fundamentals}{16}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Network flow}{16}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{18}{subsection.6.2.1}%
@@ -118,22 +118,23 @@
 \contentsline {subsubsection}{Lema 6}{29}{section*.10}%
 \contentsline {subsubsection}{Greatest Common Divisor (GCD)}{29}{section*.11}%
 \contentsline {subsubsection}{Least Commom Multiple (LCM)}{30}{section*.12}%
-\contentsline {subsection}{\numberline {7.3.3}Closed Formulas related to divisors of a number}{30}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.3}Find divisors}{30}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Closed Formulas related to divisors of a number}{30}{subsection.7.3.4}%
 \contentsline {subsubsection}{Number of Divisors}{30}{section*.13}%
 \contentsline {subsubsection}{Sum of Divisors}{30}{section*.14}%
 \contentsline {subsubsection}{Product of Divisors}{30}{section*.15}%
-\contentsline {subsection}{\numberline {7.3.4}Sieves}{30}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}Sieves}{30}{subsection.7.3.5}%
 \contentsline {subsubsection}{Eratosthenes}{30}{section*.16}%
 \contentsline {subsubsection}{Linear Sieve}{30}{section*.17}%
-\contentsline {subsection}{\numberline {7.3.5}Factorization}{30}{subsection.7.3.5}%
-\contentsline {subsection}{\numberline {7.3.6}Extended Euclid}{30}{subsection.7.3.6}%
+\contentsline {subsection}{\numberline {7.3.6}Factorization}{30}{subsection.7.3.6}%
+\contentsline {subsection}{\numberline {7.3.7}Extended Euclid}{30}{subsection.7.3.7}%
 \contentsline {subsubsection}{Inverse Multiplicative}{30}{section*.18}%
-\contentsline {subsubsection}{Diofantine Equation}{30}{section*.19}%
-\contentsline {subsection}{\numberline {7.3.7}Euler's totient function}{31}{subsection.7.3.7}%
+\contentsline {subsubsection}{Diofantine Equation}{31}{section*.19}%
+\contentsline {subsection}{\numberline {7.3.8}Euler's totient function}{31}{subsection.7.3.8}%
 \contentsline {section}{\numberline {7.4}FFT}{31}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Matrix}{31}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Minimum Path Length with exactly k edges}{31}{subsection.7.5.1}%
-\contentsline {section}{\numberline {7.6}Series' Closed Formulas}{32}{section.7.6}%
+\contentsline {subsection}{\numberline {7.5.1}Minimum Path Length with exactly k edges}{32}{subsection.7.5.1}%
+\contentsline {section}{\numberline {7.6}Series Closed Formulas}{32}{section.7.6}%
 \contentsline {subsection}{\numberline {7.6.1}Natural Number Summation (PA)}{32}{subsection.7.6.1}%
 \contentsline {subsection}{\numberline {7.6.2}Natural Number Quadratic Summation}{32}{subsection.7.6.2}%
 \contentsline {subsection}{\numberline {7.6.3}Triangular Numbers Summation}{32}{subsection.7.6.3}%
@@ -144,8 +145,8 @@
 \contentsline {section}{\numberline {8.1}Hashing}{33}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Z-Function}{33}{section.8.2}%
 \contentsline {section}{\numberline {8.3}KMP}{33}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Patterns in a String}{33}{subsection.8.3.1}%
-\contentsline {section}{\numberline {8.4}Suffix Array}{33}{section.8.4}%
+\contentsline {subsection}{\numberline {8.3.1}Patterns in a String}{34}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Suffix Array}{34}{section.8.4}%
 \contentsline {section}{\numberline {8.5}Manacher}{34}{section.8.5}%
 \contentsline {section}{\numberline {8.6}Booth}{34}{section.8.6}%
 \contentsline {section}{\numberline {8.7}Aho-Corasick}{35}{section.8.7}%
