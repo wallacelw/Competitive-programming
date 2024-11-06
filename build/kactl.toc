@@ -73,7 +73,7 @@
 \contentsline {subsection}{\numberline {6.2.4}Maximum Independent Set}{19}{subsection.6.2.4}%
 \contentsline {subsection}{\numberline {6.2.5}Min Cost Max Flow}{19}{subsection.6.2.5}%
 \contentsline {subsection}{\numberline {6.2.6}Hungarian}{20}{subsection.6.2.6}%
-\contentsline {section}{\numberline {6.3}Coloring}{21}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Coloring}{20}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Compute the Chromatic Number}{21}{subsection.6.3.1}%
 \contentsline {section}{\numberline {6.4}Shortest Paths}{21}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Dijkstra}{21}{subsection.6.4.1}%
@@ -85,7 +85,7 @@
 \contentsline {subsection}{\numberline {6.6.2}Bridge Tree}{23}{subsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.6.3}Articulation Points}{23}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Block Cut Tree}{23}{subsection.6.6.4}%
-\contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{25}{subsection.6.6.5}%
+\contentsline {subsection}{\numberline {6.6.5}Strong Orientation}{24}{subsection.6.6.5}%
 \contentsline {subsubsection}{Acyclic Graph Orientation}{25}{section*.2}%
 \contentsline {section}{\numberline {6.7}Directed Graph}{25}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Functional Graph}{25}{subsection.6.7.1}%
@@ -96,78 +96,79 @@
 \contentsline {subsection}{\numberline {6.8.1}Undirected Minimum Spanning Tree}{26}{subsection.6.8.1}%
 \contentsline {subsection}{\numberline {6.8.2}Directed Minimum Spanning Tree}{26}{subsection.6.8.2}%
 \contentsline {subsubsection}{Edmonds' algorithm with Tarjan's optimization}{26}{section*.3}%
-\contentsline {section}{\numberline {6.9}Trees}{27}{section.6.9}%
-\contentsline {subsection}{\numberline {6.9.1}Centroid}{27}{subsection.6.9.1}%
-\contentsline {subsection}{\numberline {6.9.2}Centroid Decomposition}{27}{subsection.6.9.2}%
-\contentsline {subsection}{\numberline {6.9.3}Centroid Tree}{27}{subsection.6.9.3}%
-\contentsline {subsection}{\numberline {6.9.4}Tree Isomorphism}{27}{subsection.6.9.4}%
-\contentsline {subsection}{\numberline {6.9.5}Lowest Common Ancestor (LCA)}{27}{subsection.6.9.5}%
-\contentsline {subsection}{\numberline {6.9.6}Small To Large}{28}{subsection.6.9.6}%
-\contentsline {subsection}{\numberline {6.9.7}Heavy Light Decomposition}{28}{subsection.6.9.7}%
-\contentsline {chapter}{\numberline {7}Mathematics}{28}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Modular Arithmetic}{28}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Lucas's Theorem}{29}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Fermat's Little Theorem}{29}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Combinatorics}{29}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Factorial}{29}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Combinatorial Struct}{29}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Burside Lemma}{30}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Interesting Recursion}{30}{subsection.7.2.4}%
-\contentsline {section}{\numberline {7.3}Number Theory}{30}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Highly Composite Numbers}{30}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Divisibility}{30}{subsection.7.3.2}%
+\contentsline {chapter}{\numberline {7}Tree}{26}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Center}{26}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Centroid}{27}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Centroid Decomposition}{27}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Centroid Tree}{27}{subsection.7.3.1}%
+\contentsline {section}{\numberline {7.4}Tree Isomorphism}{27}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Lowest Common Ancestor (LCA)}{27}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Small To Large}{28}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Heavy Light Decomposition}{28}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Mathematics}{28}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Modular Arithmetic}{28}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Lucas's Theorem}{29}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Fermat's Little Theorem}{29}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Combinatorics}{29}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Factorial}{29}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Combinatorial Struct}{29}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Burside Lemma}{30}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Interesting Recursion}{30}{subsection.8.2.4}%
+\contentsline {section}{\numberline {8.3}Number Theory}{30}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Highly Composite Numbers}{30}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Divisibility}{30}{subsection.8.3.2}%
 \contentsline {subsubsection}{Euclid}{30}{section*.4}%
 \contentsline {subsubsection}{Lema 1 - Transitivity}{30}{section*.5}%
-\contentsline {subsubsection}{Lema 2}{30}{section*.6}%
-\contentsline {subsubsection}{Lema 3}{30}{section*.7}%
-\contentsline {subsubsection}{Lema 4}{30}{section*.8}%
-\contentsline {subsubsection}{Lema 5}{30}{section*.9}%
-\contentsline {subsubsection}{Lema 6}{30}{section*.10}%
-\contentsline {subsubsection}{Greatest Common Divisor (GCD)}{30}{section*.11}%
+\contentsline {subsubsection}{Lema 2}{31}{section*.6}%
+\contentsline {subsubsection}{Lema 3}{31}{section*.7}%
+\contentsline {subsubsection}{Lema 4}{31}{section*.8}%
+\contentsline {subsubsection}{Lema 5}{31}{section*.9}%
+\contentsline {subsubsection}{Lema 6}{31}{section*.10}%
+\contentsline {subsubsection}{Greatest Common Divisor (GCD)}{31}{section*.11}%
 \contentsline {subsubsection}{Least Commom Multiple (LCM)}{31}{section*.12}%
-\contentsline {subsection}{\numberline {7.3.3}Find divisors}{31}{subsection.7.3.3}%
-\contentsline {subsection}{\numberline {7.3.4}Closed Formulas related to divisors of a number}{31}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {8.3.3}Find divisors}{31}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Closed Formulas related to divisors of a number}{31}{subsection.8.3.4}%
 \contentsline {subsubsection}{Number of Divisors}{31}{section*.13}%
 \contentsline {subsubsection}{Sum of Divisors}{31}{section*.14}%
 \contentsline {subsubsection}{Product of Divisors}{31}{section*.15}%
-\contentsline {subsection}{\numberline {7.3.5}Sieves}{31}{subsection.7.3.5}%
+\contentsline {subsection}{\numberline {8.3.5}Sieves}{31}{subsection.8.3.5}%
 \contentsline {subsubsection}{Eratosthenes}{31}{section*.16}%
 \contentsline {subsubsection}{Linear Sieve}{31}{section*.17}%
-\contentsline {subsection}{\numberline {7.3.6}Factorization}{31}{subsection.7.3.6}%
-\contentsline {subsection}{\numberline {7.3.7}Extended Euclid}{31}{subsection.7.3.7}%
-\contentsline {subsubsection}{Inverse Multiplicative}{31}{section*.18}%
+\contentsline {subsection}{\numberline {8.3.6}Factorization}{31}{subsection.8.3.6}%
+\contentsline {subsection}{\numberline {8.3.7}Extended Euclid}{32}{subsection.8.3.7}%
+\contentsline {subsubsection}{Inverse Multiplicative}{32}{section*.18}%
 \contentsline {subsubsection}{Diofantine Equation}{32}{section*.19}%
-\contentsline {subsection}{\numberline {7.3.8}Euler's totient function}{32}{subsection.7.3.8}%
-\contentsline {section}{\numberline {7.4}FFT}{32}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Matrix}{32}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Minimum Path Length with exactly k edges}{33}{subsection.7.5.1}%
-\contentsline {section}{\numberline {7.6}Series Closed Formulas}{33}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Natural Number Summation (PA)}{33}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Natural Number Quadratic Summation}{33}{subsection.7.6.2}%
-\contentsline {subsection}{\numberline {7.6.3}Triangular Numbers Summation}{33}{subsection.7.6.3}%
-\contentsline {section}{\numberline {7.7}Xor Basis}{33}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Note:}{33}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Solves:}{33}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Strings}{34}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Hashing}{34}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Z-Function}{34}{section.8.2}%
-\contentsline {section}{\numberline {8.3}KMP}{34}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Patterns in a String}{35}{subsection.8.3.1}%
-\contentsline {section}{\numberline {8.4}Suffix Array}{35}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Manacher}{35}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Booth}{35}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Aho-Corasick}{36}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Suffix Automaton}{36}{section.8.8}%
-\contentsline {subsection}{\numberline {8.8.1}Concepts:}{36}{subsection.8.8.1}%
-\contentsline {subsection}{\numberline {8.8.2}Implementation:}{37}{subsection.8.8.2}%
-\contentsline {chapter}{\numberline {9}Miscellaneous}{38}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Ternary Search}{38}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Random Generator}{38}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Fraction Class}{38}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Getline}{39}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Merge Sort}{39}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Rounding Half to Even}{39}{section.9.6}%
-\contentsline {section}{\numberline {9.7}Count Bits in a range}{39}{section.9.7}%
-\contentsline {section}{\numberline {9.8}Count Digits in a range}{39}{section.9.8}%
-\contentsline {section}{\numberline {9.9}Couting Bishops}{39}{section.9.9}%
+\contentsline {subsection}{\numberline {8.3.8}Euler's totient function}{32}{subsection.8.3.8}%
+\contentsline {section}{\numberline {8.4}FFT}{32}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Matrix}{32}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Minimum Path Length with exactly k edges}{33}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}Series Closed Formulas}{33}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Natural Number Summation (PA)}{33}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Natural Number Quadratic Summation}{33}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Triangular Numbers Summation}{33}{subsection.8.6.3}%
+\contentsline {section}{\numberline {8.7}Xor Basis}{33}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Note:}{33}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Solves:}{33}{subsection.8.7.2}%
+\contentsline {chapter}{\numberline {9}Strings}{34}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Hashing}{34}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Z-Function}{34}{section.9.2}%
+\contentsline {section}{\numberline {9.3}KMP}{35}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Patterns in a String}{35}{subsection.9.3.1}%
+\contentsline {section}{\numberline {9.4}Suffix Array}{35}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Manacher}{35}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Booth}{36}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Aho-Corasick}{36}{section.9.7}%
+\contentsline {section}{\numberline {9.8}Suffix Automaton}{36}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}Concepts:}{37}{subsection.9.8.1}%
+\contentsline {subsection}{\numberline {9.8.2}Implementation:}{37}{subsection.9.8.2}%
+\contentsline {chapter}{\numberline {10}Miscellaneous}{38}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Ternary Search}{38}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Random Generator}{39}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Fraction Class}{39}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Getline}{39}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Merge Sort}{39}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Rounding Half to Even}{39}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Count Bits in a range}{39}{section.10.7}%
+\contentsline {section}{\numberline {10.8}Count Digits in a range}{40}{section.10.8}%
+\contentsline {section}{\numberline {10.9}Couting Bishops}{40}{section.10.9}%
 \contentsfinish 

@@ -41,8 +41,6 @@
 
 \subsection{Matching with Flow}
 
-\vspace{12 pt}
-
 	By modeling a bipartite graph, with some Vertices 
 	(that will choose a match) 
 	to be on the L graph and some Vertices (that will be chosen) on the R.
@@ -66,11 +64,7 @@
 	like the \textit{flow} passing through each edge. 
 	Remember to consider that negative flow exist for reverse edges.
 
-\vspace{1pt}
-
 \subsection{Minimum Cut}
-
-\vspace{12pt}
 
 In computer science and optimization theory, the max-flow min-cut theorem states that, in a flow network, 
 the maximum amount of flow passing from the source to the sink is equal to the total weight of the edges 
@@ -89,8 +83,6 @@ the T-component belong to the cut-set of C. The Min Cut value is equal to the Ma
 This is the minimum over all possible s-t cuts values.
 
 \subsection{Minimum Vertex Cover}
-
-\vspace{12 pt}
 
 	The \textbf{Konig's Theorem} describes an equivalence between the maximum matching
 	problem and the minimum vertex cover problem in bipartite graphs.
@@ -155,8 +147,6 @@ This is the minimum over all possible s-t cuts values.
 		However, these two problems are equivalent to each other: it is enough to multiply all the weights by $-1$.
 
 		\kactlimport{hungarian.cpp}
-	
-\newpage
 
 \section{Coloring}
 
@@ -174,7 +164,6 @@ This is the minimum over all possible s-t cuts values.
 
 	\textbf{Four color theorem} states that every planar graph can be 4-colored. 
 	A planar graph is a graph that can be drawn in a 2D plane without edges intersecting.
-
 
 	\subsection{Compute the Chromatic Number}
 
@@ -217,13 +206,10 @@ This is the minimum over all possible s-t cuts values.
 		To retrieve the negative cycle itself, one can keep track of the last vertice that reaches a considered vertice
 
 		\kactlimport{bellman-ford-cycle.cpp}
-	
-	% for notebook generation
-	\vspace{7pts}
 
 	\subsection{Floyd Warshall}
 
-	All-Pair Shortest Paths
+	All-Pair Shortest Paths in $O(N^3)$.
 
 	\kactlimport{floyd-warshall.cpp}
 
@@ -342,13 +328,13 @@ This is the minimum over all possible s-t cuts values.
 
 \section{Directed Graph}
 
-	\subsection{Functional Graph}
+\subsection{Functional Graph}
 
 		A directed graph is called functional if every vertex has exactly one outgoing edge.
 
 		Every \textbf{Functional Graph} contains exactly one cycle per connected component.
 
-	\subsection{Topological Sort}
+\subsection{Topological Sort}
 
 	Sort a directed graph with no cycles (DAG) in an order which each source of an edge is visited before the sink of this edge.
 
@@ -357,11 +343,8 @@ This is the minimum over all possible s-t cuts values.
 	It can be done with a DFS, appending in the reverse order of transversal. Also a stack can be used to reverse order	
 
 	\kactlimport{toposort.cpp}
-
-	% for notebook generation
-    \vspace{5pts}
 	
-	\subsection{Kosaraju}
+\subsection{Kosaraju}
 
 	A Strongly Connected Component is a maximal subgraph in which every vertex is reachable
 	from any vertex inside this same subgraph.
@@ -371,7 +354,7 @@ This is the minimum over all possible s-t cuts values.
 
 	\kactlimport{kosaraju.cpp}
 
-	\subsection{2-SAT}
+\subsection{2-SAT}
 	
 		SAT (Boolean satisfiability problem) is NP-Complete.
 
@@ -407,78 +390,3 @@ This is the minimum over all possible s-t cuts values.
 	\subsubsection{Edmonds' algorithm with Tarjan's optimization}
 
 	\kactlimport{directed-mst.cpp}
-
-\newpage
-
-\section{Trees}
-
-
-\subsection{Centroid}
-
-A \textbf{centroid} of a tree with size $N$ is defined as a node such that, when the tree is rooted
-at it, no other nodes have a subtree of size greater than $N/2$.
-
-We can find a centroid in a tree by starting at any node and at, each step, 
-loop through all of its children. 
-If all of its children have a subtree whose size is $ \leq N/2$, then this node is a centroid. 
-Otherwise, move to the child with a subtree whose size is $> N/2$ 
-and repeat until you find a centroid.
-
-A tree can have a single centroid or two centroids.
-
-\kactlimport{centroid.cpp}
-
-\vspace{5pt}
-
-\subsection{Centroid Decomposition}
-
-After finding a centroid, and removing it from the tree, several subtrees will be formed.
-By applying this function several times until no more splitting can be done,
-we are doing a centroid decomposition. 
-
-By ordering the nodes by the time it was removed, we can create the centroid tree.
-
-\subsection{Centroid Tree}
-
-\vspace{5pt}
-
-\begin{itemize}
-	\item 1. The centroid tree has height of $O(\log{n}$);
-
-	\item 2. A vertex belongs to the component (original tree) of \textbf{all} its ancestors (centroid tree).
-	
-	\item 3. The path from $a$ to $b$ (original tree) can be decomposed into the path from $a$ to $lca(a,b)$ 
-	and the path from $lca(a,b)$ to $b$ (centroid tree).
-	\textbf{Note} that the distance between nodes it's still measured in reference to the original tree.
-	
-	\item 4. Each one of the $n^2$ paths of the original tree is the concatenation of 
-	two paths in a set of $O(n \log(n))$ paths from a node to all its ancestors in the 
-	centroid tree.
-\end{itemize}
-
-% use tiagosf00 code
-
-\subsection{Tree Isomorphism}
-
-\vspace{10pt}
-
-\kactlimport{isomorphism.cpp}
-
-\subsection{Lowest Common Ancestor (LCA)}
-	Besides binary lifting, there is also the method of creating a tree-transversing array (euler tour),
-	and then performing a range minimum query in the $tin[a]$ and $tin[b]$ to find $lca(a, b)$ using sparse tables.
-
-	\kactlimport{lca.cpp}
-
-	\kactlimport{binary-lifting.cpp}
-
-\subsection{Small To Large}
-
-	Count the number of occurences of each color in every subtree in $O(n log(n))$.
-
-	\kactlimport{sack.cpp}
-% \section{Math}
-
-\subsection{Heavy Light Decomposition}
-
-	\kactlimport{hld.cpp}

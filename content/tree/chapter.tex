@@ -1,0 +1,79 @@
+\chapter{Tree}
+
+\section{Center}
+
+A tree can have between one and two centers, which is(are) the middle node(s) in a diameter.
+
+To find the centers, run a BFS from any vertice $V_1$, fiding a furtherst vertice $V_2$. 
+Then, run another BFS from vertice $V_2$, finding a furtherst vertice $V_3$. 
+
+$V_2$ to $V_3$ is a diamenter, and the center is the middle vertices.
+
+\section{Centroid}
+
+A \textbf{centroid} of a tree with size $N$ is defined as a node such that, when the tree is rooted
+at it, no other nodes have a subtree of size greater than $N/2$.
+
+We can find a centroid in a tree by starting at any node and at, each step, 
+loop through all of its children. 
+If all of its children have a subtree whose size is $ \leq N/2$, then this node is a centroid. 
+Otherwise, move to the child with a subtree whose size is $> N/2$ 
+and repeat until you find a centroid.
+
+A tree can have a single centroid or two centroids.
+
+\kactlimport{centroid.cpp}
+
+\section{Centroid Decomposition}
+
+After finding a centroid, and removing it from the tree, several subtrees will be formed.
+By applying this function several times until no more splitting can be done,
+we are doing a centroid decomposition. 
+
+By ordering the nodes by the time it was removed, we can create the centroid tree.
+
+\subsection{Centroid Tree}
+
+\begin{itemize}
+	\item 1. The centroid tree has height of $O(\log{n}$);
+
+	\item 2. A vertex belongs to the component (original tree) of \textbf{all} its ancestors (centroid tree).
+	
+	\item 3. The path from $a$ to $b$ (original tree) can be decomposed into the path from $a$ to $lca(a,b)$ 
+	and the path from $lca(a,b)$ to $b$ (centroid tree).
+	\textbf{Note} that the distance between nodes it's still measured in reference to the original tree.
+	
+	\item 4. Each one of the $n^2$ paths of the original tree is the concatenation of 
+	two paths in a set of $O(n \log(n))$ paths from a node to all its ancestors in the 
+	centroid tree.
+\end{itemize}
+
+\textit{use tiagosf00's code}
+
+\section{Tree Isomorphism}
+
+\kactlimport{isomorphism.cpp}
+
+\section{Lowest Common Ancestor (LCA)}
+	Besides binary lifting, there is also the method of creating a tree-transversing array (euler tour),
+	and then performing a range minimum query in the $tin[a]$ and $tin[b]$ to find $lca(a, b)$ using sparse tables.
+
+	\kactlimport{lca.cpp}
+
+	\textbf{Extended version with min and max:}
+
+	\kactlimport{binary-lifting.cpp}
+
+\section{Small To Large}
+
+	Count the number of occurences of each color in every subtree in $O(n log(n))$.
+
+	\kactlimport{sack.cpp}
+
+\section{Heavy Light Decomposition}
+
+	A heavy child is the one amongst the children with highest cardinality, therefore, this edge is a heavy edge.
+
+	By merging all nodes connected by a heavy edge, one can have a a tree with at most $log(n)$ depth. 
+
+	\kactlimport{hld.cpp}
