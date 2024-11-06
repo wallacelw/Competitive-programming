@@ -18,3 +18,9 @@ shuffle(vec.begin(), vec.end(), rng);
 int randint(int l, int r) {
     return (rng() % (r-l+1)) + l;
 }
+
+// num in [1, n], with equiprobable chances
+int32_t main() { sws;
+    uniform_int_distribution<int> distribution(1, n);
+    int num = distribution(rng); 
+}
