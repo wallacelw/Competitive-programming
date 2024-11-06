@@ -198,7 +198,8 @@
         just represent them as integers (uint or ulong) and do \textit{\_\_builtin\_popcount(a \^ b)} to compute the hamming distance in $O(1)$ instead of $O(k)$.
 
         \item \textbf{Counting subgrids:} If the desired size if not small enough, divide into continuous segments of acceptable sizes (such as k=64 for unsigned long long).
-        Then, the complexity of $O(N)$ can be reduced to $O(N/64)$. For more versatility, and huge sizes, one can use bitset<k> directly, but it is a little bit slower.
+        Then, the complexity of $O(N)$ can be reduced to $O(N/64)$. 
+        For more versatility, and huge sizes, one can use $bitset<k>$ directly, but it is a little bit slower.
 
     \end{itemize}
 
@@ -207,11 +208,17 @@
 Given the costs $c_i$ and values $v_i$ of $N$ items, put these items in a knapsack of capacity $W$ 
 to get the maximum total value in the knapsack.
 
+%notebook
+\vspace{4pts}
+
 \subsection{Fractional Knapsack}
 
     In Fractional Knapsack, we can break items for maximizing the total value of the knapsack.
 
     \textbf{Solution:} Greedly use the best items (bigger $\frac{v_i}{c_i}$ ratios).
+
+%notebook
+\vspace{4pts}
 
 \subsection{0/1 Knapsack}
 
@@ -220,6 +227,9 @@ to get the maximum total value in the knapsack.
     \textbf{Solution:} $O(N W)$ dp solution.
 
     \kactlimport{knapsack-01.cpp}
+
+%notebook
+\vspace{4pts}
 
 \subsection{Bounded Knapsack}
 

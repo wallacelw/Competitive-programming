@@ -2,7 +2,7 @@
  * Author: Lucas Sala
  * Date: 24/10/2024
  * Description: Solves dynamic connectivity problems offline with DSU rollback
- * Time: O(N * LOG(n)^2)
+ * Time: O(N * \log(n)^2)
  * Status: Tested (https://codeforces.com/gym/100551/problem/A)
  */
 

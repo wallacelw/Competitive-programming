@@ -32,7 +32,7 @@ template<class A> void debug(A a) {
 
 const ll MAX = 1e6+10;
 const ll MOD = 998'244'353;
-const ll INF = 0x3f3f3f3f'3f3f3f3f; // INT64_MAX
+const ll INF = 0x3f3f3f3f3f3f3f3f; // INT64_MAX
 const ld EPS = 1e-7;
 const ld PI = acos(-1);
 
