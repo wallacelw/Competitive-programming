@@ -61,9 +61,11 @@
 \contentsline {chapter}{\numberline {5}Geometry}{16}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Point Struct}{16}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Line Struct}{16}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{16}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Graph}{16}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Fundamentals}{16}{section.6.1}%
+\contentsline {section}{\numberline {5.3}Inside Polygon}{16}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Convex Hull}{17}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Manhattan Minimum Spanning Tree}{17}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Graph}{17}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Fundamentals}{17}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Network flow}{17}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{19}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{19}{subsection.6.2.2}%

@@ -108,17 +108,22 @@
 \contentsline {subsection}{\texttt {point.cpp}\hspace {0.2em}}{16}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Line Struct}{16}{section.5.2}%
 \contentsline {subsection}{\texttt {line.cpp}\hspace {0.2em}}{16}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Manhattan Minimum Spanning Tree}{16}{section.5.3}%
-\contentsline {subsection}{\texttt {manhattanMST.cpp}\hspace {0.2em}}{16}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Graph}{16}{chapter.6}%
+\contentsline {section}{\numberline {5.3}Inside Polygon}{16}{section.5.3}%
+\contentsline {subsection}{\texttt {inside-convex-polygon.cpp}\hspace {0.2em}}{16}{section.5.3}%
+\contentsline {subsection}{\texttt {inside-polygon.cpp}\hspace {0.2em}}{16}{lstnumber.5.3.54}%
+\contentsline {section}{\numberline {5.4}Convex Hull}{17}{section.5.4}%
+\contentsline {subsection}{\texttt {convex-hull.cpp}\hspace {0.2em}}{17}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Manhattan Minimum Spanning Tree}{17}{section.5.5}%
+\contentsline {subsection}{\texttt {manhattanMST.cpp}\hspace {0.2em}}{17}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Graph}{17}{chapter.6}%
 \ttl@stoptoc {chapters@5}
 \ttl@starttoc {chapters@6}
-\contentsline {section}{\numberline {6.1}Fundamentals}{16}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Fundamentals}{17}{section.6.1}%
 \contentsline {subsection}{\texttt {dfs.cpp}\hspace {0.2em}}{17}{section.6.1}%
 \contentsline {subsection}{\texttt {bfs.cpp}\hspace {0.2em}}{17}{lstnumber.6.1.19}%
 \contentsline {section}{\numberline {6.2}Network flow}{17}{section.6.2}%
 \contentsline {subsection}{\texttt {dinic.cpp}\hspace {0.2em}}{17}{section.6.2}%
-\contentsline {subsection}{\texttt {dinitz.cpp}\hspace {0.2em}}{17}{lstnumber.6.3.86}%
+\contentsline {subsection}{\texttt {dinitz.cpp}\hspace {0.2em}}{18}{lstnumber.6.3.86}%
 \contentsline {subsection}{\numberline {6.2.1}Matching with Flow}{19}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Minimum Cut}{19}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Minimum Vertex Cover}{19}{subsection.6.2.3}%
