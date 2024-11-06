@@ -15,21 +15,24 @@ typedef long double ld;
 
 #define teto(a, b) (((a)+(b)-1)/(b))
 #define LSB(i) ((i) & -(i))
-#define MSB(i) (63 - __builtin_clzll(i))
+#define MSB(i) (64 - 1 - __builtin_clzll(i))
 #define BITS(i) __builtin_popcountll(i)
 
-template<class A, class B> auto& operator<<(ostream &os, pair<A, B> p) { 
-    return os << '{' << p.ff << ", " << p.ss << '}'; }
-template<class... A>void db(A ...a) {((cerr<<"{"<<a<<"} "), ...); cerr<<endl;}
-template<class A>void db2(A a) {for(auto b:a) {cerr<<b<<" ";} cerr<<endl;}
-template<class A>void db3(A a) {for(auto b:a) db2(b);}
-#define dbg(...) {cerr << #__VA_ARGS__ << ": "; db(__VA_ARGS__); }
-#define deb(a) {cerr << #a << ": "; db2(a); }
-#define debug(a) {cerr << #a << ": " << endl; db3(a); }
+template<class...A> void dbg(A...a) {
+    ((cerr << "{" << a << "} "), ...); 
+    cerr << endl;
+}
+template<class A> void deb(A a) {
+    for(auto b : a) cerr << b << " ";
+    cerr << endl;
+}
+template<class A> void debug(A a) {
+    for(auto b : a) deb(b);
+}
 
-const ll MAX = 2e5+10;
+const ll MAX = 1e6+10;
 const ll MOD = 998'244'353;
-const ll INF = 1e18; // INT32_MAX
+const ll INF = 0x3f3f3f3f'3f3f3f3f; // INT64_MAX
 const ld EPS = 1e-7;
 const ld PI = acos(-1);
 
