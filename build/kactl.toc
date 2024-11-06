@@ -33,15 +33,19 @@
 \contentsline {subsection}{\numberline {3.6.1}Operations}{13}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Bitset}{13}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Problems}{14}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}Knapsack}{14}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Knapsacks}{14}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Fractional Knapsack}{14}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}0/1 Knapsack}{14}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Bounded Knapsack}{14}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}0/1 Knapsack with limited summation}{14}{subsection.3.7.4}%
 \contentsline {chapter}{\numberline {4}Game theory}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Classic Game}{14}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Bouton's Theorem}{14}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Proof}{14}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}DAG Representation}{14}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Sprague-Grundy Theorem}{14}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Composition}{14}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Decomposition}{14}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.1}Composition}{15}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Decomposition}{15}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Variations and Extensions}{15}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Nim with Increases}{15}{subsection.4.5.1}%
 \contentsline {section}{\numberline {4.6}Misère Game}{15}{section.4.6}%
@@ -53,7 +57,7 @@
 \contentsline {subsection}{\numberline {4.8.2}Other States}{15}{subsection.4.8.2}%
 \contentsline {subsubsection}{Examples}{15}{section*.1}%
 \contentsline {section}{\numberline {4.9}Insta-Winning States}{15}{section.4.9}%
-\contentsline {section}{\numberline {4.10}References}{15}{section.4.10}%
+\contentsline {section}{\numberline {4.10}References}{16}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Geometry}{16}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Point Struct}{16}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Line Struct}{16}{section.5.2}%

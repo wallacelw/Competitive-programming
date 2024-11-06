@@ -202,6 +202,40 @@
 
     \end{itemize}
 
-\section{Knapsack}
+\section{Knapsacks}
+
+Given the costs $c_i$ and values $v_i$ of $N$ items, put these items in a knapsack of capacity $W$ 
+to get the maximum total value in the knapsack.
+
+\subsection{Fractional Knapsack}
+
+    In Fractional Knapsack, we can break items for maximizing the total value of the knapsack.
+
+    \textbf{Solution:} Greedly use the best items (bigger $\frac{v_i}{c_i}$ ratios).
+
+\subsection{0/1 Knapsack}
+
+    Traditional Knapsack.
+
+    \textbf{Solution:} $O(N W)$ dp solution.
 
     \kactlimport{knapsack-01.cpp}
+
+\subsection{Bounded Knapsack}
+
+    In Bounded Knapsack, in addition to $c_i$ and $v_i$, each item has a max quantity available $q_i$.
+    
+    \textbf{Solution:} $O(N W \log{max(Q)})$ dp solution. Break each item into binary partitions.
+    
+    \textit{Example:} Given a item with $q = 11$, break it into $3$ different items: 
+    $q_1 = 1$, $q_2 = 2$, $q_3 = 8$
+
+\subsection{0/1 Knapsack with limited summation}
+
+    This Knapsack, has a additional constrain saying that $\sum{c_i} \leq N$.
+
+    Because of this, we can conclude that, in the worst case, there will be only $O(\sqrt(N))$ unique items.
+
+    Simply create a histogram of the items and convert this problem to a bounded knapsack problem.
+
+    \textbf{Solution:} $O(\sqrt{N} W \log{max(Q)})$ dp solution.
