@@ -294,7 +294,6 @@
 
 	\kactlimport{fft-simple.cpp}
 
-
 \section{Matrix}
 
 For faster linear recurrence computation with matrix exponentiation. 
@@ -367,9 +366,9 @@ Therefore, doubling the number of generatable vectors.
 
 Instead of integers, bitsets can also be used to for the xor-basis.
 
-For range queries, we can reorder the queries and process them by $R$. In addition, we create
-an array of xb[L], that will contain the xor-basis starting from $L$. This will give a complexity
-of probably $O(N \log^2{N} + Q)$. See code for more details.
+For range queries, if the offline approach is viable, we can reorder the queries and process them by $R$. 
+In addition, we create an array of xb[L], that will contain the xor-basis starting from $L$. 
+This will give a complexity of probably $O(N \log^2{N} + Q)$. See code for more details.
 
 \subsection{Solves:}
 
