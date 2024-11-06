@@ -109,6 +109,7 @@
 \contentsline {section}{\numberline {8.1}Modular Arithmetic}{28}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Lucas's Theorem}{29}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Fermat's Little Theorem}{29}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Fast Iterative Exponentiation}{29}{subsection.8.1.3}%
 \contentsline {section}{\numberline {8.2}Combinatorics}{29}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Factorial}{29}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Combinatorial Struct}{29}{subsection.8.2.2}%
@@ -138,37 +139,39 @@
 \contentsline {subsection}{\numberline {8.3.7}Extended Euclid}{32}{subsection.8.3.7}%
 \contentsline {subsubsection}{Inverse Multiplicative}{32}{section*.18}%
 \contentsline {subsubsection}{Diofantine Equation}{32}{section*.19}%
-\contentsline {subsection}{\numberline {8.3.8}Euler's totient function}{32}{subsection.8.3.8}%
+\contentsline {subsection}{\numberline {8.3.8}Chinese Remainder Theorem}{32}{subsection.8.3.8}%
+\contentsline {subsection}{\numberline {8.3.9}Euler's totient function}{32}{subsection.8.3.9}%
 \contentsline {section}{\numberline {8.4}FFT}{32}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Matrix}{32}{section.8.5}%
+\contentsline {section}{\numberline {8.5}Matrix}{33}{section.8.5}%
 \contentsline {subsection}{\numberline {8.5.1}Minimum Path Length with exactly k edges}{33}{subsection.8.5.1}%
 \contentsline {section}{\numberline {8.6}Series Closed Formulas}{33}{section.8.6}%
 \contentsline {subsection}{\numberline {8.6.1}Natural Number Summation (PA)}{33}{subsection.8.6.1}%
 \contentsline {subsection}{\numberline {8.6.2}Natural Number Quadratic Summation}{33}{subsection.8.6.2}%
 \contentsline {subsection}{\numberline {8.6.3}Triangular Numbers Summation}{33}{subsection.8.6.3}%
 \contentsline {section}{\numberline {8.7}Xor Basis}{33}{section.8.7}%
-\contentsline {subsection}{\numberline {8.7.1}Note:}{33}{subsection.8.7.1}%
-\contentsline {subsection}{\numberline {8.7.2}Solves:}{33}{subsection.8.7.2}%
+\contentsline {subsection}{\numberline {8.7.1}Note:}{34}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Solves:}{34}{subsection.8.7.2}%
 \contentsline {chapter}{\numberline {9}Strings}{34}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Hashing}{34}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Z-Function}{34}{section.9.2}%
+\contentsline {section}{\numberline {9.2}Z-Function}{35}{section.9.2}%
 \contentsline {section}{\numberline {9.3}KMP}{35}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Patterns in a String}{35}{subsection.9.3.1}%
 \contentsline {section}{\numberline {9.4}Suffix Array}{35}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Manacher}{35}{section.9.5}%
+\contentsline {section}{\numberline {9.5}Manacher}{36}{section.9.5}%
 \contentsline {section}{\numberline {9.6}Booth}{36}{section.9.6}%
 \contentsline {section}{\numberline {9.7}Aho-Corasick}{36}{section.9.7}%
-\contentsline {section}{\numberline {9.8}Suffix Automaton}{36}{section.9.8}%
+\contentsline {section}{\numberline {9.8}Suffix Automaton}{37}{section.9.8}%
 \contentsline {subsection}{\numberline {9.8.1}Concepts:}{37}{subsection.9.8.1}%
 \contentsline {subsection}{\numberline {9.8.2}Implementation:}{37}{subsection.9.8.2}%
 \contentsline {chapter}{\numberline {10}Miscellaneous}{38}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Ternary Search}{38}{section.10.1}%
+\contentsline {section}{\numberline {10.1}Ternary Search}{39}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Random Generator}{39}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Fraction Class}{39}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Getline}{39}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Merge Sort}{39}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Rounding Half to Even}{39}{section.10.6}%
-\contentsline {section}{\numberline {10.7}Count Bits in a range}{39}{section.10.7}%
-\contentsline {section}{\numberline {10.8}Count Digits in a range}{40}{section.10.8}%
-\contentsline {section}{\numberline {10.9}Couting Bishops}{40}{section.10.9}%
+\contentsline {section}{\numberline {10.6}Rounding Half to Even}{40}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Xor Hashing a Set}{40}{section.10.7}%
+\contentsline {section}{\numberline {10.8}Count Bits in a range}{40}{section.10.8}%
+\contentsline {section}{\numberline {10.9}Count Digits in a range}{40}{section.10.9}%
+\contentsline {section}{\numberline {10.10}Couting Bishops}{40}{section.10.10}%
 \contentsfinish 
