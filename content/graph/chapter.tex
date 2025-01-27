@@ -34,25 +34,26 @@
 	
 	\kactlimport{dinitz.cpp}
 
-%notebook
-\vspace{4pts}
+\subsection{Bipartite Matching with Flow}
 
-\subsection{Matching with Flow}
+	A \textbf{Matching} is a set of vertex-disjoint edges $M$.
 
-	By modeling a bipartite graph, with some Vertices 
-	(that will choose a match) 
-	to be on the L graph and some Vertices (that will be chosen) on the R.
-	Set the correct capacities for these edges 
-	and also for the edges that connects the sink and source. 
-	After this modeling
-	and running the dinic max flow algorithm, 
-	one will generate a possible matching (if it is possible).
+	A \textbf{Maximum matching} is a matching with maximum cadinality $max{|M|}$. 
 
+	A \textbf{Alternating path} is a path of edge, in which
+	the edges are alternating part of the matching
+'
+	A \textbf{Augmenting path} is a alternating path, 
+	in which the first and last edge are not part of the matching.
 
-	A special case of matching is the perfect matching, 
+	\textit{Lemma:} $M$ is a maximun matching \iff there is no augmenting path in $M$.
+
+	By swapping the the edges that are part of the matching and not part in the matching
+	in a augmenting path, you will always increase the matching by one due to the parity.
+
+	A special case of matching is the \textbf{perfect matching}, 
 	which includes all vertices from the bipartite graph L and R.
 
-	A maximum matching has the maximum cadinality. 
 	A perfect matching is a maximum matching. 
 	But the opposite is not necessarity true.
 
@@ -82,8 +83,12 @@ This is the minimum over all possible s-t cuts values.
 
 \subsection{Minimum Vertex Cover}
 
-	The \textbf{Konig's Theorem} describes an equivalence between the maximum matching
-	problem and the minimum vertex cover problem in bipartite graphs.
+	A \textbf{Minimum Vertex Cover (MVC)} is a subset of vertices such that each 
+	edge of the graph is incident to at least one vertex in the subset,
+	and the number of vertices in the subset is minimized.
+	
+	The \textbf{Konig's Theorem} describes an equivalence between the cardinality of the maximum matching
+	problem and the cardinality in minimum vertex cover problem in bipartite graphs.
 
 	Therefore, the value for the maximum flow in a bipartite graph is the same value as the number of nodes in a minimum vertex cover.
 
