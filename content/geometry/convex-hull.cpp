@@ -8,25 +8,20 @@
 
 // import point struct
 
-vector<point> convex_hull(vector<point>& v){
+vector<point> convex_hull(vector<point> v) {
     vector<point> hull;
-    sort(v.begin(), v.end());
-
-    for(int rep=0; rep<2; rep++){
-        int S = hull.size();
+    sort(begin(v), end(v));
+    for(ll k=0; k<2; k++){
+        ll S = size(hull);
         for(point next : v){
-            while(hull.size() - S >= 2){
-                point prev = hull.end()[-2];
-                point mid = hull.end()[-1];
-                if(prev.cross(mid, next) < 0){
-                    break;
-                }
+            while(size(hull) - S >= 2) {
+                point prev = end(hull)[-2];
+                point mid = end(hull)[-1];
+                if(((mid-prev) ^ (next-prev)) < 0) break;
                 hull.pop_back();
             }
-
             hull.push_back(next);
         }
-
         hull.pop_back();
         reverse(v.begin(), v.end());
     }

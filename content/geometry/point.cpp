@@ -1,20 +1,20 @@
 /**
  * Author: Tiago, Quirino, Wallace
- * Date: 01/04/2024
+ * Date: 29/01/2025
  * Description: Point struct for point operations, supports floating points and integers
  * Time: O(1)
- * Status: copied from Tiago/Quirino, tested for int
+ * Status: copied from Tiago/Quirino, tested for ll and ld
  */
 
-const ld EPS = 1e-9;
-
-// T can be int, long long, float, double, long double
-template<class T> bool eq(T a, T b) {
+// T can be int, long long, float, double, long double, ...
+template<class T> 
+bool eq(T a, T b) {
     if (is_integral<T>::value) return a == b;
     else return abs(a-b) <= EPS;
 }
 
-template<class T> struct P {
+template<class T>
+struct P {
     T x, y;
     ll id; // (optional)
 
@@ -45,6 +45,16 @@ template<class T> struct P {
 
     friend ostream& operator <<(ostream& out, P const& p) {
         return out << p.x << ' ' << p.y;
+    }
+
+    // --- --- --- --- --- //
+
+    ld norm() { // modulo
+        return sqrtl(x*x + y*y);   
+    };
+
+    T norm2() { // squared modulo
+        return x*x + y*y;
     }
 };
 using point = P<ll>;
