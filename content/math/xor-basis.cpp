@@ -22,33 +22,31 @@ struct XorBasis {
 
 // Extended // 
 struct XorBasis {
-    vector<ll> B;
-    ll mx = 0;
+    vector<ll> B; // Basis
+    
+    ll dim() { return B.size(); } // O(1)
 
-    ll reduce(ll vec) {
-        if (!vec) return 0;
+    ll reduce(ll vec) { // O(log(a_max))
         for(auto b : B) vec = min(vec, vec^b);
         return vec;
     }
 
-    bool add(ll vec) {
+    bool add(ll vec) { // O(log(a_max))
         ll val = reduce(vec);
         if (val) {
             B.pb(val);
-            mx = max(mx, mx^val);
             return true;
         }
         return false;
     }
 
-    ll dim() {
-        return B.size();
+    ll mxVal() { // O(log(a_max))
+        ll mx = 0;
+        for(auto b : B) mx = max(mx, mx^b);
+        return mx;
     }
-    
-    // Gaussian elimination in O(dim^2)
-    // each bit below and above the pivot are zeroed
-    // Basis will be ordered from MSB to LSB
-    void gaussJordan() { 
+
+    void gaussJordan() { // O(log(a_max)^2)
         sort(B.begin(), B.end(), greater<ll>());
         for(ll i=1; i<(ll)B.size(); i++) {
             for(ll j=0; j<i; j++) {
